@@ -148,7 +148,7 @@ image::parts_switches.jpg[]
 
 image::insert_slide_switch.jpg[]
 
-
+When inserting the tactile button you feel a little click.
 
 
 === Socket
@@ -158,15 +158,47 @@ image::insert_sockets.jpg[]
 
 == Get a break
 Grab a coffee, relax
+
 image::make_a_break.jpg[]
 
 
 == Soldering (continue)
 
 === Servo Header
+Insert four times the 1x3 pin servo header.
 
 image::insert_servo_pin_header.jpg[]
+
+
+=== Potentiometers
+image::prepare_potis.jpg[]
+
+image::insert_potis.jpg[]
+
+
+=== Battery Pack
+
+image::get_wires.jpg[]
+
+image::strip_wire_and_presolder.jpg[]
+
+image::wires_result.jpg[]
+
+image::wire_order.jpg[]
+
+image::twist_wire.jpg[]
+
+image::battery_pack_turn_leads_upwards.jpg[]
+
+image::polarity_batterypack.jpg[]
+
+image::battery_pack_soldered_wires.jpg[]
+
+=== Soldering finishing
+
 image::cut_pins_short.jpg[]
+
+image::dispose_solder_waste.jpg[]
 
 == Assembly
 image::parts_servos.jpg[]
