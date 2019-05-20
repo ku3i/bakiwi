@@ -74,22 +74,44 @@ image::03_parts.jpg[]
 
 == Soldering
 
-=== Prepare SOldering
+=== Prepare Soldering
+Prepare your workbench for soldering. Use enough light. Make sure there is fresh air during soldering and not breath-in the solder vapor.
+
+Use a fine tip and solder.
 image::use_fine_solder_tip.jpg[]
+
+Adjust the soldering station for sufficient heat depending on the solder you use.
 image::solder_with_enough_temperature.jpg[]
+
+Keep you parts together as they are tiny and easily get lost whend dropping from the table.
 image::keep_parts_together.jpg[]
 
 
 === Solder Nano Module Header
+Insert header pins for the Arduino Nano (compatible) module.
 image::insert_pinheader.jpg[]
+
+Use a bread board if available for stabilizing the pins and keep them aligned and perpendicular during soldering.
 image::use_breadboard_if_available.jpg[]
+
+Solder the pins one after another.
 image::solder_nano_pins.jpg[]
+
+The result should look like this.
 image::nano_solder_result.jpg[]
 
 === Resistors
-image::parts_resistor.jpg[]
+Get the two 1 Kilo Ohms resistors and the SO(2)-Walker daughter board.
+image::parts_resistror.jpg[]
+image::parts_so2_walker.jpg[]
+
+Bend the resistors and short the leads.
 image::bend_cut_resistor.jpg[]
+
+Insert resistors as depecited and printed on the board's silk screen.
 image::insert_resistor.jpg[]
+
+Short the leads after soldering.
 image::solder_resistors_and_cut_wire.jpg[]
 
 === Capacitors
@@ -111,6 +133,14 @@ image::insert_sockets.jpg[]
 == Get a break
 Grab a coffee, relax
 image::make_a_break.jpg[]
+
+
+== Soldering (continue)
+
+=== Servo Header
+
+image::insert_servo_pin_header.jpg[]
+image::cut_pins_short.jpg[]
 
 == Assembly
 image::parts_servos.jpg[]
