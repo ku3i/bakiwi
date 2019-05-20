@@ -72,32 +72,51 @@ Check the parts in your Bakiwi package for completeness and complain if not comp
 
 image::03_parts.jpg[]
 
+== Soldering
 
-
-
-image::insert_pinheader.jpg[]
+=== Prepare SOldering
 image::use_fine_solder_tip.jpg[]
 image::solder_with_enough_temperature.jpg[]
+image::keep_parts_together.jpg[]
+
+
+=== Solder Nano Module Header
+image::insert_pinheader.jpg[]
 image::use_breadboard_if_available.jpg[]
 image::solder_nano_pins.jpg[]
 image::nano_solder_result.jpg[]
 
 === Resistors
+image::parts_resistor.jpg[]
 image::bend_cut_resistor.jpg[]
 image::insert_resistor.jpg[]
 image::solder_resistors_and_cut_wire.jpg[]
 
 === Capacitors
+image::parts_capacitors.jpg[]
 image::insert_ceramic_cap.jpg[]
 image::insert_electrolytic_cap.jpg[]
 
-=== Switches
-
+=== LEDs und Switches
+image::parts_leds.jpg[]
+image::insert_leds.jpg[]
 image::insert_slide_switch.jpg[]
-no photo for button
+image::image::parts_switches.jpg[]
 
 === Socket
-
 image::cut_socket.jpg[]
 image::sand_socket_cut.jpg[]
 image::insert_sockets.jpg[]
+
+== Get a break
+Grab a coffee, relax
+image::make_a_break.jpg[]
+
+== Assembly
+image::parts_servos.jpg[]
+image::parts_so2_walker.jpg[]
+image::parts_cables.jgg[]
+image::battery_holder.jpg[]
+
+
+image::reuse_plastic_bags.jpg[]
