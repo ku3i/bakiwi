@@ -128,13 +128,28 @@ image::solder_resistors_and_cut_wire.jpg[]
 === Capacitors
 image::parts_capacitors.jpg[]
 image::insert_ceramic_cap.jpg[]
+
+The electrolytic capacitor has a polarity. The short lead is minus, the long wire plus. Make sure polarity is correct as denoted on the board and shown in the picture.
 image::insert_electrolytic_cap.jpg[]
 
-=== LEDs und Switches
+=== LEDs
+Get the LEDs, colors can change depending on the version of the assembly kit.
+
 image::parts_leds.jpg[]
+
+The LEDs also have polarity. Again, the short lead is minus, the long wire is plus. Make sure polarity is correct as denoted on the board and shown in the picture. To remember there is a rule of thumb: The dashes of plus sign put together in a line is longer than the minus dash.
+
 image::insert_leds.jpg[]
+
+=== Switches
+Insert slide switch and button
+
+image::parts_switches.jpg[]
+
 image::insert_slide_switch.jpg[]
-image::image::parts_switches.jpg[]
+
+
+
 
 === Socket
 image::cut_socket.jpg[]
