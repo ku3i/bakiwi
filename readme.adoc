@@ -5,15 +5,24 @@ v0.1, 2019-05-20
 :toc:
 
 
-_This is the Bakiwi assembly manual. Following these steps will enable you to build your Bakiwi walking robot from the assembly kit. We encourage everybody to contribute to this project. Please share your ideas, upgrades, schematics, source-code and tricks._
+_This is the Bakiwi assembly manual. Following these steps will enable you to build your Bakiwi walking robot from the assembly kit. We encourage everybody to contribute to this project. Please share your ideas, upgrades, schematics, source-code, and tricks._
 
 
-== Tool and Part List
-NOTE: Before starting the assembly. Check that you have all the tools and parts in place. We recommend to read this manual once before starting the assembly.
+== Preparation
+
+NOTE: Before starting the assembly. Check that you have all the tools and parts in place. We recommend reading this manual once before starting the assembly.
+
+image::01_package.jpg[]
+
+=== Prepare Workbench and Tools
+
+****
+Clean and wipe your workbench and get all the tools needed as denoted in the list or shown on the picture.
+****
 
 === Recommended Tools
 
-You will need these tools to assemble the Gretchen (Dev0) robot.
+You will need these tools to assemble the Bakiwi robot.
 
 * Small Phillips screw driver
 * Soldering iron with a very fine tip for motor assembly, up to 400°C (regulated) temperature
@@ -26,7 +35,13 @@ You will need these tools to assemble the Gretchen (Dev0) robot.
 * Sandpaper or files
 * Superglue (optional)
 * Hot glue (optional)
-* A box of trash for forming legs and bodyparts of your robot.
+* A box of trash for forming legs and body parts of your robot.
+
+image::02_tools.jpg[]
+
+=== Check the Parts
+
+TIP: Check the parts in your Bakiwi package for completeness and complain if not complete :)
 
 === Bakiwi Assembly Kit Parts
 
@@ -38,7 +53,7 @@ You will need these tools to assemble the Gretchen (Dev0) robot.
 | 1 | SO(2)-Walker Daughter Board
 | 1 | Arduino Nano (compatible)
 | 2 | battery holder (2xAA)
-| 2 | 1 K Resistor
+| 2 | 1 kOhm Resistor
 | 2 | Led (different colors)
 | 4 | 1x3 pin header
 | 2 | 1x15 socket
@@ -49,161 +64,303 @@ You will need these tools to assemble the Gretchen (Dev0) robot.
 | 4 | 10 cm cable (black, orange, white, red)
 |===
 
-
-== Preparation
-
-
-
-image::01_package.jpg[]
-
-=== Prepare Workbench and Tools
-
-Wipe your workbench and get all the tools needed as denoted in the list or shown on the picture.
-
-
-image::02_tools.jpg[]
-
-
-=== Check the Parts
-
-Check the parts in your Bakiwi package for completeness and complain if not complete :)
- in your Bakiwi package for completeness and complain if not complete :)
-
-
 image::03_parts.jpg[]
+
+
+IMPORTANT: Batteries might not be included in the set. Ask your workshop leader or get you a set of 4x AA (1.5V) batteries.
+
+image::batteries_not_included.jpg[]
 
 == Soldering
 
 === Prepare Soldering
-Prepare your workbench for soldering. Use enough light. Make sure there is fresh air during soldering and not breath-in the solder vapor.
+****
+Prepare your workbench for soldering. Use a fine tip and thin solder.
+****
 
-Use a fine tip and solder.
+IMPORTANT: Watch your health! Use enough light. Make sure there is fresh air during soldering and not to breath-in the solder vapor.
+
+CAUTION: Soldering irons get REALLY hot. You need to stay focussed and should be careful not to burn yourself or others. When leaving the room, switch off the soldering station.
+
 
 image::use_fine_solder_tip.jpg[]
 
-Adjust the soldering station for sufficient heat depending on the solder you use.
+****
+Adjust the soldering station for sufficient heat depending on the solder you use. Some stations show the current temperature, make sure to let the iron pre-heat before starting. If soldering 'feels' very sticky, you might have not enough temperature or the flux in the solder is not sufficient. Also, ensure to always use a clean tip, preferably using a dry cleaner.
+****
 
 image::solder_with_enough_temperature.jpg[]
 
-Keep you parts together as they are tiny and easily get lost whend dropping from the table.
+****
+Keep the electronic parts together as they are tiny and easily get lost when they accidentally drop down from the table.
+****
 
 image::keep_parts_together.jpg[]
 
 
 === Solder Nano Module Header
-Insert header pins for the Arduino Nano (compatible) module.
+****
+So now you should be prepared for soldering the first part. Insert header pins for the Arduino Nano (compatible) module as shown in the picture.
+****
 
 image::insert_pinheader.jpg[]
 
-Use a bread board if available for stabilizing the pins and keep them aligned and perpendicular during soldering.
+****
+You can use a breadboard, if available, for stabilizing the pin headers and keep them aligned and perpendicular during soldering.
+****
 
 image::use_breadboard_if_available.jpg[]
 
-Solder the pins one after another.
+****
+Solder the pins one after another. After soldering the first pin, double-check for alignment and correct if needed. Otherwise, continue soldering all 30 pins.
+****
 
 image::solder_nano_pins.jpg[]
 
-The result should look like this.
+****
+The result should look like this. Sufficient solder looks shiny and volcano-shaped. If it looks like a drop or ball then there is too much solder. You can remove it by cleaning the tip and put the iron again to the pin.
+
+Alternatively, use desoldering braid to remove excessive solder.
+****
+
 
 image::nano_solder_result.jpg[]
 
 === Resistors
-Get the two 1 Kilo Ohms resistors and the SO(2)-Walker daughter board.
+****
+Get the two 1 Kilo-Ohms resistors and the SO(2)-Walker daughter board. Don't get irritated as the color might be different than shown in the picture.
+****
 
 image::parts_resistor.jpg[]
 image::parts_so2walker.jpg[]
 
-Bend the resistors and short the leads.
+****
+Bend the resistors very close to the ends and trim the leads as shown in the picture.
+****
 
 image::bend_cut_resistor.jpg[]
 
-Insert resistors as depecited and printed on the board's silk screen.
+****
+Insert resistors as depecited and printed as R1 and R2 on the board's silk screen. Make sure that the capacitor is soldered very close to the board.
+****
 
 image::insert_resistor.jpg[]
 
-Short the leads after soldering.
+****
+Trim the leads after soldering using the side-cutting pliers.
+****
 
 image::solder_resistors_and_cut_wire.jpg[]
 
 === Capacitors
+
+****
+Get the capacitors. The completely differ in size and form.
+****
+
 image::parts_capacitors.jpg[]
+
+****
+Insert the ceramic capacitor first as it has a lower profile. Again, make sure that the capacitor is soldered very close to the board.
+****
+
 image::insert_ceramic_cap.jpg[]
 
-The electrolytic capacitor has a polarity. The short lead is minus, the long wire plus. Make sure polarity is correct as denoted on the board and shown in the picture.
+****
+The electrolytic capacitor has a polarity and its leads must not be mixed up. The shorter lead is minus, the longer lead is plus. Make sure polarity is correct as denoted on the board and shown in the picture. The capacitor must be laid on its side since the nano board will be mounted above it.
+****
+
 image::insert_electrolytic_cap.jpg[]
 
 === LEDs
+****
 Get the LEDs, colors can change depending on the version of the assembly kit.
+****
 
 image::parts_leds.jpg[]
 
-The LEDs also have polarity. Again, the short lead is minus, the long wire is plus. Make sure polarity is correct as denoted on the board and shown in the picture. To remember there is a rule of thumb: The dashes of plus sign put together in a line is longer than the minus dash.
+****
+The LEDs also have polarity. Again, the shorter lead is minus, the long lead is plus. Make sure polarity is correct as denoted on the board and shown in the picture.
+****
+
+NOTE: To remember which lead is plus or minus, Imagine, there is a rule of thumb: The dashes of the plus sign put together in a line is longer than the minus dash.
 
 image::insert_leds.jpg[]
 
 === Switches
-Insert slide switch and button
+
+****
+Get the switches. The left one is a tactile switch, a button so to say. The other one is a slide switch.
+****
 
 image::parts_switches.jpg[]
 
-image::insert_slide_switch.jpg[]
+****
+Insert and solder the slide switch and button. When inserting the tactile button, look out for correct orientation. There is only one correct way and you probably need to gently press the part into the board. You feel a little click when inserted correctly.
+****
 
-When inserting the tactile button you feel a little click.
+image::insert_slide_switch.jpg[]
 
 
 === Socket
+****
+The next thing to solder is the sockets for the nano board. The sockets in your package might have more than 15 slots, so need to trim the socket to exactly 15 slots and use sanding paper to make it even.
+****
+
 image::cut_socket.jpg[]
 image::sand_socket_cut.jpg[]
+
+****
+Then insert the socket and solder the 30 pins. For each half of the socker, make sure the sockets are aligned perpendicular and closest to the board. Otherwise, the nano module might not fit into the socket.
+****
+
 image::insert_sockets.jpg[]
 
 == Get a break
-Grab a coffee, relax
+
+NOTE: Grab a coffee, relax your eyes. Get some fruit and fresh air.
 
 image::make_a_break.jpg[]
 
-
 == Soldering (continue)
 
+****
+Hope you are relaxed :)
+****
+
 === Servo Header
-Insert four times the 1x3 pin servo header.
+
+****
+Get the servo pin headers and insert four times the 1x3 pin servo header to all four corners of the board, next to the screw holes.
+Again, make sure the pins are perfectly perpendicular to the board, otherwise, the servo connectors might interfere with the sockets of the nano board.
+****
 
 image::insert_servo_pin_header.jpg[]
 
 
 === Potentiometers
+****
+Get the four potentiometers (10KOhms) and the associated knobs (might have a different color) and insert the knobs in such a way that the shiny metal part of the potentiometer is on the back.
+****
+
 image::prepare_potis.jpg[]
+
+****
+Insert the potentiometers as shown in the picture, turn the board and solder them.
+****
 
 image::insert_potis.jpg[]
 
 
 === Battery Pack
 
+****
+Get the wires (approx. 10cm each). The might have different colors than depicted.
+****
+
 image::get_wires.jpg[]
+
+****
+Strip the insulation of both of the wires' ends, approx. 3-5 mm, twist the ends a little and pre-solder the wires. Pre-soldering is useful to better insert the wire into solder holes.
+****
 
 image::strip_wire_and_presolder.jpg[]
 
+****
+The result could look like this.
+****
+
 image::wires_result.jpg[]
+
+****
+Insert the wires in the prescribed order and solder them to the board. The cable color should at least follow the convention for ground (black), voltage supply (red).
+****
 
 image::wire_order.jpg[]
 
+****
+Twist pairs of wires, each pair will be associated with a single battery pack of two cells.
+****
+
 image::twist_wire.jpg[]
+
+****
+Turn the leads of the battery pack a little upwards so they do not stick out over the part.
+****
 
 image::battery_pack_turn_leads_upwards.jpg[]
 
+****
+Check polarity of the battery pack. It is denoted inside the packs.
+****
+
 image::polarity_batterypack.jpg[]
+
+****
+Solder wires to the battery packs as shown.
+****
+
+CAUTION: Battery packs are made of temperature-sensitive plastic. Try to solder only as short as possible in order to avoid melting the plastic. This could irreversibly damage the pack and lead to connection problems later.
 
 image::battery_pack_soldered_wires.jpg[]
 
 === Soldering finishing
 
+****
+So, congratulations. You did it. You finished soldering. Yay. \o/
+
+Next thing to do is to trim the pins to be as short as 1-1.5 mm.
+****
+
 image::cut_pins_short.jpg[]
+
+****
+Dispose the trash material correctly. Metal, plastic and paper parts can be recycled and should not be put to residual waste.
+****
 
 image::dispose_solder_waste.jpg[]
 
-== Assembly
-image::parts_servos.jpg[]
-image::parts_cables.jpg[]
-image::parts_batteryholder.jpg[]
-
+NOTE: Do not dump the bags. Re-use them or return them to your workshop leader if you do not need them anymore. Save resources.
 
 image::reuse_plastic_bags.jpg[]
+
+
+
+== Assembly
+
+image::multimeter.jpg[]
+
+****
+TO BE CONTINUED.
+****
+
+image::parts_servos.jpg[]
+image::glue_bat_pack_and_motors.jpg[]
+
+image::install_nano_board.jpg[]
+
+
+== Software
+
+=== Installing Arduino IDE
+
+=== Checking out the Code-Repository
+This step is optional.
+
+----
+sudo apt install git
+----
+
+----
+git clone https://github.com/ku3i/Bakiwi.git
+----
+
+=== Connecting the Nano Board to a PC
+
+image::connect_nano_to_pc_via_usb.jpg[]
+
+=== Flashing Firmware
+
+=== Testing the Functions
+
+image::install_nano_board_and_connect_motors.jpg[]
