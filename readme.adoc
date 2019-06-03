@@ -5,10 +5,23 @@ v0.1, 2019-05-20
 :toc:
 
 
-_This is the Bakiwi assembly manual. Following these steps will enable you to build your Bakiwi walking robot from the assembly kit. We encourage everybody to contribute to this project. Please share your ideas, upgrades, schematics, source-code, and tricks._
+_This is the Bakiwi installation manual. With the following steps you can assemble your Bakiwi walking robot from the kit. We encourage everyone to contribute to this project. Please share your ideas, upgrades, schematics, source code and tricks._
 
 image::title.jpg[]
 
+== Motivation
+****
+There is some video links available on how Bakiwi could look like when assembled and how it performs.
+
+video: https://www.youtube.com/watch?v=UyHHptdRnA0[bakiwi robot with lego legs]
+
+video::UyHHptdRnA0[youtube]
+
+video: https://www.youtube.com/watch?v=lXEHFaAaYYs[bakiwi robot with spring steel legs live at xHain hack+makespace]
+
+video::lXEHFaAaYYs[youtube]
+
+****
 
 == Preparation
 
