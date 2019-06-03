@@ -7,6 +7,8 @@ v0.1, 2019-05-20
 
 _This is the Bakiwi assembly manual. Following these steps will enable you to build your Bakiwi walking robot from the assembly kit. We encourage everybody to contribute to this project. Please share your ideas, upgrades, schematics, source-code, and tricks._
 
+image::title.jpg[]
+
 
 == Preparation
 
