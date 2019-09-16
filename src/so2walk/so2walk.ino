@@ -41,6 +41,10 @@
 #define MAX_ANGLE 90
 #define WAIT_MS 20
 
+/* timer variables */
+volatile uint8_t tcount = 0;
+volatile bool    tswtch = false;
+
 /* weights */
 float w11,w12,w21,w22;
 
@@ -95,8 +99,29 @@ void update_weights()
   w21 = -r; w22 = s;
 }
 
+void start_oscillation() {
+  x1 = .0001;
+  x2 = .0;
+}
+
 void setup() {
-  Serial.begin(9600);
+  /* Design of the main loop:
+   * 16Mhz clock, prescaler 64 -> 16.000.000 / 64 = 250.000 increments per second
+   * diveded by 1000 -> 250 increments per ms
+   * hence, timer compare register to 250-1 -> ISR inc ms counter -> 1kHz loop
+   * count to WAIT_MS -> send signal to main loop
+   * configure timer 0:
+   */
+  noInterrupts();                  // disable all interrupts
+  TCCR0A = (1<<WGM01);             // CTC mode
+  TCCR0B = (1<<CS01) | (1<<CS00);  // set prescaler to 64
+  OCR0A = 249;                     // set timer compare register to 250-1
+  TIMSK0 = (1<<OCIE0A);            // enable compare interrupt
+
+  interrupts();                    // enable all interrupts
+
+  /* Setup Serial */
+  Serial.begin(112500);
   
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(LED_1, OUTPUT);
@@ -104,11 +129,6 @@ void setup() {
   pinMode(TACTBUTTON, INPUT_PULLUP);
 
   update_weights();
-}
-
-void start_oscillation() {
-  x1 = .0001;
-  x2 = .0;
 }
 
 void loop() {
@@ -139,8 +159,9 @@ void loop() {
 
   /* read desired phase and create phase shifted motor signals */
   const float phase = 2*readpin(POTI_3) - 1.f;
+
   const float u1 = x1;
-  const float u2 = x2*phase + x1*(1.f - fabs(phase));
+  const float u2 = cos(M_PI*phase)*x1 + x2*sin(M_PI*phase);
 
   /* read desired amplitudes */
   const float amp1 = PREAMP * readpin(POTI_2);
@@ -160,7 +181,20 @@ void loop() {
   digitalWrite(LED_1, u1 >.0);
   digitalWrite(LED_2, u2 >.0);
   
-  /* loop delay */
-  //Serial.println(out_1);
-  delay(WAIT_MS);
+  //Serial.println(tcount);
+
+  /* loop delay, wait until timer signals next 10ms slot is done */
+  while(!tswtch);
+  tswtch = false;
+}
+
+
+/* ISR for Timer Compare Interrupt*/
+ISR(TIMER0_COMPA_vect)
+{
+  TCNT0 = 0; // reset register
+  if (++tcount >= WAIT_MS) {
+    tswtch = true;
+    tcount = 0;
+  }
 }
