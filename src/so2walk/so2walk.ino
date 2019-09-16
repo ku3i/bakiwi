@@ -1,8 +1,8 @@
 /* SO(2)-Walker
  * 
  * written by Matthias Kubisch
- * Version 0.9
- * May 20th, 2019
+ * Version 0.91
+ * Sept 16th, 2019
  * 
  * This walking behavior is based on neural oscillators, so-called SO(2) networks.
  * Two recurrent neurons are coupled with the weights configured as a rotation matrix, 
