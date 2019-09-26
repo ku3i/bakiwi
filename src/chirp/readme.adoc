@@ -2,9 +2,7 @@
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2019-09-25
 
-_This is the Bakiwi Chirp Test manual. With the following you can assemble your a chirping device with only a components._
-
-image::chirp_setup.jpg[]
+_This is the Chirp manual. With the following you can assemble your own bird-like chirping device with only a few components._
 
 === Components
 
@@ -12,6 +10,10 @@ image::chirp_setup.jpg[]
 * Arduino Nano (or compatible board)
 * 10k potentiometer
 * piezo buzzer
+
+
+image::chirp_setup.jpg[]
+
 
 === Assembly
 
