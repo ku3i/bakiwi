@@ -6,7 +6,7 @@
 
 float w11,w12,w21,w22;
 
-float x1 = .0f; 
+float x1 = .0f;
 float x2 = .0f;
 
 float frq = .0;
@@ -25,12 +25,12 @@ float readpin(uint8_t pin) {
 
 
 void update_weights(float val)
-{  
+{
   /* stepsize of oscillator (frequency) */
   const float dp = 3.1415f/(0.1f + 200.f*val);  // pi/8 .. pi/50
 
   /* add non-linearity */
-  const float k = 1.0f + 1.5f*dp; // useful range: 1 + 1dp ... 1 + 2dp 
+  const float k = 1.0f + 1.5f*dp; // useful range: 1 + 1dp ... 1 + 2dp
 
   /* determine self and ring coupling */
   const float s = cos(dp) * k;
@@ -52,11 +52,10 @@ void setup() {
   pinMode(BUZ, OUTPUT);
   pinMode(LED, OUTPUT);
   randomSeed(analogRead(POTI_1));
-  
+
   frq = frq_start;
   update_weights(0.1);
   start_oscillation();
-  delay(1000*20);
 }
 
 
@@ -67,7 +66,7 @@ void loop() {
   /* update oscillator */
   const float y1 = tanh(w11*x1 + w12*x2);
   const float y2 = tanh(w21*x1 + w22*x2);
-  x1 = y1; 
+  x1 = y1;
   x2 = y2;
 
   frq *= decayf;
