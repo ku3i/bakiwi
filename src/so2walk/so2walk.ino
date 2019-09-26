@@ -110,13 +110,13 @@ void setup() {
    * diveded by 1000 -> 250 increments per ms
    * hence, timer compare register to 250-1 -> ISR inc ms counter -> 1kHz loop
    * count to WAIT_MS -> send signal to main loop
-   * configure timer 0:
+   * configure timer 2:
    */
   noInterrupts();                  // disable all interrupts
-  TCCR0A = (1<<WGM01);             // CTC mode
-  TCCR0B = (1<<CS01) | (1<<CS00);  // set prescaler to 64
-  OCR0A = 249;                     // set timer compare register to 250-1
-  TIMSK0 = (1<<OCIE0A);            // enable compare interrupt
+  TCCR2A = (1<<WGM01);             // CTC mode
+  TCCR2B = (1<<CS01) | (1<<CS00);  // set prescaler to 64
+  OCR2A = 249;                     // set timer compare register to 250-1
+  TIMSK2 = (1<<OCIE0A);            // enable compare interrupt
 
   interrupts();                    // enable all interrupts
 
@@ -178,8 +178,8 @@ void loop() {
   }
 
   /* set LED outputs */
-  digitalWrite(LED_1, u1 >.0);
-  digitalWrite(LED_2, u2 >.0);
+  digitalWrite(LED_1, u1 > .0f);
+  analogWrite(LED_2, constrain(u2,0,1)*255);
   
   //Serial.println(tcount);
 
@@ -190,9 +190,9 @@ void loop() {
 
 
 /* ISR for Timer Compare Interrupt*/
-ISR(TIMER0_COMPA_vect)
+ISR(TIMER2_COMPA_vect)
 {
-  TCNT0 = 0; // reset register
+  TCNT2 = 0; // reset register
   if (++tcount >= WAIT_MS) {
     tswtch = true;
     tcount = 0;

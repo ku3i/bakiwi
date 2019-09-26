@@ -2,7 +2,7 @@
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2019-09-25
 
-_This is the Bakiwi Chirp Test manual. With the following you can assemble your a chirping device with only a components.
+_This is the Bakiwi Chirp Test manual. With the following you can assemble your a chirping device with only a components._
 
 image::chirp_setup.jpg[]
 
@@ -19,5 +19,11 @@ Connect the potentiometer as a voltage divider (V+,signal,GND) with 'signal' to 
 Connect the piezo to GND and one of the microcontroller's digital output pins (e.g. D3).
 Flash the program.
 
+
+=== Explanation
+
 The basic mechanism for the simple bird-like sound is to exponentially sweep down the frequency from something aroung 6 KHz to something around 4 KHz.
 The sweep is further modulated by a slower oscillation and all parameters (including waiting times) are randomized to appear more natural and less technical/predictable.
+
+The potentiometer is for regulating the chirps base-frequency.
+
