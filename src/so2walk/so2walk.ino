@@ -1,8 +1,8 @@
 /* SO(2)-Walker
  * 
  * written by Matthias Kubisch
- * Version 0.91
- * Sept 16th, 2019
+ * Version 0.92
+ * Oct 9th, 2019
  * 
  * This walking behavior is based on neural oscillators, so-called SO(2) networks.
  * Two recurrent neurons are coupled with the weights configured as a rotation matrix, 
@@ -39,11 +39,10 @@
 
 #define PREAMP 1.4f
 #define MAX_ANGLE 90
-#define WAIT_MS 20
+#define WAIT_US 20000
 
-/* timer variables */
-volatile uint8_t tcount = 0;
-volatile bool    tswtch = false;
+/* timing */
+unsigned long timestamp = 0;
 
 /* weights */
 float w11,w12,w21,w22;
@@ -105,21 +104,6 @@ void start_oscillation() {
 }
 
 void setup() {
-  /* Design of the main loop:
-   * 16Mhz clock, prescaler 64 -> 16.000.000 / 64 = 250.000 increments per second
-   * diveded by 1000 -> 250 increments per ms
-   * hence, timer compare register to 250-1 -> ISR inc ms counter -> 1kHz loop
-   * count to WAIT_MS -> send signal to main loop
-   * configure timer 2:
-   */
-  noInterrupts();                  // disable all interrupts
-  TCCR2A = (1<<WGM01);             // CTC mode
-  TCCR2B = (1<<CS01) | (1<<CS00);  // set prescaler to 64
-  OCR2A = 249;                     // set timer compare register to 250-1
-  TIMSK2 = (1<<OCIE0A);            // enable compare interrupt
-
-  interrupts();                    // enable all interrupts
-
   /* Setup Serial */
   Serial.begin(112500);
   
@@ -181,20 +165,9 @@ void loop() {
   digitalWrite(LED_1, u1 > .0f);
   analogWrite(LED_2, constrain(u2,0,1)*255);
   
-  //Serial.println(tcount);
+  //Serial.println();
 
   /* loop delay, wait until timer signals next 10ms slot is done */
-  while(!tswtch);
-  tswtch = false;
-}
-
-
-/* ISR for Timer Compare Interrupt*/
-ISR(TIMER2_COMPA_vect)
-{
-  TCNT2 = 0; // reset register
-  if (++tcount >= WAIT_MS) {
-    tswtch = true;
-    tcount = 0;
-  }
+  while(micros() - timestamp < WAIT_US);
+  timestamp = micros();
 }
