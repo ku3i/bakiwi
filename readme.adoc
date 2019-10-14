@@ -25,29 +25,29 @@ video::lXEHFaAaYYs[youtube]
 
 == Preparation
 
-NOTE: Before starting the assembly. Check that you have all the tools and parts in place. We recommend reading this manual once briefly before starting the assembly. Please also have a look on the link:/circuit/so2walker.sch.pdf[schematics] of the board or the board's link:/circuit/so2walker.brd.png[layout].
+NOTE: Before starting the assembly. Check that you have all the tools and parts in place. We recommend reading this manual once briefly before starting the assembly. Please also have a look at the link:/circuit/so2walker.sch.pdf[schematics] of the board or the board's link:/circuit/so2walker.brd.png[layout].
 
 image::01_package.jpg[]
 
 === Prepare Workbench and Tools
 
 ****
-Clean and wipe your workbench and get all the tools needed as denoted in the list or shown on the picture.
+Clean and wipe your workbench and get all the tools needed as denoted in the list or shown in the picture.
 ****
 
 === Recommended Tools
 
-You will need these tools to assemble the _Bakiwi_ robot:
+We recommend these tools to assemble the _Bakiwi_ robot:
 
-* small Phillips screw driver
-* soldering iron with a very fine tip for motor assembly, up to 400°C (regulated) temperature
-* tweezers
+* soldering iron with a very fine tip and solder (0.5mm) and up to 400°C (regulated) temperature
 * flat-nosed pliers
 * side-cutting pliers
 * wire stripper
 * utility knife
 * multimeter
 * sandpaper or files
+* small Phillips screw driver
+* tweezers (optionally)
 * hot glue or superglue (optionally)
 * a box of craft materials, trash or old Lego parts for creating legs and body parts of your robot.
 
@@ -89,24 +89,24 @@ image::batteries_not_included.jpg[]
 
 === Prepare Soldering
 ****
-Prepare your workbench for soldering. Use a fine tip and thin solder.
+Prepare your workbench for soldering. We recommend using a fine tip and thin solder.
 ****
 
 IMPORTANT: Watch your health! Use enough light. Make sure there is fresh air during soldering and not to breath-in the solder vapor.
 
-CAUTION: Soldering irons get REALLY hot. You need to stay focussed and should be careful not to burn yourself or others. When leaving the table or room, switch off the soldering station.
+CAUTION: Soldering irons get REALLY hot. You need to stay focused and should be careful not to burn yourself or others. When leaving the table or room, switch off the soldering station.
 
 
 image::use_fine_solder_tip.jpg[]
 
 ****
-Adjust the soldering station for sufficient heat depending on the solder you use. Some stations show the current temperature, make sure to let the iron pre-heat before starting. If soldering 'feels' very sticky, you might have not enough temperature or the flux in the solder is not sufficient. Also, ensure to always use a clean tip, preferably using a dry cleaner.
+Adjust the soldering station for sufficient heat depending on the solder you use. Some stations show the current temperature, make sure to let the iron pre-heat before starting. If soldering 'feels' very sticky, you might have not the correct temperature (too cold) or the flux in the molten solder has already evaporated. Also, ensure to always use a clean solder tip, preferably using a dry cleaner (metal pot cleaner) as it does not cool down the solder tip (in comparison to a wet sponge) and the cleaning result is generally better.
 ****
 
 image::solder_with_enough_temperature.jpg[]
 
 ****
-Keep the electronic parts together as they are tiny and get lost easily when they accidentally drop down from the table.
+Keep the electronic parts together as they are tiny and get lost easily when they are accidentally dropped from the table.
 ****
 
 image::keep_parts_together.jpg[]
@@ -126,17 +126,17 @@ You can use a breadboard, if available, for stabilizing the pin headers and keep
 image::use_breadboard_if_available.jpg[]
 
 ****
-Solder the pins one after another. After soldering the first pin, double-check for alignment and correct if needed. Otherwise, continue soldering all 30 pins.
+Solder the pins one after another. After soldering the first pin, double-check for alignment and correct it if needed. Otherwise, continue soldering all 30 pins.
 ****
 
 image::solder_nano_pins.jpg[]
 
 ****
-The result should look like this. Sufficient solder looks shiny and volcano-shaped. If it looks like a drop or ball then there is too much solder. You can remove it by cleaning the tip and put the iron again to the pin.
-
+The result should look like this. Sufficient solder looks shiny and volcano-shaped. If it looks like a water drop or ball then there is too much solder. You can remove it by cleaning the tip and put the soldering iron again to the pin.
 Alternatively, use de-soldering braid to remove excessive solder.
-****
 
+If the solder point has a weird shape or _noses_, then there was probably not sufficient flux available in the melting process, use a little _fresh_ solder to make the solder point shiny again.
+****
 
 image::nano_solder_result.jpg[]
 
@@ -417,7 +417,9 @@ For testing, follow these steps:
 * check all knobs are in neutral position
 * switch on
 
-The LEDs should again be blinking periodically. The four knobs modify the properties of this oscillator: Frequency, Phase and Amplitude (2x).
+The LEDs should again be blinking periodically. The four knobs modify the properties of the neural oscillator: Frequency, Phase and Amplitude (2x).
+
+There are four 3-pin headers that allow for connecting motors. In the current version of the code only two of them are sending motor commands (the two next to the USB connector). The others you can use for connecting additional motors or sensors, when you modify or extend your robot or its code.
 
 You find the knob which modifies the _frequency_ in the right upper position when holding the board with the USB connector upwards while looking from the _Nano-Board_ side. Try out modifying the frequency and watch the LEDs blinking accordingly. The blinking LEDs later corresponds to moving motors. So the motors will change direction with the same frequency as shown by the LEDs.
 
@@ -425,7 +427,7 @@ For each motor the oscillation is tapped at two different positions, so that you
 
 When powering-up, your _Bakiwi_ is in _pause_ mode. You can now start the motors by hitting the tactile button. The motors will now begin to move according to the frequency and phaseshift you set.
 
-The other knobs (on the left side) can be used to modify the motors' amplitude. You can either decrease the amplitude by turning them to the right until the motors fully stop or you can increase the amplitude to a certain maximal value by turning it to the left.
+The other two knobs (on the left side) can be used to modify each motor's amplitude. You can either decrease the amplitude by turning them to the right until the motors fully stop or you can increase the amplitude to a certain maximal value by turning them to the left.
 
 Please note that a mixture of large amplitude _and_ high frequency at the same time can probably not be accomplished by the motor since every physical device has some sort of inertia.
 ****
