@@ -349,12 +349,12 @@ Before installing batteries, get your multimeter and check at least for three th
 
 * Use the short circuit detection mode (beep mode) and check whether there is good connection between the battery packs and the board. Measure from the very end (e.g. the spring in the pack) to the wire end soldered to the board. The multimeter should make a beep sound here signaling a proper (low-resistance) connection.
 
-* Next check the four battery cable ends for possible cross connections. There should be none. Remove any short circuits.
+* Next check the four battery cable ends for possible cross connections. There should be none (if you nonetheless find a short circuit between the inner cables, make sure that the power switch is in _off_ position). Remove any short circuits.
 Check (optically) for possible short circuits on all your soldered connections on the motherboard and _Nano-Board_. If unsure, check (electrically) with the multimeter.
 
 * The last thing: Check electrically (!) for potential short circuits between GND, VIN and +5V as denoted on the _Nano-Board_ pins.
 
-Please be careful with this last step and make sure that there is no short circuit (left) as this can destroy components of your robot irreversibly.
+Please be careful with this last step and make sure that there is no short circuit (left) as this can destroy components of your robot irreversibly. In any case, if some component of your robot is getting hot, remove batteries immediately and check for potential problems. Maximally the motors are getting warm after longer use, the rest of the robot should stay at environment temperature.
 ****
 
 === Insert Batteries
@@ -421,7 +421,7 @@ The LEDs should again be blinking periodically. The four knobs modify the proper
 
 There are four 3-pin headers that allow for connecting motors. In the current version of the code only two of them are sending motor commands (the two next to the USB connector). The others you can use for connecting additional motors or sensors, when you modify or extend your robot or its code.
 
-You find the knob which modifies the _frequency_ in the right upper position when holding the board with the USB connector upwards while looking from the _Nano-Board_ side. Try out modifying the frequency and watch the LEDs blinking accordingly. The blinking LEDs later corresponds to moving motors. So the motors will change direction with the same frequency as shown by the LEDs.
+You find the knob which modifies the _frequency_ in the right upper position when holding the board with the USB connector upwards while looking from the _Nano-Board_ side. Try out modifying the frequency and watch the LEDs blinking accordingly. The blinking LEDs corresponds to moving motors later. So the motors will change direction with the same frequency as shown by the LEDs.
 
 For each motor the oscillation is tapped at two different positions, so that you can create patterns that are either more _in-phase_ or _anti-phase_. The right lower knob modifies the _phaseshift_ between those taps. Try out the phase knob and so how you can create different blinking patterns.
 
