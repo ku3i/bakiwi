@@ -399,7 +399,17 @@ Open the _Bakiwi_ firmware's source code in the Arduino IDE (file->open) and hit
 ****
 Remove batteries again and connect the _Nano-Board_ to your computer via USB (mini)-cable. The board should immediately power-up again as you connect the cable.
 ****
+
 image::connect_nano_to_pc_via_usb.jpg[]
+
+=== Selecting Board and Microcontroller
+****
+Next you need to select the target board and processor. The _Nano-Board_ is compatible to Arduino Nano and hosts an 8-bit ATMEGA328p microcontroller. After setting the board via _Tools_ -> _Board_ -> _Arduino Nano_ you also have to select the correct microcontroller and Bootloader combination via _Tools_ -> _Processor_ -> _ATMEGA328P (Old Bootloader)_. If the _old-bootloader_ option is not available in your Arduino IDE you may consider updating to the current version.
+
+Please note: The board uses an USB-to-Serial chip-set called "CH340" which, depending on your operating system, may need some sort of driver to be installed.
+****
+
+image::arduino_IDE.png[]
 
 === Uploading Firmware
 ****
