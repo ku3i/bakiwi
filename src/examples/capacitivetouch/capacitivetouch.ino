@@ -1,20 +1,30 @@
-#include <CapacitiveSensor.h>
+#include "jcl_capsense.h"
 
-CapacitiveSensor cs = CapacitiveSensor(2,12);
 
+jcl::CapSense cap0(2 /*send*/, 8 /*recv*/); //TODO adapt these pins!
+jcl::CapSense cap1(2 /*send*/,12 /*recv*/);
 
 void setup() {
-  cs.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
   Serial.begin(1000000);
-  //cs.set_CS_Timeout_Millis(10);
 }
 
 void loop() {
     long start = micros();
-    long total1 =  cs.capacitiveSensor(30);
 
-    Serial.print(micros() - start);        // check on performance in milliseconds
-    Serial.print("\t");                    // tab character for debug window spacing
-    Serial.println(total1);                // print sensor output 3
-    //delay(20);          
+    float U = cap0.step();
+    float V = cap1.step();
+
+    float dt = 0.001 *(micros() - start);
+    //Serial.print(dt);
+    //Serial.print(" ");
+    Serial.print(50*U);
+    Serial.print(" ");
+    Serial.print(50*V);
+    Serial.print(" ");
+    Serial.println(100*cap0.w);
+
+    float upos = constrain(U, 0,1);
+    analogWrite(11, (uint8_t) 255*upos);
+    digitalWrite(13, fabs(U) > 0.9f);
+    delay(10);
 }
