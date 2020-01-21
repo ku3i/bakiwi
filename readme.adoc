@@ -255,7 +255,7 @@ image::insert_servo_pin_header.jpg[]
 
 === Potentiometers
 ****
-Get the four potentiometers (10 KOhms) and the associated knobs (might have a different color) and insert the knobs in such a way that the shiny metal part of the potentiometer is on the back. When inserting the knobs, make sure the arrow is pointing upwards. Check for correct _neutral_ position (pointing to the top), e.g. when turned fully to the left end stop the arrow should point in the lower left corner and when turned fully to the right end stop, the arrow should also point to the lower left corner
+Get the four potentiometers (10 KOhms) and the associated knobs (might have a different color) and insert the knobs in such a way that the shiny metal part of the potentiometer is on the back. When inserting the knobs, make sure the arrow is pointing upwards. Check for correct _neutral_ position (pointing to the top), e.g. when turned fully to the left end stop the arrow should point in the lower left corner and when turned fully to the right end stop, the arrow should point to the lower right corner.
 ****
 
 image::prepare_potis.jpg[]
