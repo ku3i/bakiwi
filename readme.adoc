@@ -393,6 +393,11 @@ If you have question on using _Git_ (e.g. for other operating systems), please r
 
 ****
 Open the _Bakiwi_ firmware's source code in the Arduino IDE (file->open) and hit the _compile_ button (it looks like a checkmark, it's somewhere in the left upper corner). When compiling works without complains from the IDE then all the code dependencies seem to be fulfilled on your machine and the compiler was able to create the binary code to be run by the microcontroller on the _Nano-Board_.
+The firmware source code file is located in:
+----
+Bakiwi/src/so2walk/so2walk.ino
+----
+
 ****
 
 === Connecting the Nano-Board to a PC
