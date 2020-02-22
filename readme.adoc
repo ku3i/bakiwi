@@ -255,7 +255,7 @@ image::insert_servo_pin_header.jpg[]
 
 === Potentiometers
 ****
-Get the four potentiometers (10 KOhms) and the associated knobs (might have a different color) and insert the knobs in such a way that the shiny metal part of the potentiometer is on the back. When inserting the knobs, make sure the arrow is pointing upwards. Check for correct _neutral_ position (pointing to the top), e.g. when turned fully to the left end stop the arrow should point in the lower left corner and when turned fully to the right end stop, the arrow should also point to the lower left corner
+Get the four potentiometers (10 KOhms) and the associated knobs (might have a different color) and insert the knobs in such a way that the shiny metal part of the potentiometer is on the back. When inserting the knobs, make sure the arrow is pointing upwards. Check for correct _neutral_ position (pointing to the top), e.g. when turned fully to the left end stop the arrow should point in the lower left corner and when turned fully to the right end stop, the arrow should point to the lower right corner.
 ****
 
 image::prepare_potis.jpg[]
@@ -393,6 +393,11 @@ If you have question on using _Git_ (e.g. for other operating systems), please r
 
 ****
 Open the _Bakiwi_ firmware's source code in the Arduino IDE (file->open) and hit the _compile_ button (it looks like a checkmark, it's somewhere in the left upper corner). When compiling works without complains from the IDE then all the code dependencies seem to be fulfilled on your machine and the compiler was able to create the binary code to be run by the microcontroller on the _Nano-Board_.
+The firmware source code file is located in:
+----
+Bakiwi/src/so2walk/so2walk.ino
+----
+
 ****
 
 === Connecting the Nano-Board to a PC
