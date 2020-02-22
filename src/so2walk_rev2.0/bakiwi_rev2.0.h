@@ -15,9 +15,10 @@
 #include "modules.h"
 #include "sensors/rangef.h"
 #include "sensors/motion.h"
-#include "sensors/touch.h"
+#include "sensors/jcl_capsense.h"
 #include "sound/tones.h"
 #include "sound/melodies.h"
+#include "neural_osc.h"
 
 #ifdef round
 #undef round
@@ -43,7 +44,7 @@ const unsigned POTI_FREQ  = A7; // poti for walking frequency
 const unsigned POTI_PHASE = A2; // poti for phase shift between motors
 const unsigned POTI_AMP1  = A6; // amplitude motor 1
 const unsigned POTI_AMP2  = A3; // amplitude motor 2
-const unsigned IRRECV     =  7; // to be removed
+const unsigned BRIGHTNESS =  7; // brightness sensor
 const unsigned BUTTON     =  4; // tactile button
 
 /* actuators */
@@ -57,7 +58,7 @@ const unsigned BUZZER     =  8;
 
 /* sensors*/
 const unsigned TOUCH_SEND =  2;
-const unsigned TOUCH_RCV1 = 13;
+const unsigned TOUCH_RCV1 = 13; //TODO: wait for next revision, cannot be used, because of LED on pin 13
 const unsigned TOUCH_RCV2 = 12;
 const unsigned FLEX_SENS1 = A0;
 const unsigned FLEX_SENS2 = A1;
@@ -69,10 +70,11 @@ namespace constants {
     /* Note: the step size is largely dominated by the ToF sensor.
      * Without it, 10ms are reachable.
      */
-    const unsigned long WAIT_US = 40*1000UL;
+    const unsigned long WAIT_US = 10*1000UL;
     const unsigned MAX_ANGLE = 90; // DEG
     const float    PREAMP = 1.4f;
 }
+
 
 void set_freq(float frq);
 
@@ -148,6 +150,7 @@ public:
     int8_t get_integ(void) const { return integ;}
 };
 
+
 class Lights {
     const uint8_t pin1, pin2;
     uint8_t pwm1, pwm2;
@@ -165,13 +168,12 @@ public:
     }
 
     void step(void) {
-        //analogWrite(pin1, pwm1);
-        //analogWrite(pin2, pwm2);
         led1pwm = pwm1/16;
         led2pwm = pwm2/16;
     }
 
 };
+
 
 class Sound {
     const uint8_t pin;
@@ -182,13 +184,21 @@ public:
     void play_note(unsigned no, unsigned dur_ms) {}
     void play_melody() {
         /* play totoro */
-        switch_on();
-        for (unsigned i = 0; i < 6; ++i) {
-          set_freq(tonetable[88-totoro[i]]);
-          delay(200);
+
+        for (unsigned i = 0; i < 9; ++i) {
+          if (melodies::totoro[0][i] != 0) {
+            switch_on();
+            set_freq( tonetable[88-melodies::totoro[0][i]] );
+          } else switch_off();
+
+          delay(2000/melodies::totoro[1][i]);
         }
-        switch_off();      
-        set_freq(16000);
+        reset();
+    }
+
+    void reset(void) {
+      buzzer_on = false;
+      set_freq(16000);
     }
 
     void step() {
@@ -197,8 +207,8 @@ public:
         //set_freq(tonetable[sel]);
     }
 
-    void switch_on(void) { on = true; }
-    void switch_off(void) { on = false; }
+    void switch_on(void) { buzzer_on = true; }
+    void switch_off(void) { buzzer_on = false; }
 };
 
 
@@ -212,12 +222,15 @@ public:
     Sound buzzer;
     Motionsensor motion;
     Rangefinder rangef;
-    Touchsensor touch;
+    jcl::CapSense cap;
 
     float freq  = .0f,
           amp1  = .0f,
           amp2  = .0f,
-          phase = .0f;
+          phase = .0f,
+          brgt  = .0f,
+          temp  = .0f,
+          touch = .0f;
 
     const uint8_t max_a = constants::MAX_ANGLE;
 
@@ -228,9 +241,11 @@ public:
     , buzzer(io::BUZZER)
     , motion(Wire)
     , rangef()
-    , touch(io::TOUCH_SEND, io::TOUCH_RCV1, io::TOUCH_RCV2)
+    , cap(io::TOUCH_SEND, io::TOUCH_RCV2)
     {
+        pinMode(io::BRIGHTNESS, INPUT_PULLUP); // reduce the resistance in voltage divider
         read_potentiometers();
+        buzzer.reset();
     }
 
     /* must be called during setup() */
@@ -255,16 +270,15 @@ public:
             lights.set_pwm( to_pwm(l1), to_pwm(l2) );
     }
 
-    void step(void)
+    void step(NeuralOscillator const& osc)
     {
-        read_potentiometers();
         if (button.step()) {
             paused = !paused; // toggle pause on button release
             if (paused) {
                 motors.detach();
             } else {
                 motors.attach();
-                //TODO restart_oscillation();
+                osc.restart();
             }
         }
 
@@ -276,7 +290,11 @@ public:
         /* read sensors */
         motion.step();
         rangef.step();
-        //touch.step();
+
+        touch = cap.step();
+
+        read_potentiometers();
+        read_brightness();
     }
 
     bool is_paused(void) const { return paused; }
@@ -285,18 +303,25 @@ public:
 
     uint8_t to_pwm(float val) { return round(clip(val, 0.f, 1.f) * 255u); }
 
-    void read_potentiometers(void) {
-        amp1 = constants::PREAMP * readpin(io::POTI_AMP1);
-        amp2 = constants::PREAMP * readpin(io::POTI_AMP2);
+    void read_potentiometers(float ampl_gain = 1.f/*TODO use as damping*/)
+    {
+        const float lev = readpin(io::POTI_AMP1)*ampl_gain;
+        const float dif = 2*readpin(io::POTI_AMP2);
+
+        amp1 = constants::PREAMP * lev * clip(dif, 0.f, 1.f);
+        amp2 = constants::PREAMP * lev * clip(2.f - dif, 0.f, 1.f);
+
         freq = readpin(io::POTI_FREQ);
         phase = 2 * readpin(io::POTI_PHASE) - 1.f;
     }
 
+    void read_brightness(void) {
+      brgt = digitalRead(io::BRIGHTNESS);
+    }
+
     float get_temperature(void) const { return motion.tm; }
-    
-
-
 };
+
 
 /* ISR for Timer 2 Compare Interrupt */
 ISR(TIMER2_COMPA_vect)
@@ -311,8 +336,10 @@ ISR(TIMER2_COMPA_vect)
   digitalWrite(11, pwmcnt < led2pwm);
 }
 
+
 /* prescaler table */
 constexpr uint16_t presc[8] = {0,1,8,32,64,128,256,1024};
+
 
 void set_timer_2(uint8_t pre, uint8_t ocr) {
     noInterrupts();       // disable all interrupts
@@ -322,8 +349,9 @@ void set_timer_2(uint8_t pre, uint8_t ocr) {
     TIMSK2 = (1<<OCIE2A); // enable compare interrupt
     interrupts();         // enable all interrupts
 }
- 
-/* determine the timer settings for desired frequency */ 
+
+
+/* determine the timer settings for desired frequency */
 void set_freq(float frq)
 {
   frq = clip(frq, 31, 20000);

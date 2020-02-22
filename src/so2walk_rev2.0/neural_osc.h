@@ -8,7 +8,7 @@
  +---------------------------------*/
 
 /* Description:
- *  
+ *
  * Neural-SO(2)-Oscillator.
  * The theoretical basis can be found in this paper:
  * 'SO(2)-Networks as Neural Oscillators' by Frank Pasemann, Manfred Hild and Keyan Zahedi.

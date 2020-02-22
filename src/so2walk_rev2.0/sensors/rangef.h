@@ -13,7 +13,7 @@ public:
 
     void init(void) {
         sensor.init();
-        sensor.setTimeout(50);
+        sensor.setTimeout(1);
         /* Start continuous back-to-back mode,
          * take readings as fast as possible. */
         sensor.startContinuous();
@@ -22,8 +22,12 @@ public:
 
     void step(void) {
         const auto t = sensor.readRangeContinuousMillimeters();
-        dx = min(t,2000);
-        //if (sensor.timeoutOccurred()) { }
+        if (65535 != t)         // if not timed-out
+            dx = min(t,1200);
+
+        /* note: out of range value is 8190
+           but sensor can measure slightly above 1200
+         */
     }
 
 };

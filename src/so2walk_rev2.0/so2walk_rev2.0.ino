@@ -1,6 +1,6 @@
 /// Bakiwi ///
 
-/*---------------------------------+ 
+/*---------------------------------+
  | Matthias Kubisch                |
  | kubisch@informatik.hu-berlin.de |
  | software version 0.01           |
@@ -10,12 +10,12 @@
 
 /* DESCRIPTION.
  * This walking behavior is based on neural oscillators, so-called SO(2) networks.
- * Two recurrent neurons are coupled with the weights configured as a rotation matrix, 
+ * Two recurrent neurons are coupled with the weights configured as a rotation matrix,
  * thus forming an approximated sin/cos waveform pair.
- * Based on the core oscillation, the motors are fed by this pattern generators' signals 
+ * Based on the core oscillation, the motors are fed by this pattern generators' signals
  * which are mixed for adjusting phaseshift and amplified by readings from potentiometers.
- * 
- * WARNING: Do NOT connect motors when using power from USB-port only. 
+ *
+ * WARNING: Do NOT connect motors when using power from USB-port only.
  * This might overload the supply voltage of your computers USB port.
  */
 
@@ -43,7 +43,7 @@ void setup() {
   osc.restart();
 
   /* play totoro */
-  board.buzzer.play_melody();
+  //board.buzzer.play_melody();
 }
 
 void loop()
@@ -52,26 +52,28 @@ void loop()
   while(micros() - timestamp < (bakiwi::constants::WAIT_US));
   unsigned long dt = micros() - timestamp;
   timestamp = micros();
-  
+
   /* begin execution of step functions */
-  board.step();
- 
+  board.step(osc);
+
   /* propagate neural oscillator */
   osc.set_frequency(board.freq);
   osc.step();
-  
+
   /* create phase shifted motor signals */
   const float u1 = osc.x1;
   const float u2 = osc.get_phase_shifted_x1(board.phase);
 
   board.set_motors(u1, u2);
   board.set_lights(u1, u2);
-  
- /*
-  Serial.print(dt); Serial.print(" ");
+
+
+  Serial.print(dt/1000); Serial.print(" ");
   Serial.print(0.1f*board.motion.gx); Serial.print(" ");
   Serial.print(board.rangef.dx); Serial.print(" ");
-  */
+  Serial.print(board.brgt); Serial.print(" ");
+  Serial.print(board.touch); Serial.print(" ");
+
   Serial.println();
-  
+
 }
