@@ -141,10 +141,10 @@ void loop() {
 
   /* read desired amplitudes */
   const float lev = readpin(POTI_AMP1)*ampl_gain;
-  const float dif = readpin(POTI_AMP2);
+  const float dif = 2*readpin(POTI_AMP2);
   
-  const float amp1 = PREAMP * lev * dif;
-  const float amp2 = PREAMP * lev *(1.f - dif);
+  const float amp1 = PREAMP * lev * clip(dif, 0.f, 1.f);
+  const float amp2 = PREAMP * lev * clip(2.f - dif, 0.f, 1.f);
 
   /* calc motor outputs */
   const uint8_t out_1 = constrain(round( u1*amp1*MAX_ANGLE ) + MAX_ANGLE, 0, 2*MAX_ANGLE);

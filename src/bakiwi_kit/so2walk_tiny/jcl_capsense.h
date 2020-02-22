@@ -20,13 +20,13 @@ public:
   const uint8_t NREAD = 8; /* each reading approx. takes 0.3 ms */
   const unsigned timeout_ms = 2000; /* 2000 is default */
   const float eta = 0.005f;
-  const float eta_w = .000001;
+  const float eta_w = .0000005;
   const float lp = 0.1f;
 
 
   CapSense(uint8_t sendpin, uint8_t recvpin)
   : cs(sendpin, recvpin)
-  , y(), w(0.1f), b()
+  , y(), w(0.01f), b()
   {
     cs.set_CS_AutocaL_Millis(0xFFFFFFFF);
     cs.set_CS_Timeout_Millis(timeout_ms);
@@ -44,8 +44,8 @@ public:
     
     /* decrease weight w when amp is near saturation,
        or increase w when amp is too lower */
-    if (fabs(y) > .9f) w *= 1-eta_w;
-    if (fabs(y) < .1f) w *= 1+eta_w;
+    if (fabs(y) > .6f) w *= 1-eta_w;
+    if (fabs(y) < .4f) w *= 1+eta_w;
 
     return y;
   }
