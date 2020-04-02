@@ -1,7 +1,7 @@
 = Bakiwi Assembly Documentation
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.2, 2020-04-02
-:imagesdir: ./documents/bakiwi_dev0/img
+:imagesdir: ./documents/manual/img
 :toc: macro
 
 _This is the Bakiwi assembly manual. With the following steps you can assemble your Bakiwi walking robot from the kit. We encourage everyone to contribute to this project. Please share your ideas and experiences, upgrades and schematics, source code and tricks._
@@ -451,7 +451,7 @@ image::install_nano_board_and_connect_motors.jpg[]
 
 == Assembly
 ****
-We're sorry. The assembly manual for the development version of Bakiwi ("SO(2)Walker") ends here. How you create your robot's body is at the moment up to you for this version. However, the given pictures suggest how you can proceed. Try fixing the motors with double-sided tape first and try mounting them in some different angles. If you've found a working (and walking) solution then you may use permanent glue to attach the battery packs to the motors. The board can either by temporarily mounted with a rubber band or fixated with hot glue. Also using the surplus screws inside the motors' packaging is an option. 
+We're sorry. The assembly manual for the development version of Bakiwi ("SO(2)Walker") ends here. How you create your robot's body is at the moment up to you for this version. However, the given pictures suggest how you can proceed. Try fixing the motors with double-sided tape first and try mounting them in some different angles. If you've found a working (and walking) solution then you may use permanent glue to attach the battery packs to the motors. The board can either by temporarily mounted with a rubber band or fixated with hot glue. Also using the surplus screws inside the motors' packaging is an option.
 
 Let us know which solution works best for you.
 
