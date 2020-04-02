@@ -1,0 +1,19 @@
+= Bakiwi Firmware Help
+Doc Writer <kubisch@informatik.hu-berlin.de>
+v0.1, 2020-04-02
+:imagesdir: ./img
+:toc:
+
+_This is the Bakiwi Kit Firmware Help. Depending on the hardware revision you have to choose between different software versions._
+
+All Bakiwi Firmware is free/libre open-source software. The firmware is currently written in C/C++ for the Arduino framework and can be deployed using the Ardunio IDE.
+
+* so2walk
+* bakiwi_kit
+* bakiwi_sen (dev)
+* plops (dev)
+
+
+_ (dev) means this firmware is still under heavy development and may be subject to larger changes.
+
+
