@@ -1,0 +1,30 @@
+= Bakiwi
+Doc Writer <kubisch@informatik.hu-berlin.de>
+v0.1, 2020-04-02
+:imagesdir: ./documents/
+
+_Welcome to the Bakiwi project._
+
+image::logo/bakiwi_header.png[]
+
+== Introduction
+****
+
+There are some video links available on how _Bakiwi_ could look like when assembled and how it performs:
+
+* link:https://www.youtube.com/watch?v=UyHHptdRnA0[Ministy of Silly Walks]
+* link:https://www.youtube.com/watch?v=r7zon1IOzuM[Pulling Things]
+* link:https://www.youtube.com/watch?v=ixKAcRevgqk[Bakiwicalypse]
+* link:https://www.youtube.com/watch?v=EbDHLbfVccA[Human Sensing]
+
+
+link:./documents/[Click here] for viewing the assembly manual for Bakiwi's first Version (so-called "SO(2)Walker").
+
+
+For information on how the development is continueing, you have a look on our link:https://hackaday.io/project/169268-bakiwi-robot[hackaday.io page]
+
+****
+
+
+
+
