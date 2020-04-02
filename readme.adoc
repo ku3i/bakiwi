@@ -21,6 +21,7 @@ video: https://www.youtube.com/watch?v=lXEHFaAaYYs[bakiwi robot with spring stee
 
 video::lXEHFaAaYYs[youtube]
 
+If you like, visit our link:https://hackaday.io/project/169268-bakiwi-robot[hackaday page]
 ****
 
 == Preparation
