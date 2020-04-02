@@ -3,7 +3,7 @@ Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-04-02
 :imagesdir: ./documents/
 
-image::./logo/bakiwi_header.png[Bakiwi Logo, 1000,334]
+image::./logo/bakiwi_header.png[Bakiwi,800,267]
 
 Welcome. Bakiwi is a small walking robot with only two motors that comes as a kit and is easy to build. Every Bakiwi is unique. You can freely choose how it will look and behave. Furthermore, you can easily change the robot's walking style with four knobs mounted on your Bakiwi's body. Programming is initially not required, but if you like to modify the firmware and add some nice features.
 
