@@ -10,10 +10,10 @@ All Bakiwi Firmware is free/libre open-source software. The firmware is currentl
 
 * so2walk
 * bakiwi_kit
-* bakiwi_sen (dev)
-* plops (dev)
+* bakiwi_sen (*)
+* plops (*)
 
 
-_ (dev) means this firmware is still under heavy development and may be subject to larger changes.
+_(*)this firmware is still under heavy development and may be subject to larger changes._
 
 
