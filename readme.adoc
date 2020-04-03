@@ -20,6 +20,7 @@ There are some video links available on how _Bakiwi_ could look like when assemb
 * link:https://www.youtube.com/watch?v=r7zon1IOzuM[Pulling Things]
 * link:https://www.youtube.com/watch?v=ixKAcRevgqk[Bakiwicalypse]
 * link:https://www.youtube.com/watch?v=EbDHLbfVccA[Human Sensing]
+* link:https://youtu.be/psynHG6JsZE[Workshop CCCamp19]
 ****
 
 == Assembly Manual
