@@ -9,22 +9,23 @@ Welcome. Bakiwi is a small walking robot with only two motors that comes as a ki
 
 The Bakiwi Robot is perfectly suited for teaching robotics to kids and youths. We use Bakiwi in many workshops and the builders are always amazed when their robot starts hopping. While having fun, many skills and technical experience is acquired.
 
+For information on ongoing developments, you might want to follow us on our link:https://hackaday.io/project/169268-bakiwi-robot[hackaday.io page]
 
-== Introduction
+
+== Videos
 ****
-
 There are some video links available on how _Bakiwi_ could look like when assembled and how it performs:
 
-* link:https://www.youtube.com/watch?v=UyHHptdRnA0[Ministy of Silly Walks]
+* link:https://www.youtube.com/watch?v=UyHHptdRnA0[Ministry of Silly Walks]
 * link:https://www.youtube.com/watch?v=r7zon1IOzuM[Pulling Things]
 * link:https://www.youtube.com/watch?v=ixKAcRevgqk[Bakiwicalypse]
 * link:https://www.youtube.com/watch?v=EbDHLbfVccA[Human Sensing]
+****
 
+== Assembly Manual
 
-Follow this link for viewing the link:https://github.com/ku3i/Bakiwi/tree/master/documents[assembly manual] for Bakiwi's first Version (so-called "SO(2)Walker").
-
-
-For information on how the development is continueing, you have a look on our link:https://hackaday.io/project/169268-bakiwi-robot[hackaday.io page]
+****
+Follow this link to read the link:https://github.com/ku3i/Bakiwi/tree/master/documents[assembly manual] for Bakiwi's first version, so-called "SO(2)Walker".
 
 ****
 
