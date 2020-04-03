@@ -29,3 +29,4 @@ Follow this link to read the link:https://github.com/ku3i/Bakiwi/tree/master/doc
 
 ****
 
+image:./fotos/bakiwi_kit.jpg[Bakiwi]
