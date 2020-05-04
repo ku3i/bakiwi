@@ -52,9 +52,9 @@ toc::[]
 === Werkzeuge
 Für das Löten der Bakiwi-Elektronik benötigst du folgende Werkzeuge:
 
-* Lötkolben (oder Lötstation) feiner Spitze
-* Lötzinn (Dicke 0.5mm mit integriertem Flussmittel empfohlen)
-* Messingwolle mit Behälter ("Trockenreiniger"), alternativ ein angefeuchtetes Schwämmchen)
+* Lötkolben (oder Lötstation) mit dünner Löt-Spitze
+* Lötzinn (empfohlen: Dicke 0.5--0.75mm mit integriertem Flussmittel, bleifrei)
+* Messingwolle mit Behälter ("Trockenreiniger"), alternativ ein angefeuchtetes Schwämmchen
 * Seitenschneider oder Knipszange
 * Multimeter
 
@@ -77,7 +77,11 @@ Lege alle Kleinteile evtl. in ein Gefäß, sodass dir keines verloren gehen kann
 image:./00_preparation/04_put_parts_in_container.jpg[width=49%]
 image:./00_preparation/05_get_pcb.jpg[width=49%]
 
-Schalte die Lötstation ein und überprüfe die eingestellte Temperatur und stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns (Aufschrift beachten)
+Schalte die Lötstation ein und überprüfe die Temperaturanzeige (und wenn sie einstellbar ist) stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns ein (Aufschrift beachten). Wenn du dir unsicher bist beginne mit 330° (abhängig von der Leistung der Lötstation ist mitunter eine höhere Temperatur nötig). Wenn sich das Löten _klebrig_ handhabt dann kann evtl. die Temperatur falsch sein.
+
+=== Nimm dir Zeit
+
+Das Zusammenlöten deines Bakiwis erfordert Ruhe und Konzentration. Die benötigte Zeit ist von Mensch zu Mensch unterschiedlich und sehr vom Vorwissen abhängig. Absolute Neulinge sollte 2 Stunden für das Löten einplanen, Profis schaffen das mitunter in 30 Minuten.
 
 :numbered:
 
