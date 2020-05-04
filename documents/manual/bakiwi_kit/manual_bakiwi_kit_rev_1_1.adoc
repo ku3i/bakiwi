@@ -1,0 +1,412 @@
+=  Bakiwi Kit Bauanleitung
+Doc Writer <kubisch@informatik.hu-berlin.de>
+v0.1, 2020-05-04
+
+:imagesdir: ./img/
+//:iconsdir: ./icon
+//:favicon: {iconsdir}/favicon.png
+:toc:
+:toc-placement!:
+:numbered:
+:numbered!:
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+image::./bakiwi_logo_1024.png[]
+
+
+
+// todo add detail fotos of components
+// schlussfoto unterseite.. alle pins gekürzt
+
+////
+TODO
+	+ F.A.Q. / Troubleshooting
+	+ split to separate documents (electr, mechanics, usage,...)
+	+ find nice soldering tutorial
+	+ add link to differen languages
+	+ check gleicher Duktus DU-Form (aufforderung)
+	+ wo ist platz für eine Lötpause
+	+ wie sind die erwarteten Zeiten
+	+ describe schematics, boardlayout
+	+ add to each part an explanation, schematics vs. pcb, vs symbol
+	+ create printable version:
+	https://github.com/asciidoctor/asciidoctor-pdf/blob/master/docs/theming-guide.adoc
+////
+
+
+toc::[]
+
+
+= Elektronik-Löten
+:imagesdir: ./img/01_electronics/
+
+== Vorbereitung
+
+=== Werkzeuge
+Für das Löten der Bakiwi-Elektronik benötigst du folgende Werkzeuge:
+
+* Lötkolben (oder Lötstation) feiner Spitze
+* Lötzinn (Dicke 0.5mm mit integriertem Flussmittel empfohlen)
+* Messingwolle mit Behälter ("Trockenreiniger"), alternativ ein angefeuchtetes Schwämmchen)
+* Seitenschneider oder Knipszange
+* Multimeter
+
+image:./00_preparation/01_required_tools.jpg[width=49%]
+image:./00_preparation/02_fine_tip_and_solder.jpg[width=49%]
+
+[NOTE]
+====
+Falls du noch gar keine Erfahrungen mit Löten hast, dann empfehlen wir dir vorher ein Einführungsvideo oder Tutorial anzuschauen um schon vorab eine ungefähre Vorstellung vom Löten zu entwickeln. Noch besser ist es, wenn du den Bausatz mit jemand anderem zusammen aufbaust, der bereits ein wenig Löten kann.
+====
+
+=== Bauteile
+Überprüfe alle Bauteile auf Vollständigkeit. Zusätzlich zu den gezeigten Teilen hast du ggf. Materialstücke beiligen, welches sich für die Fühler deines Bakiwi eignet, z.B. Gitarrensaite.
+// Tabelle mit Bauteilen
+
+image:./00_preparation/03_check_electronic_parts.jpg[]
+
+Lege alle Kleinteile evtl. in ein Gefäß, sodass dir keines verloren gehen kann. Nimm dir zuerst die Bakiwi-Platine und legen sie vor dir hin. Die _Oberseite_ der Platine ist die mit den Bauteilbeschriftungen. Alle Bauteile werden nun nach und nach in einzeln erklärten Schritten auf der Oberseite eingesteckt und auf der _Unterseite_ festgelötet. Die beste Übereinstimmung mit den Bildern dieser Anleitung hast du, wenn du die Platine so drehst, dass du den `Bakiwi`-Schriftzug lesen kannst und sie mit der Beschriftung `POWER` zu dir gedreht ist und `PAUSE` nach oben zeigt.
+
+image:./00_preparation/04_put_parts_in_container.jpg[width=49%]
+image:./00_preparation/05_get_pcb.jpg[width=49%]
+
+Schalte die Lötstation ein und überprüfe die eingestellte Temperatur und stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns (Aufschrift beachten)
+
+:numbered:
+
+== Widerstände
+Nun nimm dir die Widerstände zur Hand. Es gibt _einen_ blauen Widerstand und _zwei_ in beige. Beginne damit das Papier an jeweils beiden Enden des Widerstands abzuziehen.
+
+image:./01_resistors/01_resistors_prepare.jpg[width=49%]
+image:./symbols/resistor.png[width=49%]
+
+Nun biege die beiden Draht-Enden mit deinen Fingern direkt an ihrem Ursprung um, sodass sie beide in dieselbe Richtung zeigen und sich die beiden Drähte parallel gegenüberstehen. Der blaue Widerstand hat die Bezeichnung `R3`. Suche nach dem abgebildeten Widerstands-Symbol auf der Platine, es befindet sich unmittelbar unter dem `Bakiwi`-Schriftzug. Setze ihn wie auf dem Bild gezeigt auf der Platine ein. Ein Widerstand besitzt _keine_ Polarität, d.h. hierbei spielt es keine Rolle wie herum du diesen einsetzt.
+
+image:./01_resistors/08_resistors_bend.jpg[width=49%]
+image:./01_resistors/02_resistors_position.jpg[width=49%]
+
+Drehe die Platine nun vorsichtig um während du das soeben eingesetzte Bauteil mit den Fingern festhältst. Beginne nun damit die Drahtenden auf der Platine festzulöten. Achte dabei darauf den Draht und die lochförmige Lötfläche gleichermaßen aufzuheizen während du das Lötzinn hinzufügst.
+
+image:./01_resistors/03_resistors_inserted.jpg[width=49%]
+image:./01_resistors/04_resistors_soldering.jpg[width=49%]
+
+Entferne den überstehenden Draht, indem du ihn mit einer geeigneten Zange (z.B. Seitenschneider) abknipst. Entferne dabei den Draht möglichst knapp über deiner Lötstelle ohne diese zu beschädigen.
+
+image:./01_resistors/05_resistors_cutting.jpg[width=49%]
+image:./01_resistors/09_resistors_cutting.jpg[width=49%]
+
+Nun folgen die beiden anderen Widerstände `R1` und `R2`. Sie werden links und rechts vom Schriftzug angebracht. Hierbei ist die Reihenfolge unerheblich, du kannst auch beide gleich zusammen einbauen. Die Arbeitsschritte sind diegleichen wie beim ersten Widerstand.
+
+image:./01_resistors/06_resistors_repeat.jpg[width=49%]
+image:./01_resistors/07_resistors_done.jpg[width=49%]
+
+*Gratulation.* Du hast den ersten Schritt gemeistert. Vergleiche dein Ergebnis mit dem Bild aus dieser Anleitung.
+
+== Kondensator
+Als nächstes ist der Kondensator an der Reihe. Suche nach dem kleinen orange-farbenen Bauteil in Form einer Linse. Die Position auf der Platine ist diesesmal weiter zum anderen Ende bei der Markierung `C1`. Schaue auf das abgebildete Symbol.
+
+image:./02_capacitor/01_capacitor_prepare.jpg[width=49%]
+image:./symbols/capacitor.png[width=49%]
+
+So wie eben bei den Widerständen wird der Kondensator von oben in die Platine gesteckt und von der Rückseite festgelötet.
+
+image:./02_capacitor/02_capacitor_detail.jpg[width=49%]
+image:./02_capacitor/03_capacitor_position.jpg[width=49%]
+
+Nach dem Löten kannst du hier ebenfalls die überstehenden Draht-Enden abzwicken.
+
+image:./02_capacitor/04_capacitor_soldering.jpg[width=49%]
+image:./02_capacitor/05_capacitor_cutting.jpg[width=49%]
+
+*Geschafft*. Dies war das Ende deiner Aufwärmrunde. Denn jetzt wird es eine Idee kniffeliger.
+
+
+== Schaltkreis-Sockel
+Der Schaltkreis-Sockel hat ganze 14 Kontakte und das heißt für Dich, dass du Deine Lötfertigkeiten jetzt richtig trainieren kannst. Denn alle 14 Lötstellen sind identisch.
+
+image:./03_socket/01_socket_prepare.jpg[width=49%]
+image:./symbols/socket.png[width=49%]
+
+Die Position des Sockels auf der Platine kannst du nicht übersehen. Der Sockel hat allerdings eine kleine Kerbe und diese sollte wie auf der Platine gekennzeichnet nach vorn zeigen.
+
+image:./03_socket/02_socket_detail.jpg[width=49%]
+image:./03_socket/03_socket_position.jpg[width=49%]
+
+Achte beim Löten darauf, dass du zunächst erst eine Ecke und dann die gegenüberliegende Ecke anlötest, falls du den Sockel noch ein wenig tarieren möchtest.
+
+image:./03_socket/04_socket_soldering_start.jpg[width=49%]
+image:./03_socket/05_socket_soldering_done.jpg[width=49%]
+
+*Tada*. Du hast nun bereits 22 Lötstellen auf der Bakiwi-Platine gesetzt. Wenn du bisher nicht viel gelötet hast, solltest du spätestens jetzt den Dreh gut 'raushaben.
+
+
+== Taster
+Der Taster wird and der Stelle mit der Markierung `PAUSE` eingesetzt. Wenn du den Taster spielend leicht einsetzen kannst _ohne_ die Beinchen zu biegen ist er auch automatisch richtig herum. Mitunter hörst du ein leises Knackgeräusch, wenn der Taster einrastet.
+
+image:./04_button/01_button_prepare.jpg[width=49%]
+image:./symbols/button.png[width=49%]
+
+[IMPORTANT]
+====
+Die Lötstifte des Tasters sind ein wenig spitz, achte beim Ensetzten des Tasters auf deine Finger. Nach dem Einlöten solltest du die Spitzen mit der Zange entfernen.
+====
+
+image:./04_button/02_button_position.jpg[width=49%]
+
+
+== Spannungswandler
+Das nächste Bauteil wird etwas schwieriger. Halte zunächst nach dem abgebildeten Symbol `VREG` auf der Platine Ausschau, es ist knapp über dem orangenen Kondensator zu finden und sieht aus wie ein angeschnittener Kreis.
+
+image:./05_vreg/01_vreg_prepare.jpg[width=49%]
+image:./symbols/vreg.png[width=49%]
+
+*Achtung!* Jetzt wird es etwas fummelig. Der _Spannungswandler_ hat drei dünne Beinchen die superdicht aneinander liegen. Damit du den Spannungswandler einsetzen kannst, muss das mittlere Bein etwas in Richtung der Rundung umgebogen werden, sodass die Enden der Drähte ein kleines Dreieck aufspannen. Du kannst eine Pinzette oder einen Bleistift zur Hilfe nehmen oder es vorsichtig mit deinem Fingernagel probieren.
+
+image:./05_vreg/02_vreg_bending.jpg[]
+
+Die richtige Anordnung der Beinchen ist bei diesem Bauteil entscheidend für seine korrekte Funktion. Achte daher darauf, dass die Form des Bauteils mit der auf der Platine abgebildeten Zeichnung übereinstimmt. Setze den Spannungwandler ein und drücke ihn wie abgebildet Stück für Stück weiter hinein. Dabei wird sich das mittlere Beinchen noch weiter verbiegen -- was hierbei in Ordnung ist.
+
+image:./05_vreg/04_vreg_insert_1.jpg[width=49%]
+image:./05_vreg/05_vreg_insert_2.jpg[width=49%]
+
+Wenn der Spannungswandler bis auf die Platine gedrückt ist sollte er kaum 1mm höher sein als der Schaltkreissockel. Nun löte die drei Beine wie gehabt fest und kürze die Drähte nach dem Löten mit der Zange. Du wirst feststellen, dass die Lötstellen diesmal sehr dicht beieinander sind. Konzentriere dich gut, damit kein Kurzschluss entsteht.
+
+image:./05_vreg/06_vreg_insert_3.jpg[width=49%]
+image:./05_vreg/03_vreg_position.jpg[width=49%]
+
+*Gut gemacht*. Jetzt wird das Löten ersteinmal wieder etwas einfacher, versprochen.
+
+
+== Batteriekabel-Buchsen
+
+image:./06_batcon/01_batcon_prepare.jpg[width=49%]
+image:./symbols/batcon.png[width=49%]
+
+Setze nun die zwei weißen Batteriebuchsen bei den Markierungen `BAT1` und `BAT2` ein. Achte hierbei darauf, dass du sie _genau_ wie auf der Platine abgebildet einsetzt. Die kleinen Lücken und Kerben an den Buchsen sind auch auf der Platine abgebildet. Die korrekte Ausrichtung ist hier sehr wichtig!
+
+image:./06_batcon/02_batcon_position.jpg[width=49%]
+image:./06_batcon/03_batcon_soldering.jpg[width=49%]
+
+Mit ein wenig Geschick kannst du beide Buchsen im gleichen Arbeitsgang einsetzen und festlöten. Auch hier bietet es sich an, zunächst ein Beinchen festzulöten und nochmal die Ausrichtung zu korrigieren falls nötig.
+
+[CAUTION]
+====
+Achtung! Vergleiche an dieser Stelle bitte nocheinmal genau deine Platine mit den abgebildeten Fotos. Eine verkehrtherum eingelötete Battierbuchse führt bei Anschluss der Batterie später zu einer Verpolung und endet möglicherweise in der nicht-reversiblen Zerstörung von Teilen deines Bakiwi. Daher schau lieber zweimal hin.
+====
+
+
+== An/Aus-Schalter
+
+Weiter geht es mit dem Einsetzen des An/Aus-Schalters. Dieser ist blau/weiß und wird auf der Platine bei der Markierung `POWER` platziert. Wichtig ist hierbei, dass das weiße Teil Richtung `off` zeigt. Prinzipiell kannst du den Schalter auch andersherum einlöten, er funktioniert in beide Richtungen gleichermaßen. Stelle bloß sicher, dass er in der `off`-Position ist, d.h. der Bakiwi ausgeschaltet ist, wenn wir später die Batterien einlegen.
+
+image:./07_switch/01_switch_prepare.jpg[width=49%]
+image:./symbols/switch.png[width=49%]
+
+[CAUTION]
+====
+Zuviel Hitze lässt den Schalter schmilzen und kann ihn unbrauchbar machen, daher achte beim Löten darauf die Stift und die Lötflächen stehts gleichzeitig aufzuheizen, damit der Lötvorgang kurz und effektiv ist.
+====
+
+image:./07_switch/02_switch_position.jpg[width=49%]
+image:./07_switch/03_switch_soldering.jpg[width=49%]
+
+Die Lötstifte sind recht lang und sollten nach dem Festlöten ein wenig gekürzt werden. Das Material der Schalterstifte ist auch dicker als bisher, sodass du mitunter etwas mehr Kraft benötigst.
+
+
+== Stiftleisten
+
+Widme dich nun den drei Stiftleisten. Die beiden einreihigen Stiftleisten (1x3) werden mit dem kurzen Ende von oben in die Platine bei `MOT1` und `MOT2` eingesteckt und wie gehabt auf der Rückseite festgelöten. An ihnen werden später die Motoren deines Bakiwi angeschlossen.
+
+image:./08_pinh/01_pinh_prepare.jpg[width=49%]
+image:./symbols/pinh.png[width=49%]
+
+Am besten setzt du beide Stiftleisten zusammen ein, drehst dann die Platine und stellst sie wie in der Abbildung gezeigt auf die noch etwas wackeligen Stiftleisten. Achte darauf, dass die Stifte möglichst senkrecht zur Platine stehen. Wenn du zuerst an jeder Stiftleiste nur einen Stift festlötest, kannst du die genaue Position durch nochmaliges Aufheizen korrigieren, sollte sie nicht gleich beim ersten mal hinreichend gerade sein.
+
+image:./08_pinh/02_pinh_position.jpg[width=49%]
+image:./08_pinh/03_pinh_soldering.jpg[width=49%]
+
+Die doppelreihige Stiftleiste (2x3) wird bei `PROG` ebenfalls mit Ihrem kurzen Ende von oben eingesetzt. Das Einlöten sollte nun einfacher sein, weil die beiden verlöteten einreihigen Stiftleisten bereits die Platine stabilisieren. Die doppelreihige Stiftleiste ist der Programmierschluss, falls du später das Programm deines Bakiwi verändern möchtest.
+
+
+== Leuchtdioden
+
+Dein Bakiwi bekommt zwei Leuchtdioden (LED) um dir den Zustand des Lauf-Oszillators anzuzeigen. Die Position der LEDs wird mit `D1` und `D2` markiert. Farblich kannst du selbst entscheiden welche LED auf welche Seite soll. Du kannst prinzipiell auch andersfarbige LEDs einbauen wenn Dir welche verfügbar sind.
+
+image:./09_led/01_led_prepare.jpg[width=49%]
+image:./symbols/led.png[width=49%]
+
+[IMPORTANT]
+====
+Leuchtdioden haben eine sogenannte _Polarität_, d.h. es ist nicht egal wie herum sie eingebaut werden. Erkennen tust du das anhand der unterschiedlich langen Beine. Das längere Bein zeigt immer den Pluspol und das kurze den Minuspol an. Du kannst dir das gut merken, wenn du dir vorstellst, dass du gedanklich ein _Pluszeichen_ auseinander baust und die Striche hintereinander legst. (`+` -> `--`) Dann ist das _Plus_ länger als das _Minus_. Diese Regel gilt im Übrigen für alle zweibeinigen elektrischen Bauteile mit unterschiedlich langen Beinen.
+====
+
+image:./09_led/03_led_detail.jpg[width=49%]
+image:./09_led/02_led_position.jpg[width=49%]
+
+Setze also die Leuchtdioden gemäß ihrer Polarität und deiner Wunschfarbe ein und löte sie fest, die Beine danach wie gehabt kürzen.
+
+
+== Elektrolytkondensator
+
+Der Elektrolytkondensator wird genau wie im vorherigen Schritt (langes Bein = Pluspol) eingebaut. Seine Position ist mit `C2` markiert. Der Minuspol ist sogar auf dem Zylinderförmigen Gehäuse mit einem dicken (hohlen) Minus gekennzeichnet.
+
+image:./10_elcap/01_elcap_prepare.jpg[width=49%]
+image:./symbols/elcap.png[width=49%]
+
+Die Farbe deines Bakiwi-Elektrolytkondensators kann herstellerbedingt von dem in der Abbildung abweichen, hat aber keinen Einfluss auf die Funktion.
+
+image:./10_elcap/02_elcap_position.jpg[width=49%]
+
+
+== Potentiometer
+
+Dein Bakiwi bekommt vier Drehknöpfe mit denen du seine Gangart verändern kannst. Diese Bauteile heißen Potentiometer und sind verstellbare Widerstände. Du kennst das von dem Lautstärkeknopf von Lautsprechern oder anderen Geräten.
+
+image:./11_pots/01_pots_prepare.jpg[width=49%]
+image:./symbols/pots.png[width=49%]
+
+Lege dir die vier blauen Potentiometer oder kurz Potis mit den zugehörigen Drehknöpfen vor dich hin. Stecke die Drehknöpfe mit Pfeil nach oben in die Potis ein (siehe Abbildung).
+
+image:./11_pots/02_pots_detail.jpg[width=49%]
+
+Danach kannst du die zusammengesteckten Teile auf die Positionen `LEVEL`, `SPEED`, `PHASE` und `BALANCE` verteilen und vorsichtig die Platine wenden. Die Potis sitzen in der Regel schon recht fest und fallen nicht so leicht von allein ab.
+
+image:./11_pots/03_pots_position.jpg[width=49%]
+image:./11_pots/04_pots_soldering.jpg[width=49%]
+
+Jetzt kannst du alle vier Potis nach-und-nach festlöten. Nach dem Löten solltest du auch hier die spitzen Enden etwas kürzen.
+
+
+// hier ist platz für die Pause
+
+
+== Batteriefächer
+
+Nun kannst du die Platine kurz beiseite legen und dir die beiden Batteriefächer schnappen. Zu jedem Fach gibt es ein rot-schwarzes Kabel mit weißem Stecker.
+
+[WARNING]
+====
+Auch wenn es verlockend ist: Bitte jetzt noch keine Batterien einlegen!
+====
+
+Die Kabel müssen an den Lötlaschen der Fächer festgelötet werden, dazu kannst du die abisolierten Kabelenden in die Löcher einstecken. Es ist einfacher wenn du die Laschen dazu ganz leicht hochbiegst.
+Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist später die Innenseite wo die Motoren sitzen und du musst vermeiden, dass die Batteriekabel in die Beine deines Bakiwi gelangen.
+
+Die korrekte Polarität der Kabel ist hier von größter Wichtigkeit. Hier gilt dasselbe wie für die Batteriebuchsen, bei Verwechslung von Plus und Minus können Teile deines Bakiwi irreparabel kaputt gehen. Das rote Kabel steht für _Plus_ das schwarze Kabel für _Minus_. Diese Konvention ist weit verbreitet und es lohnt sich das zu merken. Die Polarität der Batteriefächer kannst du auf deren Innenseite ablesen.
+
+image:./12_batholder/01_batholder_prepare.jpg[width=49%]
+image:./12_batholder/02_batholder_polarity.jpg[width=49%]
+
+image:./12_batholder/03_batholder_insert.jpg[width=49%]
+
+Die einlegten Kabel nun am äußersten Ende der Lasche festlöten. Dabei so effizient wie es dir möglich ist löten.
+[WARNING]
+====
+Das Plastik der Batteriefächer kann leicht schmilzen. Ein Berühren mit dem Lötkolben oder ein zu langes Aufheizen der Lötösen lässt das Batteriefach schmelzen und kann es schlimmstenfalls unbrauchbar machen.
+====
+
+image:./12_batholder/04_batholder_soldering.jpg[width=49%]
+image:./12_batholder/05_batholder_done.jpg[width=49%]
+
+
+== Mikrocontroller
+
+Bei dem folgenden Arbeitsschritt wird ausnahmsweise mal nicht gelötet. Du kannst jetzt den _Mikrocontroller_, einen sogenannten _Integrierten Schaltkreis_ in den Sockel einsetzen. Dazu musst du den Schaltkreis mit seinen 14 Beinchen zunächst etwas vorbereiten. Halte den Chip wie in der Abbildung gezeigt und biege jeweils alle sieben Beine einer Seite ganz vorsichtig etwas weiter nach innen. Nutze dazu z.B. die Tischplatte. Wiederhole den Schritt mit den anderen sieben Beinchen.
+
+Anfangs zeigen die Beine etwas nach außen. Im Idealfall zeigen sie jetzt genau senkrecht vom Chip-Körper in dieselbe Richtung. Damit lässt sich der Chip leichter in den Sockel einsetzen.
+
+image:./13_microctrl/01_microctrl_prepare.jpg[width=49%]
+image:./13_microctrl/02_microctrl_bending.jpg[width=49%]
+
+Setze nun den Mikrocontroller in den Sockel, achte darauf, dass alle Beinchen in ihrer Führung sitzen. Wichtig hierbei ist, dass die Kerbe am Chip mit der Kerbe am Sockel in die gleiche Richtung (zum Taster nach vorn) zeigen.
+
+image:./13_microctrl/03_microctrl_insert.jpg[width=49%]
+image:./13_microctrl/04_microctrl_done.jpg[width=49%]
+
+
+== Fühler
+
+Der letzte Lötarbeitsschritt um deine Bakiwi-Platine zu vervollständigen, ist die Anbringung der Fühler. Deinem Bausatz liegen zwei kurze Stücke Gitarrensaite bei. Diese kannst du als Grundlage für die Fühler deines persönlichen Bakiwis verwenden -- musst du aber nicht. Prinzipiell kannst du viele verschiene metallische Materialien verwenden wie z.B.:
+
+* Kabel mit farbiger Isolierung
+* Messingdraht
+* oder Pfeifenputzer
+
+image:./14_antenna/01_antenna_prepare.jpg[width=49%]
+image:./symbols/antenna.png[width=49%]
+
+Die Fühler werden von Bakiwi automatisch eingelernt. Es kann sein, dass sie anfänglich noch nicht sensibel genug oder gar übersensibel sind. Aber nach ein paar Minuten kann dein Bakiwi seine von dir individuell gestalteten Fühler genau richtig benutzen. Fühle dich also frei in der Gestaltung, alles ist erlaubt solange es:
+
+* an die entsprechenden Flächen angelötet werden kann
+* ein leitfähiges Material ist
+* und keine leitenden Teile der Platine berührt
+
+*Probier verschiedenes aus!*
+
+Wenn du keine anderen Materialien verfügbar hast kannst du alternativ auch die beiligenden Gitarrenseiten frei umgestalten. Mit Puscheln oder flauschigen Enden, oder du kannst Ösen dranlöten und etwas dranbinden. Die Saiten sind gut lötbar, biegsam, leifähig und sind recht robust und knicken nicht so leicht.
+
+Zum Anlöten lege die Platine mit den Bauteilen nach oben auf den Tisch und löte die Fühler als erstes einmal _oben_ an der Platine fest und danach auf der Rückseite wie gewohnt. So hast du bessere Kontroll über deren Ausrichtung.
+
+image:./14_antenna/02_antenna_solder_top.jpg[width=49%]
+image:./14_antenna/03_antenna_solder_bot.jpg[width=49%]
+
+
+:numbered!:
+
+== Aufräumen
+
+*Trommelwirbel.... Ka--sching.* Geschafft. Die Lötarbeiten sind nun abgeschlossen. Die Lötstation wird jetzt nicht mehr benötigt und du kannst sie abschalten und abkühlen lassen.
+
+[WARNING]
+====
+Die Lötspitze kann nach dem Abschalten noch ein paar Minuten sehr heiß sein. Lasse also die Lötstation noch eine Weile abkühlen bevor du sie einräumst.
+====
+
+Als letztes empfehlen wir die Lötstellen auf der Rückseite nocheinmal anzugleichen und evtl. vergessene zu lange Stiftereste zu kürzen. Das ist wichtig, damit nachher beim mechanischen Zusammenbau keine störenden Spitzen mehr da sind und sich somit nicht in die Motor- bzw. Batteriekabel boren können.
+
+image:./15_cleanup/01_short_pins.jpg[width=49%]
+image:./15_cleanup/02_recycle_trash.jpg[width=49%]
+
+//TODO Abschnitt überarbeiten
+
+Wir haben versucht den Bausatz so zu gestalten, dass möglichst wenig Müll anfällt. Bitte trenne den Müll. Die kleinen Metallreste können zum Verpackungsmüll (Gelbe Tonne) und die Papierfetzen zum Altpapier.
+
+== Reparieren
+
+Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte, keine Panik. Wir senden Dir ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an deine Adresse frankierten Rücksende-Umschlag und wir sorgen sofort für Ersatz.
+
+
+
+////
+*NACHHALTIGKEIT*
+Der nunmehr letzter Arbeitsschritt und dieser liegt uns auch sehr am Herzen, ist die fachgerechte Entsorgung deines Arbeitsmülls. Papier kommt zu Papier und die restlichen angeknipsten Drähte kommen in den gelben Sack. Wir haben uns darum bemüht, dir so wenig wie möglich Verpackungsmaterialien mitzuschicken, denn wir haben nun mal nur einen Planeten. Plan(et) B ist daher keine Lösung.
+////
+
+= Mechanischer Zusammenbau
+// TODO
+
+= Benutzung
+// TODO
+
+= Funktionsweise erklärt
+// TODO
+
+== Die Bauteile und ihre Funktion
+// TODO
+
+image::./bakiwi_kit_rev1_1_schematics.png[]
+// Kondensator, Widerstand, uC, Schalter, Taster, etc
+
+== Was ist ein Oszillator?
+// TODO
+// Amplitude, Phase, Frequenz
+
+= Probleme beheben
+//TODO
