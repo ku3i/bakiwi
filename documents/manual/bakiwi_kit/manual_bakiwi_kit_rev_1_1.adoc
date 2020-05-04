@@ -70,7 +70,7 @@ Falls du noch gar keine Erfahrungen mit Löten hast, dann empfehlen wir dir vorh
 Überprüfe alle Bauteile auf Vollständigkeit. Zusätzlich zu den gezeigten Teilen hast du ggf. Materialstücke beiligen, welches sich für die Fühler deines Bakiwi eignet, z.B. Gitarrensaite.
 // Tabelle mit Bauteilen
 
-image:./00_preparation/03_check_electronic_parts.jpg[]
+image:./00_preparation/03_check_electronic_parts_annotated.jpg[]
 
 Lege alle Kleinteile evtl. in ein Gefäß, sodass dir keines verloren gehen kann. Nimm dir zuerst die Bakiwi-Platine und legen sie vor dir hin. Die _Oberseite_ der Platine ist die mit den Bauteilbeschriftungen. Alle Bauteile werden nun nach und nach in einzeln erklärten Schritten auf der Oberseite eingesteckt und auf der _Unterseite_ festgelötet. Die beste Übereinstimmung mit den Bildern dieser Anleitung hast du, wenn du die Platine so drehst, dass du den `Bakiwi`-Schriftzug lesen kannst und sie mit der Beschriftung `POWER` zu dir gedreht ist und `PAUSE` nach oben zeigt.
 
@@ -255,12 +255,12 @@ Setze also die Leuchtdioden gemäß ihrer Polarität und deiner Wunschfarbe ein 
 
 == Elektrolytkondensator
 
-Der Elektrolytkondensator wird genau wie im vorherigen Schritt (langes Bein = Pluspol) eingebaut. Seine Position ist mit `C2` markiert. Der Minuspol ist sogar auf dem Zylinderförmigen Gehäuse mit einem dicken (hohlen) Minus gekennzeichnet.
+Der Elektrolytkondensator (kurz: _Elko_) wird genau wie im vorherigen Schritt (langes Bein = Pluspol) eingebaut. Seine Position ist mit `C2` markiert. Der Minuspol ist sogar auf dem Zylinderförmigen Gehäuse mit einem dicken (hohlen) Minus gekennzeichnet.
 
 image:./10_elcap/01_elcap_prepare.jpg[width=49%]
 image:./symbols/elcap.png[width=49%]
 
-Die Farbe deines Bakiwi-Elektrolytkondensators kann herstellerbedingt von dem in der Abbildung abweichen, hat aber keinen Einfluss auf die Funktion.
+Die Farbe deines Bakiwi-Elkos kann herstellerbedingt von dem in der Abbildung abweichen, hat aber keinen Einfluss auf die Funktion.
 
 image:./10_elcap/02_elcap_position.jpg[width=49%]
 
