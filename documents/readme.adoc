@@ -2,7 +2,8 @@
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.2, 2020-04-02
 :imagesdir: ./manual/img
-:toc: macro
+:toc:
+:toc-placement!:
 
 _This is the Bakiwi assembly manual. With the following steps you can assemble your Bakiwi walking robot from the kit. We encourage everyone to contribute to this project. Please share your ideas and experiences, upgrades and schematics, source code and tricks._
 
@@ -459,4 +460,3 @@ Let us know which solution works best for you.
 image::parts_servos.jpg[]
 image::glue_bat_pack_and_motors.jpg[]
 image::install_nano_board.jpg[]
-
