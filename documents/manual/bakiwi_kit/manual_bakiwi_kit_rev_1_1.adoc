@@ -350,7 +350,10 @@ Die benutzten Fühler werden von Bakiwi automatisch eingelernt. Es kann sein, da
 
 *Probier verschiedenes aus!*
 
-Wenn du keine anderen Materialien verfügbar hast, kannst du auch die beiligenden Gitarrenseiten frei umgestalten. Mit Puscheln oder flauschigen Enden, oder du kannst Ösen dranlöten und etwas dranbinden. Die Saiten sind gut lötbar, biegsam, leifähig und sind recht robust und knicken nicht so leicht.
+Wenn du keine anderen Materialien verfügbar hast, kannst du auch die beiligenden Gitarrenseiten frei umgestalten. Mit Puscheln oder flauschigen Enden, oder du kannst Ösen dranlöten und etwas dranbinden. Die Saiten sind gut lötbar, biegsam, leifähig und sind recht robust und knicken nicht so leicht. Hier zwei Beispiele:
+
+image:./14_antenna/04_antenna_puschel.jpg[width=49%]
+image:./14_antenna/05_antenna_solder_dots.jpg[width=49%]
 
 Zum Anlöten lege die Platine mit den Bauteilen nach oben auf den Tisch und löte die Fühler als erstes einmal _oben_ an der Platine fest und danach auf der Rückseite wie gewohnt. So hast du bessere Kontrolle über deren Ausrichtung.
 
