@@ -63,7 +63,7 @@ image:./00_preparation/02_fine_tip_and_solder.jpg[width=49%]
 
 [NOTE]
 ====
-Falls du noch gar keine Erfahrung im Löten hast, dann empfehlen wir dir vorher ein Einführungsvideo oder Tutorial anzuschauen um schon vorab eine ungefähre Vorstellung vom Löten zu entwickeln. Noch besser ist es, wenn du den Bausatz mit jemand anderem zusammen aufbaust, der bereits ein wenig löten kann.
+Falls du noch gar keine Erfahrung im Löten hast, dann empfehlen wir dir, vorher ein Einführungsvideo oder Tutorial anzuschauen um schon mal eine ungefähre Vorstellung vom Löten zu entwickeln. Noch besser ist es, wenn du den Bausatz mit jemand anderem zusammen aufbaust, der bereits ein wenig löten kann.
 ====
 
 === Bauteile
@@ -72,12 +72,12 @@ Falls du noch gar keine Erfahrung im Löten hast, dann empfehlen wir dir vorher 
 
 image:./00_preparation/03_check_electronic_parts_annotated.jpg[]
 
-Lege alle Kleinteile in ein Gefäß, so dass dir keines verloren gehen kann. Nimm dir zuerst die Bakiwi-Platine und leg sie vor dir hin. Die _Oberseite_ der Platine ist die mit den Bauteilbeschriftungen. Alle Bauteile werden nun nach und nach in einzeln erklärten Schritten auf der Oberseite eingesteckt und auf der _Unterseite_ festgelötet. Die beste Übereinstimmung mit den Bildern dieser Anleitung hast du, wenn du die Platine so drehst, dass du den `Bakiwi`-Schriftzug lesen kannst und sie mit der Beschriftung `POWER` zu dir gedreht ist und `PAUSE` nach oben zeigt.
+Lege alle Kleinteile in ein Gefäß, damit dir keines verloren gehen kann. Nimm dir zuerst die Bakiwi-Platine und leg sie vor dir hin. Die _Oberseite_ der Platine ist die mit den Bauteilbeschriftungen. Alle Bauteile werden nun nach und nach in einzeln erklärten Schritten auf der Oberseite eingesteckt und auf der _Unterseite_ festgelötet. Die beste Übereinstimmung mit den Bildern dieser Anleitung hast du, wenn du die Platine so drehst, dass du den `Bakiwi`-Schriftzug lesen kannst und sie mit der Beschriftung `POWER` zu dir gedreht ist und `PAUSE` nach oben zeigt.
 
 image:./00_preparation/04_put_parts_in_container.jpg[width=49%]
 image:./00_preparation/05_get_pcb.jpg[width=49%]
 
-Schalte die Lötstation ein und überprüfe die Temperaturanzeige (und wenn sie einstellbar ist) stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns ein (Aufschrift beachten). Wenn du dir unsicher bist, beginne mit 330°, abhängig von der Leistung der Lötstation ist vielleicht eine etwas höhere Temperatur nötig. Wenn sich das Löten _klebrig_ anfühlt, dann kann die Temperatur zu niedrig sein.
+Schalte die Lötstation ein und überprüfe die Temperaturanzeige. Wenn die Temperatur einstellbar ist, stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns ein (Aufschrift beachten). Wenn du dir unsicher bist, beginne mit 330°, abhängig von der Leistung der Lötstation ist vielleicht eine etwas höhere Temperatur nötig. Wenn sich das Löten _klebrig_ anfühlt, dann kann die Temperatur zu niedrig sein.
 
 // Was ist die maximale Temperatur? jenseites von 360° gibts doch eigentlich nix sinnvolles, oder?
 
@@ -98,7 +98,7 @@ Nun biege die beiden Draht-Enden mit deinen Fingern direkt an ihrem Ursprung um,
 image:./01_resistors/08_resistors_bend.jpg[width=49%]
 image:./01_resistors/02_resistors_position.jpg[width=49%]
 
-Drehe die Platine nun vorsichtig um während du das soeben eingesetzte Bauteil mit den Fingern festhältst. Beginne nun damit, die Drahtenden auf der Platine festzulöten. Achte dabei darauf, den Draht und die lochförmige Lötfläche gleichermaßen aufzuheizen während du das Lötzinn hinzufügst.
+Drehe die Platine nun vorsichtig um während du das soeben eingesetzte Bauteil mit den Fingern festhältst. Beginne nun damit, die Drahtenden auf der Platine festzulöten. Achte dabei darauf, den Draht und die Lötfläche um das Loch gleichmäßig aufzuheizen während du das Lötzinn hinzufügst.
 
 image:./01_resistors/03_resistors_inserted.jpg[width=49%]
 image:./01_resistors/04_resistors_soldering.jpg[width=49%]
@@ -108,7 +108,7 @@ Entferne den überstehenden Draht, indem du ihn mit einer geeigneten Zange (z.B.
 image:./01_resistors/05_resistors_cutting.jpg[width=49%]
 image:./01_resistors/09_resistors_cutting.jpg[width=49%]
 
-Nun folgen die beiden anderen Widerstände `R1` und `R2` (beige). Sie werden links und rechts vom Schriftzug angebracht. Hierbei ist die Reihenfolge unerheblich, du kannst auch beide gleich zusammen einbauen. Die Arbeitsschritte sind die gleichen wie beim ersten Widerstand.
+Nun folgen die beiden anderen Widerstände `R1` und `R2` (beige). Sie werden links und rechts vom Schriftzug angebracht. Die Reihenfolge ist dabei egal, du kannst auch gleich beide zusammen einbauen. Die Arbeitsschritte sind die gleichen wie beim ersten Widerstand.
 
 image:./01_resistors/06_resistors_repeat.jpg[width=49%]
 image:./01_resistors/07_resistors_done.jpg[width=49%]
@@ -150,7 +150,7 @@ Achte beim Löten darauf, dass du zunächst erst eine Ecke und dann die schräg 
 image:./03_socket/04_socket_soldering_start.jpg[width=49%]
 image:./03_socket/05_socket_soldering_done.jpg[width=49%]
 
-*Tada*. Du hast nun bereits 22 Lötstellen auf der Bakiwi-Platine gesetzt. Wenn du bisher nicht viel gelötet hast, solltest du spätestens jetzt den Dreh gut raushaben.
+*Tada*. Du hast nun bereits 22 Lötstellen auf der Bakiwi-Platine gesetzt. Wenn du bisher nicht so viel gelötet hattest, solltest du spätestens jetzt den Dreh gut raushaben.
 
 
 == Taster
@@ -243,7 +243,7 @@ Die doppelreihige Stiftleiste (2x3) wird bei `PROG` ebenfalls mit Ihrem kurzen E
 
 == Leuchtdioden
 
-Dein Bakiwi bekommt zwei Leuchtdioden (LED) um dir den Zustand des Lauf-Oszillators anzuzeigen. Die Position der LEDs ist mit `D1` und `D2` markiert. Farblich kannst du selbst entscheiden welche LED auf welche Seite soll. Du kannst auch andersfarbige LEDs einbauen, wenn du welche verfügbar hast.
+Dein Bakiwi bekommt zwei Leuchtdioden (LED) um dir den Zustand des Lauf-Oszillators anzuzeigen. Die Position der LEDs ist mit `D1` und `D2` markiert. Farblich kannst du selbst entscheiden, welche LED auf welche Seite soll. Du kannst auch andersfarbige LEDs einbauen, wenn du welche hast.
 
 image:./09_led/01_led_prepare.jpg[width=49%]
 image:./symbols/led.png[width=49%]
@@ -324,9 +324,9 @@ image:./12_batholder/05_batholder_done.jpg[width=49%]
 
 == Mikrocontroller
 
-Bei dem folgenden Arbeitsschritt wird ausnahmsweise mal nicht gelötet. Du kannst jetzt den _Mikrocontroller_, einen sogenannten _Integrierten Schaltkreis_ (kurz: IC oder Chip) in den Sockel einsetzen. Dazu musst du den Schaltkreis mit seinen 14 Beinchen zunächst etwas vorbereiten. Halte den Chip wie in der Abbildung gezeigt und biege jeweils alle sieben Beine einer Seite ganz vorsichtig etwas weiter nach innen. Nutze dazu z.B. die Tischplatte. Wiederhole den Schritt mit den anderen sieben Beinchen.
+Bei dem folgenden Arbeitsschritt wird ausnahmsweise mal nicht gelötet. Du kannst jetzt den _Mikrocontroller_, einen sogenannten _Integrierten Schaltkreis_ (kurz: Chip) in den Sockel einsetzen. Dazu musst du den Schaltkreis mit seinen 14 Beinchen zunächst etwas vorbereiten. Halte den Chip wie in der Abbildung gezeigt und biege jeweils alle sieben Beine einer Seite ganz vorsichtig etwas weiter nach innen. Nutze dazu z.B. die Tischplatte. Wiederhole den Schritt mit den anderen sieben Beinchen.
 
-Anfangs zeigen die Beine etwas nach außen. Im Idealfall zeigen sie nach dem Biegen genau senkrecht vom Chip-Körper in dieselbe Richtung. Damit lässt sich der Chip leichter in den Sockel einsetzen.
+Anfangs zeigen die Beine etwas nach außen. Im Idealfall zeigen sie nach dem Biegen genau senkrecht vom Chip-Körper in dieselbe Richtung. So lässt sich der Chip leichter in den Sockel einsetzen.
 
 image:./13_microctrl/01_microctrl_prepare.jpg[width=49%]
 image:./13_microctrl/02_microctrl_bending.jpg[width=49%]
@@ -376,7 +376,7 @@ image:./14_antenna/03_antenna_solder_bot.jpg[width=49%]
 Die Lötspitze kann nach dem Abschalten noch ein paar Minuten sehr heiß sein. Lass also die Lötstation noch eine Weile abkühlen bevor du sie wegräumst.
 ====
 
-Als letztes empfehlen wir, die Lötstellen auf der Rückseite noch einmal anzugleichen und zu lange Stiftereste zu kürzen. Das ist wichtig, damit nachher beim mechanischen Zusammenbau keine störenden Spitzen mehr da sind und sich nicht in die Motor- bzw. Batteriekabel bohren können.
+Als letztes empfehlen wir, die Lötstellen auf der Rückseite noch einmal anzugleichen und zu lange Stiftereste zu kürzen. Das ist wichtig, damit nachher beim mechanischen Zusammenbau keine störenden Spitzen mehr da sind, die sich in die Motor- bzw. Batteriekabel bohren könnten.
 
 image:./15_cleanup/01_short_pins.jpg[width=49%]
 image:./15_cleanup/02_recycle_trash.jpg[width=49%]
