@@ -20,20 +20,13 @@ endif::[]
 
 image::./bakiwi_logo_1024.png[]
 
-
-
-// todo add detail fotos of components
-// schlussfoto unterseite.. alle pins gekürzt
-
 ////
 TODO
 	+ F.A.Q. / Troubleshooting
-	+ split to separate documents (electr, mechanics, usage,...)
+	+ consider splitting into separate documents (electr, mechanics, usage,...)
 	+ find nice soldering tutorial
-	+ add link to differen languages
-	+ check gleicher Duktus DU-Form (aufforderung)
+	+ add link to different languages
 	+ wo ist platz für eine Lötpause
-	+ wie sind die erwarteten Zeiten
 	+ describe schematics, boardlayout
 	+ add to each part an explanation, schematics vs. pcb, vs symbol
 	+ create printable version:
@@ -98,7 +91,7 @@ Nun biege die beiden Draht-Enden mit deinen Fingern direkt an ihrem Ursprung um,
 image:./01_resistors/08_resistors_bend.jpg[width=49%]
 image:./01_resistors/02_resistors_position.jpg[width=49%]
 
-Drehe die Platine nun vorsichtig um während du das soeben eingesetzte Bauteil mit den Fingern festhältst. Beginne nun damit, die Drahtenden auf der Platine festzulöten. Achte dabei darauf, den Draht und die Lötfläche um das Loch gleichmäßig aufzuheizen während du das Lötzinn hinzufügst.
+Halte das eingesetzte Bauteil mit den Fingern fest, drehe die Platine vorsichtig um und leg Sie vor dir ab. Beginne nun damit, die Drahtenden auf der Platinenunterseite festzulöten. Achte dabei darauf, den Draht und die Lötfläche um das Loch gleichzeitig zu berühren und  aufzuheizen während du das Lötzinn hinzufügst. Die Wärmeübetragung funktioniert am besten, wenn die Lötspitze kurz vorher gereinigt und schon etwas mit Zinn benetzt ist.
 
 image:./01_resistors/03_resistors_inserted.jpg[width=49%]
 image:./01_resistors/04_resistors_soldering.jpg[width=49%]
@@ -217,13 +210,13 @@ image:./symbols/switch.png[width=49%]
 
 [CAUTION]
 ====
-Zuviel Hitze lässt den Schalter schmelzen und kann ihn unbrauchbar machen, daher achte beim Löten darauf, die Stift und Lötfläche stehts gleichzeitig aufzuheizen, damit der Lötvorgang kurz und effektiv ist.
+Zuviel Hitze lässt den Schalter schmelzen und kann ihn unbrauchbar machen, daher achte beim Löten darauf, Stift und Lötfläche stets gleichzeitig aufzuheizen, damit der Lötvorgang kurz und effektiv ist.
 ====
 
 image:./07_switch/02_switch_position.jpg[width=49%]
 image:./07_switch/03_switch_soldering.jpg[width=49%]
 
-Die Lötstifte sind recht lang und sollten nach dem Festlöten ein wenig gekürzt werden. Das Material der Schalterstifte ist auch dicker als der anderen Bauteile, so dass du etwas mehr Kraft beim Abknipsen benötigst.
+Die Lötstifte sind recht lang und sollten nach dem Festlöten ein wenig gekürzt werden. Das Material der Schalterstifte ist auch dicker als das der anderen Bauteile, so dass du etwas mehr Kraft beim Abknipsen benötigst.
 
 
 == Stiftleisten
@@ -339,7 +332,7 @@ image:./13_microctrl/04_microctrl_done.jpg[width=49%]
 
 == Fühler
 
-Der letzte Lötarbeitsschritt um deine Bakiwi-Platine zu vervollständigen, ist die Anbringung der Fühler. Deinem Bausatz liegen zwei kurze Stücke Gitarrensaite bei. Diese kannst du als Grundlage für die Fühler deines persönlichen Bakiwis verwenden -- musst du aber nicht. Du kanns viele verschiene metallische Materialien verwenden:
+Der letzte Lötarbeitsschritt um deine Bakiwi-Platine zu vervollständigen, ist die Anbringung der Fühler. Deinem Bausatz liegen zwei kurze Stücke Gitarrensaite bei. Diese kannst du als Grundlage für die Fühler deines persönlichen Bakiwis verwenden -- musst du aber nicht. Du kannst viele verschiedene metallische Materialien verwenden:
 
 * Kabel mit farbiger Isolierung
 * Messingdraht
@@ -387,8 +380,7 @@ Wir haben versucht, den Bausatz so zu gestalten, dass möglichst wenig Müll anf
 
 == Reparieren
 
-Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte, keine Panik. Wir senden Dir ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an deine Adresse frankierten Rücksende-Umschlag und wir sorgen sofort für Ersatz.
-
+Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte, keine Panik. Wir senden dir gerne ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an dich adressierten Rücksende-Umschlag und wir sorgen sofort für Ersatz.
 
 
 ////
