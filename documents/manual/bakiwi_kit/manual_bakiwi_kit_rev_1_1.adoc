@@ -18,31 +18,28 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-image::./bakiwi_logo_1024.png[]
+image::./bakiwi_logo_3-1_purple_3000px.png[]
 
 ////
 TODO
 	+ F.A.Q. / Troubleshooting
-	+ consider splitting into separate documents (electr, mechanics, usage,...)
 	+ find nice soldering tutorial
 	+ add link to different languages
 	+ wo ist platz für eine Lötpause
 	+ describe schematics, boardlayout
 	+ add to each part an explanation, schematics vs. pcb, vs symbol
-	+ create printable version:
-	https://github.com/asciidoctor/asciidoctor-pdf/blob/master/docs/theming-guide.adoc
 ////
 
 
 toc::[]
 
 
-= Elektronik-Löten
+== Elektronik-Löten
 :imagesdir: ./img/01_electronics/
 
-== Vorbereitung
+=== Vorbereitung
 
-=== Werkzeuge
+==== Werkzeuge
 Für das Löten der Bakiwi-Elektronik benötigst du folgende Werkzeuge:
 
 * Lötkolben (oder Lötstation) mit dünner Lötspitze
@@ -59,7 +56,7 @@ image:./00_preparation/02_fine_tip_and_solder.jpg[width=49%]
 Falls du noch gar keine Erfahrung im Löten hast, dann empfehlen wir dir, vorher ein Einführungsvideo oder Tutorial anzuschauen um schon mal eine ungefähre Vorstellung vom Löten zu entwickeln. Noch besser ist es, wenn du den Bausatz mit jemand anderem zusammen aufbaust, der bereits ein wenig löten kann.
 ====
 
-=== Bauteile
+==== Bauteile
 Überprüfe alle Bauteile auf Vollständigkeit. Zusätzlich zu den gezeigten Teilen hast du vielleicht Material beiliegen, welches sich für die Fühler deines Bakiwi eignet, z.B. Gitarrensaiten oder Pfeifenputzer.
 // Tabelle mit Bauteilen
 
@@ -74,13 +71,14 @@ Schalte die Lötstation ein und überprüfe die Temperaturanzeige. Wenn die Temp
 
 // Was ist die maximale Temperatur? jenseites von 360° gibts doch eigentlich nix sinnvolles, oder?
 
-=== Nimm dir Zeit
+==== Nimm dir Zeit
 
 Das Zusammenlöten deines Bakiwis erfordert Ruhe und Konzentration. Die benötigte Zeit ist von Mensch zu Mensch unterschiedlich und sehr vom Vorwissen abhängig. Absolute Neulinge sollte 2 Stunden für das Löten einplanen, Profis schaffen das mitunter in 30 Minuten.
 
 :numbered:
+== Die Bauteile einlöten
 
-== Widerstände
+=== Widerstände
 Nun nimm dir die Widerstände zur Hand. Es gibt _einen_ blauen Widerstand und _zwei_ in beige. Beginne damit, das Papier an jeweils beiden Enden des blauen Widerstands abzuziehen.
 
 image:./01_resistors/01_resistors_prepare.jpg[width=49%]
@@ -108,7 +106,7 @@ image:./01_resistors/07_resistors_done.jpg[width=49%]
 
 *Gratulation.* Du hast den ersten Schritt gemeistert. Vergleiche dein Ergebnis mit dem Bild aus dieser Anleitung.
 
-== Kondensator
+=== Kondensator
 Als nächstes ist der Kondensator an der Reihe. Suche nach dem kleinen orange-farbenen Bauteil in Form einer Linse. Die Position auf der Platine ist diesesmal weiter zum anderen Ende bei der Markierung `C1`. Schaue auf das abgebildete Symbol.
 
 image:./02_capacitor/01_capacitor_prepare.jpg[width=49%]
@@ -127,7 +125,7 @@ image:./02_capacitor/05_capacitor_cutting.jpg[width=49%]
 *Geschafft*. Dies war das Ende deiner Aufwärmrunde. Denn jetzt wird es eine Idee kniffeliger.
 
 
-== Schaltkreis-Sockel
+=== Schaltkreis-Sockel
 Der Schaltkreis-Sockel hat ganze 14 Kontakte und das heißt für Dich, dass du Deine Lötfertigkeiten jetzt richtig trainieren kannst. Denn alle 14 Lötstellen sind identisch.
 
 image:./03_socket/01_socket_prepare.jpg[width=49%]
@@ -146,7 +144,7 @@ image:./03_socket/05_socket_soldering_done.jpg[width=49%]
 *Tada*. Du hast nun bereits 22 Lötstellen auf der Bakiwi-Platine gesetzt. Wenn du bisher nicht so viel gelötet hattest, solltest du spätestens jetzt den Dreh gut raushaben.
 
 
-== Taster
+=== Taster
 Der Taster wird and der Stelle mit der Markierung `PAUSE` eingesetzt. Wenn du den Taster spielend leicht einsetzen kannst _ohne_ die Beinchen zu biegen ist er auch automatisch richtig herum. Mitunter hörst du ein leises Knackgeräusch, wenn der Taster einrastet.
 
 image:./04_button/01_button_prepare.jpg[width=49%]
@@ -160,7 +158,7 @@ Die Lötstifte des Tasters sind ein wenig spitz, achte beim Ensetzten des Taster
 image:./04_button/02_button_position.jpg[width=49%]
 
 
-== Spannungswandler
+=== Spannungswandler
 Das nächste Bauteil wird etwas schwieriger. Halte zunächst nach dem abgebildeten Symbol `VREG` auf der Platine Ausschau, es ist knapp über dem orangenen Kondensator zu finden und sieht aus wie ein angeschnittener Kreis.
 
 image:./05_vreg/01_vreg_prepare.jpg[width=49%]
@@ -183,7 +181,7 @@ image:./05_vreg/03_vreg_position.jpg[width=49%]
 *Gut gemacht*. Jetzt wird das Löten erst einmal wieder etwas einfacher, versprochen.
 
 
-== Batteriekabel-Buchsen
+=== Batteriekabel-Buchsen
 
 image:./06_batcon/01_batcon_prepare.jpg[width=49%]
 image:./symbols/batcon.png[width=49%]
@@ -201,7 +199,7 @@ Achtung! Vergleiche an dieser Stelle bitte nocheinmal genau deine Platine mit de
 ====
 
 
-== An/Aus-Schalter
+=== An/Aus-Schalter
 
 Weiter geht es mit dem Einsetzen des An/Aus-Schalters. Dieser ist blau/weiß und wird auf der Platine bei der Markierung `POWER` platziert. Wichtig ist hierbei, dass das weiße Teil Richtung `off` zeigt. Prinzipiell kannst du den Schalter auch andersherum einlöten, er funktioniert in beide Richtungen gleichermaßen. Stelle bloß sicher, dass er in der `off`-Position ist, d.h. der Bakiwi ausgeschaltet ist, wenn wir später die Batterien einlegen.
 
@@ -219,7 +217,7 @@ image:./07_switch/03_switch_soldering.jpg[width=49%]
 Die Lötstifte sind recht lang und sollten nach dem Festlöten ein wenig gekürzt werden. Das Material der Schalterstifte ist auch dicker als das der anderen Bauteile, so dass du etwas mehr Kraft beim Abknipsen benötigst.
 
 
-== Stiftleisten
+=== Stiftleisten
 
 Widme dich nun den drei Stiftleisten. Die beiden einreihigen Stiftleisten (1x3) werden mit dem kurzen Ende von oben in die Platine bei `MOT1` und `MOT2` eingesteckt und wie gehabt auf der Rückseite festgelöten. An ihnen werden später die Motoren deines Bakiwi angeschlossen.
 
@@ -234,7 +232,7 @@ image:./08_pinh/03_pinh_soldering.jpg[width=49%]
 Die doppelreihige Stiftleiste (2x3) wird bei `PROG` ebenfalls mit Ihrem kurzen Ende von oben eingesetzt. Das Einlöten sollte nun einfacher sein, weil die beiden verlöteten einreihigen Stiftleisten bereits die Platine stabilisieren. Die doppelreihige Stiftleiste ist der Programmieranschluss, falls du später das Programm deines Bakiwi verändern möchtest.
 
 
-== Leuchtdioden
+=== Leuchtdioden
 
 Dein Bakiwi bekommt zwei Leuchtdioden (LED) um dir den Zustand des Lauf-Oszillators anzuzeigen. Die Position der LEDs ist mit `D1` und `D2` markiert. Farblich kannst du selbst entscheiden, welche LED auf welche Seite soll. Du kannst auch andersfarbige LEDs einbauen, wenn du welche hast.
 
@@ -252,7 +250,7 @@ image:./09_led/02_led_position.jpg[width=49%]
 Setze also die Leuchtdioden gemäß ihrer Polarität und deiner Wunschfarbe ein und löte sie fest. Die Beine kannst du danach wie immer kürzen.
 
 
-== Elektrolytkondensator
+=== Elektrolytkondensator
 
 Der Elektrolytkondensator (kurz: _Elko_) wird genau wie im vorherigen Schritt (langes Bein = Pluspol) eingebaut. Seine Position ist mit `C2` markiert. Der Minuspol ist sogar auf dem Zylinderförmigen Gehäuse mit einem dicken (hohlen) Minus gekennzeichnet.
 
@@ -264,7 +262,7 @@ Die Farbe deines Bakiwi-Elkos kann von der in der Abbildung abweichen, das hat a
 image:./10_elcap/02_elcap_position.jpg[width=49%]
 
 
-== Potentiometer
+=== Potentiometer
 
 Dein Bakiwi bekommt vier Drehknöpfe mit denen du seine Gangart verändern kannst. Diese Bauteile heißen Potentiometer und sind verstellbare Widerstände. Du kennst das vom Lautstärkeknopf bei Lautsprechern oder anderen Geräten.
 
@@ -286,7 +284,7 @@ Jetzt kannst du alle vier Potis nach und nach festlöten. Nach dem Löten sollte
 // hier ist platz für die Pause
 
 
-== Batteriefächer
+=== Batteriefächer
 
 Nun kannst du die Platine kurz beiseite legen und dir die beiden Batteriefächer schnappen. Zu jedem Fach gibt es ein rot-schwarzes Kabel mit weißem Stecker.
 
@@ -315,7 +313,7 @@ image:./12_batholder/04_batholder_soldering.jpg[width=49%]
 image:./12_batholder/05_batholder_done.jpg[width=49%]
 
 
-== Mikrocontroller
+=== Mikrocontroller
 
 Bei dem folgenden Arbeitsschritt wird ausnahmsweise mal nicht gelötet. Du kannst jetzt den _Mikrocontroller_, einen sogenannten _Integrierten Schaltkreis_ (kurz: Chip) in den Sockel einsetzen. Dazu musst du den Schaltkreis mit seinen 14 Beinchen zunächst etwas vorbereiten. Halte den Chip wie in der Abbildung gezeigt und biege jeweils alle sieben Beine einer Seite ganz vorsichtig etwas weiter nach innen. Nutze dazu z.B. die Tischplatte. Wiederhole den Schritt mit den anderen sieben Beinchen.
 
@@ -330,7 +328,7 @@ image:./13_microctrl/03_microctrl_insert.jpg[width=49%]
 image:./13_microctrl/04_microctrl_done.jpg[width=49%]
 
 
-== Fühler
+=== Fühler
 
 Der letzte Lötarbeitsschritt um deine Bakiwi-Platine zu vervollständigen, ist die Anbringung der Fühler. Deinem Bausatz liegen zwei kurze Stücke Gitarrensaite bei. Diese kannst du als Grundlage für die Fühler deines persönlichen Bakiwis verwenden -- musst du aber nicht. Du kannst viele verschiedene metallische Materialien verwenden:
 
@@ -361,9 +359,9 @@ image:./14_antenna/02_antenna_solder_top.jpg[width=49%]
 image:./14_antenna/03_antenna_solder_bot.jpg[width=49%]
 
 
-:numbered!:
+== Nach dem Löten
 
-== Aufräumen
+=== Aufräumen
 
 *Trommelwirbel.... Ka--tsching.* Geschafft. Die Lötarbeiten sind nun abgeschlossen. Die Lötstation wird jetzt nicht mehr benötigt und du kannst sie abschalten und abkühlen lassen.
 
@@ -379,11 +377,69 @@ image:./15_cleanup/02_recycle_trash.jpg[width=49%]
 
 //TODO Abschnitt überarbeiten
 
-Wir haben versucht, den Bausatz so zu gestalten, dass möglichst wenig Müll anfällt. Bitte trenne den Müll. Alle kleinen Metallreste können zum Verpackungsmüll (Gelbe Tonne) und die Papierfetzen zum Altpapier.
+=== Abfallentsorgung
 
-== Reparieren
+Wir haben versucht, den Bausatz so zu gestalten, dass möglichst wenig Müll anfällt. Bitte trenne den Müll. Alle kleinen Metallreste können zum Verpackungsmüll (Gelbe Tonne) und die Papierfetzen zum Altpapier. Die beiliegenden Zipper-Tüten und den Karton kannst du vielleicht ja noch weiter nutzen oder entsorgst sie ebenfalls zum Verpackungsmüll bzw. Altpapier.
 
-Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte, keine Panik. Wir senden dir gerne ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an dich adressierten Rücksende-Umschlag und wir sorgen sofort für Ersatz.
+=== Funktionstest
+Bevor es gleich mit dem mechanischen Zusammenbau losgehen kann müssen alle elektronischen Komponenten getestet werden.
+
+==== Kurzschlusstest
+
+image:./16_testing/01_testing_multimeter.jpg[width=49%]
+image:./16_testing/01_testing_multimeter_detail.jpg[width=49%]
+
+Nimm ein Multimeter zur Hand und schalte es in den Modus Durchgangsprüfung ("Piepser"). Du erkennst das an dem Lautsprecher-Symbol. Halte die beiden Prüfspitzen mit den metallischen Enden gegeneinander und überzeuge dich, dass es einen deutlich hörbaren Piepton gibt. Das akkustische Signal zeigt dir einen elektrischen Kontakt ohne nennenswerten Widerstand dazwischen an. Du kannst es dazu nutzen Lötstellen, Kabel und Stecker auf ordnungsgemäßen Kontakt zu prüfen oder auch um ungewollte Kurzschlüsse zu finden.
+
+image:./16_testing/02_testing_battery_sockets.jpg[width=49%]
+image:./16_testing/03_testing_motor_pins.jpg[width=49%]
+
+Halte nun die Prüfspitzen an die beiden Stifte der linken Batteriebuchse, hierbei sollte kein Signal ertönen. Wiederhole den Test mit der anderen Buchse. Teste ebenfalls die Stifte der beiden Motoranschlüsse und des 6-poligen Programmieranschlusses indem du jeweils zwei benachbarte Stifte auf Kurzschluss prüfst. Sollte es hier bei zwei Stiften piepsen, d.h. einen Kontakt geben, musst du dir deine Lötstellen an dieser Stelle nocheinmal sehr genau anschauen. Möglicherweise ist etwas Lötzinn zwischen die Löstellen geraten und verbindet diese. Achte auf genügend Licht bei der Kontrolle und nimm ggf. eine Lupe zur Hilfe.
+
+[NOTE]
+====
+Sollten zwei Lötstellen aus versehen mit Lötzinn miteinander verbunden sein, kannst du durch erneutes Aufheizen der Lötstellen versuchen diese voneinander zu trennen. Wenn das Lot dabei klebrig wirkt, so versuche etwas frisches Lötzinn (mit unverdampften Flussmittel) hinzuzufügen um die Lötstellen wieder gängig zu machen. Der farbige Lack (blau oder lila) auf deiner Platine nimmt Lötzinn nicht an und hilft dir die Lötstellen zu trennen. Wenn beide Lötstellen gemeinsam aufgeheizt werden und durch genügend Flussmittel gut fließen können trennen sie sich leicht voneinander und ziehen sich auf ihre Lötflächen zurück.
+====
+
+image:./16_testing/04_testing_switch.jpg[width=49%]
+
+
+Teste als letztes den Pluspol der linken Batteriebuchse gegen den Minuspol der rechten Batteriebuchse. Es sollte hier ebenfalls kein Kontakt zu messen sein. Stelle nun den An-/Aus-Schalter auf `ON`, nun sollte es bei erneuter Messung Kontakt geben und piepsen. Stelle danach den Schalter wieder auf `OFF`.
+
+image:./16_testing/05_testing_get_components.jpg[width=49%]
+
+==== Motoren verbinden
+[#connect_motors]
+
+Verbinde nun die Motoren. Achte darauf, dass die braunen (bzw. schwarzen) Adern des 3-adrigen Motorkabels mit dem Stift verbunden ist, der auf der Platine mit dem Ground-Symbol (siehe Abbildung) bezeichnet ist.
+
+image:./16_testing/06_testing_connect_motors.jpg[width=49%]
+image:./symbols/gnd.png[width=49%]
+
+Lege nun die Batterien ein. Hierbei ist es sehr wichtig die im Innern des Batteriefachs angezeigte Polarität (+/-) zu beachten. Auf deinen Batterien oder Akkus sind ebenfalls die Symbole Plus und Minus zu erkennen (manchmal nur das Plus). Verbinde nun die Batteriestecker mit den Buchsen auf der Platine, dabei ist es egal, welches Fach du an welchen Stecker anschließt.
+
+image:./16_testing/07_testing_insert_batteries.jpg[width=49%]
+image:./16_testing/08_testing_connect_batteries.jpg[width=49%]
+
+[WARNING]
+====
+*Aufgepasst!* Sollten nach dem Anschließen der Fächer die Batterien warm oder gar heiß werden, musst du die Stecker sofort wieder von der Platine trennen. Das Aufheizen der Batterien deutet sehr wahrscheinlich auf einen Kurzschluss hin und du musst nochmal die elektrische Durchgangsprüfung wiederholen und deine Lötstellen genau inspizieren um den Kurzschluss zu finden.
+====
+
+Stelle nun den An-/Aus-Schalter auf `ON` und wenn alles richtig zusammengebaut ist solltest du nun bereits die Leuchtdioden blinken sehen. Wenn alle Drehknöpfe mit den Pfeilen nach oben zeigen, sollten die Leuchtdioden im Gleichtakt blinken.
+
+Wenn die Leuchtdioden funktionieren, dann betätige nun den Taster und gleich darauf sollten beide Motoren beginnen Geräusche zumachen und die Schäfte zu drehen (die Runden gezahnten Metallenden).
+
+Berühre die Fühler mit deinen Händen und sofort sollten die Geräusche der Motoren sich verändern, langsamer werden oder gar stoppen. Beim Loslassen der Fühler sollten die Motoren wieder ihr ursprüngliches Verhalten aufnehmen. Schalte den Bakiwi nun wieder aus.
+
+Wenn bis hierhin alles wie erwartet funktioniert kannst du jetzt zum nächsten Kapitel übergehen, dem <<assembly, mechanischen Zusammenbau>>.
+
+Sollte ein Motor sich drehen, der andere aber nicht, stelle sicher, dass alle Drehknöpfe nach oben zeigen und dass die Motorkabel angeschlossen sind wie in Abschnitt <<connect_motors, Motoren verbinden>> beschrieben steht.
+
+
+=== Was tun, wenn etwas kaputt gegangen ist?
+
+Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte: Keine Panik! Wir senden dir gerne ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an dich adressierten Rücksende-Umschlag und wir sorgen sofort für Ersatz. Wir freuen uns wenn du dir die Zeit nimmst und uns kurz beschreibst wie das Bauteil kaputt gegangen ist, sodass wir unseren Bakiwi-Bausatz mit deiner Hilfe verbessern können.
 
 
 ////
@@ -391,24 +447,199 @@ Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verl
 Der nunmehr letzter Arbeitsschritt und dieser liegt uns auch sehr am Herzen, ist die fachgerechte Entsorgung deines Arbeitsmülls. Papier kommt zu Papier und die restlichen angeknipsten Drähte kommen in den gelben Sack. Wir haben uns darum bemüht, dir so wenig wie möglich Verpackungsmaterialien mitzuschicken, denn wir haben nun mal nur einen Planeten. Plan(et) B ist daher keine Lösung.
 ////
 
-= Mechanischer Zusammenbau
+== Mechanischer Zusammenbau
+[#assembly]
+
+:imagesdir: ./img/02_mechanics/
+
+=== Vorbereitung
+
+Hole die abgebildeten mechanischen Bauteile aus der Packung und lege sie vor dir ab. Die Bakiwi-Platine und die Batteriefächer hast du bereits in vorausgehenden Arbeitsschritten vorbereitet.
+
+image:./00_preparation/01_assembly_get_parts_annotated.jpg[width=98%]
+
+Für den Zusammenbau benötigst du weitere Werkzeuge: Einen kleinen Kreuz-Schraubendreher und einen Innensechskant-Schraubendreher (2,5 mm). Wenn vorhanden, ist eine Pinzette evtl. nützlich und vereinfacht den Zusammenbau, ist aber nicht zwingend erforderlich. Weiterhin wird nocheinmal der Seitenschneider benötigt.
+
+image:./00_preparation/02_assembly_get_tools.jpg[width=49%]
+
+=== Motoren einbauen
+
+Wir beginnen den Zusammenbau mit den Motoren. Nimm dir dazu einen der Motoren und einen Motorhalter sowie zwei der vier Kreuzschrauben (du erkennst sie daran, dass es die einzigen sind die Spitzen haben). Lege das Motorkabel wie abgebildet einige Male in Falten und drücke es sachte zusammen, sodass es sich beim Einbauen leichter in dieselben Falten legt.
+
+image:./01_motors/04_assembly_get_motor_holder.jpg[width=49%]
+image:./01_motors/03_assembly_fold_cable.jpg[width=49%]
+
+Fädele das Motorkabel durch die große Öffnung in den Halter und durch die kleine seitliche Öffnung wieder aus dem Halter heraus. Setze nun den Motor in den Halter, wobei es wichtig ist, dass sich ein Teil des Kabels gefaltet im Halter befindet, damit ingesamt weniger vom Kabel heraussteht. Der Schaft des Motor sollte von der kleinen Öffnung wegzeigen (vergleiche dein Ergebnis mit der Abbildung).
+
+image:./01_motors/05_assembly_insert_cable.jpg[width=49%]
+image:./01_motors/06_assembly_motor_screws.jpg[width=49%]
+
+Setze nun nacheinander die Schrauben an und ziehe sie hinreichend fest. Wenn alles gut sitzt wiederhole die Schritte mit dem zweiten Motor.
+
+image:./01_motors/07_assembly_motors_cable_detail.jpg[width=49%]
+image:./01_motors/08_assembly_motors_prepared.jpg[width=49%]
+
+
+=== Rahmen zusammensetzen
+
+Als nächstes füge den Rahmen zusammen. Lege dazu die Grundplatte des Rahmens vor dir ab und setze die V-förmige Klemmenmutter zwischen die beiden mittigen Lochstege. Setze die Arretierschraube ein und ziehe sie zwei Umdrehungen an.
+
+image:./02_frame/09_assembly_frame_start.jpg[width=49%]
+image:./02_frame/10_assembly_frame_insert_stamp_bolt.jpg[width=49%]
+
+Lege die beiden Motorhalter mit ihren Achsenden auf die Löcher in der Grundplatte. Achte darauf, dass die Öffungen und die herausragenden Kabel nach oben wegzeigen. Lege nun den Deckel des Rahmens auf und halte alles mit deinen Fingern zusammen. Wenn du die Arretierschraube sachte noch etwas weiter hineindrehst hält der Rahmen besser zusammen.
+
+image:./02_frame/11_assembly_frame_insert_parts.jpg[width=49%]
+image:./02_frame/12_assembly_frame_close_lid.jpg[width=49%]
+
+
+==== Kabel einfädeln und verstauen
+
+Halte den Rahmen so, das ein Motor nach links der andere nach rechts zeigt und die Kabel nach oben herausragen. Fädele nun das von dir aus linksseitige Motorkabel durch das von dir wegzeigende hintere Loch. Das rechtsseitige Motorkabel gehört durch das zu dir hinzeigende Loch.
+
+Verstaue die beiden Motorkabel im Rahmen über der Klemmenmutter, sodass in etwa noch 4cm Kabel aus dem Rahmen ragen.
+
+image:./02_frame/13_assembly_frame_thread_cables.jpg[width=49%]
+image:./02_frame/14_assembly_frame_stow_cables.jpg[width=49%]
+
+==== Platine festschrauben
+Nun benötigst du die zwei Zylinderkopfschrauben (M3x10mm) und den Innensechskant-Schraubendreher. Setze nacheinander die Schrauben oben in die Löcher der Bakiwi-Platine ein und schraube diese am Rahmen fest.
+
+
+[TIP]
+====
+Mit etwas Glück lassen sich die Schrauben auf den Innensechskant-Schraubendreher aufstecken und halten dort gut durch Reibung fest, manche Werkzeug sind auch magnetisch. Damit lassen sich die Schrauben meist leichter in die Löcher der Platine einsetzen.
+====
+
+[NOTE]
+====
+Achtung beim ersten Einschrauben schneiden sich die Schrauben ihr eigenes Gewinde in die Löcher der Rahmengrundplatte. Solltest du die Schrauben später nocheinmal lösen und wieder einsetzen wollen, versuche das Gewinde zu ertasten indem du die Schraube vor dem festziehen leicht linksherum drehst bis sie ins ursprüngliche Gewinde findet.
+====
+
+image:./02_frame/15_assembly_frame_tighten_screws.jpg[width=49%]
+
+Der Rahmen hält nun von selbst zusammen, ziehe die Arretierschraube vorsichtig mit den Fingern etwas fester und teste wie sich die Motorhalter nun in bestimmten Rastpositionen feststellen lassen.
+
+=== Motorkabel verbinden
+
+Nun werden die Motoren verkabelt. Diesen Schritt hatten wir bereits beim Testen, stelle erneut sicher, dass die braunen (bzw. schwarzen) Adern der Motorkabel auf das Ground-Symbol zeigen (vgl. mit Abschnitt <<connect_motors, Motoren verbinden>>). Verstaue die beiden Motorkabel möglichst weit im Rahmen, sodass sie gut anliegen und keine großen Schlaufen bilden.
+
+image:./03_cabling/16_assembly_connect_cables.jpg[width=49%]
+image:./03_cabling/17_assembly_connect_cables_side.jpg[width=49%]
+
+=== Batteriehalter anbringen
+
+==== Vorbereiten
+
+Bereite nun das Anbringen der Batterierhalter vor. Du benötigst die vier M3x4mm Zylinderkopfschrauben, den Innensechskant-Schraubendreher und den Seitenschneider.
+
+image:./04_batholder/18_assembly_get_battery_holders.jpg[width=49%]
+
+Entferne zunächst die beiden Distanzstege in beiden Batteriefächern indem du sie ganz knapp über der Fläche abtrennst. Schraube nun die Batteriefächer seitlich an den Rahmen an. Jetzt ist genügend Platz für die Schraubenköpfe.
+
+image:./04_batholder/19_assembly_remove_separator.jpg[width=49%]
+image:./04_batholder/20_assembly_separator_removed.jpg[width=49%]
+
+==== Festschrauben
+
+Die Batteriefächer sollten so angebracht werden, dass die Kabel an der Seite mit den Fühlern sind. Jeder Halter wird mit zwei Schrauben am Rahmen fixiert. Auch hier Schneiden sich die Schrauben beim erstenmal einsetzen ihr Gewinde in die Löcher im Rahmen.
+
+[WARNING]
+====
+Warnung! Nach fest kommt locker! Achte darauf, die Schrauben nicht zu fest anzuziehen.
+====
+
+image:./04_batholder/21_assembly_battery_screws.jpg[width=49%]
+
+==== Batteriekabel verlegen
+
+Verlege die Batterierkabel hinter den Motorkabeln entlang der Platine bis nach hinten und stecke sie dort in die Buchsen ein. Schiebe das Kabel ggf. vorsichtig etwas unter die Platine.
+
+image:./04_batholder/22_assembly_thread_battery_cable.jpg[width=49%]
+image:./04_batholder/23_assembly_thread_battery_cable_done.jpg[width=49%]
+
+*Hurra!* Der Körper deines Bakiwi ist nun fertig. Vergleiche nochmal mit der Abbildung die Ausrichtung der Stecker auf deiner Platine und ob alle Kabel möglichst dicht am Bakiwi-Körper anliegen.
+
+image:./04_batholder/24_assembly_cabling_finished.jpg[width=98%]
+
+
+=== Beine anbringen
+
+Lege zunächst die Batterien wieder ein und schalte deinen Bakiwi ein. Drücke zweimal nacheinander im Abstand von ca. einer Sekunde den `PAUSE`-Knopf, sodass dein Bakiwi seine Motoren in die Ausgangsposition fährt und dann wieder in den Pausemodus geht.
+
+image:./05_legs/25_assembly_leg_adapter.jpg[width=49%]
+image:./05_legs/26_assembly_insert_batteries.jpg[width=49%]
+
+Nun setze die abgebildeten Bein-Anschlüsse auf die gezahnten Enden der Motoren (Schäfte) und schraube die mit den beiliegenden Kreuzschrauben fest. Es sind die letzten zwei Schrauben die übrig sind.
+
+Die beiliegenden 3D-gedruckten Bein-Anschlüsse sind nur eine von unzähligen Möglichkeiten wie du deinem Bakiwi Beine geben kannst. In deinem Bausatz liegen mitunter noch weitere Teile die auf die Schäfte der Motoren passen (sogenannte Ruderhörner).
+
+*Probiere dich aus!* Mit den beiliegenden restlichen Ruderhönern kannst du verschiedene Beinpaare aus unterschiedlichen Bastelmaterialien herstellen immerwieder wechseln.
+
+image:./05_legs/27_assembly_motor_inner_thread.jpg[width=49%]
+image:./05_legs/28_assembly_leg_adapter_screws.jpg[width=49%]
+
+*Erledigt!* Je nachdem welchen Bakiwi-Bausatz du hast, liegen unter Umständen noch kleine Lego-Teile bei, welche die ersten Füße deines Bakiwi sein können. Vielleicht besitzt du auch bereits Lego-Technic-Teile. Diese kannst du verwenden um sehr schnell Beine und Füße für dein Bakiwi zu entwerfen.
+
+image:./05_legs/29_assembly_done.jpg[width=98%]
+
+
+== Benutzung
+
+=== Vor dem Einschalten
+
+*Wichtig:* Vor dem ersten Einschalten (mit Beinen dran) schau dir die Bezeichnungen der vier grauen Regler (Potentiometer) genauer an.
+
+. Stelle den `BALANCE` und `PHASE`-Regler auf Mittenposition (Pfeil nach oben).
+
+. Stelle den Geschwindigkeitsregler (`SPEED`) auf auf halb links (in Richtung der langen Welle).
+
+. Stelle den `LEVEL`-Regler auf halb links (in Richtung der kleinen Welle).
+
+Schalte nun deinen Bakiwi ein.
+
+//TODO hier schon auf den Oszillator eingehen?
+
+== Die Funktionsweise erklärt
+
+Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktiviät der Motorneuronen, selbst wenn sich dein Bakiwi im Pause-Modus befindet. Im Pause-Modus sind die Motoren inhibiert (d.h. gehemmt), du kannst aber durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.
+
+=== Laufparameter
+Die Art wie dein Bakiwi läuft wird durch mehrere Faktoren beeinflusst. Maßgeblich für ein erfolgreiche Fortbewegung sind die Beine, die du deinem Bakiwi erschaffst.
+
+==== Anstellwinkel
+
+Der Anstellwinkel ist ein mechanischer Parameter, du kannst durch Lösen der großen Arretierschraube die Motorhalter beweglich machen und dann ihren Winkel zueinander verändern. *Probiere verschiedenes aus!* Ziehe die Schraube dann wieder nur soweit fest, bis die Motorhalter in der gewünschten Position fest genug halten.
+
+==== Geschwindigkeit/Frequenz
+
+Bewege den `SPEED`-Knopf und beobachte, wie sich die Geschwindigkeit des Blinkens der LEDs verändert. Verlasse den Pause-Modus durch Drücken des Tasters und beobachte an den Motoren wie sich die Geschwindigkeit der Schwingung (d.h. die Frequenz der Oszillation) der Motorneurone unmittelbar auf die Motoren auswirkt. Die Frequenz regelt die Schrittgeschwindigkeit deines Bakiwi.
+
+==== Level/Amplitude
+
+Drehe am `LEVEL`-Knopf und beobachte, wie sich die Helligkeit der LEDs verändert und die Weite mit der die Motoren bei jeder Bewegung ausschlagen. Diese Schwingungsweite wird Amplitude genannt und regelt die Schrittweite der Laufbewegung.
+
+==== Balance
+
+Drehe am `BALANCE`-Regler und beobachte wie sich die vorher eingestellte Amplitude auf die beiden Motoren verteilt. Steht der Regler in Mittenposition sind beide Motoramplituden gleich. Ein Drehen nach links, senkt die Amplitude des vorderen Motors, eine Drehung nach rechts dämpft die Bewegung des hinteren Motors.
+
+==== Phase
+
+Der letzte Parameter, die sogenannte Phase (bzw. der Phasenwinkel) ist wahrlich die besondere Würze und regelt die Laufrichtung. Ein `PHASE`-Regler auf Mitte erzeugt eine synchrone aber gegenläufige Bewegung der Motoren. Drehst du den Phasenwinkel etwas aus der Mitte heraus bewegen sich die Motoren nicht mehr synchron was entscheidend für das Laufen ist. Ein bis auf Maximum (oder Minimum) gestellter Phasenwinkel erzeugt erneut eine synchrone aber diesmal mitläufige Bewegung. Die Phase ist der wichtigste Parameter für eine erfolgreiche Laufbewegung und benötigt deine besondere Aufmerksamkeit. Mit Ihr entscheidet sich, ob dein Bakiwi überhaupt läuft und wenn ja in welche Richtung.
+
+
+
+=== Die Bauteile und ihre Funktion
 // TODO
 
-= Benutzung
-// TODO
-
-= Funktionsweise erklärt
-// TODO
-
-== Die Bauteile und ihre Funktion
-// TODO
-
+=== Der Schaltplan
+:imagesdir: ./img/
 image::./bakiwi_kit_rev1_1_schematics.png[]
 // Kondensator, Widerstand, uC, Schalter, Taster, etc
 
-== Was ist ein Oszillator?
+=== Was ist ein Oszillator?
 // TODO
 // Amplitude, Phase, Frequenz
 
-= Probleme beheben
+== Probleme beheben
 //TODO

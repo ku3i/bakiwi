@@ -40,8 +40,8 @@ public:
        vector:   b2]   vector:  x2]
     */
 
-    const float velmin = M_PI / 8;
-    const float velmax = M_PI / 40;
+    const float velmax = M_PI / 16;
+    const float velmin = M_PI / 80;
 
     float w11, w12, w21, w22, b1, b2, x1, x2;
 
@@ -56,7 +56,7 @@ public:
     void set_weights(float frq)
     {
         /* stepsize of oscillator (frequency) */
-        const float dp = frq * velmin + (1 - frq) * velmax;
+        const float dp = frq * velmax + (1 - frq) * velmin;
 
         /* add non-linearity */
         const float k = 1.0f + 1.5f*dp; // useful range: 1 + 1dp ... 1 + 2dp

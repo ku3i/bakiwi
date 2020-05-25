@@ -26,7 +26,7 @@ public:
 
   CapSense(uint8_t sendpin, uint8_t recvpin)
   : cs(sendpin, recvpin)
-  , y(), w(0.01f), b()
+  , y(), w(0.1f), b()
   {
     cs.set_CS_AutocaL_Millis(0xFFFFFFFF);
     cs.set_CS_Timeout_Millis(timeout_ms);

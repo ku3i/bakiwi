@@ -43,7 +43,7 @@ void setup() {
   osc.restart();
 
   /* play totoro */
-  //board.buzzer.play_melody();
+  board.buzzer.play_melody();
 }
 
 void loop()
