@@ -1,5 +1,5 @@
-#ifndef NEURAL_OSC_H
-#define NEURAL_OSC_H
+#ifndef JCL_NEURAL_OSC_H
+#define JCL_NEURAL_OSC_H
 
 /*---------------------------------+
  | Matthias Kubisch                |
@@ -85,8 +85,8 @@ public:
 
     /* dampening oscillation */
     void damp() {
-        x1 *= 0.9;
-        x2 *= 0.9;
+        x1 *= 0.9f;
+        x2 *= 0.9f;
     }
 
     /* stop the oscillation immediately */
@@ -110,4 +110,4 @@ public:
 
 } /* namespace jcl */
 
-#endif /* NEURAL_OSC_H */
+#endif /* JCL_NEURAL_OSC_H */

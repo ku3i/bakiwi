@@ -1,3 +1,7 @@
+#ifndef JCL_CAPSENSE_H
+#define JCL_CAPSENSE_H
+
+
 #include <CapacitiveSensor.h>
 
 /*-----------------------+
@@ -39,7 +43,6 @@ public:
     y = tanh(w*x + b); /* single tanh neuron */
 
     /* low-pass out the bias/DC component */
-    //b += -eta*y;
     b += (b > -w*x) ? -eta*y: -10*eta*y;
     
     /* decrease weight w when amp is near saturation,
@@ -52,6 +55,9 @@ public:
 
   float get(void) const { return y; }
 
+  uint8_t get_weight() const { return 1/w; }
+  void set_weight(uint8_t val) { w = 1.0/val; }
+
 private:
   float _read(void) { return cs.capacitiveSensorRaw(NREAD)/NREAD; }
 
@@ -59,3 +65,5 @@ private:
 
 
 } /* namespace jcl */
+
+#endif /* JCL_CAPSENSE_H */
