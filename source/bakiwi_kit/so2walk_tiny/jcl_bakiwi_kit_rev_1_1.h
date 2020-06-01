@@ -2,9 +2,9 @@
 #define JCL_BAKIWI_KIT_REV_1_1_H
 
 
-#include <PWMServo.h>
-#include <EEPROM.h>
+#include <avr/eeprom.h>
 
+#include "jcl_servo.h"
 #include "jcl_modules.h"
 #include "jcl_capsense.h"
 #include "jcl_led.h"
@@ -27,41 +27,81 @@ const uint8_t MOTOR_2  = A5;
 const uint8_t CAPSEND  =  9;
 const uint8_t CAPRECV  =  4;
 
-/* eeprom adresses */
+/* memory layout */
+const uint8_t MEM_CAP_SIZE = 20; // starts from address 0
+const uint8_t MEM_CAP_SLOT = 21;
+
 const uint8_t MEM_OFFSET_1 = 22;
 const uint8_t MEM_OFFSET_2 = 23;
-const uint8_t MEM_CAP_GAIN = 21;
+
+const uint8_t MEM_STARTS   = 24; //+25, number of starts is uint16_t
+
+
 
 /* timing */
 const unsigned WAIT_CYCLE_US = 20000;
 const unsigned WAIT_CONFIG_TIMEOUT_MS = 100;
 
+/* misc */
+const unsigned DEG90 = 90;
+
+
+constexpr unsigned cycles_per_minute = 60000 /*1min in ms*/ / (WAIT_CYCLE_US/1000) /*ms*/;
+
+#define CONFIG_MOTOR(N)                       \
+{                                             \
+  int8_t offset = 0;                          \
+  motor_##N.on();                             \
+  while(not button_pressed()) {               \
+    led_##N.toggle();                         \
+    delay(20);                                \
+    offset = 32*readpin(POTI_PHS)-16;         \
+    motor_##N.set(90 + offset);               \
+  }                                           \
+  wait_for_button_released();                 \
+  motor_##N.off();                            \
+  led_##N.off();                              \
+  eeprom_update_byte(MEM_OFFSET_##N, offset); \
+  bias_##N = offset;                          \
+}                                             \
 
 
 class BakiwiKit {
 
   /* timing */
   unsigned long timestamp = 0;
-  int8_t button_integ = 0;
+  int button_integ = 0;
+
+  unsigned cycles = 0;
+  uint8_t slot_id = 0;
 
 public:
 
   int8_t bias_1 = 0;
   int8_t bias_2 = 0;
   
-  PWMServo motor_1 = {};
-  PWMServo motor_2 = {};
+  JCLServo<MOTOR_1> motor_1 = {};
+  JCLServo<MOTOR_2> motor_2 = {};
   CapSense cap;
 
   LED<LED_1> led_1;
   LED<LED_2> led_2;
 
 
-  BakiwiKit() : cap(CAPSEND,CAPRECV) {}
+  BakiwiKit() : cap(CAPSEND,CAPRECV) {
+    static_assert(cycles_per_minute == 3000);
+  }
 
   void step(void) { 
     cap.step(); 
-    //last todo: regularily update the eeprom value for wgain  
+
+    /* regularily update the eeprom value for wgain */
+    if (cycles++ >= cycles_per_minute) {
+      //led_2.on();
+      //delay(500);
+      eeprom_update_byte(slot_id, cap.get_weight());
+      cycles=0;
+    }
   }
 
   void init(void) {
@@ -69,21 +109,29 @@ public:
     led_1.init();
     led_2.init();
 
+
+    eeprom_busy_wait();
     /* check for config mode */
     if (button_pressed_for_ms(WAIT_CONFIG_TIMEOUT_MS))
       configuration_routine();
     else {
-      bias_1 = EEPROM.read(MEM_OFFSET_1);
-      bias_2 = EEPROM.read(MEM_OFFSET_2);
+      bias_1 = eeprom_read_byte(MEM_OFFSET_1);
+      bias_2 = eeprom_read_byte(MEM_OFFSET_2);
     }
+
+    uint16_t numstarts = eeprom_read_word(MEM_STARTS);
+    eeprom_write_word(MEM_STARTS, ++numstarts);
 
     /* read capacitive sense gain from memory and check for valid value 
        if no valid value is in memory, flash default value. */
-    uint8_t cap_gain = EEPROM.read(MEM_CAP_GAIN);
+    slot_id = eeprom_read_byte(MEM_CAP_SLOT); // read last slot_id from memory
+    const uint8_t cap_gain = eeprom_read_byte(slot_id);
+
+    if (++slot_id >= MEM_CAP_SIZE) slot_id = 0; // rotate slot_id
+    eeprom_write_byte(MEM_CAP_SLOT, slot_id);       // and save to memory
     
-    if (255 == cap_gain) { // no value written yet
-      cap_gain = cap.get_weight();
-      EEPROM.update(MEM_CAP_GAIN, cap_gain);
+    if (255 == cap_gain) { // no gain value written yet
+      eeprom_write_byte(slot_id, cap.get_weight());
       led_1.on();
       delay(1000);
     } else {
@@ -92,21 +140,21 @@ public:
   }
 
   
-  float readpin(uint8_t pin) { return analogRead(pin) / 1023.f; }
+  float readpin(uint8_t pin) const { return analogRead(pin) / 1023.f; }
 
-  float get_amp() { return readpin(POTI_AMP); }
-  float get_bal() { return readpin(POTI_BAL); }
-  float get_frq() { return readpin(POTI_FRQ); }
-  float get_phs() { return readpin(POTI_PHS); }
+  float get_amp() const { return readpin(POTI_AMP); }
+  float get_bal() const { return readpin(POTI_BAL); }
+  float get_frq() const { return readpin(POTI_FRQ); }
+  float get_phs() const { return readpin(POTI_PHS); }
 
 
 
   bool button_pressed(uint8_t N = 3)
   {  
-    bool buttonstate = !digitalRead(BUTTON);
+    const bool buttonstate = !digitalRead(BUTTON);
  
     button_integ += buttonstate ? 1 : -1;
-    button_integ = clip(button_integ, 0, 2*N);
+    button_integ = clamp(button_integ, 0, 2*N);
   
     return button_integ>=N;
   }
@@ -128,18 +176,18 @@ public:
   }
 
   void write_motors(uint8_t out_1, uint8_t out_2) {
-    motor_1.write(out_1);
-    motor_2.write(out_2);
+    motor_1.set(out_1);
+    motor_2.set(out_2);
   }
 
   void motors_on(void) {
-    motor_1.attach(MOTOR_1);
-    motor_2.attach(MOTOR_2); 
+    motor_1.on();
+    motor_2.on();
   }
 
   void motors_off(void) {
-    motor_1.detach();
-    motor_2.detach();
+    motor_1.off();
+    motor_2.off();
   }
 
   /* use for constant loop delay, 
@@ -171,40 +219,11 @@ public:
     }
     leds_off();
 
-    int8_t offset = 0;
-
-    /* configure 1st motor */
-    motor_1.attach(MOTOR_1);
-    while(not button_pressed()) {
-      led_1.toggle();
-      delay(20); 
-      offset = 32*readpin(POTI_PHS)-16;
-      motor_1.write(90 + offset);
-    }
-    wait_for_button_released();
-  
-    motor_1.detach();
-    led_1.off();
-    EEPROM.write(MEM_OFFSET_1, offset);
-    bias_1 = offset;
-
-    /* configure 2nd motor */
-    motor_2.attach(MOTOR_2);
-    while(not button_pressed()) {
-      led_2.toggle();
-      delay(20); 
-      offset = 32*readpin(POTI_PHS)-16;
-      motor_2.write(90 + offset);
-    }
-    wait_for_button_released();
-  
-    motor_2.detach();
-    led_2.off();
-    EEPROM.write(MEM_OFFSET_2, offset);
-    bias_2 = offset;
+    CONFIG_MOTOR(1);
+    CONFIG_MOTOR(2);
 }
 
- 
+
 };
 
 

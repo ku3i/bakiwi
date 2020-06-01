@@ -6,8 +6,7 @@
  * 
  *
  * TODO: 
- * + correct amplitude when playing a low freq. (amp is very low here)
- * + rewrite servo lib
+ * + correct amplitude when playing a low freq. (amp gets low here)
  */
 
 /* Note: Using the attiny layout by Davis A. Mellis
@@ -28,11 +27,6 @@
 
 #include "jcl_neural_osc.h"
 #include "jcl_bakiwi_kit_rev_1_1.h"
-
-
-/* misc */
-#define PREAMP 1.0
-#define MAX_ANGLE 90
 
 
 bool pressed = false;
@@ -80,10 +74,10 @@ void loop() {
 
   const float cs = bakiwi.cap.get();
 
-  const float freq_gain = (cs > 0) ? (1 - 5 * clip(cs, 0, 0.2)) 
+  const float freq_gain = (cs > 0) ? (1 - 5 * clamp(cs, 0.f, .2f))
                                    : (1 - 0.334 * cs);
                                  
-  const float ampl_gain = 1 - clip(cs);
+  const float ampl_gain = 1 - clamp(cs, 0.f, 1.f);
 
   /* propagate neural oscillator */
   osc.set_frequency(freq_gain * bakiwi.get_frq());
@@ -100,26 +94,26 @@ void loop() {
   const float lev = bakiwi.get_amp() * ampl_gain;
   const float dif = 2 * bakiwi.get_bal();
   
-  const float amp1 = PREAMP * lev * clip(    dif);
-  const float amp2 = PREAMP * lev * clip(2 - dif);
+  const float amp1 = lev * clamp(    dif, .0f, 1.f);
+  const float amp2 = lev * clamp(2 - dif, .0f, 1.f);
 
   /* calc motor outputs */
-  const uint8_t out_1 = constrain(round(u1 * amp1 * MAX_ANGLE) + MAX_ANGLE + bakiwi.bias_1, 0, 2 * MAX_ANGLE);
-  const uint8_t out_2 = constrain(round(u2 * amp2 * MAX_ANGLE) + MAX_ANGLE + bakiwi.bias_2, 0, 2 * MAX_ANGLE);
+  const uint8_t out_1 = clamp((unsigned) (round(u1 * amp1 * DEG90) + DEG90 + bakiwi.bias_1), 0u, 2 * DEG90);
+  const uint8_t out_2 = clamp((unsigned) (round(u2 * amp2 * DEG90) + DEG90 + bakiwi.bias_2), 0u, 2 * DEG90);
 
   /* write motors */
-  if (!paused)
+  if (not paused)
     bakiwi.write_motors(out_1, out_2);
 
   
   /* set LED pwms */
   uint8_t led_1,led_2;
   if (cs < 0.25) {
-    led_1 = 255 * clip(u1 * amp1 * 4);
-    led_2 = 255 * clip(u2 * amp2 * 4);
+    led_1 = 255 * clamp(u1 * amp1 * 4, 0.f, 1.f);
+    led_2 = 255 * clamp(u2 * amp2 * 4, 0.f, 1.f);
   } else {
-    led_1 = 255 * clip(cs);
-    led_2 = 255 * clip(cs);
+    led_1 = 255 * clamp(cs, 0.f, 1.f);
+    led_2 = 255 * clamp(cs, 0.f, 1.f);
   }
   
   bakiwi.led_set_pwm(led_1, led_2);

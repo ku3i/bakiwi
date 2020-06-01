@@ -1,0 +1,1 @@
+avrdude -c arduino -P /dev/ttyUSB0 -b 19200 -p attiny84 -U eeprom:r:bakiwi_eeprom.hex:i

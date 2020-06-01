@@ -1,15 +1,28 @@
 #ifndef JCL_MODULES_H
 #define JCL_MODULES_H
 
-#include <math.h>
+#include <stdlib.h>
 
 namespace jcl {
 
-/* clips values to Interval [l_limit, u_limit] */
-float clip(float x, float l_limit = 0.f, float u_limit = 1.f);
+/* clamps values to Interval [lo, hi] */
+template<class T>
+constexpr const T& clamp( const T& v, const T& lo, const T& hi )
+{
+    return (v < lo) ? lo : (hi < v) ? hi : v;
+}
 
 /* generates a random value within interval [a,b] */
 float random_value(float a, float b);
+
+
+template <unsigned N>
+unsigned random_index(void)
+{
+  static_assert(N > 0);
+  return rand() % N;
+}
+
 
 } /* namespace jcl */
 

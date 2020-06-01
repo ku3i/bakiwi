@@ -83,19 +83,13 @@ public:
         x2 = .0f;
     }
 
-    /* dampening oscillation */
-    void damp() {
-        x1 *= 0.9f;
-        x2 *= 0.9f;
-    }
-
     /* stop the oscillation immediately */
     void stop(void) {
         x1 = .0f;
         x2 = .0f;
     }
 
-    void set_frequency(float val) { set_weights(clip(val, 0.f, 1.f)); }
+    void set_frequency(float val) { set_weights(clamp(val, 0.f, 1.f)); }
 
     void step(void) {
         const float a1 = w11*x1 + w12*x2 + b1;
