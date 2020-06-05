@@ -1,6 +1,15 @@
 #ifndef JCL_MODULES_H
 #define JCL_MODULES_H
 
+
+/*---------------------------------+
+ | Modules                         |
+ | Jetpack Cognition Lab           |
+ | Matthias Kubisch                |
+ | kubisch@informatik.hu-berlin.de |
+ | June 5th 2020                   |
+ +---------------------------------*/
+
 #include <stdlib.h>
 
 namespace jcl {

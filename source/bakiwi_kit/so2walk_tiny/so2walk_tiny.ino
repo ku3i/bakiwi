@@ -1,29 +1,11 @@
-/* SO(2)-Walker for Bakiwi Kit
- * 
- * written by Matthias Kubisch
- * Version for bakiwi kit 0.1
- * May 29th, 2020
- * 
- *
- * TODO: 
- * + correct amplitude when playing a low freq. (amp gets low here)
- */
-
-/* Note: Using the attiny layout by Davis A. Mellis
-   https://github.com/damellis/attiny
-
-   ATMEL ATTINY84 / ARDUINO
-  
-                             +-\/-+
-                       VCC  1|    |14  GND
-               (D 10)  PB0  2|    |13  AREF (D  0)
-               (D  9)  PB1  3|    |12  PA1  (D  1) 
-                       PB3  4|    |11  PA2  (D  2) 
-    PWM  INT0  (D  8)  PB2  5|    |10  PA3  (D  3) 
-    PWM        (D  7)  PA7  6|    |9   PA4  (D  4) 
-    PWM        (D  6)  PA6  7|    |8   PA5  (D  5)        PWM
-                             +----+
-*/
+/*---------------------------------+
+ | Bakiwi Kit Firmware             |
+ | Jetpack Cognition Lab           |
+ | Matthias Kubisch                |
+ | kubisch@informatik.hu-berlin.de |
+ | Version for bakiwi kit rev 1.1  |
+ | June 5th, 2020                  |
+ +---------------------------------*/
 
 #include "jcl_neural_osc.h"
 #include "jcl_bakiwi_kit_rev_1_1.h"
@@ -72,11 +54,14 @@ void loop() {
   }
   pressed = state;
 
+  /* read capacitive sensors (aka antennas) */
   const float cs = bakiwi.cap.get();
 
+  /* reduce frequency when antennas touched */
   const float freq_gain = (cs > 0) ? (1 - 5 * clamp(cs, 0.f, .2f))
                                    : (1 - 0.334 * cs);
-                                 
+
+  /* reduce amplitude when antennas touched */
   const float ampl_gain = 1 - clamp(cs, 0.f, 1.f);
 
   /* propagate neural oscillator */
@@ -93,11 +78,12 @@ void loop() {
   /* read amplitude and balance */
   const float lev = bakiwi.get_amp() * ampl_gain;
   const float dif = 2 * bakiwi.get_bal();
-  
+
+  /* set amplitudes for front (1) and rear (2) motor */
   const float amp1 = lev * clamp(    dif, .0f, 1.f);
   const float amp2 = lev * clamp(2 - dif, .0f, 1.f);
 
-  /* calc motor outputs */
+  /* prepare motor outputs */
   const uint8_t out_1 = clamp((unsigned) (round(u1 * amp1 * DEG90) + DEG90 + bakiwi.bias_1), 0u, 2 * DEG90);
   const uint8_t out_2 = clamp((unsigned) (round(u2 * amp2 * DEG90) + DEG90 + bakiwi.bias_2), 0u, 2 * DEG90);
 
@@ -106,17 +92,17 @@ void loop() {
     bakiwi.write_motors(out_1, out_2);
 
   
-  /* set LED pwms */
+  /* prepare LED pwms */
   uint8_t led_1,led_2;
-  if (cs < 0.25) {
-    led_1 = 255 * clamp(u1 * amp1 * 4, 0.f, 1.f);
+  if (cs < 0.25) { // if antennas not touched
+    led_1 = 255 * clamp(u1 * amp1 * 4, 0.f, 1.f); // blink LEDs with oscillator state
     led_2 = 255 * clamp(u2 * amp2 * 4, 0.f, 1.f);
   } else {
-    led_1 = 255 * clamp(cs, 0.f, 1.f);
+    led_1 = 255 * clamp(cs, 0.f, 1.f); // light-up LEDs according to antenna touch
     led_2 = 255 * clamp(cs, 0.f, 1.f);
   }
   
-  bakiwi.led_set_pwm(led_1, led_2);
+  bakiwi.led_set_pwm(led_1, led_2); /* set LED pwms */
 
   
   bakiwi.wait_for_next_cycle(); /* wait for next timeslot */

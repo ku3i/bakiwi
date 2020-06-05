@@ -1,6 +1,13 @@
 #ifndef JCL_LED_H
 #define JCL_LED_H
 
+/*-----------------------+
+ | Simple LED Helper     |
+ | Jetpack Cognition Lab |
+ | Matthias Kubisch      |
+ | June 5th 2020         |
+ +-----------------------*/
+
 namespace jcl {
 
 template <uint8_t PIN>

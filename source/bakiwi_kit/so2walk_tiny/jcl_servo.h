@@ -1,31 +1,46 @@
 #ifndef JCL_SERVO_H
 #define JCL_SERVO_H
 
-#include "jcl_modules.h"
+/*---------------------------------+
+ | Minimal Servo Lib               |
+ | Jetpack Cognition Lab           |
+ | Matthias Kubisch                |
+ | kubisch@informatik.hu-berlin.de |
+ | June 5th 2020                   |
+ +---------------------------------*/
+
+
 #include <avr/interrupt.h>
 #include "Arduino.h"
+#include "jcl_modules.h"
 
-/* This is a minimal two-servo class for Attiny84 */
-// TODO add contribution comment
+/* This is a minimal two-servo class for attiny84/atmega328p (Bakiwi Kit)
+ * It is NOT meant as a full library. Parts of the code is inspired by servo
+ * libs with contributions of Jim Studt, David A. Mellis, and Paul Stoffregen. */
 
-
-#if defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__) // Arduino
-  #define SERVO_PIN_A 9
-  #define SERVO_PIN_B 10
-#elif defined(__AVR_ATtiny84__)
+#if defined(__AVR_ATtiny84__)
  #define SERVO_PIN_A 6
  #define SERVO_PIN_B 5
-#else
+#elif defined(__AVR_ATmega328P__)
   #define SERVO_PIN_A 9
   #define SERVO_PIN_B 10
+#else
+  static_assert(false, "no servo pins assinged");
 #endif
 
 
+namespace jcl {
 
-// pulse length for 0 degrees in microseconds, 544uS default
-// pulse length for 180 degrees in microseconds, 2400uS default
-const unsigned min16 = 544 / 16;   // minimum pulse, 16uS units  (default is 34)
-const unsigned max16 = 2400 / 16; // maximum pulse, 16uS units, 0-4ms range (default is 150)
+/*-------------------------------------------+
+ |  default pulse lengths [in us] for degree |
+ |   0: 544                                  |
+ | 180: 2400                                 |
+ +-------------------------------------------*/
+
+const uint16_t pulse_min = 544;
+const uint16_t pulse_max = 2400;
+const uint16_t a = clockCyclesPerMicrosecond() * pulse_min;
+const uint16_t b = clockCyclesPerMicrosecond() * (pulse_max - pulse_min) / 180;
 
 
 class JCLServoBase {
@@ -46,22 +61,19 @@ class JCLServo : public JCLServoBase
     const uint8_t defSREG = SREG;
 
     cli();
-    TCCR1A = _BV(WGM11); /* fast PWM, ICR1 is top */
-    TCCR1B = _BV(WGM13)
-           | _BV(WGM12)  /* fast PWM, ICR1 is top */
-           | _BV(CS11);  /* div 8 clock prescaler */
+    TCCR1A = _BV(WGM11);
+    TCCR1B = _BV(WGM12)
+           | _BV(WGM13)  /* Mode: Fast PWM, ICR1 is top */
+           | _BV(CS11);  /* Clock Prescaler is /8       */
 
     OCR1A = 3000;
     OCR1B = 3000;
-    ICR1  = clockCyclesPerMicrosecond()*(20000L/8);  /* 20000 us (20ms) is a bit fast for the refresh, but
-                                                        it keeps us from overflowing ICR1 at 20MHz clocks
-                                                        That "/8" at the end is the prescaler. */
+    ICR1  = clockCyclesPerMicrosecond()*(20000L/8);  /* ICR1 is 16bit, so its value is
+                                                        e.g. 16*20000/8 = 40000, for 16MHz clock
+                                                        20000us is servo refresh time
+                                                        /8 is the prescaler. */
 
-    #if defined(__AVR_ATmega8__)
-      TIMSK &= ~(_BV(TICIE1) | _BV(OCIE1A) | _BV(OCIE1B) | _BV(TOIE1) );
-    #else
-      TIMSK1 &=  ~(_BV(OCIE1A) | _BV(OCIE1B) | _BV(TOIE1) );
-    #endif
+    TIMSK1 &=  ~(_BV(OCIE1A) | _BV(OCIE1B) | _BV(TOIE1) );
 
     SREG = defSREG;  // restore
   }
@@ -77,7 +89,7 @@ class JCLServo : public JCLServoBase
    * will not position the servo until a subsequent write() */
   void on(void)
   {
-    digitalWrite(PIN, LOW); //check order?
+    digitalWrite(PIN, LOW);
     pinMode(PIN, OUTPUT);
 
     if (!is_attached_A && !is_attached_B) init_timer();
@@ -112,13 +124,11 @@ class JCLServo : public JCLServoBase
   /* sets the servos target angle from 0 to 180 deg */
   void set(uint8_t angle)
   {
-    jcl::clamp(angle, uint8_t{0}, uint8_t{180});
+    clamp(angle, uint8_t{0}, uint8_t{180});
 
-    // TODO clarify this comment: 
-    // bleh, have to use longs to prevent overflow, could be tricky if always a 16MHz clock, but not true
-    // That 8L on the end is the TCNT1 prescaler, it will need to change if the clock's prescaler changes,
-    // but then there will likely be an overflow problem, so it will have to be handled by a human.
-    uint16_t p = (min16*16L*clockCyclesPerMicrosecond() + (max16-min16)*(16L*clockCyclesPerMicrosecond())*angle/180L)/8L;
+    /* 8L is TCNT1 prescaler, change if the clock's prescaler changes */
+    const uint16_t p = (a + b * angle) / 8;
+
     if (PIN == SERVO_PIN_A) OCR1A = p;
     if (PIN == SERVO_PIN_B) OCR1B = p;
   }
@@ -126,5 +136,6 @@ class JCLServo : public JCLServoBase
          
 };
 
+} /* namespace jcl */
 
 #endif /* JCL_SERVO_H */

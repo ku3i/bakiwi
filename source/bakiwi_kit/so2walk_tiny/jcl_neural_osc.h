@@ -2,14 +2,14 @@
 #define JCL_NEURAL_OSC_H
 
 /*---------------------------------+
+ | Neural SO(2)-Oscillator         |
+ | Jetpack Cognition Lab           |
  | Matthias Kubisch                |
  | kubisch@informatik.hu-berlin.de |
- | October 6th, 2019               |
+ | Oct. 6th 2019                   |
  +---------------------------------*/
 
-/* Description:
- *
- * Neural-SO(2)-Oscillator.
+/* Neural-SO(2)-Oscillator.
  * The theoretical basis can be found in this paper:
  * 'SO(2)-Networks as Neural Oscillators' by Frank Pasemann, Manfred Hild and Keyan Zahedi.
  *
@@ -25,6 +25,8 @@
  * r(dp) = [ cos(dp), sin(dp)
  *          -sin(dp), cos(dp) ]
  */
+
+/* Known issue: Amplitude gets also a little lower when setting up a low frequency. */
 
 #include <math.h>
 #include "jcl_modules.h"

@@ -1,16 +1,15 @@
 #ifndef JCL_CAPSENSE_H
 #define JCL_CAPSENSE_H
 
+/*---------------------------------+
+ | CapSense (Wrapper)              |
+ | Jetpack Cognition Lab           |
+ | Matthias Kubisch                |
+ | kubisch@informatik.hu-berlin.de |
+ | Dec. 19th 2019                  |
+ +---------------------------------*/
 
 #include <CapacitiveSensor.h>
-
-/*-----------------------+
- | CapSense              |
- | Jetpack Cognition Lab |
- | Matthias Kubisch      |
- | v.0.1 Dec. 19th 2019  |
- +-----------------------*/
-
 
 namespace jcl {
 
