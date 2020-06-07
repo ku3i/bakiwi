@@ -7,7 +7,7 @@
  | Jetpack Cognition Lab           |
  | Matthias Kubisch                |
  | kubisch@informatik.hu-berlin.de |
- | June 5th 2020                   |
+ | June 7th 2020                   |
  +---------------------------------*/
 
 
@@ -54,13 +54,13 @@ const uint8_t CAPSEND  =  9;
 const uint8_t CAPRECV  =  4;
 
 /* memory layout */
-const uint8_t MEM_CAP_SIZE = 20; // starts from address 0
-const uint8_t MEM_CAP_SLOT = 21;
+const uint8_t MEM_CAP_SIZE = 32; // starts from address 0
+const uint8_t MEM_CAP_SLOT = 32;
 
-const uint8_t MEM_OFFSET_1 = 22;
-const uint8_t MEM_OFFSET_2 = 23;
+const uint8_t MEM_OFFSET_1 = 34;
+const uint8_t MEM_OFFSET_2 = 35;
 
-const uint8_t MEM_STARTS   = 24; //+25, number of starts is uint16_t
+const uint8_t MEM_STARTS   = 64; //+65, number of starts is uint16_t
 
 
 

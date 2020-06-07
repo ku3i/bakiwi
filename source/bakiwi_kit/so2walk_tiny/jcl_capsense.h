@@ -6,7 +6,7 @@
  | Jetpack Cognition Lab           |
  | Matthias Kubisch                |
  | kubisch@informatik.hu-berlin.de |
- | Dec. 19th 2019                  |
+ | June 7th 2020                   |
  +---------------------------------*/
 
 #include <CapacitiveSensor.h>
@@ -58,7 +58,13 @@ public:
   /* getting and setting the weight parameter for saving and loading.
      param w is transmitted as 1/w to fit in one byte [val=0..255] */
   uint8_t get_weight() const { return clamp(1.f/w, 1.f, 255.f); }
-  void set_weight(uint8_t val) { if (0!=val) w = 1.f/val; }
+
+  void set_weight(uint8_t val) {
+    if (0!=val) {
+      w = 1.f/val;
+      b = -w*x;    // update b according to weight change
+    }
+  }
 
 private:
   float _read(void) { return jcl::max(0L, cs.capacitiveSensorRaw(NREAD)/NREAD); }

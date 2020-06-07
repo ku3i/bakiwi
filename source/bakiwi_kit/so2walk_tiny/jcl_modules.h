@@ -7,7 +7,7 @@
  | Jetpack Cognition Lab           |
  | Matthias Kubisch                |
  | kubisch@informatik.hu-berlin.de |
- | June 5th 2020                   |
+ | June 7th 2020                   |
  +---------------------------------*/
 
 #include <stdlib.h>

@@ -3,8 +3,8 @@
  | Jetpack Cognition Lab           |
  | Matthias Kubisch                |
  | kubisch@informatik.hu-berlin.de |
- | Version for bakiwi kit rev 1.1  |
- | June 5th, 2020                  |
+ | board ver. bakiwi kit rev 1.1   |
+ | version 20.6.7                  |
  +---------------------------------*/
 
 #include "jcl_neural_osc.h"
@@ -91,7 +91,6 @@ void loop() {
   if (not paused)
     bakiwi.write_motors(out_1, out_2);
 
-
   /* prepare LED pwms */
   uint8_t led_1, led_2;
   if (cs < 0.25) { // if antennas not touched
@@ -103,7 +102,6 @@ void loop() {
   }
 
   bakiwi.leds_set_pwm(led_1, led_2);
-
 
   bakiwi.wait_for_next_cycle();
 }
