@@ -35,13 +35,16 @@ public:
     b = -w*x;
   }
 
+  /* positiv return value signals touch,
+     while a negative one signals release.
+     return value is always bounded by [-1,+1] */
   float step(void) {
     x = lp*_read() + (1-lp)*x;
     y = tanh(w*x + b); /* single tanh neuron */
 
     /* low-pass out the bias/DC component */
     b += (b > -w*x) ? -eta*y : -10*eta*y;
-    
+
     /* decrease weight w when amp is near saturation,
        or increase w when amp is too lower */
     if (fabs(y) > .6f) w *= 1-eta_w;
@@ -52,11 +55,13 @@ public:
 
   float get(void) const { return y; }
 
-  uint8_t get_weight() const { return 1/w; }
-  void set_weight(uint8_t val) { w = 1.0/val; }
+  /* getting and setting the weight parameter for saving and loading.
+     param w is transmitted as 1/w to fit in one byte [val=0..255] */
+  uint8_t get_weight() const { return clamp(1.f/w, 1.f, 255.f); }
+  void set_weight(uint8_t val) { if (0!=val) w = 1.f/val; }
 
 private:
-  float _read(void) { return cs.capacitiveSensorRaw(NREAD)/NREAD; }
+  float _read(void) { return jcl::max(0L, cs.capacitiveSensorRaw(NREAD)/NREAD); }
 
 };
 

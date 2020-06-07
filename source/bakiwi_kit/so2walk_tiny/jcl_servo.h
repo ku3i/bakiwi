@@ -133,7 +133,7 @@ class JCLServo : public JCLServoBase
     if (PIN == SERVO_PIN_B) OCR1B = p;
   }
 
-         
+
 };
 
 } /* namespace jcl */

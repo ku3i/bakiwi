@@ -20,7 +20,7 @@ NeuralOscillator osc;
 BakiwiKit        bakiwi;
 
 void setup() {
-  
+
   bakiwi.init(); /* initialize bakiwi board */
 
   osc.set_frequency(bakiwi.get_frq());
@@ -28,10 +28,10 @@ void setup() {
 
   /* start LED boot-up sequence */
   for (float i = 255; i > 2; i *= 0.95) {
-    bakiwi.led_set_pwm((uint8_t)i, (uint8_t)i);
+    bakiwi.leds_set_pwm((uint8_t)i, (uint8_t)i);
     delay(5);
   }
-  
+
   bakiwi.leds_off();
 }
 
@@ -45,7 +45,7 @@ void loop() {
   {
     if (paused) {
       paused = false;
-      bakiwi.motors_on();     
+      bakiwi.motors_on();
       osc.restart();
     } else {
       paused = true;
@@ -91,9 +91,9 @@ void loop() {
   if (not paused)
     bakiwi.write_motors(out_1, out_2);
 
-  
+
   /* prepare LED pwms */
-  uint8_t led_1,led_2;
+  uint8_t led_1, led_2;
   if (cs < 0.25) { // if antennas not touched
     led_1 = 255 * clamp(u1 * amp1 * 4, 0.f, 1.f); // blink LEDs with oscillator state
     led_2 = 255 * clamp(u2 * amp2 * 4, 0.f, 1.f);
@@ -101,9 +101,9 @@ void loop() {
     led_1 = 255 * clamp(cs, 0.f, 1.f); // light-up LEDs according to antenna touch
     led_2 = 255 * clamp(cs, 0.f, 1.f);
   }
-  
-  bakiwi.led_set_pwm(led_1, led_2); /* set LED pwms */
 
-  
-  bakiwi.wait_for_next_cycle(); /* wait for next timeslot */
+  bakiwi.leds_set_pwm(led_1, led_2);
+
+
+  bakiwi.wait_for_next_cycle();
 }

@@ -20,7 +20,7 @@ class LED {
 
   void toggle() { digitalWrite(PIN, !digitalRead(PIN)); }
   void pwm(uint8_t val) { analogWrite(PIN, val); }
-  
+
 };
 
 } /* namespace jcl */

@@ -105,7 +105,7 @@ public:
 
   int8_t bias_1 = 0;
   int8_t bias_2 = 0;
-  
+
   JCLServo<MOTOR_1> motor_1 = {};
   JCLServo<MOTOR_2> motor_2 = {};
   CapSense cap;
@@ -118,15 +118,13 @@ public:
     static_assert(cycles_per_minute == 3000);
   }
 
-  void step(void) { 
-    cap.step(); 
+  void step(void) {
+    cap.step();
 
     /* regularily update the eeprom value for wgain */
     if (cycles++ >= cycles_per_minute) {
-      //led_2.on();
-      //delay(500);
       eeprom_update_byte(slot_id, cap.get_weight());
-      cycles=0;
+      cycles = 0;
     }
   }
 
@@ -135,37 +133,42 @@ public:
     led_1.init();
     led_2.init();
 
-
     eeprom_busy_wait();
+
     /* check for config mode */
-    if (button_pressed_for_ms(WAIT_CONFIG_TIMEOUT_MS))
+    if (button_pressed_for_ms<WAIT_CONFIG_TIMEOUT_MS>())
       configuration_routine();
-    else {
+    else { /* otherwise read the motor offsets */
       bias_1 = eeprom_read_byte(MEM_OFFSET_1);
       bias_2 = eeprom_read_byte(MEM_OFFSET_2);
     }
 
+    /* protocol system starts */
     uint16_t numstarts = eeprom_read_word(MEM_STARTS);
     eeprom_write_word(MEM_STARTS, ++numstarts);
 
-    /* read capacitive sense gain from memory and check for valid value 
-       if no valid value is in memory, flash default value. */
-    slot_id = eeprom_read_byte(MEM_CAP_SLOT); // read last slot_id from memory
-    const uint8_t cap_gain = eeprom_read_byte(slot_id);
+    /* read slot_id from memory + check bounds in case of corrupt memory */
+    slot_id = eeprom_read_byte(MEM_CAP_SLOT);
+    slot_id = clamp(slot_id, uint8_t{0}, uint8_t{MEM_CAP_SIZE-1});
 
-    if (++slot_id >= MEM_CAP_SIZE) slot_id = 0; // rotate slot_id
-    eeprom_write_byte(MEM_CAP_SLOT, slot_id);       // and save to memory
-    
+    /* read capacitive sense gain from memory, check for valid value
+       if no valid value is in memory, flash default value. */
+    const uint8_t cap_gain = eeprom_read_byte(slot_id);
     if (255 == cap_gain) { // no gain value written yet
       eeprom_write_byte(slot_id, cap.get_weight());
       led_1.on();
-      delay(1000);
-    } else {
-      cap.set_weight(cap_gain);
+      delay(500);
     }
+    else
+      cap.set_weight(cap_gain);
+
+    /* rotate slot id for adaptive antenna gain,
+       in order to reduce eemprom wear-out. */
+    if (++slot_id >= MEM_CAP_SIZE) slot_id = 0;
+    eeprom_write_byte(MEM_CAP_SLOT, slot_id);
+
   }
 
-  
   float readpin(uint8_t pin) const { return analogRead(pin) / 1023.f; }
 
   float get_amp() const { return readpin(POTI_AMP); }
@@ -173,26 +176,27 @@ public:
   float get_frq() const { return readpin(POTI_FRQ); }
   float get_phs() const { return readpin(POTI_PHS); }
 
-
-
+  /* detect if button is pressed, uses hysteresis,
+     i.e. needs to be called N times for a press or
+     release to be detected */
   bool button_pressed(uint8_t N = 3)
-  {  
+  {
     const bool buttonstate = !digitalRead(BUTTON);
- 
+
     button_integ += buttonstate ? 1 : -1;
     button_integ = clamp(button_integ, 0, 2*N);
-  
+
     return button_integ>=N;
   }
 
-  void led_set_pwm(uint8_t pwm_1, uint8_t pwm_2)
+  void leds_set_pwm(uint8_t pwm_1, uint8_t pwm_2)
   {
     led_1.pwm(pwm_1);
     led_2.pwm(pwm_2);
   }
 
   void leds_off(void) {
-    led_1.off(); 
+    led_1.off();
     led_2.off();
   }
 
@@ -216,24 +220,26 @@ public:
     motor_2.off();
   }
 
-  /* use for constant loop delay, 
+  /* ensure constant loop delay,
      wait until timer signals next time slot is done */
-     
   void wait_for_next_cycle(void) {
     while(micros() - timestamp < WAIT_CYCLE_US);
     timestamp = micros();
   }
 
-  bool button_pressed_for_ms(unsigned int timeout_ms) {
+  /* detects if the button was pressed for at least 'time_ms' */
+  template <unsigned time_ms = 100>
+  bool button_pressed_for_ms(void) {
+    static_assert(time_ms >= 20, "time too short.");
     bool pressed = false;
-    while(millis() < timeout_ms) {
-      if (button_pressed(8)) pressed = true;
-      delay(10); 
+    while(millis() < time_ms) {
+      if (button_pressed(time_ms/10-1)) pressed = true;
+      delay(10);
     }
     return pressed;
   }
 
-  void wait_for_button_released(void) { 
+  void wait_for_button_released(void) {
     while(button_pressed()) { delay(20); }
   }
 
@@ -241,7 +247,7 @@ public:
   {
     while(button_pressed()) {
       leds_toggle();
-      delay(64); 
+      delay(64);
     }
     leds_off();
 

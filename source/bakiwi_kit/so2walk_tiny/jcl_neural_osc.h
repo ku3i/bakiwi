@@ -10,7 +10,7 @@
  +---------------------------------*/
 
 /* Neural-SO(2)-Oscillator.
- * The theoretical basis can be found in this paper:
+ * The theoretical background can be found in this paper:
  * 'SO(2)-Networks as Neural Oscillators' by Frank Pasemann, Manfred Hild and Keyan Zahedi.
  *
  * Brief Description:
@@ -49,11 +49,11 @@ public:
 
     float w11, w12, w21, w22, b1, b2, x1, x2;
 
-    NeuralOscillator(float velmin = M_PI / 64, float velmax = M_PI / 8) 
+    NeuralOscillator(float velmin = M_PI / 64, float velmax = M_PI / 8)
     : velmin(velmin)
     , velmax(velmax)
     , w11(), w12(), w21(), w22()
-    , b1(), b2(), x1(), x2() 
+    , b1(), b2(), x1(), x2()
     {
         set_weights(1.0);
     }
