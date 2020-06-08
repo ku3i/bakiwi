@@ -9,7 +9,7 @@ image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi]
 
 Welcome to Bakiwi Land.
 
-Bakiwis are small walking robots with only two motors that come as a kit and are easy to build. Each Bakiwi is unique. You can freely choose how it will look like and behave. You can easily change your Bakiwi's walking style with four knobs mounted on the printed circuit board. Programming is not required, but have a look into the _source_ folder if you like to modify the firmware and add some nice features.
+Bakiwis are small walking robots with only two motors that come as a kit and are easy to build. Each Bakiwi is unique. You can freely choose how it will look and behave. You can easily change your Bakiwi's walking style with four knobs mounted on the printed circuit board. Programming is not required, but have a look into the _source_ folder if you like to modify the firmware and add some nice features.
 
 Bakiwis are perfectly suited for teaching robotics to kids and beginners. We already build Bakiwis in many workshops and the builders are always amazed when their robot creature starts hopping. While having fun, many skills and technical experience is acquired.
 
@@ -20,7 +20,7 @@ If you want to *buy a Bakiwi Kit*, please visit our store: link:https://bakiwi.s
 
 == Videos
 ****
-There are some video links available on how _Bakiwi_ could look like when assembled and how it performs:
+There are some video links available on how _Bakiwi_ could look when assembled and how it performs:
 
 * link:https://www.youtube.com/watch?v=UyHHptdRnA0[Ministry of Silly Walks]
 * link:https://www.youtube.com/watch?v=r7zon1IOzuM[Pulling Things]
