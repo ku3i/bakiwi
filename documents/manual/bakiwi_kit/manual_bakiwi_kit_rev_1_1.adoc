@@ -1,11 +1,13 @@
 =  Bakiwi Kit Bauanleitung
 Doc Writer <kubisch@informatik.hu-berlin.de>
-v0.1, 2020-05-04
+v0.2, 2020-06-11
 
 :imagesdir: ./img/
 //:iconsdir: ./icon
 //:favicon: {iconsdir}/favicon.png
-:toc: macro
+
+:toc:
+:toc-placement!:
 
 :numbered:
 :numbered!:
@@ -654,7 +656,7 @@ image::./bakiwi_kit_rev1_1_schematics.png[]
 // === Was ist ein Oszillator?
 // TODO
 // Amplitude, Phase, Frequenz
-:numbered!:
+//:numbered!:
 
 == Hast du noch Fragen?
 Du hast noch Fragen oder wünscht dir weitere Erklärungen? Du hast Anregungen oder Feedback für uns?
