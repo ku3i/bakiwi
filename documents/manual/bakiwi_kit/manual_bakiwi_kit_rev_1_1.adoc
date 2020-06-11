@@ -285,12 +285,13 @@ image:./11_pots/04_pots_soldering.jpg[width=49%]
 
 Jetzt kannst du alle vier Potis nach und nach festlöten. Nach dem Löten solltest du auch hier die spitzen Enden etwas kürzen.
 
-:numbered!:
+//:numbered!:
+
 === Pause
 
 Du hast jetzt schon eine ganze Menge Bauteile eingelötet. Falls du bis hierhin durchgearbeitet hast, empfehlen wir dir, eine kurze Pause einzulegen. Sorge für dich, indem du etwas frische Luft schnappst, etwas trinkst oder isst, und vor allem deine Augen entspannst. Das Arbeiten im Nahfeld kann für deine Augen anstrengend sein und etwas Entspannung zwischendurch kann nicht schaden.
 
-:numbered:
+//:numbered:
 
 === Batteriefächer
 
@@ -656,7 +657,7 @@ image::./bakiwi_kit_rev1_1_schematics.png[]
 // === Was ist ein Oszillator?
 // TODO
 // Amplitude, Phase, Frequenz
-//:numbered!:
+:numbered!:
 
 == Hast du noch Fragen?
 Du hast noch Fragen oder wünscht dir weitere Erklärungen? Du hast Anregungen oder Feedback für uns?
