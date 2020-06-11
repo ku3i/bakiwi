@@ -3,18 +3,24 @@ Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-04-02
 :imagesdir: ./documents/
 
-image:./logo/bakiwi_header.png[Bakiwi]
+image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi]
 
-Welcome. Bakiwi is a small walking robot with only two motors that comes as a kit and is easy to build. Every Bakiwi is unique. You can freely choose how it will look and behave. Furthermore, you can easily change the robot's walking style with four knobs mounted on your Bakiwi's body. Programming is initially not required, but if you like to modify the firmware and add some nice features.
+== A Tiny Walking Robot Kit for Education and Fun. 
 
-The Bakiwi Robot is perfectly suited for teaching robotics to kids and youths. We use Bakiwi in many workshops and the builders are always amazed when their robot starts hopping. While having fun, many skills and technical experience is acquired.
+Welcome to Bakiwi Land.
+
+Bakiwis are small walking robots with only two motors that come as a kit and are easy to build. Each Bakiwi is unique. You can freely choose how it will look and behave. You can easily change your Bakiwi's walking style with four knobs mounted on the printed circuit board. Programming is not required, but have a look into the _source_ folder if you like to modify the firmware and add some nice features.
+
+Bakiwis are perfectly suited for teaching robotics to kids and beginners. We already build Bakiwis in many workshops and the builders are always amazed when their robot creature starts hopping. While having fun, many skills and technical experience is acquired.
 
 For information on ongoing developments, you might want to follow us on our link:https://hackaday.io/project/169268-bakiwi-robot[hackaday.io page]
+
+If you want to *buy a Bakiwi Kit*, please visit our store: link:https://bakiwi.shop[]
 
 
 == Videos
 ****
-There are some video links available on how _Bakiwi_ could look like when assembled and how it performs:
+There are some video links available on how _Bakiwi_ could look when assembled and how it performs:
 
 * link:https://www.youtube.com/watch?v=UyHHptdRnA0[Ministry of Silly Walks]
 * link:https://www.youtube.com/watch?v=r7zon1IOzuM[Pulling Things]
@@ -26,7 +32,10 @@ There are some video links available on how _Bakiwi_ could look like when assemb
 == Assembly Manual
 
 ****
-Follow this link to read the link:https://github.com/ku3i/Bakiwi/tree/master/documents[assembly manual] for Bakiwi's first version, so-called "SO(2)Walker".
+Follow these links to read the assembly manuals:
+
+* link:https://github.com/ku3i/Bakiwi/tree/master/documents/manual/bakiwi_kit/manual_bakiwi_kit_rev_1_1.adoc[Bakiwi Kit rev 1.1]
+* link:https://github.com/ku3i/Bakiwi/tree/master/documents[SO(2)Walker]
 
 ****
 
