@@ -487,6 +487,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_leuchtdioden">1.9. Leuchtdioden</a></li>
 <li><a href="#_elektrolytkondensator">1.10. Elektrolytkondensator</a></li>
 <li><a href="#_potentiometer">1.11. Potentiometer</a></li>
+<li><a href="#_pause">Pause</a></li>
 <li><a href="#_batteriefächer">1.12. Batteriefächer</a></li>
 <li><a href="#_mikrocontroller">1.13. Mikrocontroller</a></li>
 <li><a href="#_fühler">1.14. Fühler</a></li>
@@ -518,12 +519,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_die_funktionsweise_erklärt">5. Die Funktionsweise erklärt</a>
 <ul class="sectlevel2">
 <li><a href="#_laufparameter">5.1. Laufparameter</a></li>
-<li><a href="#_die_bauteile_und_ihre_funktion">5.2. Die Bauteile und ihre Funktion</a></li>
-<li><a href="#_der_schaltplan">5.3. Der Schaltplan</a></li>
-<li><a href="#_was_ist_ein_oszillator">5.4. Was ist ein Oszillator?</a></li>
+<li><a href="#_der_schaltplan">5.2. Der Schaltplan</a></li>
 </ul>
 </li>
-<li><a href="#_probleme_beheben">6. Probleme beheben</a></li>
+<li><a href="#_hast_du_noch_fragen">Hast du noch Fragen?</a></li>
 </ul>
 </div>
 </div>
@@ -609,28 +608,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_widerstände">1.1. Widerstände</h3>
 <div id="__asciidoctor-preview-19__" class="paragraph">
-<p>Nun nimm dir die Widerstände zur Hand. Es gibt <em>einen</em> blauen Widerstand und <em>zwei</em> in beige. Beginne damit, das Papier an jeweils beiden Enden des blauen Widerstands abzuziehen.</p>
+<p>Nimm dir die Widerstände zur Hand. Es gibt <em>einen</em> blauen Widerstand und <em>zwei</em> in beige. Beginne damit, das Papier an jeweils beiden Enden des blauen Widerstands abzuziehen.</p>
 </div>
 <div id="__asciidoctor-preview-20__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/01_resistors_prepare.jpg" alt="01 resistors prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/resistor.png" alt="resistor" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-21__" class="paragraph">
-<p>Nun biege die beiden Draht-Enden mit deinen Fingern direkt an ihrem Ursprung um, sodass sie beide in dieselbe Richtung zeigen und sich die beiden Drähte parallel gegenüberstehen. Der blaue Widerstand hat die Bezeichnung <code>R3</code>. Suche nach dem abgebildeten Widerstands-Symbol auf der Platine, es befindet sich unmittelbar unter dem <code>Bakiwi</code>-Schriftzug. Setze ihn wie auf dem Bild gezeigt auf der Platine ein. Ein Widerstand besitzt <em>keine</em> Polarität, es spielt also keine Rolle, wie herum du diesen einsetzt.</p>
+<p>Nun biege die beiden Draht-Enden mit deinen Fingern direkt an ihrem Ursprung um, sodass sie beide in dieselbe Richtung zeigen und sich die beiden Drähte parallel gegenüberstehen. Der blaue Widerstand hat die Bezeichnung <code>R3</code>. Suche nach dem abgebildeten Widerstandssymbol auf der Platine, es befindet sich unmittelbar unter dem <code>Bakiwi</code>-Schriftzug. Setze ihn wie auf dem Bild gezeigt auf der Platine ein. Ein Widerstand besitzt <em>keine</em> Polarität, es spielt also keine Rolle, wie herum du diesen einsetzt.</p>
 </div>
 <div id="__asciidoctor-preview-22__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/08_resistors_bend.jpg" alt="08 resistors bend" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/01_resistors/02_resistors_position.jpg" alt="02 resistors position" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-23__" class="paragraph">
-<p>Halte das eingesetzte Bauteil mit den Fingern fest, drehe die Platine vorsichtig um und leg Sie vor dir ab. Beginne nun damit, die Drahtenden auf der Platinenunterseite festzulöten. Achte dabei darauf, den Draht und die Lötfläche um das Loch gleichzeitig zu berühren und  aufzuheizen während du das Lötzinn hinzufügst. Die Wärmeübetragung funktioniert am besten, wenn die Lötspitze kurz vorher gereinigt und schon etwas mit Zinn benetzt ist.</p>
+<p>Halte das eingesetzte Bauteil mit den Fingern fest, drehe die Platine vorsichtig um und leg Sie vor dir ab. Beginne nun damit, die Drahtenden auf der Platinenunterseite festzulöten. Achte dabei darauf, den Draht und die Lötfläche um das Loch gleichzeitig zu berühren und  aufzuheizen während du das Lötzinn hinzufügst. Die Wärmeübertragung funktioniert am besten, wenn die Lötspitze kurz vorher gereinigt und schon etwas mit Zinn benetzt ist.</p>
 </div>
 <div id="__asciidoctor-preview-24__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/03_resistors_inserted.jpg" alt="03 resistors inserted" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/01_resistors/04_resistors_soldering.jpg" alt="04 resistors soldering" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-25__" class="paragraph">
-<p>Entferne den überstehenden Draht, indem du ihn mit einer geeigneten Zange (z.B. Seitenschneider) abknipst. Entferne dabei den Draht möglichst knapp über deiner Lötstelle ohne diese zu beschädigen.</p>
+<p>Entferne den überstehenden Draht, indem du ihn mit einer geeigneten Zange (z. B. Seitenschneider) abknipst. Entferne dabei den Draht möglichst knapp über deiner Lötstelle, ohne diese zu beschädigen.</p>
 </div>
 <div id="__asciidoctor-preview-26__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/05_resistors_cutting.jpg" alt="05 resistors cutting" width="49%"></span>
@@ -650,7 +649,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_kondensator">1.2. Kondensator</h3>
 <div id="__asciidoctor-preview-30__" class="paragraph">
-<p>Als nächstes ist der Kondensator an der Reihe. Suche nach dem kleinen orange-farbenen Bauteil in Form einer Linse. Die Position auf der Platine ist diesesmal weiter zum anderen Ende bei der Markierung <code>C1</code>. Schaue auf das abgebildete Symbol.</p>
+<p>Als Nächstes ist der Kondensator an der Reihe. Suche nach dem kleinen orange-farbenen Bauteil in Form einer Linse. Die Position auf der Platine ist diesmal weiter zum anderen Ende bei der Markierung <code>C1</code>. Schaue auf das abgebildete Symbol.</p>
 </div>
 <div id="__asciidoctor-preview-31__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/02_capacitor/01_capacitor_prepare.jpg" alt="01 capacitor prepare" width="49%"></span>
@@ -704,7 +703,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_taster">1.4. Taster</h3>
 <div id="__asciidoctor-preview-44__" class="paragraph">
-<p>Der Taster wird and der Stelle mit der Markierung <code>PAUSE</code> eingesetzt. Wenn du den Taster spielend leicht einsetzen kannst <em>ohne</em> die Beinchen zu biegen ist er auch automatisch richtig herum. Mitunter hörst du ein leises Knackgeräusch, wenn der Taster einrastet.</p>
+<p>Der Taster wird an der Stelle mit der Markierung <code>PAUSE</code> eingesetzt. Wenn du den Taster spielend leicht einsetzen kannst <em>ohne</em> die Beinchen zu biegen ist er auch automatisch richtig herum. Mitunter hörst du ein leises Knackgeräusch, wenn der Taster einrastet.</p>
 </div>
 <div id="__asciidoctor-preview-45__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/04_button/01_button_prepare.jpg" alt="01 button prepare" width="49%"></span>
@@ -718,7 +717,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div id="__asciidoctor-preview-47__" class="paragraph">
-<p>Die Lötstifte des Tasters sind ein wenig spitz, achte beim Ensetzten des Tasters auf deine Finger. Nach dem Einlöten solltest du diese Spitzen mit der Zange entfernen.</p>
+<p>Die Lötstifte des Tasters sind ein wenig spitz, achte beim Einsetzen des Tasters auf deine Finger. Nach dem Einlöten solltest du diese Spitzen mit der Zange entfernen.</p>
 </div>
 </td>
 </tr>
@@ -738,20 +737,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="image"><img src="./img/01_electronics/symbols/vreg.png" alt="vreg" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-51__" class="paragraph">
-<p><strong>Achtung!</strong> Jetzt wird es etwas fummelig. Der <em>Spannungswandler</em> hat drei dünne Beinchen die superdicht aneinander liegen. Damit du den Spannungswandler einsetzen kannst, muss das mittlere Bein etwas in Richtung der Rundung umgebogen werden, sodass die Enden der Drähte ein kleines Dreieck aufspannen. Du kannst eine Pinzette oder einen Bleistift zur Hilfe nehmen oder es vorsichtig mit deinem Fingernagel probieren.</p>
+<p><strong>Achtung!</strong> Jetzt wird es etwas fummelig. Der <em>Spannungswandler</em> hat drei dünne Beinchen, die superdicht aneinander liegen. Damit du den Spannungswandler einsetzen kannst, muss das mittlere Bein etwas in Richtung der Rundung umgebogen werden, sodass die Enden der Drähte ein kleines Dreieck aufspannen. Du kannst eine Pinzette oder einen Bleistift zur Hilfe nehmen oder es vorsichtig mit deinem Fingernagel probieren.</p>
 </div>
 <div id="__asciidoctor-preview-52__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/05_vreg/02_vreg_bending.jpg" alt="02 vreg bending"></span></p>
 </div>
 <div id="__asciidoctor-preview-53__" class="paragraph">
-<p>Die richtige Anordnung der Beinchen ist bei diesem Bauteil entscheidend für seine korrekte Funktion. Achte daher darauf, dass die Form des Bauteils mit der auf der Platine abgebildeten Zeichnung übereinstimmt. Setze den Spannungwandler ein und drücke ihn wie abgebildet Stück für Stück weiter hinein. Dabei wird sich das mittlere Beinchen noch weiter verbiegen&#8201;&#8212;&#8201;das ist in Ordnung.</p>
+<p>Die richtige Anordnung der Beinchen ist bei diesem Bauteil entscheidend für seine korrekte Funktion. Achte daher darauf, dass die Form des Bauteils mit der auf der Platine abgebildeten Zeichnung übereinstimmt. Setze den Spannungswandler ein und drücke ihn wie abgebildet Stück für Stück weiter hinein. Dabei wird sich das mittlere Beinchen noch weiter verbiegen&#8201;&#8212;&#8201;das ist in Ordnung.</p>
 </div>
 <div id="__asciidoctor-preview-54__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/05_vreg/04_vreg_insert_1.jpg" alt="04 vreg insert 1" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/05_vreg/05_vreg_insert_2.jpg" alt="05 vreg insert 2" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-55__" class="paragraph">
-<p>Wenn der Spannungswandler bis auf die Platine gedrückt ist sollte er kaum 1mm höher sein als der Schaltkreissockel. Nun löte die drei Beine wie gehabt fest und kürze die Drähte nach dem Löten mit der Zange. Du wirst feststellen, dass die Lötstellen diesmal sehr dicht beieinander sind. Konzentriere dich gut, damit kein Kurzschluss entsteht.</p>
+<p>Wenn der Spannungswandler bis auf die Platine gedrückt ist, sollte er kaum 1 mm höher sein als der Schaltkreissockel. Nun löte die drei Beine wie gehabt fest und kürze die Drähte nach dem Löten mit der Zange. Du wirst feststellen, dass die Lötstellen diesmal sehr dicht beieinander sind. Konzentriere dich gut, damit kein Kurzschluss entsteht.</p>
 </div>
 <div id="__asciidoctor-preview-56__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/05_vreg/06_vreg_insert_3.jpg" alt="06 vreg insert 3" width="49%"></span>
@@ -775,7 +774,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="image"><img src="./img/01_electronics/06_batcon/03_batcon_soldering.jpg" alt="03 batcon soldering" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-61__" class="paragraph">
-<p>Mit ein wenig Geschick kannst du beide Buchsen im gleichen Arbeitsgang einsetzen und festlöten. Auch hier bietet es sich an, zunächst ein Beinchen festzulöten und nochmal die Ausrichtung zu korrigieren falls nötig.</p>
+<p>Mit ein wenig Geschick kannst du beide Buchsen im gleichen Arbeitsgang einsetzen und festlöten. Auch hier bietet es sich an, zunächst ein Beinchen festzulöten und noch mal die Ausrichtung zu korrigieren falls nötig.</p>
 </div>
 <div id="__asciidoctor-preview-62__" class="admonitionblock caution">
 <table>
@@ -785,7 +784,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div id="__asciidoctor-preview-63__" class="paragraph">
-<p>Achtung! Vergleiche an dieser Stelle bitte nocheinmal genau deine Platine mit den abgebildeten Fotos. Eine verkehrtherum eingelötete Battierbuchse führt bei Anschluss der Batterie später zu einer Verpolung und endet möglicherweise in der Zerstörung von Teilen deines Bakiwi. Daher schau lieber zweimal hin.</p>
+<p>Achtung! Vergleiche an dieser Stelle bitte noch einmal genau deine Platine mit den abgebildeten Fotos. Eine verkehrt herum eingelötete Batteriebuchse führt bei Anschluss der Batterie später zu einem Verpolen und endet möglicherweise in der Zerstörung von Teilen deines Bakiwi. Daher schau lieber zweimal hin.</p>
 </div>
 </td>
 </tr>
@@ -795,7 +794,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_anaus_schalter">1.7. An/Aus-Schalter</h3>
 <div id="__asciidoctor-preview-64__" class="paragraph">
-<p>Weiter geht es mit dem Einsetzen des An/Aus-Schalters. Dieser ist blau/weiß und wird auf der Platine bei der Markierung <code>POWER</code> platziert. Wichtig ist hierbei, dass das weiße Teil Richtung <code>off</code> zeigt. Prinzipiell kannst du den Schalter auch andersherum einlöten, er funktioniert in beide Richtungen gleichermaßen. Stelle bloß sicher, dass er in der <code>off</code>-Position ist, d.h. der Bakiwi ausgeschaltet ist, wenn wir später die Batterien einlegen.</p>
+<p>Weiter geht es mit dem Einsetzen des An/Aus-Schalters. Dieser ist blau/weiß und wird auf der Platine bei der Markierung <code>POWER</code> platziert. Wichtig ist hierbei, dass das weiße Teil Richtung <code>off</code> zeigt. Prinzipiell kannst du den Schalter auch andersherum einlöten, er funktioniert in beide Richtungen gleichermaßen. Stelle bloß sicher, dass er in der <code>off</code>-Position ist, d. h. dass dein Bakiwi ausgeschaltet ist, wenn wir später die Batterien einlegen.</p>
 </div>
 <div id="__asciidoctor-preview-65__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/07_switch/01_switch_prepare.jpg" alt="01 switch prepare" width="49%"></span>
@@ -820,7 +819,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="image"><img src="./img/01_electronics/07_switch/03_switch_soldering.jpg" alt="03 switch soldering" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-69__" class="paragraph">
-<p>Die Lötstifte sind recht lang und sollten nach dem Festlöten ein wenig gekürzt werden. Das Material der Schalterstifte ist auch dicker als das der anderen Bauteile, so dass du etwas mehr Kraft beim Abknipsen benötigst.</p>
+<p>Die Lötstifte sind recht lang und sollten nach dem Festlöten ein wenig gekürzt werden. Das Material der Schalterstifte ist auch dicker als das der anderen Bauteile, sodass du etwas mehr Kraft beim Abknipsen benötigst.</p>
 </div>
 </div>
 <div class="sect2">
@@ -833,7 +832,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="image"><img src="./img/01_electronics/symbols/pinh.png" alt="pinh" width="49%"></span></p>
 </div>
 <div id="__asciidoctor-preview-72__" class="paragraph">
-<p>Am besten setzt du beide Stiftleisten zusammen ein, drehst dann die Platine und stellst sie wie in der Abbildung gezeigt auf die noch etwas wackeligen Stiftleisten. Achte darauf, dass die Stifte möglichst senkrecht zur Platine stehen. Wenn du zuerst an jeder Stiftleiste nur einen Stift festlötest, kannst du die genaue Position durch nochmaliges Aufheizen korrigieren, sollte sie nicht gleich beim ersten mal gerade sein.</p>
+<p>Am besten setzt du beide Stiftleisten zusammen ein, drehst dann die Platine und stellst sie wie in der Abbildung gezeigt auf die noch etwas wackeligen Stiftleisten. Achte darauf, dass die Stifte möglichst senkrecht zur Platine stehen. Wenn du zuerst an jeder Stiftleiste nur einen Stift festlötest, kannst du die genaue Position durch nochmaliges Aufheizen korrigieren, sollte sie nicht gleich beim ersten Mal gerade sein.</p>
 </div>
 <div id="__asciidoctor-preview-73__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/08_pinh/02_pinh_position.jpg" alt="02 pinh position" width="49%"></span>
@@ -860,7 +859,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div id="__asciidoctor-preview-78__" class="paragraph">
-<p>Leuchtdioden haben eine sogenannte <em>Polarität</em>, d.h. es ist <em>nicht</em> egal, wie herum sie eingebaut werden. Erkennen kannst du das anhand der unterschiedlich langen Beine. Das längere Bein ist immer der Pluspol, das kurze Bein ist der Minuspol. Du kannst dir das gut merken, wenn du dir vorstellst, dass du gedanklich ein <em>Pluszeichen</em> auseinander baust und die Striche hintereinander legst. (<code>+</code> &#8594; <code>--</code>) Dann ist das <em>Plus</em> länger als das <em>Minus</em>. Diese Regel gilt übrigens für alle zweibeinigen elektronischen Bauteile mit Polarität und unterschiedlich langen Beinen.</p>
+<p>Leuchtdioden haben eine sogenannte <em>Polarität</em>, d. h. es ist <em>nicht</em> egal, wie herum sie eingebaut werden. Erkennen kannst du das anhand der unterschiedlich langen Beine. Das längere Bein ist immer der Pluspol, das kürzere Bein ist der Minuspol. Du kannst dir das gut merken, wenn du dir vorstellst, dass du gedanklich ein <em>Pluszeichen</em> auseinander baust und die Striche hintereinanderlegst (<code>+</code> &#8594; <code>--</code>). Dann ist das <em>Plus</em> länger als das <em>Minus</em>. Diese Merkregel gilt übrigens für alle zweibeinigen elektronischen Bauteile mit Polarität und unterschiedlich langen Beinen.</p>
 </div>
 </td>
 </tr>
@@ -877,175 +876,192 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_elektrolytkondensator">1.10. Elektrolytkondensator</h3>
 <div id="__asciidoctor-preview-81__" class="paragraph">
-<p>Der Elektrolytkondensator (kurz: <em>Elko</em>) wird genau wie im vorherigen Schritt (langes Bein = Pluspol) eingebaut. Seine Position ist mit <code>C2</code> markiert. Der Minuspol ist sogar auf dem Zylinderförmigen Gehäuse mit einem dicken (hohlen) Minus gekennzeichnet.</p>
+<p>Der Elektrolytkondensator (kurz: <em>Elko</em>) wird genau wie im vorherigen Schritt (langes Bein = Pluspol) eingebaut. Seine Position ist mit <code>C2</code> markiert. Der Minuspol ist sogar auf dem zylinderförmigen Gehäuse mit einem dicken (hohlen) Minus gekennzeichnet.</p>
 </div>
 <div id="__asciidoctor-preview-82__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/10_elcap/01_elcap_prepare.jpg" alt="01 elcap prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/elcap.png" alt="elcap" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-83__" class="paragraph">
-<p>Die Farbe deines Bakiwi-Elkos kann von der in der Abbildung abweichen, das hat aber keinen Einfluss auf die Funktion.</p>
-</div>
+<div id="__asciidoctor-preview-83__" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div id="__asciidoctor-preview-84__" class="paragraph">
+<p>Die Farbe deines Bakiwi-Elkos kann von der in der Abbildung abweichen, das hat aber keinen Einfluss auf die Funktion. Je nach Hersteller haben auch die Elkos einen Papierstreifen, der die Beinchen stabilisiert. Entferne ihn vorsichtig vor dem Anlöten.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="__asciidoctor-preview-85__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/10_elcap/02_elcap_position.jpg" alt="02 elcap position" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_potentiometer">1.11. Potentiometer</h3>
-<div id="__asciidoctor-preview-85__" class="paragraph">
-<p>Dein Bakiwi bekommt vier Drehknöpfe mit denen du seine Gangart verändern kannst. Diese Bauteile heißen Potentiometer und sind verstellbare Widerstände. Du kennst das vom Lautstärkeknopf bei Lautsprechern oder anderen Geräten.</p>
-</div>
 <div id="__asciidoctor-preview-86__" class="paragraph">
+<p>Dein Bakiwi bekommt vier Drehknöpfe, mit denen du seine Gangart verändern kannst. Diese Bauteile heißen Potentiometer und sind verstellbare Widerstände. Du kennst das vom Lautstärkeknopf bei Lautsprechern oder anderen Geräten.</p>
+</div>
+<div id="__asciidoctor-preview-87__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/11_pots/01_pots_prepare.jpg" alt="01 pots prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/pots.png" alt="pots" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-87__" class="paragraph">
+<div id="__asciidoctor-preview-88__" class="paragraph">
 <p>Lege dir die vier blauen Potentiometer (kurz: <em>Potis</em>) mit den zugehörigen Drehknöpfen vor dich hin. Stecke die Drehknöpfe mit dem Pfeil nach oben in die Potis ein (siehe Abbildung).</p>
 </div>
-<div id="__asciidoctor-preview-88__" class="paragraph">
+<div id="__asciidoctor-preview-89__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/11_pots/02_pots_detail.jpg" alt="02 pots detail" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-89__" class="paragraph">
+<div id="__asciidoctor-preview-90__" class="paragraph">
 <p>Danach kannst du die zusammengesteckten Teile auf die Positionen <code>LEVEL</code>, <code>SPEED</code>, <code>PHASE</code> und <code>BALANCE</code> verteilen und vorsichtig die Platine wenden. Die Potis sitzen in der Regel schon recht fest und fallen nicht so leicht von allein ab.</p>
 </div>
-<div id="__asciidoctor-preview-90__" class="paragraph">
+<div id="__asciidoctor-preview-91__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/11_pots/03_pots_position.jpg" alt="03 pots position" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/11_pots/04_pots_soldering.jpg" alt="04 pots soldering" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-91__" class="paragraph">
+<div id="__asciidoctor-preview-92__" class="paragraph">
 <p>Jetzt kannst du alle vier Potis nach und nach festlöten. Nach dem Löten solltest du auch hier die spitzen Enden etwas kürzen.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_batteriefächer">1.12. Batteriefächer</h3>
-<div id="__asciidoctor-preview-92__" class="paragraph">
-<p>Nun kannst du die Platine kurz beiseite legen und dir die beiden Batteriefächer schnappen. Zu jedem Fach gibt es ein rot-schwarzes Kabel mit weißem Stecker.</p>
+<h3 id="_pause">Pause</h3>
+<div id="__asciidoctor-preview-93__" class="paragraph">
+<p>Du hast jetzt schon eine ganze Menge Bauteile eingelötet. Falls du bis hierhin durchgearbeitet hast, empfehlen wir dir, eine kurze Pause einzulegen. Sorge für dich, indem du etwas frische Luft schnappst, etwas trinkst oder isst, und vor allem deine Augen entspannst. Das Arbeiten im Nahfeld kann für deine Augen anstrengend sein und etwas Entspannung zwischendurch kann nicht schaden.</p>
 </div>
-<div id="__asciidoctor-preview-93__" class="admonitionblock warning">
+</div>
+<div class="sect2">
+<h3 id="_batteriefächer">1.12. Batteriefächer</h3>
+<div id="__asciidoctor-preview-94__" class="paragraph">
+<p>Nun kannst du die Platine kurz beiseitelegen und dir die beiden Batteriefächer schnappen. Zu jedem Fach gibt es ein rot-schwarzes Kabel mit weißem Stecker.</p>
+</div>
+<div id="__asciidoctor-preview-95__" class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-94__" class="paragraph">
+<div id="__asciidoctor-preview-96__" class="paragraph">
 <p>Auch wenn es verlockend ist: Bitte jetzt noch keine Batterien einlegen!</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-95__" class="paragraph">
-<p>Die Kabel müssen an den Lötlaschen der Fächer festgelötet werden, dazu kannst du die abisolierten Kabelenden in die Löcher einstecken. Es ist einfacher wenn du die Laschen dazu ganz leicht hochbiegst.
+<div id="__asciidoctor-preview-97__" class="paragraph">
+<p>Die Kabel müssen an den Lötlaschen der Fächer festgelötet werden, dazu kannst du die abisolierten Kabelenden in die Löcher einstecken. Es ist einfacher, wenn du die Laschen dazu ganz leicht hochbiegst.
 Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist später die Innenseite wo die Motoren sitzen und du musst vermeiden, dass die Batteriekabel in die Beine deines Bakiwi gelangen.</p>
 </div>
-<div id="__asciidoctor-preview-96__" class="paragraph">
+<div id="__asciidoctor-preview-98__" class="paragraph">
 <p>Die korrekte Polarität der Kabel ist hier von größter Wichtigkeit. Hier gilt dasselbe wie für die Batteriebuchsen, bei Verwechslung von Plus und Minus können Teile deines Bakiwi kaputt gehen. Das rote Kabel steht für <em>Plus</em> das schwarze Kabel für <em>Minus</em>. Diese Konvention ist weit verbreitet und es lohnt, sich das zu merken. Die Polarität der Batteriefächer kannst du auf deren Innenseite ablesen.</p>
 </div>
-<div id="__asciidoctor-preview-97__" class="paragraph">
+<div id="__asciidoctor-preview-99__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/12_batholder/01_batholder_prepare.jpg" alt="01 batholder prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/12_batholder/02_batholder_polarity.jpg" alt="02 batholder polarity" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-98__" class="paragraph">
+<div id="__asciidoctor-preview-100__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/12_batholder/03_batholder_insert.jpg" alt="03 batholder insert" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-99__" class="paragraph">
+<div id="__asciidoctor-preview-101__" class="paragraph">
 <p>Die einlegten Kabel nun am äußersten Ende der Lasche festlöten. Dabei so effizient und schnell wie möglich löten, damit das Plastik der Batteriefächer nicht schmilzt.</p>
 </div>
-<div id="__asciidoctor-preview-100__" class="admonitionblock warning">
+<div id="__asciidoctor-preview-102__" class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-101__" class="paragraph">
+<div id="__asciidoctor-preview-103__" class="paragraph">
 <p>Das Plastik der Batteriefächer ist recht temperaturempfindlich. Eine Berührung mit dem Lötkolben oder ein zu langes Aufheizen der Lötösen lässt das Batteriefach schmelzen und kann es schlimmstenfalls unbrauchbar machen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-102__" class="paragraph">
+<div id="__asciidoctor-preview-104__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/12_batholder/04_batholder_soldering.jpg" alt="04 batholder soldering" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/12_batholder/05_batholder_done.jpg" alt="05 batholder done" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_mikrocontroller">1.13. Mikrocontroller</h3>
-<div id="__asciidoctor-preview-103__" class="paragraph">
-<p>Bei dem folgenden Arbeitsschritt wird ausnahmsweise mal nicht gelötet. Du kannst jetzt den <em>Mikrocontroller</em>, einen sogenannten <em>Integrierten Schaltkreis</em> (kurz: Chip) in den Sockel einsetzen. Dazu musst du den Schaltkreis mit seinen 14 Beinchen zunächst etwas vorbereiten. Halte den Chip wie in der Abbildung gezeigt und biege jeweils alle sieben Beine einer Seite ganz vorsichtig etwas weiter nach innen. Nutze dazu z.B. die Tischplatte. Wiederhole den Schritt mit den anderen sieben Beinchen.</p>
+<div id="__asciidoctor-preview-105__" class="paragraph">
+<p>Bei dem folgenden Arbeitsschritt wird ausnahmsweise mal nicht gelötet. Du kannst jetzt den <em>Mikrocontroller</em>, einen sogenannten <em>Integrierten Schaltkreis</em> (kurz: Chip) in den Sockel einsetzen. Dazu musst du den Schaltkreis mit seinen 14 Beinchen zunächst etwas vorbereiten. Halte den Chip wie in der Abbildung gezeigt und biege jeweils alle sieben Beine einer Seite ganz vorsichtig etwas weiter nach innen. Nutze dazu z. B. die Tischplatte. Wiederhole den Schritt mit den anderen sieben Beinchen.</p>
 </div>
-<div id="__asciidoctor-preview-104__" class="paragraph">
+<div id="__asciidoctor-preview-106__" class="paragraph">
 <p>Anfangs zeigen die Beine etwas nach außen. Im Idealfall zeigen sie nach dem Biegen genau senkrecht vom Chip-Körper in dieselbe Richtung. So lässt sich der Chip leichter in den Sockel einsetzen.</p>
 </div>
-<div id="__asciidoctor-preview-105__" class="paragraph">
+<div id="__asciidoctor-preview-107__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/13_microctrl/01_microctrl_prepare.jpg" alt="01 microctrl prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/13_microctrl/02_microctrl_bending.jpg" alt="02 microctrl bending" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-106__" class="paragraph">
+<div id="__asciidoctor-preview-108__" class="paragraph">
 <p>Setze nun den Mikrocontroller in den Sockel, achte darauf, dass alle Beinchen in ihrer Führung sitzen. Wichtig hierbei ist, dass die Kerbe am Chip mit der Kerbe am Sockel in die gleiche Richtung (zum Taster nach vorn) zeigen.</p>
 </div>
-<div id="__asciidoctor-preview-107__" class="paragraph">
+<div id="__asciidoctor-preview-109__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/13_microctrl/03_microctrl_insert.jpg" alt="03 microctrl insert" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/13_microctrl/04_microctrl_done.jpg" alt="04 microctrl done" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_fühler">1.14. Fühler</h3>
-<div id="__asciidoctor-preview-108__" class="paragraph">
-<p>Der letzte Lötarbeitsschritt um deine Bakiwi-Platine zu vervollständigen, ist die Anbringung der Fühler. Deinem Bausatz liegen zwei kurze Stücke Gitarrensaite bei. Diese kannst du als Grundlage für die Fühler deines persönlichen Bakiwis verwenden&#8201;&#8212;&#8201;musst du aber nicht. Du kannst viele verschiedene metallische Materialien verwenden:</p>
+<div id="__asciidoctor-preview-110__" class="paragraph">
+<p>Der letzte Lötarbeitsschritt, um deine Bakiwi-Platine zu vervollständigen, ist die Anbringung der Fühler. Deinem Bausatz liegen zwei kurze Stücke Gitarrensaite bei. Diese kannst du als Grundlage für die Fühler deines persönlichen Bakiwis verwenden&#8201;&#8212;&#8201;musst du aber nicht. Du kannst viele verschiedene metallische Materialien verwenden:</p>
 </div>
-<div id="__asciidoctor-preview-109__" class="ulist">
+<div id="__asciidoctor-preview-111__" class="ulist">
 <ul>
-<li id="__asciidoctor-preview-110__">
+<li id="__asciidoctor-preview-112__">
 <p>Kabel mit farbiger Isolierung</p>
 </li>
-<li id="__asciidoctor-preview-111__">
+<li id="__asciidoctor-preview-113__">
 <p>Messingdraht</p>
 </li>
-<li id="__asciidoctor-preview-112__">
+<li id="__asciidoctor-preview-114__">
 <p>Pfeifenputzer</p>
 </li>
-<li id="__asciidoctor-preview-113__">
+<li id="__asciidoctor-preview-115__">
 <p>oder etwas ganz anderes</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-114__" class="paragraph">
+<div id="__asciidoctor-preview-116__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/14_antenna/01_antenna_prepare.jpg" alt="01 antenna prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/antenna.png" alt="antenna" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-115__" class="paragraph">
+<div id="__asciidoctor-preview-117__" class="paragraph">
 <p>Die benutzten Fühler werden von Bakiwi automatisch eingelernt. Es kann sein, dass sie anfänglich noch nicht sensibel genug oder gar übersensibel sind. Aber nach ein paar Minuten kann dein Bakiwi seine von dir individuell gestalteten Fühler genau richtig benutzen. Fühle dich also frei in der Gestaltung, alles ist erlaubt solange es:</p>
 </div>
-<div id="__asciidoctor-preview-116__" class="ulist">
+<div id="__asciidoctor-preview-118__" class="ulist">
 <ul>
-<li id="__asciidoctor-preview-117__">
+<li id="__asciidoctor-preview-119__">
 <p>an die entsprechenden Flächen angelötet werden kann</p>
 </li>
-<li id="__asciidoctor-preview-118__">
+<li id="__asciidoctor-preview-120__">
 <p>ein leitfähiges Material ist</p>
 </li>
-<li id="__asciidoctor-preview-119__">
+<li id="__asciidoctor-preview-121__">
 <p>und keine leitenden Teile der Platine berührt</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-120__" class="paragraph">
+<div id="__asciidoctor-preview-122__" class="paragraph">
 <p><strong>Probier verschiedenes aus!</strong></p>
 </div>
-<div id="__asciidoctor-preview-121__" class="paragraph">
-<p>Wenn du keine anderen Materialien verfügbar hast, kannst du auch die beiligenden Gitarrenseiten frei umgestalten. Mit Puscheln oder flauschigen Enden, oder du kannst Ösen dranlöten und etwas dranbinden. Die Saiten sind gut lötbar, biegsam, leifähig und sind recht robust und knicken nicht so leicht. Hier zwei Beispiele:</p>
+<div id="__asciidoctor-preview-123__" class="paragraph">
+<p>Wenn du keine anderen Materialien verfügbar hast, kannst du auch die beiliegenden Gitarrensaiten frei umgestalten. Mit Puscheln oder flauschigen Enden, oder du kannst Ösen anlöten und etwas drumbinden. Die Saiten sind gut lötbar, biegsam, leitfähig und sind recht robust und knicken nicht so leicht. Hier zwei Beispiele:</p>
 </div>
-<div id="__asciidoctor-preview-122__" class="paragraph">
+<div id="__asciidoctor-preview-124__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/14_antenna/04_antenna_puschel.jpg" alt="04 antenna puschel" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/14_antenna/05_antenna_solder_dots.jpg" alt="05 antenna solder dots" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-123__" class="paragraph">
+<div id="__asciidoctor-preview-125__" class="paragraph">
 <p>Zum Anlöten lege die Platine mit den Bauteilen nach oben auf den Tisch und löte die Fühler als erstes einmal <em>oben</em> an der Platine fest und danach auf der Rückseite wie gewohnt. So hast du bessere Kontrolle über deren Ausrichtung.</p>
 </div>
-<div id="__asciidoctor-preview-124__" class="paragraph">
+<div id="__asciidoctor-preview-126__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/14_antenna/02_antenna_solder_top.jpg" alt="02 antenna solder top" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/14_antenna/03_antenna_solder_bot.jpg" alt="03 antenna solder bot" width="49%"></span></p>
 </div>
@@ -1057,79 +1073,79 @@ Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist 
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_aufräumen">2.1. Aufräumen</h3>
-<div id="__asciidoctor-preview-125__" class="paragraph">
+<div id="__asciidoctor-preview-127__" class="paragraph">
 <p><strong>Trommelwirbel&#8230;&#8203;. Ka&#8212;&#8203;tsching.</strong> Geschafft. Die Lötarbeiten sind nun abgeschlossen. Die Lötstation wird jetzt nicht mehr benötigt und du kannst sie abschalten und abkühlen lassen.</p>
 </div>
-<div id="__asciidoctor-preview-126__" class="admonitionblock warning">
+<div id="__asciidoctor-preview-128__" class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-127__" class="paragraph">
-<p>Die Lötspitze kann nach dem Abschalten noch ein paar Minuten sehr heiß sein. Lass also die Lötstation noch eine Weile abkühlen bevor du sie wegräumst.</p>
+<div id="__asciidoctor-preview-129__" class="paragraph">
+<p>Die Lötspitze kann nach dem Abschalten noch ein paar Minuten sehr heiß sein. Lass also die Lötstation noch eine Weile abkühlen, bevor du sie wegräumst.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-128__" class="paragraph">
-<p>Als letztes empfehlen wir, die Lötstellen auf der Rückseite noch einmal anzugleichen und zu lange Stiftereste zu kürzen. Das ist wichtig, damit nachher beim mechanischen Zusammenbau keine störenden Spitzen mehr da sind, die sich in die Motor- bzw. Batteriekabel bohren könnten.</p>
+<div id="__asciidoctor-preview-130__" class="paragraph">
+<p>Zum Abschluss empfehlen wir, die Lötstellen auf der Rückseite noch einmal anzugleichen und zu lange Stiftereste zu kürzen. Das ist wichtig, damit nachher beim mechanischen Zusammenbau keine störenden Spitzen mehr da sind, die sich in die Motor- bzw. Batteriekabel bohren könnten.</p>
 </div>
-<div id="__asciidoctor-preview-129__" class="paragraph">
+<div id="__asciidoctor-preview-131__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/15_cleanup/01_short_pins.jpg" alt="01 short pins" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/15_cleanup/02_recycle_trash.jpg" alt="02 recycle trash" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_abfallentsorgung">2.2. Abfallentsorgung</h3>
-<div id="__asciidoctor-preview-130__" class="paragraph">
+<div id="__asciidoctor-preview-132__" class="paragraph">
 <p>Wir haben versucht, den Bausatz so zu gestalten, dass möglichst wenig Müll anfällt. Bitte trenne den Müll. Alle kleinen Metallreste können zum Verpackungsmüll (Gelbe Tonne) und die Papierfetzen zum Altpapier. Die beiliegenden Zipper-Tüten und den Karton kannst du vielleicht ja noch weiter nutzen oder entsorgst sie ebenfalls zum Verpackungsmüll bzw. Altpapier.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_funktionstest">2.3. Funktionstest</h3>
-<div id="__asciidoctor-preview-131__" class="paragraph">
+<div id="__asciidoctor-preview-133__" class="paragraph">
 <p>Bevor es gleich mit dem mechanischen Zusammenbau losgehen kann müssen alle elektronischen Komponenten getestet werden.</p>
 </div>
 <div class="sect3">
 <h4 id="_kurzschlusstest">2.3.1. Kurzschlusstest</h4>
-<div id="__asciidoctor-preview-132__" class="paragraph">
+<div id="__asciidoctor-preview-134__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/01_testing_multimeter.jpg" alt="01 testing multimeter" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/16_testing/01_testing_multimeter_detail.jpg" alt="01 testing multimeter detail" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-133__" class="paragraph">
-<p>Nimm ein Multimeter zur Hand und schalte es in den Modus Durchgangsprüfung ("Piepser"). Du erkennst das an dem Lautsprecher-Symbol. Halte die beiden Prüfspitzen mit den metallischen Enden gegeneinander und überzeuge dich, dass es einen deutlich hörbaren Piepton gibt. Das akkustische Signal zeigt dir einen elektrischen Kontakt ohne nennenswerten Widerstand dazwischen an. Du kannst es dazu nutzen Lötstellen, Kabel und Stecker auf ordnungsgemäßen Kontakt zu prüfen oder auch um ungewollte Kurzschlüsse zu finden.</p>
+<div id="__asciidoctor-preview-135__" class="paragraph">
+<p>Nimm ein Multimeter zur Hand und schalte es in den Modus Durchgangsprüfung ("Piepser"). Du erkennst das an dem Lautsprecher-Symbol. Halte die beiden Prüfspitzen mit den metallischen Enden gegeneinander und überzeuge dich, dass es einen deutlich hörbaren Piepton gibt. Das akustische Signal zeigt dir einen elektrischen Kontakt ohne nennenswerten Widerstand dazwischen an. Du kannst es dazu nutzen Lötstellen, Kabel und Stecker auf ordnungsgemäßen Kontakt zu prüfen oder auch um ungewollte Kurzschlüsse zu finden.</p>
 </div>
-<div id="__asciidoctor-preview-134__" class="paragraph">
+<div id="__asciidoctor-preview-136__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/02_testing_battery_sockets.jpg" alt="02 testing battery sockets" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/16_testing/03_testing_motor_pins.jpg" alt="03 testing motor pins" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-135__" class="paragraph">
-<p>Halte nun die Prüfspitzen an die beiden Stifte der linken Batteriebuchse, hierbei sollte kein Signal ertönen. Wiederhole den Test mit der anderen Buchse. Teste ebenfalls die Stifte der beiden Motoranschlüsse und des 6-poligen Programmieranschlusses indem du jeweils zwei benachbarte Stifte auf Kurzschluss prüfst. Sollte es hier bei zwei Stiften piepsen, d.h. einen Kontakt geben, musst du dir deine Lötstellen an dieser Stelle nocheinmal sehr genau anschauen. Möglicherweise ist etwas Lötzinn zwischen die Löstellen geraten und verbindet diese. Achte auf genügend Licht bei der Kontrolle und nimm ggf. eine Lupe zur Hilfe.</p>
+<div id="__asciidoctor-preview-137__" class="paragraph">
+<p>Halte nun die Prüfspitzen an die beiden Stifte der linken Batteriebuchse, hierbei sollte kein Signal ertönen. Wiederhole den Test mit der anderen Buchse. Teste ebenfalls die Stifte der beiden Motoranschlüsse und des 6-poligen Programmieranschlusses, indem du jeweils zwei benachbarte Stifte auf Kurzschluss prüfst. Sollte es hier bei zwei Stiften piepsen, d. h. einen Kontakt geben, musst du dir deine Lötstellen an dieser Stelle noch einmal sehr genau anschauen. Möglicherweise ist etwas Lötzinn zwischen die Lötstellen geraten und verbindet diese. Achte auf genügend Licht bei der Kontrolle und nimm ggf. eine Lupe zur Hilfe.</p>
 </div>
-<div id="__asciidoctor-preview-136__" class="admonitionblock note">
+<div id="__asciidoctor-preview-138__" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-137__" class="paragraph">
-<p>Sollten zwei Lötstellen aus versehen mit Lötzinn miteinander verbunden sein, kannst du durch erneutes Aufheizen der Lötstellen versuchen diese voneinander zu trennen. Wenn das Lot dabei klebrig wirkt, so versuche etwas frisches Lötzinn (mit unverdampften Flussmittel) hinzuzufügen um die Lötstellen wieder gängig zu machen. Der farbige Lack (blau oder lila) auf deiner Platine nimmt Lötzinn nicht an und hilft dir die Lötstellen zu trennen. Wenn beide Lötstellen gemeinsam aufgeheizt werden und durch genügend Flussmittel gut fließen können trennen sie sich leicht voneinander und ziehen sich auf ihre Lötflächen zurück.</p>
+<div id="__asciidoctor-preview-139__" class="paragraph">
+<p>Sollten zwei Lötstellen aus Versehen mit Lötzinn miteinander verbunden sein, kannst du durch erneutes Aufheizen der Lötstellen versuchen diese voneinander zu trennen. Wenn das Lot dabei klebrig wirkt, so versuche etwas frisches Lötzinn (mit noch nicht verdampften Flussmittel) hinzuzufügen um die Lötstellen wieder gängig zu machen. Der farbige Lack (blau oder lila) auf deiner Platine nimmt Lötzinn nicht an und hilft dir die Lötstellen zu trennen. Wenn beide Lötstellen gemeinsam aufgeheizt werden und durch genügend Flussmittel gut fließen können trennen sie sich leicht voneinander und ziehen sich auf ihre Lötflächen zurück.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-138__" class="paragraph">
+<div id="__asciidoctor-preview-140__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/04_testing_switch.jpg" alt="04 testing switch" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-139__" class="paragraph">
-<p>Teste als letztes den Pluspol der linken Batteriebuchse gegen den Minuspol der rechten Batteriebuchse. Es sollte hier ebenfalls kein Kontakt zu messen sein. Stelle nun den An-/Aus-Schalter auf <code>ON</code>, nun sollte es bei erneuter Messung Kontakt geben und piepsen. Stelle danach den Schalter wieder auf <code>OFF</code>.</p>
+<div id="__asciidoctor-preview-141__" class="paragraph">
+<p>Teste als Letztes den Pluspol der linken Batteriebuchse gegen den Minuspol der rechten Batteriebuchse. Es sollte hier ebenfalls kein Kontakt zu messen sein. Stelle nun den An-/Aus-Schalter auf <code>ON</code>, nun sollte es bei erneuter Messung Kontakt geben und piepsen. Stelle danach den Schalter wieder auf <code>OFF</code>.</p>
 </div>
-<div id="__asciidoctor-preview-140__" class="paragraph">
+<div id="__asciidoctor-preview-142__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/05_testing_get_components.jpg" alt="05 testing get components" width="49%"></span></p>
 </div>
 </div>
@@ -1138,52 +1154,52 @@ Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist 
 <div id="connect_motors" class="paragraph">
 <p>Verbinde nun die Motoren. Achte darauf, dass die braunen (bzw. schwarzen) Adern des 3-adrigen Motorkabels mit dem Stift verbunden ist, der auf der Platine mit dem Ground-Symbol (siehe Abbildung) bezeichnet ist.</p>
 </div>
-<div id="__asciidoctor-preview-141__" class="paragraph">
+<div id="__asciidoctor-preview-143__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/06_testing_connect_motors.jpg" alt="06 testing connect motors" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/gnd.png" alt="gnd" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-142__" class="paragraph">
-<p>Lege nun die Batterien ein. Hierbei ist es sehr wichtig die im Innern des Batteriefachs angezeigte Polarität (+/-) zu beachten. Auf deinen Batterien oder Akkus sind ebenfalls die Symbole Plus und Minus zu erkennen (manchmal nur das Plus). Verbinde nun die Batteriestecker mit den Buchsen auf der Platine, dabei ist es egal, welches Fach du an welchen Stecker anschließt.</p>
+<div id="__asciidoctor-preview-144__" class="paragraph">
+<p>Lege nun die Batterien ein. Hierbei ist es sehr wichtig, die im Innern des Batteriefachs angezeigte Polarität (+/-) zu beachten. Auf deinen Batterien oder Akkus sind ebenfalls die Symbole Plus und Minus zu erkennen (manchmal nur das Plus). Verbinde nun die Batteriestecker mit den Buchsen auf der Platine, dabei ist es egal, welches Fach du an welchen Stecker anschließt.</p>
 </div>
-<div id="__asciidoctor-preview-143__" class="paragraph">
+<div id="__asciidoctor-preview-145__" class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/07_testing_insert_batteries.jpg" alt="07 testing insert batteries" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/16_testing/08_testing_connect_batteries.jpg" alt="08 testing connect batteries" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-144__" class="admonitionblock warning">
+<div id="__asciidoctor-preview-146__" class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-145__" class="paragraph">
-<p><strong>Aufgepasst!</strong> Sollten nach dem Anschließen der Fächer die Batterien warm oder gar heiß werden, musst du die Stecker sofort wieder von der Platine trennen. Das Aufheizen der Batterien deutet sehr wahrscheinlich auf einen Kurzschluss hin und du musst nochmal die elektrische Durchgangsprüfung wiederholen und deine Lötstellen genau inspizieren um den Kurzschluss zu finden.</p>
+<div id="__asciidoctor-preview-147__" class="paragraph">
+<p><strong>Aufgepasst!</strong> Sollten nach dem Anschließen der Fächer die Batterien warm oder gar heiß werden, musst du die Stecker sofort wieder von der Platine trennen. Das Aufheizen der Batterien deutet sehr wahrscheinlich auf einen Kurzschluss hin und du musst noch einmal die elektrische Durchgangsprüfung wiederholen und deine Lötstellen genau inspizieren, um den Kurzschluss zu finden.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-146__" class="paragraph">
-<p>Stelle nun den An-/Aus-Schalter auf <code>ON</code> und wenn alles richtig zusammengebaut ist solltest du nun bereits die Leuchtdioden blinken sehen. Wenn alle Drehknöpfe mit den Pfeilen nach oben zeigen, sollten die Leuchtdioden im Gleichtakt blinken.</p>
-</div>
-<div id="__asciidoctor-preview-147__" class="paragraph">
-<p>Wenn die Leuchtdioden funktionieren, dann betätige nun den Taster und gleich darauf sollten beide Motoren beginnen Geräusche zumachen und die Schäfte zu drehen (die Runden gezahnten Metallenden).</p>
-</div>
 <div id="__asciidoctor-preview-148__" class="paragraph">
-<p>Berühre die Fühler mit deinen Händen und sofort sollten die Geräusche der Motoren sich verändern, langsamer werden oder gar stoppen. Beim Loslassen der Fühler sollten die Motoren wieder ihr ursprüngliches Verhalten aufnehmen. Schalte den Bakiwi nun wieder aus.</p>
+<p>Stelle nun den An-/Aus-Schalter auf <code>ON</code> und wenn alles richtig zusammengebaut ist, solltest du nun bereits die Leuchtdioden blinken sehen. Wenn alle Drehknöpfe mit den Pfeilen nach oben zeigen, sollten die Leuchtdioden im Gleichtakt blinken.</p>
 </div>
 <div id="__asciidoctor-preview-149__" class="paragraph">
-<p>Wenn bis hierhin alles wie erwartet funktioniert kannst du jetzt zum nächsten Kapitel übergehen, dem <a href="#assembly">mechanischen Zusammenbau</a>.</p>
+<p>Wenn die Leuchtdioden funktionieren, dann betätige nun den Taster und gleich darauf sollten beide Motoren beginnen Geräusche zumachen und die Schäfte zu drehen (die Runden gezahnten Metallenden).</p>
 </div>
 <div id="__asciidoctor-preview-150__" class="paragraph">
+<p>Berühre die Fühler mit deinen Händen und sofort sollten die Geräusche der Motoren sich verändern, langsamer werden oder gar stoppen. Beim Loslassen der Fühler sollten die Motoren wieder ihr ursprüngliches Verhalten aufnehmen. Schalte den Bakiwi nun wieder aus.</p>
+</div>
+<div id="__asciidoctor-preview-151__" class="paragraph">
+<p>Wenn bis hierhin alles wie erwartet funktioniert, kannst du jetzt zum nächsten Kapitel übergehen, dem <a href="#assembly">mechanischen Zusammenbau</a>.</p>
+</div>
+<div id="__asciidoctor-preview-152__" class="paragraph">
 <p>Sollte ein Motor sich drehen, der andere aber nicht, stelle sicher, dass alle Drehknöpfe nach oben zeigen und dass die Motorkabel angeschlossen sind wie in Abschnitt <a href="#connect_motors">Motoren verbinden</a> beschrieben steht.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_was_tun_wenn_etwas_kaputt_gegangen_ist">2.4. Was tun, wenn etwas kaputt gegangen ist?</h3>
-<div id="__asciidoctor-preview-151__" class="paragraph">
-<p>Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte: Keine Panik! Wir senden dir gerne ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an dich adressierten Rücksende-Umschlag und wir sorgen sofort für Ersatz. Wir freuen uns wenn du dir die Zeit nimmst und uns kurz beschreibst wie das Bauteil kaputt gegangen ist, sodass wir unseren Bakiwi-Bausatz mit deiner Hilfe verbessern können.</p>
+<div id="__asciidoctor-preview-153__" class="paragraph">
+<p>Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte: Keine Panik! Wir senden dir gerne ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an dich adressierten Rücksende-Umschlag und wir sorgen sofort für Ersatz. Wir freuen uns, wenn du dir die Zeit nimmst und uns kurz beschreibst wie das Bauteil kaputt gegangen ist, sodass wir unseren Bakiwi-Bausatz mit deiner Hilfe verbessern können.</p>
 </div>
 </div>
 </div>
@@ -1193,119 +1209,119 @@ Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist 
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="assembly">3.1. Vorbereitung</h3>
-<div id="__asciidoctor-preview-152__" class="paragraph">
+<div id="__asciidoctor-preview-154__" class="paragraph">
 <p>Hole die abgebildeten mechanischen Bauteile aus der Packung und lege sie vor dir ab. Die Bakiwi-Platine und die Batteriefächer hast du bereits in vorausgehenden Arbeitsschritten vorbereitet.</p>
 </div>
-<div id="__asciidoctor-preview-153__" class="paragraph">
+<div id="__asciidoctor-preview-155__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/00_preparation/01_assembly_get_parts_annotated.jpg" alt="01 assembly get parts annotated" width="98%"></span></p>
 </div>
-<div id="__asciidoctor-preview-154__" class="paragraph">
-<p>Für den Zusammenbau benötigst du weitere Werkzeuge: Einen kleinen Kreuz-Schraubendreher und einen Innensechskant-Schraubendreher (2,5 mm). Wenn vorhanden, ist eine Pinzette evtl. nützlich und vereinfacht den Zusammenbau, ist aber nicht zwingend erforderlich. Weiterhin wird nocheinmal der Seitenschneider benötigt.</p>
+<div id="__asciidoctor-preview-156__" class="paragraph">
+<p>Für den Zusammenbau benötigst du weitere Werkzeuge: einen kleinen Kreuz-Schraubendreher und einen Innensechskant-Schraubendreher (2,5 mm). Wenn vorhanden, ist eine Pinzette evtl. nützlich und vereinfacht den Zusammenbau, ist aber nicht zwingend erforderlich. Weiterhin wird noch einmal der Seitenschneider benötigt.</p>
 </div>
-<div id="__asciidoctor-preview-155__" class="paragraph">
+<div id="__asciidoctor-preview-157__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/00_preparation/02_assembly_get_tools.jpg" alt="02 assembly get tools" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_motoren_einbauen">3.2. Motoren einbauen</h3>
-<div id="__asciidoctor-preview-156__" class="paragraph">
+<div id="__asciidoctor-preview-158__" class="paragraph">
 <p>Wir beginnen den Zusammenbau mit den Motoren. Nimm dir dazu einen der Motoren und einen Motorhalter sowie zwei der vier Kreuzschrauben (du erkennst sie daran, dass es die einzigen sind die Spitzen haben). Lege das Motorkabel wie abgebildet einige Male in Falten und drücke es sachte zusammen, sodass es sich beim Einbauen leichter in dieselben Falten legt.</p>
 </div>
-<div id="__asciidoctor-preview-157__" class="paragraph">
+<div id="__asciidoctor-preview-159__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/01_motors/04_assembly_get_motor_holder.jpg" alt="04 assembly get motor holder" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/01_motors/03_assembly_fold_cable.jpg" alt="03 assembly fold cable" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-158__" class="paragraph">
-<p>Fädele das Motorkabel durch die große Öffnung in den Halter und durch die kleine seitliche Öffnung wieder aus dem Halter heraus. Setze nun den Motor in den Halter, wobei es wichtig ist, dass sich ein Teil des Kabels gefaltet im Halter befindet, damit ingesamt weniger vom Kabel heraussteht. Der Schaft des Motor sollte von der kleinen Öffnung wegzeigen (vergleiche dein Ergebnis mit der Abbildung).</p>
+<div id="__asciidoctor-preview-160__" class="paragraph">
+<p>Fädele das Motorkabel durch die große Öffnung in den Halter und durch die kleine seitliche Öffnung wieder aus dem Halter heraus. Setze nun den Motor in den Halter, wobei es wichtig ist, dass sich ein Teil des Kabels gefaltet im Halter befindet, damit insgesamt weniger vom Kabel heraussteht. Der Schaft des Motors sollte von der kleinen Öffnung wegzeigen (vergleiche dein Ergebnis mit der Abbildung).</p>
 </div>
-<div id="__asciidoctor-preview-159__" class="paragraph">
+<div id="__asciidoctor-preview-161__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/01_motors/05_assembly_insert_cable.jpg" alt="05 assembly insert cable" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/01_motors/06_assembly_motor_screws.jpg" alt="06 assembly motor screws" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-160__" class="paragraph">
-<p>Setze nun nacheinander die Schrauben an und ziehe sie hinreichend fest. Wenn alles gut sitzt wiederhole die Schritte mit dem zweiten Motor.</p>
+<div id="__asciidoctor-preview-162__" class="paragraph">
+<p>Setze nun nacheinander die Schrauben an und ziehe sie hinreichend fest. Wenn alles gut sitzt, wiederhole die Schritte mit dem zweiten Motor.</p>
 </div>
-<div id="__asciidoctor-preview-161__" class="paragraph">
+<div id="__asciidoctor-preview-163__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/01_motors/07_assembly_motors_cable_detail.jpg" alt="07 assembly motors cable detail" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/01_motors/08_assembly_motors_prepared.jpg" alt="08 assembly motors prepared" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_rahmen_zusammensetzen">3.3. Rahmen zusammensetzen</h3>
-<div id="__asciidoctor-preview-162__" class="paragraph">
-<p>Als nächstes füge den Rahmen zusammen. Lege dazu die Grundplatte des Rahmens vor dir ab und setze die V-förmige Klemmenmutter zwischen die beiden mittigen Lochstege. Setze die Arretierschraube ein und ziehe sie zwei Umdrehungen an.</p>
+<div id="__asciidoctor-preview-164__" class="paragraph">
+<p>Als Nächstes füge den Rahmen zusammen. Lege dazu die Grundplatte des Rahmens vor dir ab und setze die v-förmige Klemmenmutter zwischen die beiden mittigen Lochstege. Setze die Arretierschraube ein und ziehe sie zwei Umdrehungen an.</p>
 </div>
-<div id="__asciidoctor-preview-163__" class="paragraph">
+<div id="__asciidoctor-preview-165__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/09_assembly_frame_start.jpg" alt="09 assembly frame start" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/02_frame/10_assembly_frame_insert_stamp_bolt.jpg" alt="10 assembly frame insert stamp bolt" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-164__" class="paragraph">
-<p>Lege die beiden Motorhalter mit ihren Achsenden auf die Löcher in der Grundplatte. Achte darauf, dass die Öffungen und die herausragenden Kabel nach oben wegzeigen. Lege nun den Deckel des Rahmens auf und halte alles mit deinen Fingern zusammen. Wenn du die Arretierschraube sachte noch etwas weiter hineindrehst hält der Rahmen besser zusammen.</p>
+<div id="__asciidoctor-preview-166__" class="paragraph">
+<p>Lege die beiden Motorhalter mit ihren Achsenden auf die Löcher in der Grundplatte. Achte darauf, dass die Öffnungen und die herausragenden Kabel nach oben wegzeigen. Lege nun den Deckel des Rahmens auf und halte alles mit deinen Fingern zusammen. Wenn du die Arretierschraube sachte noch etwas weiter hinein drehst, hält der Rahmen besser zusammen.</p>
 </div>
-<div id="__asciidoctor-preview-165__" class="paragraph">
+<div id="__asciidoctor-preview-167__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/11_assembly_frame_insert_parts.jpg" alt="11 assembly frame insert parts" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/02_frame/12_assembly_frame_close_lid.jpg" alt="12 assembly frame close lid" width="49%"></span></p>
 </div>
 <div class="sect3">
 <h4 id="_kabel_einfädeln_und_verstauen">3.3.1. Kabel einfädeln und verstauen</h4>
-<div id="__asciidoctor-preview-166__" class="paragraph">
-<p>Halte den Rahmen so, das ein Motor nach links der andere nach rechts zeigt und die Kabel nach oben herausragen. Fädele nun das von dir aus linksseitige Motorkabel durch das von dir wegzeigende hintere Loch. Das rechtsseitige Motorkabel gehört durch das zu dir hinzeigende Loch.</p>
-</div>
-<div id="__asciidoctor-preview-167__" class="paragraph">
-<p>Verstaue die beiden Motorkabel im Rahmen über der Klemmenmutter, sodass in etwa noch 4cm Kabel aus dem Rahmen ragen.</p>
-</div>
 <div id="__asciidoctor-preview-168__" class="paragraph">
+<p>Halte den Rahmen so, dass ein Motor nach links der andere nach rechts zeigt und die Kabel nach oben herausragen. Fädele nun das von dir aus linksseitige Motorkabel durch das von dir wegzeigende hintere Loch. Das rechtsseitige Motorkabel gehört durch das zu dir hinzeigende Loch.</p>
+</div>
+<div id="__asciidoctor-preview-169__" class="paragraph">
+<p>Verstaue die beiden Motorkabel im Rahmen über der Klemmenmutter, sodass in etwa noch 4 cm Kabel aus dem Rahmen ragen.</p>
+</div>
+<div id="__asciidoctor-preview-170__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/13_assembly_frame_thread_cables.jpg" alt="13 assembly frame thread cables" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/02_frame/14_assembly_frame_stow_cables.jpg" alt="14 assembly frame stow cables" width="49%"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_platine_festschrauben">3.3.2. Platine festschrauben</h4>
-<div id="__asciidoctor-preview-169__" class="paragraph">
+<div id="__asciidoctor-preview-171__" class="paragraph">
 <p>Nun benötigst du die zwei Zylinderkopfschrauben (M3x10mm) und den Innensechskant-Schraubendreher. Setze nacheinander die Schrauben oben in die Löcher der Bakiwi-Platine ein und schraube diese am Rahmen fest.</p>
 </div>
-<div id="__asciidoctor-preview-170__" class="admonitionblock tip">
+<div id="__asciidoctor-preview-172__" class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-171__" class="paragraph">
-<p>Mit etwas Glück lassen sich die Schrauben auf den Innensechskant-Schraubendreher aufstecken und halten dort gut durch Reibung fest, manche Werkzeug sind auch magnetisch. Damit lassen sich die Schrauben meist leichter in die Löcher der Platine einsetzen.</p>
+<div id="__asciidoctor-preview-173__" class="paragraph">
+<p>Mit etwas Glück lassen sich die Schrauben auf den Innensechskant-Schraubendreher aufstecken und halten dort gut durch Reibung fest, manche Werkzeuge sind auch magnetisch. Damit lassen sich die Schrauben meist leichter in die Löcher der Platine einsetzen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-172__" class="admonitionblock note">
+<div id="__asciidoctor-preview-174__" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-173__" class="paragraph">
-<p>Achtung beim ersten Einschrauben schneiden sich die Schrauben ihr eigenes Gewinde in die Löcher der Rahmengrundplatte. Solltest du die Schrauben später nocheinmal lösen und wieder einsetzen wollen, versuche das Gewinde zu ertasten indem du die Schraube vor dem festziehen leicht linksherum drehst bis sie ins ursprüngliche Gewinde findet.</p>
+<div id="__asciidoctor-preview-175__" class="paragraph">
+<p>Achtung, beim ersten Einschrauben schneiden sich die Schrauben ihr eigenes Gewinde in die Löcher der Rahmengrundplatte. Solltest du die Schrauben später noch einmal lösen und wieder einsetzen wollen, versuche das Gewinde zu ertasten, indem du die Schraube vor dem festziehen leicht linksherum drehst, bis sie ins ursprüngliche Gewinde findet.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-174__" class="paragraph">
+<div id="__asciidoctor-preview-176__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/15_assembly_frame_tighten_screws.jpg" alt="15 assembly frame tighten screws" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-175__" class="paragraph">
+<div id="__asciidoctor-preview-177__" class="paragraph">
 <p>Der Rahmen hält nun von selbst zusammen, ziehe die Arretierschraube vorsichtig mit den Fingern etwas fester und teste wie sich die Motorhalter nun in bestimmten Rastpositionen feststellen lassen.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_motorkabel_verbinden">3.4. Motorkabel verbinden</h3>
-<div id="__asciidoctor-preview-176__" class="paragraph">
+<div id="__asciidoctor-preview-178__" class="paragraph">
 <p>Nun werden die Motoren verkabelt. Diesen Schritt hatten wir bereits beim Testen, stelle erneut sicher, dass die braunen (bzw. schwarzen) Adern der Motorkabel auf das Ground-Symbol zeigen (vgl. mit Abschnitt <a href="#connect_motors">Motoren verbinden</a>). Verstaue die beiden Motorkabel möglichst weit im Rahmen, sodass sie gut anliegen und keine großen Schlaufen bilden.</p>
 </div>
-<div id="__asciidoctor-preview-177__" class="paragraph">
+<div id="__asciidoctor-preview-179__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/03_cabling/16_assembly_connect_cables.jpg" alt="16 assembly connect cables" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/03_cabling/17_assembly_connect_cables_side.jpg" alt="17 assembly connect cables side" width="49%"></span></p>
 </div>
@@ -1314,86 +1330,86 @@ Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist 
 <h3 id="_batteriehalter_anbringen">3.5. Batteriehalter anbringen</h3>
 <div class="sect3">
 <h4 id="_vorbereiten">3.5.1. Vorbereiten</h4>
-<div id="__asciidoctor-preview-178__" class="paragraph">
-<p>Bereite nun das Anbringen der Batterierhalter vor. Du benötigst die vier M3x4mm Zylinderkopfschrauben, den Innensechskant-Schraubendreher und den Seitenschneider.</p>
-</div>
-<div id="__asciidoctor-preview-179__" class="paragraph">
-<p><span class="image"><img src="./img/02_mechanics/04_batholder/18_assembly_get_battery_holders.jpg" alt="18 assembly get battery holders" width="49%"></span></p>
-</div>
 <div id="__asciidoctor-preview-180__" class="paragraph">
-<p>Entferne zunächst die beiden Distanzstege in beiden Batteriefächern indem du sie ganz knapp über der Fläche abtrennst. Schraube nun die Batteriefächer seitlich an den Rahmen an. Jetzt ist genügend Platz für die Schraubenköpfe.</p>
+<p>Bereite nun das Anbringen der Batteriehalter vor. Du benötigst die vier M3x4mm Zylinderkopfschrauben, den Innensechskant-Schraubendreher und den Seitenschneider.</p>
 </div>
 <div id="__asciidoctor-preview-181__" class="paragraph">
+<p><span class="image"><img src="./img/02_mechanics/04_batholder/18_assembly_get_battery_holders.jpg" alt="18 assembly get battery holders" width="49%"></span></p>
+</div>
+<div id="__asciidoctor-preview-182__" class="paragraph">
+<p>Entferne zunächst die beiden Distanzstege in beiden Batteriefächern, indem du sie ganz knapp über der Fläche abtrennst. Schraube nun die Batteriefächer seitlich an den Rahmen an. Jetzt ist genügend Platz für die Schraubenköpfe.</p>
+</div>
+<div id="__asciidoctor-preview-183__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/19_assembly_remove_separator.jpg" alt="19 assembly remove separator" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/04_batholder/20_assembly_separator_removed.jpg" alt="20 assembly separator removed" width="49%"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_festschrauben">3.5.2. Festschrauben</h4>
-<div id="__asciidoctor-preview-182__" class="paragraph">
-<p>Die Batteriefächer sollten so angebracht werden, dass die Kabel an der Seite mit den Fühlern sind. Jeder Halter wird mit zwei Schrauben am Rahmen fixiert. Auch hier Schneiden sich die Schrauben beim erstenmal einsetzen ihr Gewinde in die Löcher im Rahmen.</p>
+<div id="__asciidoctor-preview-184__" class="paragraph">
+<p>Die Batteriefächer sollten so angebracht werden, dass die Kabel an der Seite mit den Fühlern sind. Jeder Halter wird mit zwei Schrauben am Rahmen fixiert. Auch hier Schneiden sich die Schrauben beim ersten Mal einsetzen ihr Gewinde in die Löcher im Rahmen.</p>
 </div>
-<div id="__asciidoctor-preview-183__" class="admonitionblock warning">
+<div id="__asciidoctor-preview-185__" class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-184__" class="paragraph">
+<div id="__asciidoctor-preview-186__" class="paragraph">
 <p>Warnung! Nach fest kommt locker! Achte darauf, die Schrauben nicht zu fest anzuziehen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-185__" class="paragraph">
+<div id="__asciidoctor-preview-187__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/21_assembly_battery_screws.jpg" alt="21 assembly battery screws" width="49%"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_batteriekabel_verlegen">3.5.3. Batteriekabel verlegen</h4>
-<div id="__asciidoctor-preview-186__" class="paragraph">
-<p>Verlege die Batterierkabel hinter den Motorkabeln entlang der Platine bis nach hinten und stecke sie dort in die Buchsen ein. Schiebe das Kabel ggf. vorsichtig etwas unter die Platine.</p>
+<div id="__asciidoctor-preview-188__" class="paragraph">
+<p>Verlege die Batteriekabel hinter den Motorkabeln entlang der Platine bis nach hinten und stecke sie dort in die Buchsen ein. Schiebe das Kabel ggf. vorsichtig etwas unter die Platine.</p>
 </div>
-<div id="__asciidoctor-preview-187__" class="paragraph">
+<div id="__asciidoctor-preview-189__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/22_assembly_thread_battery_cable.jpg" alt="22 assembly thread battery cable" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/04_batholder/23_assembly_thread_battery_cable_done.jpg" alt="23 assembly thread battery cable done" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-188__" class="paragraph">
-<p><strong>Hurra!</strong> Der Körper deines Bakiwi ist nun fertig. Vergleiche nochmal mit der Abbildung die Ausrichtung der Stecker auf deiner Platine und ob alle Kabel möglichst dicht am Bakiwi-Körper anliegen.</p>
+<div id="__asciidoctor-preview-190__" class="paragraph">
+<p><strong>Hurra!</strong> Der Körper deines Bakiwi ist nun fertig. Vergleiche noch mal mit der Abbildung die Ausrichtung der Stecker auf deiner Platine und ob alle Kabel möglichst dicht am Bakiwi-Körper anliegen.</p>
 </div>
-<div id="__asciidoctor-preview-189__" class="paragraph">
+<div id="__asciidoctor-preview-191__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/24_assembly_cabling_finished.jpg" alt="24 assembly cabling finished" width="98%"></span></p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_beine_anbringen">3.6. Beine anbringen</h3>
-<div id="__asciidoctor-preview-190__" class="paragraph">
-<p>Lege zunächst die Batterien wieder ein und schalte deinen Bakiwi ein. Drücke zweimal nacheinander im Abstand von ca. einer Sekunde den <code>PAUSE</code>-Knopf, sodass dein Bakiwi seine Motoren in die Ausgangsposition fährt und dann wieder in den Pausemodus geht.</p>
+<div id="__asciidoctor-preview-192__" class="paragraph">
+<p>Lege zunächst die Batterien wieder ein und schalte dein Bakiwi ein. Drücke zweimal nacheinander im Abstand von ca. einer Sekunde den <code>PAUSE</code>-Knopf, sodass dein Bakiwi seine Motoren in die Ausgangsposition fährt und dann wieder in den Pausemodus geht.</p>
 </div>
-<div id="__asciidoctor-preview-191__" class="paragraph">
+<div id="__asciidoctor-preview-193__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/05_legs/25_assembly_leg_adapter.jpg" alt="25 assembly leg adapter" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/05_legs/26_assembly_insert_batteries.jpg" alt="26 assembly insert batteries" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-192__" class="paragraph">
-<p>Nun setze die abgebildeten Bein-Anschlüsse auf die gezahnten Enden der Motoren (Schäfte) und schraube die mit den beiliegenden Kreuzschrauben fest. Es sind die letzten zwei Schrauben die übrig sind.</p>
-</div>
-<div id="__asciidoctor-preview-193__" class="paragraph">
-<p>Die beiliegenden 3D-gedruckten Bein-Anschlüsse sind nur eine von unzähligen Möglichkeiten wie du deinem Bakiwi Beine geben kannst. In deinem Bausatz liegen mitunter noch weitere Teile die auf die Schäfte der Motoren passen (sogenannte Ruderhörner).</p>
-</div>
 <div id="__asciidoctor-preview-194__" class="paragraph">
-<p><strong>Probiere dich aus!</strong> Mit den beiliegenden restlichen Ruderhönern kannst du verschiedene Beinpaare aus unterschiedlichen Bastelmaterialien herstellen immerwieder wechseln.</p>
+<p>Nun setze die abgebildeten Bein-Anschlüsse auf die gezahnten Enden der Motoren (Schäfte) und schraube die mit den beiliegenden Kreuzschrauben fest. Es sind die letzten zwei Schrauben, die übrig sind.</p>
 </div>
 <div id="__asciidoctor-preview-195__" class="paragraph">
+<p>Die beiliegenden 3D-gedruckten Bein-Anschlüsse sind nur eine von unzähligen Möglichkeiten wie du deinem Bakiwi Beine geben kannst. In deinem Bausatz liegen mitunter noch weitere Teile, die auf die Schäfte der Motoren passen (sogenannte Ruderhörner).</p>
+</div>
+<div id="__asciidoctor-preview-196__" class="paragraph">
+<p><strong>Probiere dich aus!</strong> Mit den beiliegenden restlichen Ruderhönern kannst du verschiedene Beinpaare aus unterschiedlichen Bastelmaterialien herstellen immer wieder wechseln.</p>
+</div>
+<div id="__asciidoctor-preview-197__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/05_legs/27_assembly_motor_inner_thread.jpg" alt="27 assembly motor inner thread" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/05_legs/28_assembly_leg_adapter_screws.jpg" alt="28 assembly leg adapter screws" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-196__" class="paragraph">
-<p><strong>Erledigt!</strong> Je nachdem welchen Bakiwi-Bausatz du hast, liegen unter Umständen noch kleine Lego-Teile bei, welche die ersten Füße deines Bakiwi sein können. Vielleicht besitzt du auch bereits Lego-Technic-Teile. Diese kannst du verwenden um sehr schnell Beine und Füße für dein Bakiwi zu entwerfen.</p>
+<div id="__asciidoctor-preview-198__" class="paragraph">
+<p><strong>Erledigt!</strong> Je nachdem welchen Bakiwi-Bausatz du hast, liegen unter Umständen noch kleine Lego-Teile bei, welche die ersten Füße deines Bakiwi sein können. Vielleicht besitzt du auch bereits Lego-Technic-Teile. Diese kannst du verwenden, um sehr schnell Beine und Füße für dein Bakiwi zu entwerfen.</p>
 </div>
-<div id="__asciidoctor-preview-197__" class="paragraph">
+<div id="__asciidoctor-preview-199__" class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/05_legs/29_assembly_done.jpg" alt="29 assembly done" width="98%"></span></p>
 </div>
 </div>
@@ -1404,24 +1420,24 @@ Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist 
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_vor_dem_einschalten">4.1. Vor dem Einschalten</h3>
-<div id="__asciidoctor-preview-198__" class="paragraph">
+<div id="__asciidoctor-preview-200__" class="paragraph">
 <p><strong>Wichtig:</strong> Vor dem ersten Einschalten (mit Beinen dran) schau dir die Bezeichnungen der vier grauen Regler (Potentiometer) genauer an.</p>
 </div>
-<div id="__asciidoctor-preview-199__" class="olist arabic">
+<div id="__asciidoctor-preview-201__" class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-200__">
-<p>Stelle den <code>BALANCE</code> und <code>PHASE</code>-Regler auf Mittenposition (Pfeil nach oben).</p>
-</li>
-<li id="__asciidoctor-preview-201__">
-<p>Stelle den Geschwindigkeitsregler (<code>SPEED</code>) auf auf halb links (in Richtung der langen Welle).</p>
-</li>
 <li id="__asciidoctor-preview-202__">
+<p>Stelle den <code>BALANCE</code> und <code>PHASE</code>-Regler auf Mittelposition (Pfeil nach oben).</p>
+</li>
+<li id="__asciidoctor-preview-203__">
+<p>Stelle den Geschwindigkeitsregler (<code>SPEED</code>) auf halb links (in Richtung der langen Welle).</p>
+</li>
+<li id="__asciidoctor-preview-204__">
 <p>Stelle den <code>LEVEL</code>-Regler auf halb links (in Richtung der kleinen Welle).</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-203__" class="paragraph">
-<p>Schalte nun deinen Bakiwi ein.</p>
+<div id="__asciidoctor-preview-205__" class="paragraph">
+<p>Schalte nun dein Bakiwi ein.</p>
 </div>
 </div>
 </div>
@@ -1429,67 +1445,92 @@ Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist 
 <div class="sect1">
 <h2 id="_die_funktionsweise_erklärt">5. Die Funktionsweise erklärt</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-204__" class="paragraph">
-<p>Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktiviät der Motorneuronen, selbst wenn sich dein Bakiwi im Pause-Modus befindet. Im Pause-Modus sind die Motoren inhibiert (d.h. gehemmt), du kannst aber durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.</p>
+<div id="__asciidoctor-preview-206__" class="paragraph">
+<p>Im Programmspeicher deines Bakiwi-Mikrocontrollers sind zwei Neuronen, welche so verschaltet sind, dass sie schwingen. Sie bilden zusammen einen sogenannten Oszillator und dieser ist der Taktgeber für die Bewegung der Beine.
+Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorneuronen. Im Pause-Modus sind die Neuronen und somit der Oszillator bereits aktiv und schwingen, die Motoren sind aber inhibiert (gehemmt). Das heißt, du kannst durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.</p>
 </div>
 <div class="sect2">
 <h3 id="_laufparameter">5.1. Laufparameter</h3>
-<div id="__asciidoctor-preview-205__" class="paragraph">
-<p>Die Art wie dein Bakiwi läuft wird durch mehrere Faktoren beeinflusst. Maßgeblich für ein erfolgreiche Fortbewegung sind die Beine, die du deinem Bakiwi erschaffst.</p>
+<div id="__asciidoctor-preview-207__" class="paragraph">
+<p>Die Art, wie dein Bakiwi läuft, wird durch mehrere Faktoren beeinflusst. Maßgeblich für eine erfolgreiche Fortbewegung sind die Beine, die du deinem Bakiwi erschaffst. Hast du dir neue Beine für dein Bakiwi ausgedacht, so kannst du mit der Veränderung der folgenden Parameter (Stellschrauben) deinem Bakiwi mit seinen neuen Beinen das Laufen beibringen:</p>
 </div>
 <div class="sect3">
 <h4 id="_anstellwinkel">5.1.1. Anstellwinkel</h4>
-<div id="__asciidoctor-preview-206__" class="paragraph">
-<p>Der Anstellwinkel ist ein mechanischer Parameter, du kannst durch Lösen der großen Arretierschraube die Motorhalter beweglich machen und dann ihren Winkel zueinander verändern. <strong>Probiere verschiedenes aus!</strong> Ziehe die Schraube dann wieder nur soweit fest, bis die Motorhalter in der gewünschten Position fest genug halten.</p>
+<div id="__asciidoctor-preview-208__" class="paragraph">
+<p>Die Anstellwinkel sind rein mechanische Parameter. Du kannst durch Lösen der großen Arretierschraube die Motorhalter beweglich machen und dann ihre Winkel zum Körper und zueinander verändern. <strong>Probiere Verschiedenes aus!</strong> Ziehe die Schraube dann wieder nur soweit fest, bis die Motorhalter in der gewünschten Position fest genug halten.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_geschwindigkeitfrequenz">5.1.2. Geschwindigkeit/Frequenz</h4>
-<div id="__asciidoctor-preview-207__" class="paragraph">
-<p>Bewege den <code>SPEED</code>-Knopf und beobachte, wie sich die Geschwindigkeit des Blinkens der LEDs verändert. Verlasse den Pause-Modus durch Drücken des Tasters und beobachte an den Motoren wie sich die Geschwindigkeit der Schwingung (d.h. die Frequenz der Oszillation) der Motorneurone unmittelbar auf die Motoren auswirkt. Die Frequenz regelt die Schrittgeschwindigkeit deines Bakiwi.</p>
+<div id="__asciidoctor-preview-209__" class="paragraph">
+<p>Bewege den <code>SPEED</code>-Knopf und beobachte, wie sich die Geschwindigkeit des Blinkens der LEDs verändert. Verlasse den Pause-Modus durch Drücken des Tasters und beobachte an den Motoren wie sich die Geschwindigkeit der Schwingung (d. h. die Frequenz der Oszillation) der Motorneurone unmittelbar auf die Motoren auswirkt. Die Frequenz regelt die Schrittgeschwindigkeit deines Bakiwi.</p>
+</div>
+<div id="__asciidoctor-preview-210__" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div id="__asciidoctor-preview-211__" class="paragraph">
+<p>Wir empfehlen zunächst mit einer langsamen Bewegung zu beginnen. Es hilft dir dabei die Bewegung deiner selbst-gebauten Beine gut beobachten zu können und damit ein gutes Verständnis über die Auswirkungen der Beinbewegung zu bekommen.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_levelamplitude">5.1.3. Level/Amplitude</h4>
-<div id="__asciidoctor-preview-208__" class="paragraph">
+<div id="__asciidoctor-preview-212__" class="paragraph">
 <p>Drehe am <code>LEVEL</code>-Knopf und beobachte, wie sich die Helligkeit der LEDs verändert und die Weite mit der die Motoren bei jeder Bewegung ausschlagen. Diese Schwingungsweite wird Amplitude genannt und regelt die Schrittweite der Laufbewegung.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_balance">5.1.4. Balance</h4>
-<div id="__asciidoctor-preview-209__" class="paragraph">
-<p>Drehe am <code>BALANCE</code>-Regler und beobachte wie sich die vorher eingestellte Amplitude auf die beiden Motoren verteilt. Steht der Regler in Mittenposition sind beide Motoramplituden gleich. Ein Drehen nach links, senkt die Amplitude des vorderen Motors, eine Drehung nach rechts dämpft die Bewegung des hinteren Motors.</p>
+<div id="__asciidoctor-preview-213__" class="paragraph">
+<p>Drehe am <code>BALANCE</code>-Regler und beobachte wie sich die vorher eingestellte Amplitude auf die beiden Motoren verteilt. Steht der Regler in der Mittelposition, sind beide Motoramplituden gleich. Ein Drehen nach links, senkt die Amplitude des vorderen Motors, eine Drehung nach rechts dämpft die Bewegung des hinteren Motors.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_phase">5.1.5. Phase</h4>
-<div id="__asciidoctor-preview-210__" class="paragraph">
-<p>Der letzte Parameter, die sogenannte Phase (bzw. der Phasenwinkel) ist wahrlich die besondere Würze und regelt die Laufrichtung. Ein <code>PHASE</code>-Regler auf Mitte erzeugt eine synchrone aber gegenläufige Bewegung der Motoren. Drehst du den Phasenwinkel etwas aus der Mitte heraus bewegen sich die Motoren nicht mehr synchron was entscheidend für das Laufen ist. Ein bis auf Maximum (oder Minimum) gestellter Phasenwinkel erzeugt erneut eine synchrone aber diesmal mitläufige Bewegung. Die Phase ist der wichtigste Parameter für eine erfolgreiche Laufbewegung und benötigt deine besondere Aufmerksamkeit. Mit Ihr entscheidet sich, ob dein Bakiwi überhaupt läuft und wenn ja in welche Richtung.</p>
+<div id="__asciidoctor-preview-214__" class="paragraph">
+<p>Der letzte Parameter, die sogenannte Phase (bzw. der Phasenwinkel) ist wahrlich die besondere Würze und regelt die Laufrichtung. Ein <code>PHASE</code>-Regler auf Mitte erzeugt eine synchrone aber gegenläufige Bewegung der Motoren. Drehst du den Phasenwinkel etwas aus der Mitte heraus, bewegen sich die Motoren nicht mehr synchron, was entscheidend für das Laufen ist. Ein bis auf Maximum (oder Minimum) gestellter Phasenwinkel erzeugt erneut eine synchrone aber diesmal mitläufige Bewegung. Die Phase ist der wichtigste Parameter für eine erfolgreiche Laufbewegung und benötigt deine besondere Aufmerksamkeit. Mit Ihr entscheidet sich, ob dein Bakiwi überhaupt läuft und wenn ja in welche Richtung.</p>
+</div>
+<div id="__asciidoctor-preview-215__" class="paragraph">
+<p>Und jetzt genug gelesen :) Ran ans Werk!</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_die_bauteile_und_ihre_funktion">5.2. Die Bauteile und ihre Funktion</h3>
-
+<h3 id="_der_schaltplan">5.2. Der Schaltplan</h3>
+<div id="__asciidoctor-preview-216__" class="paragraph">
+<p>Im Folgenden siehst du den elektrischen Schaltplan deines Bakiwi. Findest du selbst heraus, welche Symbole zu welchen von dir gelöteten Teilen gehören? Einen Schaltplan zu <em>lesen</em> erfordert etwas Übung, aber nachdem du jetzt alle Teile selbst zusammengelötet hast, kannst du hier nachvollziehen, welches Bauteil mit welchem verkabelt ist. Die <em>Kabel</em> auf einer Platine heißen Leiterbahnen und bestehen aus einer dünnen Lage Kupfer. Wenn du die Platine deines Bakiwi anschaust und leicht gegen das Licht hältst, kannst du sie unter der Lackschicht ausmachen. Manche Leiterbahnen wechseln die Seite der Platine durch kleine Löcher, sogenannte <em>Vias</em>. Manche Leiterbahnen sind auch ganze Flächen, so ist beispielsweise die gesamte untere Kupferfläche der Platine der Minuspol.</p>
 </div>
-<div class="sect2">
-<h3 id="_der_schaltplan">5.3. Der Schaltplan</h3>
-<div id="__asciidoctor-preview-211__" class="imageblock">
+<div id="__asciidoctor-preview-217__" class="paragraph">
+<p>Ein Schaltplan hilft auch bei der Fehlersuche. Verhält sich die Elektronik merkwürdig, sind ein Multimeter und ein Schaltplan die wichtigsten Hilfsmittel beim Finden der Ursache. Im Schaltplan sind auch die Bauteile genau bezeichnet. Du findest dort beispielsweise welche Kapazität die Kondensatoren haben, in welche Richtung die Dioden zu schalten sind oder wie die Bezeichnung des Spannungswandlers ist. Mit der Hilfe eines Schaltplans kann ein elektrisches Gerät, wie auch dein Bakiwi, immer wieder repariert werden.</p>
+</div>
+<div id="__asciidoctor-preview-218__" class="imageblock">
 <div class="content">
 <img src="./img/bakiwi_kit_rev1_1_schematics.png" alt="bakiwi kit rev1 1 schematics">
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_was_ist_ein_oszillator">5.4. Was ist ein Oszillator?</h3>
-
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_probleme_beheben">6. Probleme beheben</h2>
+<h2 id="_hast_du_noch_fragen">Hast du noch Fragen?</h2>
 <div class="sectionbody">
-
+<div id="__asciidoctor-preview-219__" class="paragraph">
+<p>Du hast noch Fragen oder wünscht dir weitere Erklärungen? Du hast Anregungen oder Feedback für uns?
+<a href="https://jetpack.cl/bakiwi">Schreib uns!</a></p>
+</div>
+<div id="__asciidoctor-preview-220__" class="paragraph">
+<p>Du kannst uns auch auf Twitter folgen, dann versorgen wir dich mit Neuigkeiten zu <strong>#bakiwi</strong>. Wir sind  <a href="https://twitter.com/labjetpack">@LabJetpack</a>.</p>
+</div>
+<div id="__asciidoctor-preview-221__" class="paragraph">
+<p>Ansonsten wünschen wir dir viel Spaß mit deinem neuen Bakiwi. Lass es krabbeln!</p>
+</div>
 </div>
 </div>
         </div>
