@@ -19,15 +19,15 @@ class CapSense {
 public:
 
   float x,y,b,w;
-  const uint8_t NREAD = 8; /* each reading approx. takes 0.3 ms */
-  const float eta = 0.005f;
-  const float eta_w = .0000005f;
-  const float lp = 0.1f;
-
+  static const uint8_t NREAD = 8; /* each reading approx. takes 0.3 ms */
+  static const float eta = 0.005f;
+  static const float eta_w = .0000005f;
+  static const float lp = 0.1f;
+  static const float tar = .34f;
 
   CapSense(uint8_t sendpin, uint8_t recvpin)
   : cs(sendpin, recvpin)
-  , x(), y(), w(0.1f), b()
+  , x(), y(), w(0.05f), b()
   {
     cs.set_CS_AutocaL_Millis(0xFFFFFFFF);
     cs.set_CS_Timeout_Millis(2000);
@@ -46,9 +46,9 @@ public:
     b += (b > -w*x) ? -eta*y : -10*eta*y;
 
     /* decrease weight w when amp is near saturation,
-       or increase w when amp is too lower */
-    if (fabs(y) > .6f) w *= 1-eta_w;
-    if (fabs(y) < .4f) w *= 1+eta_w;
+       or increase w when amp is too low */
+    if (fabs(y) > tar) w *= 1-eta_w;
+    if (fabs(y) < tar) w *= 1+eta_w;
 
     return y;
   }
