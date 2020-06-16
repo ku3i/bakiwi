@@ -5,7 +5,7 @@ v0.1, 2020-04-02
 
 image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi]
 
-== A Tiny Walking Robot Kit for Education and Fun. 
+== A Tiny Walking Robot Kit for Education and Fun.
 
 Welcome to Bakiwi Land.
 
@@ -35,7 +35,7 @@ There are some video links available on how _Bakiwi_ could look when assembled a
 Follow these links to read the assembly manuals:
 
 * link:https://github.com/ku3i/Bakiwi/tree/master/documents/manual/bakiwi_kit/manual_bakiwi_kit_rev_1_1.adoc[Bakiwi Kit rev 1.1]
-* link:https://github.com/ku3i/Bakiwi/tree/master/documents[SO(2)Walker]
+* link:https://github.com/ku3i/Bakiwi/tree/master/documents/manual/so2walker/readme.adoc[SO(2)Walker]
 
 ****
 
