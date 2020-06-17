@@ -1,7 +1,7 @@
 = Bakiwi
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-04-02
-:imagesdir: ./documents/
+:imagesdir: ./images/
 
 image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi]
 
