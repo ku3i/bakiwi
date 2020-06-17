@@ -24,6 +24,7 @@ If you want to *buy a Bakiwi Kit*, please visit our store: link:https://bakiwi.s
 Here you can find the link:https://github.com/ku3i/Bakiwi/tree/master/manual[Bakiwi Assembly Manual]
 
 == Videos
+
 ****
 There are some video links available on how _Bakiwi_ could look when assembled and how it performs:
 
@@ -31,7 +32,8 @@ There are some video links available on how _Bakiwi_ could look when assembled a
 * link:https://www.youtube.com/watch?v=r7zon1IOzuM[Pulling Things]
 * link:https://www.youtube.com/watch?v=ixKAcRevgqk[Bakiwicalypse]
 * link:https://www.youtube.com/watch?v=EbDHLbfVccA[Human Sensing]
-* link:https://youtu.be/psynHG6JsZE[Workshop CCCamp19]
+* link:https://www.youtube.com/watch?v=psynHG6JsZE[Workshop CCCamp19]
+* link:https://www.youtube.com/watch?v=GNrDzkgFEy4[Where can I get a Bakiwi?]
 ****
 
 image:./fotos/bakiwi_kit.jpg[Bakiwi]
