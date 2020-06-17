@@ -5,15 +5,17 @@ v0.1, 2020-04-02
 
 image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi]
 
-== A Tiny Walking Robot Kit for Education and Fun.
+== The fabulous DIY walking robot kit.
 
-Welcome to Bakiwi Land.
+_tl;dr: Build your own walking robot._
+
+Welcome to the Bakiwiverse.
 
 Bakiwis are small walking robots with only two motors that come as a kit and are easy to build. Each Bakiwi is unique. You can freely choose how it will look and behave. You can easily change your Bakiwi's walking style with four knobs mounted on the printed circuit board. Programming is not required, but have a look into the _source_ folder if you like to modify the firmware and add some nice features.
 
-Bakiwis are perfectly suited for teaching robotics to kids and beginners. We already build Bakiwis in many workshops and the builders are always amazed when their robot creature starts hopping. While having fun, many skills and technical experience is acquired.
+Bakiwis combine education and fun and are therefore perfect for teaching robotics to children and beginners. We have already built dozens of Bakiwis in many workshops and the builders are always amazed when their robot creature starts to walk. While it is fun to build and play with the bakiwis, many skills and technical experience are acquired.
 
-For information on ongoing developments, you might want to follow us on our link:https://hackaday.io/project/169268-bakiwi-robot[hackaday.io page]
+For information on ongoing developments, you might want to follow the project on its link:https://hackaday.io/project/169268-bakiwi-robot[hackaday.io page] or follow me on link:https://twitter.com/qbernetik[twitter/@qbernetik]
 
 If you want to *buy a Bakiwi Kit*, please visit our store: link:https://bakiwi.shop[]
 
