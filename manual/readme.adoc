@@ -2,7 +2,7 @@
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-06-17
 :imagesdir: ./img
-:toc:
+//:toc:
 
 Here you can find the Bakiwi Kit solder and assembly manuals. Depending on your Bakiwi's hardware revision, you have to choose between different versions of the manual. All files of the Bakiwi assembly manuals are under the CREATIVE COMMONS LICENSE CC-BY-NC-SA. All our manuals are written in the fabulous link:https://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc] markup language.
 
