@@ -3,7 +3,7 @@ Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-04-02
 :imagesdir: ./images/
 
-image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi, width=50%]
+image:./logo/png/bakiwi_logo_5-1_purple_2500px.png[Bakiwi]
 
 == The fabulous DIY walking robot kit.
 
