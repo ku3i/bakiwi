@@ -34,8 +34,8 @@ There are some video links available on how _Bakiwi_ could look when assembled a
 ****
 Follow these links to read the assembly manuals:
 
-* link:https://github.com/ku3i/Bakiwi/tree/master/documents/manual/bakiwi_kit/manual_bakiwi_kit_rev_1_1.adoc[Bakiwi Kit rev 1.1]
-* link:https://github.com/ku3i/Bakiwi/tree/master/documents/manual/so2walker/readme.adoc[SO(2)Walker]
+* link:https://github.com/ku3i/Bakiwi/tree/master/manual/bakiwi_kit/manual_bakiwi_kit_rev_1_1.adoc[Bakiwi Kit rev 1.1]
+* link:https://github.com/ku3i/Bakiwi/tree/master/manual/so2walker/readme.adoc[SO(2)Walker]
 
 ****
 
