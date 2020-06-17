@@ -3,7 +3,7 @@ Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-04-02
 :imagesdir: ./images/
 
-image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi]
+image:./logo/png/bakiwi_logo_4-1_purple_2000px.png[Bakiwi, width=50%]
 
 == The fabulous DIY walking robot kit.
 
@@ -19,6 +19,9 @@ For information on ongoing developments, you might want to follow the project on
 
 If you want to *buy a Bakiwi Kit*, please visit our store: link:https://bakiwi.shop[]
 
+== Assembly Manual
+
+Here you can find the link:https://github.com/ku3i/Bakiwi/tree/master/manual[Bakiwi Assembly Manual]
 
 == Videos
 ****
@@ -29,16 +32,6 @@ There are some video links available on how _Bakiwi_ could look when assembled a
 * link:https://www.youtube.com/watch?v=ixKAcRevgqk[Bakiwicalypse]
 * link:https://www.youtube.com/watch?v=EbDHLbfVccA[Human Sensing]
 * link:https://youtu.be/psynHG6JsZE[Workshop CCCamp19]
-****
-
-== Assembly Manual
-
-****
-Follow these links to read the assembly manuals:
-
-* link:https://github.com/ku3i/Bakiwi/tree/master/manual/bakiwi_kit/manual_bakiwi_kit_rev_1_1.adoc[Bakiwi Kit rev 1.1]
-* link:https://github.com/ku3i/Bakiwi/tree/master/manual/so2walker/readme.adoc[SO(2)Walker]
-
 ****
 
 image:./fotos/bakiwi_kit.jpg[Bakiwi]
