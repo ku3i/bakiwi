@@ -4,7 +4,7 @@
  | Matthias Kubisch                |
  | kubisch@informatik.hu-berlin.de |
  | board ver. bakiwi kit rev 1.1   |
- | version 20.6.7                  |
+ | version 20.6.17                 |
  +---------------------------------*/
 
 #include "jcl_neural_osc.h"
