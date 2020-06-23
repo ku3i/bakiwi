@@ -21,7 +21,7 @@ endif::[]
 image::./bakiwi_logo_3-1_purple_3000px.png[]
 
 ////
-TODO
+TODO 💡
 	+ F.A.Q. / Troubleshooting
 	+ find nice soldering tutorial
 	+ add link to different languages
@@ -310,7 +310,7 @@ image:./12_batholder/02_batholder_polarity.jpg[width=49%]
 image:./12_batholder/03_batholder_insert.jpg[width=49%]
 
 Die einlegten Kabel nun am äußersten Ende der Lasche festlöten. Dabei so effizient und schnell wie möglich löten, damit das Plastik der Batteriefächer nicht schmilzt.
-[WARNING]
+[CAUTION]
 ====
 Das Plastik der Batteriefächer ist recht temperaturempfindlich. Eine Berührung mit dem Lötkolben oder ein zu langes Aufheizen der Lötösen lässt das Batteriefach schmelzen und kann es schlimmstenfalls unbrauchbar machen.
 ====
@@ -402,7 +402,7 @@ image:./16_testing/03_testing_motor_pins.jpg[width=49%]
 
 Halte nun die Prüfspitzen an die beiden Stifte der linken Batteriebuchse, hierbei sollte kein Signal ertönen. Wiederhole den Test mit der anderen Buchse. Teste ebenfalls die Stifte der beiden Motoranschlüsse und des 6-poligen Programmieranschlusses, indem du jeweils zwei benachbarte Stifte auf Kurzschluss prüfst. Sollte es hier bei zwei Stiften piepsen, d. h. einen Kontakt geben, musst du dir deine Lötstellen an dieser Stelle noch einmal sehr genau anschauen. Möglicherweise ist etwas Lötzinn zwischen die Lötstellen geraten und verbindet diese. Achte auf genügend Licht bei der Kontrolle und nimm ggf. eine Lupe zur Hilfe.
 
-[NOTE]
+[TIP]
 ====
 Sollten zwei Lötstellen aus Versehen mit Lötzinn miteinander verbunden sein, kannst du durch erneutes Aufheizen der Lötstellen versuchen diese voneinander zu trennen. Wenn das Lot dabei klebrig wirkt, so versuche etwas frisches Lötzinn (mit noch nicht verdampften Flussmittel) hinzuzufügen um die Lötstellen wieder gängig zu machen. Der farbige Lack (blau oder lila) auf deiner Platine nimmt Lötzinn nicht an und hilft dir die Lötstellen zu trennen. Wenn beide Lötstellen gemeinsam aufgeheizt werden und durch genügend Flussmittel gut fließen können trennen sie sich leicht voneinander und ziehen sich auf ihre Lötflächen zurück.
 ====
@@ -549,7 +549,7 @@ image:./04_batholder/20_assembly_separator_removed.jpg[width=49%]
 
 Die Batteriefächer sollten so angebracht werden, dass die Kabel an der Seite mit den Fühlern sind. Jeder Halter wird mit zwei Schrauben am Rahmen fixiert. Auch hier Schneiden sich die Schrauben beim ersten Mal einsetzen ihr Gewinde in die Löcher im Rahmen.
 
-[WARNING]
+[CAUTION]
 ====
 Warnung! Nach fest kommt locker! Achte darauf, die Schrauben nicht zu fest anzuziehen.
 ====
@@ -612,10 +612,10 @@ image::./05_osc.png[OSC,200,float="right"]
 Im Programmspeicher deines Bakiwi-Mikrocontrollers sind zwei Neuronen, welche so verschaltet sind, dass sie schwingen. Sie bilden zusammen einen sogenannten Oszillator und dieser ist der Taktgeber für die Bewegung der Beine.
 Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorneuronen. Im Pause-Modus sind die Neuronen und somit der Oszillator bereits aktiv und schwingen, die Motoren sind aber inhibiert (gehemmt). Das heißt, du kannst durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.
 
-Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren. Wenn du magst, schau es dir an!
+Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren. Wenn du magst, link:https://youtu.be/rAteGra5-xM[schau es dir an!]
 
-video::rAteGra5-xM[youtube]
-link:https://youtu.be/rAteGra5-xM[Link zum Video]
+video::rAteGra5-xM[youtube, width=640, height=360]
+
 
 === Laufparameter
 
@@ -631,7 +631,7 @@ image::./01_speed.png[SPEED,200,float="right"]
 
 Bewege den `SPEED`-Knopf und beobachte, wie sich die Geschwindigkeit des Blinkens der LEDs verändert. Verlasse den Pause-Modus durch Drücken des Tasters und beobachte an den Motoren wie sich die Geschwindigkeit der Schwingung (d. h. die Frequenz der Oszillation) der Motorneurone unmittelbar auf die Motoren auswirkt. Die Frequenz regelt die Schrittgeschwindigkeit deines Bakiwi.
 
-[NOTE]
+[TIP]
 ====
 Wir empfehlen zunächst mit einer langsamen Bewegung zu beginnen. Es hilft dir dabei die Bewegung deiner selbst-gebauten Beine gut beobachten zu können und damit ein gutes Verständnis über die Auswirkungen der Beinbewegung zu bekommen.
 ====
@@ -673,7 +673,7 @@ Schalte dazu dein Bakiwi zunächst aus.
 
 . Ist auch der hintere Motor richtig gerade eingestellt, bestätige erneut durch Drücken des Tasters und der Zentrierungsprozess ist damit abgeschlossen.
 
-[NOTE]
+[TIP]
 ====
 Wenn du deinem Bakiwi neue Beine baust und dabei die Beine, ob gewollt oder ungewollt, nicht gleich werden kannst du die Zentrierung ebenfalls benutzen, um Unsymmertrie auszugleichen.
 
