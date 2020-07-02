@@ -612,10 +612,16 @@ image::./05_osc.png[OSC,200,float="right"]
 Im Programmspeicher deines Bakiwi-Mikrocontrollers sind zwei Neuronen, welche so verschaltet sind, dass sie schwingen. Sie bilden zusammen einen sogenannten Oszillator und dieser ist der Taktgeber für die Bewegung der Beine.
 Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorneuronen. Im Pause-Modus sind die Neuronen und somit der Oszillator bereits aktiv und schwingen, die Motoren sind aber inhibiert (gehemmt). Das heißt, du kannst durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.
 
-Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren. Wenn du magst, link:https://youtu.be/rAteGra5-xM[schau es dir an!]
+Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren:
 
+ifdef::env-github[]
+link:https://youtu.be/rAteGra5-xM[Direkter Link aufs Video]
+image:https://img.youtube.com/vi/rAteGra5-xM/maxresdefault.jpg[link=https://youtu.be/rAteGra5-xM]
+endif::[]
+
+ifndef::env-github[]
 video::rAteGra5-xM[youtube, width=640, height=360]
-
+endif::[]
 
 === Laufparameter
 
