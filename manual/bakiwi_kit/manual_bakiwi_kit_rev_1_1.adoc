@@ -617,8 +617,8 @@ Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorn
 Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren:
 
 ifdef::env-github[]
-link:https://youtu.be/rAteGra5-xM[Direkter Link aufs Video, window="_blank"]
-image:https://img.youtube.com/vi/rAteGra5-xM/maxresdefault.jpg[link=https://youtu.be/rAteGra5-xM, window="_blank"]
+link:https://youtu.be/rAteGra5-xM[Direkter Link aufs Video^]
+image:https://img.youtube.com/vi/rAteGra5-xM/maxresdefault.jpg[link=https://youtu.be/rAteGra5-xM, role="ext-link"]
 endif::[]
 
 ifndef::env-github[]
