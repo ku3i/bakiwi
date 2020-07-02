@@ -7,6 +7,8 @@ v0.2, 2020-06-11
 //:iconsdir: ./icon
 //:favicon: {iconsdir}/favicon.png
 
+:linkattrs:
+
 :numbered:
 :numbered!:
 
