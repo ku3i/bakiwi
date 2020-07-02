@@ -618,6 +618,7 @@ Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren:
 
 ifdef::env-github[]
 link:https://youtu.be/rAteGra5-xM[Direkter Link aufs Video^]
+
 image::https://img.youtube.com/vi/rAteGra5-xM/maxresdefault.jpg[link=https://youtu.be/rAteGra5-xM, role="ext-link", width=640, height=360]
 endif::[]
 
