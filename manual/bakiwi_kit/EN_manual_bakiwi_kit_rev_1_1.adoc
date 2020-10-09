@@ -453,7 +453,7 @@ If there is a problem but you are not entirely sure what is causing it, you can 
 
 Take the illustrated mechanical components out of the package and place them in front of you. You have already prepared the Bakiwi circuit board and the battery compartments in the previous work steps.
 
-image:./00_preparation/01_assembly_get_parts_annotated.jpg[width=98%]
+image:./00_preparation/01_assembly_get_parts_annotated_EN.jpg[width=98%]
 
 You will need additional tools for the assembly: a small Phillips screwdriver and a hexagon socket screwdriver (2.5 mm). If available, tweezers may be useful and simplify the assembly, but they are not strictly necessary. The side cutter is also required again.
 

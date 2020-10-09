@@ -473,7 +473,7 @@ Wenn ein Problem besteht, du aber nicht ganz sicher bist, was die Ursache ist, k
 
 Hole die abgebildeten mechanischen Bauteile aus der Packung und lege sie vor dir ab. Die Bakiwi-Platine und die Batteriefächer hast du bereits in vorausgehenden Arbeitsschritten vorbereitet.
 
-image:./00_preparation/01_assembly_get_parts_annotated.jpg[width=98%]
+image:./00_preparation/01_assembly_get_parts_annotated_DE.jpg[width=98%]
 
 Für den Zusammenbau benötigst du weitere Werkzeuge: einen kleinen Kreuz-Schraubendreher und einen Innensechskant-Schraubendreher (2,5 mm). Wenn vorhanden, ist eine Pinzette evtl. nützlich und vereinfacht den Zusammenbau, ist aber nicht zwingend erforderlich. Weiterhin wird noch einmal der Seitenschneider benötigt.
 
