@@ -7,15 +7,17 @@ v0.1, 2020-06-17
 
 image::./manuals.png[]
 
+== Welcome / Willkommen
+
 *EN* Here you can find the Bakiwi Kit solder and assembly manuals. Depending on your Bakiwi's hardware revision, you have to choose between different versions of the manual. All files of the Bakiwi assembly manuals are under the CREATIVE COMMONS LICENSE CC-BY-NC-SA. Our manuals are written in the fabulous link:https://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc] markup language.
 
 *DE* Hier finden Sie die Bakiwi Kit Löt- und Montageanleitungen. Abhängig von der Hardwareversion Ihres Bakiwi, müssen Sie zwischen verschiedenen Versionen des Handbuchs wählen. Alle Dateien der Bakiwi-Montageanleitungen befinden sich unter der CREATIVE COMMONS-LIZENZ CC-BY-NC-SA. Unsere Handbücher sind in der fabelhaften link:https://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc] Markup-Sprache geschrieben.
 
 == Bakiwi Kit
 
-link:https://github.com/ku3i/Bakiwi/blob/master/manual/bakiwi_kit/manual_bakiwi_kit_rev_1_1_EN.adoc[EN - Assembly Manual]
+link:https://github.com/ku3i/Bakiwi/blob/master/manual/bakiwi_kit/EN_manual_bakiwi_kit_rev_1_1.adoc[EN - Assembly Instructions in English]
 
-link:https://github.com/ku3i/Bakiwi/blob/master/manual/bakiwi_kit/manual_bakiwi_kit_rev_1_1_DE.adoc[DE - Bauanleitung]
+link:https://github.com/ku3i/Bakiwi/blob/master/manual/bakiwi_kit/DE_manual_bakiwi_kit_rev_1_1.adoc[DE - Bauanleitung auf Deutsch]
 
 == SO(2)-Walker
 
