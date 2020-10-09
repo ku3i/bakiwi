@@ -466,8 +466,6 @@ We start our mechanical assembly with the motors. To do this, take one of the m
 image:./01_motors/04_assembly_get_motor_holder.jpg[width=49%]
 image:./01_motors/03_assembly_fold_cable.jpg[width=49%]
 
-Fädele das Motorkabel durch die große Öffnung in den Halter und durch die kleine seitliche Öffnung wieder aus dem Halter heraus. Setze nun den Motor in den Halter, wobei es wichtig ist, dass sich ein Teil des Kabels gefaltet im Halter befindet, damit insgesamt weniger vom Kabel heraussteht. Der Schaft des Motors sollte von der kleinen Öffnung wegzeigen (vergleiche dein Ergebnis mit der Abbildung).
-
 Thread the motor cable through the large opening in the holder and out of the holder again through the small opening on the side. Now insert the motor into the holder. Make sure that part of the cable is folded in the holder so that less of the cable protrudes overall. The shaft of the motor should point away from the small opening (compare your result with the picture).
 
 image:./01_motors/05_assembly_insert_cable.jpg[width=49%]
@@ -559,8 +557,6 @@ Lay the battery cables behind the motor cables along the circuit board to the re
 image:./04_batholder/22_assembly_thread_battery_cable.jpg[width=49%]
 image:./04_batholder/23_assembly_thread_battery_cable_done.jpg[width=49%]
 
-*Hurra!* Der Körper deines Bakiwi ist nun fertig. Vergleiche noch einmal die Ausrichtung der Stecker auf deiner Platine und ob alle Kabel möglichst dicht am Bakiwi-Körper anliegen.
-
 *Hooray!* Your Bakiwi's body is finished now. Double check the alignment of the connectors on your circuit board and whether all cables are as close as possible to your Bakiwi’s body.
 
 image:./04_batholder/24_assembly_cabling_finished.jpg[width=98%]
@@ -608,16 +604,12 @@ Now turn on your Bakiwi.
 
 image::./05_osc.png[OSC,200,float="right"]
 
-In the program memory of your Bakiwi microcontroller there are two neurons which are connected in such a way that they oscilate. Together they form a so-called oscillator and this is the clock for the movement of the legs. The two LED on your Bakiwi signal the activity of these motor neurons. In the pause mode, the neurons and thus the oscillator are already active and vibrate, but the motors are inhibited. This means that you can change the movement pattern at any time by adjusting the four sliders, whether paused or not.
+In the program memory of your Bakiwi microcontroller there are two neurons that form an oscillator which create the clock signal for the movement of the legs. The two LEDs on your Bakiwi signal the activity of these motor neurons. In the pause mode, the neurons and thus the oscillator are already active and swing, but the motors are inhibited. This means that you can change the movement pattern at any time by adjusting the four knobs, whether paused or not.
+
 We recorded a video to better illustrate how it works:
 
-Im Programmspeicher deines Bakiwi-Mikrocontrollers sind zwei Neuronen, welche so verschaltet sind, dass sie schwingen. Sie bilden zusammen einen sogenannten Oszillator und dieser ist der Taktgeber für die Bewegung der Beine.
-Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorneuronen. Im Pause-Modus sind die Neuronen und somit der Oszillator bereits aktiv und schwingen, die Motoren sind aber inhibiert (gehemmt). Das heißt, du kannst durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.
-
-Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren:
-
 ifdef::env-github[]
-link:https://youtu.be/rAteGra5-xM[Direkter Link aufs Video^]
+link:https://youtu.be/rAteGra5-xM[Direct link to the video^]
 
 image::https://img.youtube.com/vi/rAteGra5-xM/maxresdefault.jpg[link=https://youtu.be/rAteGra5-xM, role="ext-link", width=640, height=360]
 endif::[]
@@ -626,91 +618,84 @@ ifndef::env-github[]
 video::rAteGra5-xM[youtube, width=640, height=360]
 endif::[]
 
-=== Laufparameter
+=== Gait Parameters
 
-Die Art, wie dein Bakiwi läuft, wird durch mehrere Faktoren beeinflusst. Maßgeblich für eine erfolgreiche Fortbewegung sind die Beine, die du deinem Bakiwi erschaffst. Hast du dir neue Beine für dein Bakiwi ausgedacht, so kannst du mit der Veränderung der folgenden Parameter (Stellschrauben) deinem Bakiwi mit seinen neuen Beinen das Laufen beibringen:
+The way your Bakiwi walks is influenced by several factors. The legs that you create for your Bakiwi are decisive for successful locomotion. If you have come up with new legs for your Bakiwi, you can teach it to walk with them by changing the following parameters:
 
-==== Anstellwinkel
+==== Motor Joint Angle
 
-Die Anstellwinkel sind rein mechanische Parameter. Du kannst durch Lösen der großen Arretierschraube die Motorhalter beweglich machen und dann ihre Winkel zum Körper und zueinander verändern. *Probiere Verschiedenes aus!* Ziehe die Schraube dann wieder nur soweit fest, bis die Motorhalter in der gewünschten Position fest genug halten.
+The motor joint angles are purely mechanical parameters. You can make the motor mounts movable by loosening the large locking screw and then changing their angles to the body and to each other. *Try different angles and watch the difference it makes!* Tighten the screw again only until the motor mounts hold firmly enough in the desired position.
 
-==== Geschwindigkeit/Frequenz
+==== Speed/Walking Frequency
 
 image::./01_speed.png[SPEED,200,float="right"]
 
-Bewege den `SPEED`-Knopf und beobachte, wie sich die Geschwindigkeit des Blinkens der LEDs verändert. Verlasse den Pause-Modus durch Drücken des Tasters und beobachte an den Motoren wie sich die Geschwindigkeit der Schwingung (d. h. die Frequenz der Oszillation) der Motorneurone unmittelbar auf die Motoren auswirkt. Die Frequenz regelt die Schrittgeschwindigkeit deines Bakiwi.
+The frequency regulates the walking speed of your Bakiwi. Turn the `SPEED` knob and watch the LEDs change their rate of blinking. Leave the pause mode by pressing the button and observe the motors. Turn the knob back and forth and see how the motor neurons' oscillation speed changes the gait frequency and influences your Bakiwi's walking speed.
 
 [TIP]
 ====
-Wir empfehlen zunächst mit einer langsamen Bewegung zu beginnen. Es hilft dir dabei die Bewegung deiner selbst-gebauten Beine gut beobachten zu können und damit ein gutes Verständnis über die Auswirkungen der Beinbewegung zu bekommen.
+We recommend starting with a slow movement first. It helps you to be able to observe the movement of your self-made legs and thus to get a good understanding of the locomotion.
 ====
 
 ==== Level/Amplitude
 
 image::./04_level.png[LEVEL,200,float="right"]
 
-Drehe am `LEVEL`-Knopf und beobachte, wie sich die Helligkeit der LEDs verändert und die Weite mit der die Motoren bei jeder Bewegung ausschlagen. Diese Schwingungsweite wird Amplitude genannt und regelt die Schrittweite der Laufbewegung.
+Turn the `LEVEL` knob and watch how the brightness of the LEDs changes and how far the motors deflect with every movement. In terms of oscillations this is called the amplitude and controls the step size of your Bakiwi's gait.
 
 ==== Balance
 
 image::./03_balance.png[BALANCE,200,float="right"]
 
-Drehe am `BALANCE`-Regler und beobachte wie sich die vorher eingestellte Amplitude auf die beiden Motoren verteilt. Steht der Regler in der Mittelposition, sind beide Motoramplituden gleich. Ein Drehen nach links, senkt die Amplitude des vorderen Motors, eine Drehung nach rechts dämpft die Bewegung des hinteren Motors.
+Turn the `BALANCE` control and watch how the previously set amplitude is distributed between the two motors. If the controller is in the middle position, both motor amplitudes are the same. Turning to the left decreases the amplitude of the front motor, turning to the right dampens the movement of the rear motor.
 
 ==== Phase
 
 image::./02_phase.png[PHASE,200,float="right"]
 
-Der letzte Parameter, die sogenannte Phase (bzw. der Phasenwinkel) ist wahrlich die besondere Würze und regelt die Laufrichtung. Ein `PHASE`-Regler auf Mitte erzeugt eine synchrone aber gegenläufige Bewegung der Motoren. Drehst du den Phasenwinkel etwas aus der Mitte heraus, bewegen sich die Motoren nicht mehr synchron, was entscheidend für das Laufen ist. Ein bis auf Maximum (oder Minimum) gestellter Phasenwinkel erzeugt erneut eine synchrone aber diesmal mitläufige Bewegung. Die Phase ist der wichtigste Parameter für eine erfolgreiche Laufbewegung und benötigt deine besondere Aufmerksamkeit. Mit Ihr entscheidet sich, ob sich dein Bakiwi überhaupt von der Stelle bewegt und wenn ja in welche Richtung.
+The last parameter, the so-called phase (or the phase angle) is truly the special flavor and controls the direction of movement. 
+A `PHASE` controller in the middle position produces a synchronous but opposite movement of the motors. If you turn the phase angle a little out of the middle, the motors no longer move synchronously, which is crucial for walking. A phase angle set up to the maximum (or minimum) again generates a synchronous but this time concurrent movement. The phase is the most important parameter for a successful walking movement and needs your special attention. The phase setting will decide whether your Bakiwi will move at all and if so in which direction.
 
-Jetzt aber genug gelesen...
+But read enough now ...
 
-*Ran ans Werk!* :)
+*Get to work! :)*
 
+=== Centering
 
-=== Zentrierung
+When you have assembled your Bakiwi, you should center  its legs if necessary. The motors with the attached leg connections are never perfectly straight due to the manufacturing process. Your Bakiwi can correct this offset and remember it.
 
-Wenn du dein Bakiwi zusammengebaut hast, solltest Du es ggf. zentrieren. Die Motoren mit den aufgesteckten Bein-Anschlüssen sind herstellungsbedingt nie perfekt gerade. Diesen Versatz kann dein Bakiwi korrigieren und es sich merken.
+To do this, first turn off your Bakiwi.
 
-Schalte dazu dein Bakiwi zunächst aus.
+. Hold down the pause button and switch on your Bakiwi while holding the button. Both LEDs should now flicker quickly.
 
-. Halte den Pause-Taster gedrückt und schalte dein Bakiwi bei gehaltenem Taster ein. Die LEDs sollten jetzt schnell flackern.
+. Release the button and now only the left LED should flicker and the front motor should start up briefly. If you now turn the `PHASE` knob you can set the front motor to the desired zero position. Adjust until the leg connection is straight enough.
 
-. Lasse den Taster los und nun sollte nur noch die linke LED flackern und der vordere Motor kurz anfahren. Wenn du nun den `PHASE`-Drehknopf betätigst, kannst du den vorderen Motor in die gewünschte Ausgangsposition stellen. Justiere dabei solange, bis der Beinanschluss gerade ist.
+. Press the button again to confirm. While the right LED is now flickering, you can repeat the process for the rear motor.
 
-. Betätige den Taster erneut zum Bestätigen. Nun kannst du den Prozess für den hinteren Motor durchführen, während die die rechte LED flackert.
-
-. Ist auch der hintere Motor richtig gerade eingestellt, bestätige erneut durch Drücken des Tasters und der Zentrierungsprozess ist damit abgeschlossen.
+. If the rear motor is also correctly adjusted, confirm again by pressing the button and the centering process is now complete.
 
 [TIP]
 ====
-Wenn du deinem Bakiwi neue Beine baust und dabei die Beine, ob gewollt oder ungewollt, nicht gleich werden kannst du die Zentrierung ebenfalls benutzen, um Unsymmertrie auszugleichen.
+If you are building new legs for your Bakiwi and the legs, whether intentional or unintentional, are not symmetrical you can also use the centering method to compensate for any offset.
 
-Du kannst es aber auch gezielt verwenden, um dein Bakiwi immer eine Kurve laufen zu lassen.
+But you can also use it specifically to let your Bakiwi always run a curve.
 ====
 
-=== Der Schaltplan
+=== Schematics
 
-Im Folgenden siehst du den elektrischen Schaltplan deines Bakiwi. Findest du selbst heraus, welche Symbole zu welchen von dir gelöteten Teilen gehören? Einen Schaltplan zu _lesen_ erfordert etwas Übung, aber nachdem du jetzt alle Teile selbst zusammengelötet hast, kannst du hier nachvollziehen, welches Bauteil mit welchem verkabelt ist. Die _Kabel_ auf einer Platine heißen Leiterbahnen und bestehen aus einer dünnen Lage Kupfer. Wenn du die Platine deines Bakiwi anschaust und leicht gegen das Licht hältst, kannst du sie unter der Lackschicht ausmachen. Manche Leiterbahnen wechseln die Seite der Platine durch kleine Löcher, sogenannte _Vias_. Manche Leiterbahnen sind auch ganze Flächen, so ist beispielsweise die gesamte untere Kupferfläche der Platine der Minuspol.
+Below you can see the circuit diagram (schematics) of your Bakiwi. Can you find out for yourself which symbols belong to which parts you soldered? _Reading_ a circuit diagram takes some practice, but now that you have soldered all the parts together yourself, you can see here which component is wired to which. The cables on a circuit board are called _tracks_ and consist of a thin layer of copper. If you look at the circuit board of your Bakiwi and hold it slightly up to the light, you can see them under the layer of varnish. Some tracks change the side of the board through small holes, so-called _vias_. Some  tracks are also whole areas, for example the entire bottom copper area of the board is the negative pole.
 
-Ein Schaltplan hilft auch bei der Fehlersuche. Verhält sich die Elektronik merkwürdig, sind ein Multimeter und ein Schaltplan die wichtigsten Hilfsmittel beim Finden der Ursache. Im Schaltplan sind auch die Bauteile genau bezeichnet. Du findest dort beispielsweise welche Kapazität die Kondensatoren haben, in welche Richtung die Dioden zu schalten sind oder wie die Bezeichnung des Spannungswandlers ist. Mit der Hilfe eines Schaltplans kann ein elektrisches Gerät, wie auch dein Bakiwi, immer wieder repariert werden.
+A circuit diagram also helps with troubleshooting. If the electronics behave strangely, a multimeter and a circuit diagram are the most important tools in finding the cause. The components are also precisely identified in the circuit diagram. There you will find, for example, the resistors' values, the capacitance of the capacitors, the forward direction of the diodes or what the name of the voltage regulator is. With the help of a circuit diagram, an electrical device, like your Bakiwi, can be repaired over and over again.
 
 :imagesdir: ./img/
 image::./bakiwi_kit_rev1_1_schematics.png[]
 
-// === Die Bauteile und ihre Funktion
-// TODO
-// Kondensator, Widerstand, uC, Schalter, Taster, etc
-
-// === Was ist ein Oszillator?
-// TODO
-// Amplitude, Phase, Frequenz
 :numbered!:
 
-== Hast du noch Fragen?
-Du hast noch Fragen oder wünscht dir weitere Erklärungen? Du hast Anregungen oder Feedback für uns?
-link:https://jetpack.cl/bakiwi[Schreib uns!]
+== Do you have any questions?
 
-Du kannst uns auch auf Twitter folgen, dann versorgen wir dich mit Neuigkeiten zu *#bakiwi*. Wir sind  link:https://twitter.com/labjetpack[@LabJetpack].
+Do you have any questions or would you like further explanations? Do you have any suggestions or feedback for us? link:https://jetpack.cl/bakiwi[Write us!]
 
-Ansonsten wünschen wir dir viel Spaß mit deinem neuen Bakiwi. Lass es krabbeln!
+You can also follow us on Twitter, there we will provide you with news about *#bakiwi*. We are link:https://twitter.com/labjetpack[@LabJetpack].
+
+Otherwise we wish you a lot of fun with your new Bakiwi. Let it crawl!

@@ -205,7 +205,7 @@ Achtung! Vergleiche an dieser Stelle bitte noch einmal genau deine Platine mit d
 
 === An/Aus-Schalter
 
-Weiter geht es mit dem Einsetzen des An/Aus-Schalters. Dieser ist blau/weiß und wird auf der Platine bei der Markierung `POWER` platziert. Wichtig ist hierbei, dass das weiße Teil Richtung `off` zeigt. Prinzipiell kannst du den Schalter auch andersherum einlöten, er funktioniert in beide Richtungen gleichermaßen. Stelle bloß sicher, dass er in der `off`-Position ist, d. h. dass dein Bakiwi ausgeschaltet ist, wenn wir später die Batterien einlegen.
+Weiter geht es mit dem Einsetzen des An/Aus-Schalters. Dieser ist blau/weiß und wird auf der Platine bei der Markierung `POWER` platziert. Wichtig ist hierbei, dass das weiße Teil Richtung `off` zeigt. Prinzipiell kannst du den Schalter auch andersherum einlöten, er funktioniert in beide Richtungen gleichermaßen. Stelle bloß sicher, dass er in der `OFF`-Position ist, d. h. dass dein Bakiwi ausgeschaltet ist, wenn wir später die Batterien einlegen.
 
 image:./07_switch/01_switch_prepare.jpg[width=49%]
 image:./symbols/switch.png[width=49%]
@@ -679,15 +679,15 @@ Jetzt aber genug gelesen...
 
 === Zentrierung
 
-Wenn du dein Bakiwi zusammengebaut hast, solltest Du es ggf. zentrieren. Die Motoren mit den aufgesteckten Bein-Anschlüssen sind herstellungsbedingt nie perfekt gerade. Diesen Versatz kann dein Bakiwi korrigieren und es sich merken.
+Wenn du dein Bakiwi zusammengebaut hast, solltest Du seine Beine ggf. zunächst zentrieren. Die Motoren mit den aufgesteckten Bein-Anschlüssen sind herstellungsbedingt nie perfekt gerade. Diesen Versatz kann dein Bakiwi korrigieren und es sich merken.
 
 Schalte dazu dein Bakiwi zunächst aus.
 
-. Halte den Pause-Taster gedrückt und schalte dein Bakiwi bei gehaltenem Taster ein. Die LEDs sollten jetzt schnell flackern.
+. Halte den Pause-Taster gedrückt und schalte dein Bakiwi bei gehaltenem Taster wieder ein. Die LEDs sollten jetzt schnell flackern.
 
 . Lasse den Taster los und nun sollte nur noch die linke LED flackern und der vordere Motor kurz anfahren. Wenn du nun den `PHASE`-Drehknopf betätigst, kannst du den vorderen Motor in die gewünschte Ausgangsposition stellen. Justiere dabei solange, bis der Beinanschluss gerade ist.
 
-. Betätige den Taster erneut zum Bestätigen. Nun kannst du den Prozess für den hinteren Motor durchführen, während die die rechte LED flackert.
+. Betätige den Taster erneut um zum Bestätigen. Nun flackert die rechte LED und du kannst den Prozess für den hinteren Motor durchführen.
 
 . Ist auch der hintere Motor richtig gerade eingestellt, bestätige erneut durch Drücken des Tasters und der Zentrierungsprozess ist damit abgeschlossen.
 
@@ -700,9 +700,9 @@ Du kannst es aber auch gezielt verwenden, um dein Bakiwi immer eine Kurve laufen
 
 === Der Schaltplan
 
-Im Folgenden siehst du den elektrischen Schaltplan deines Bakiwi. Findest du selbst heraus, welche Symbole zu welchen von dir gelöteten Teilen gehören? Einen Schaltplan zu _lesen_ erfordert etwas Übung, aber nachdem du jetzt alle Teile selbst zusammengelötet hast, kannst du hier nachvollziehen, welches Bauteil mit welchem verkabelt ist. Die _Kabel_ auf einer Platine heißen Leiterbahnen und bestehen aus einer dünnen Lage Kupfer. Wenn du die Platine deines Bakiwi anschaust und leicht gegen das Licht hältst, kannst du sie unter der Lackschicht ausmachen. Manche Leiterbahnen wechseln die Seite der Platine durch kleine Löcher, sogenannte _Vias_. Manche Leiterbahnen sind auch ganze Flächen, so ist beispielsweise die gesamte untere Kupferfläche der Platine der Minuspol.
+Im Folgenden siehst du den elektrischen Schaltplan deines Bakiwi. Findest du selbst heraus, welche Symbole zu welchen von dir gelöteten Teilen gehören? Einen Schaltplan zu _lesen_ erfordert etwas Übung, aber nachdem du jetzt alle Teile selbst zusammengelötet hast, kannst du hier nachvollziehen, welches Bauteil mit welchem verkabelt ist. Die _Kabel_ auf einer Platine heißen Leiterbahnen und bestehen aus einer dünnen Lage Kupfer. Wenn du die Platine deines Bakiwi anschaust und leicht gegen das Licht hältst, kannst du sie unter der Lackschicht ausmachen. Manche Leiterbahnen wechseln die Seite der Platine durch kleine Löcher, sogenannte _Vias_. Manche Leiterbahnen sind auch ganze Flächen, und so ist beispielsweise die gesamte untere Kupferfläche der Platine der Minuspol.
 
-Ein Schaltplan hilft auch bei der Fehlersuche. Verhält sich die Elektronik merkwürdig, sind ein Multimeter und ein Schaltplan die wichtigsten Hilfsmittel beim Finden der Ursache. Im Schaltplan sind auch die Bauteile genau bezeichnet. Du findest dort beispielsweise welche Kapazität die Kondensatoren haben, in welche Richtung die Dioden zu schalten sind oder wie die Bezeichnung des Spannungswandlers ist. Mit der Hilfe eines Schaltplans kann ein elektrisches Gerät, wie auch dein Bakiwi, immer wieder repariert werden.
+Ein Schaltplan hilft auch bei der Fehlersuche. Verhält sich die Elektronik merkwürdig, sind ein Multimeter und ein Schaltplan die wichtigsten Hilfsmittel beim Finden der Ursache. Im Schaltplan sind auch die Bauteile genau bezeichnet. Du findest dort beispielsweise, Widerstandswert, welche Kapazität die Kondensatoren haben, in welche Richtung die Dioden geschaltet sind oder wie die Bezeichnung des Spannungswandlers ist. Mit der Hilfe eines Schaltplans kann ein elektrisches Gerät, wie auch dein Bakiwi, immer wieder repariert werden.
 
 :imagesdir: ./img/
 image::./bakiwi_kit_rev1_1_schematics.png[]
