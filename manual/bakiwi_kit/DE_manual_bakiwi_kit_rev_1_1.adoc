@@ -3,6 +3,7 @@ Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.2, 2020-06-11
 :toc:
 :toc-placement!:
+:toc-title: Abenteuer-Verzeichnis
 :imagesdir: ./img/
 //:iconsdir: ./icon
 //:favicon: {iconsdir}/favicon.png
@@ -20,7 +21,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-image::./bakiwi_logo_3-1_purple_3000px.png[]
+image::./bakiwi_logo_3-1_dynamic_DE.png[]
 
 ////
 TODO 💡
@@ -59,7 +60,7 @@ Falls du noch gar keine Erfahrung im Löten hast, dann empfehlen wir dir, vorher
 Überprüfe alle Bauteile auf Vollständigkeit. Zusätzlich zu den gezeigten Teilen hast du vielleicht Material beiliegen, welches sich für die Fühler deines Bakiwi eignet, z.B. Gitarrensaiten oder Pfeifenputzer.
 // Tabelle mit Bauteilen
 
-image:./00_preparation/03_check_electronic_parts_annotated.jpg[]
+image:./00_preparation/03_check_electronic_parts_annotated_DE.jpg[]
 
 Lege alle Kleinteile in ein Gefäß, damit dir keines verloren gehen kann. Nimm dir zuerst die Bakiwi-Platine und leg sie vor dir hin. Die _Oberseite_ der Platine ist die mit den Bauteilbeschriftungen. Alle Bauteile werden nun nach und nach in einzeln erklärten Schritten auf der Oberseite eingesteckt und auf der _Unterseite_ festgelötet. Die beste Übereinstimmung mit den Bildern dieser Anleitung hast du, wenn du die Platine so drehst, dass du den `Bakiwi`-Schriftzug lesen kannst und sie mit der Beschriftung `POWER` zu dir gedreht ist und `PAUSE` nach oben zeigt.
 

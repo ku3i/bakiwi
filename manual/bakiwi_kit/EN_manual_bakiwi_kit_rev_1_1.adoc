@@ -4,6 +4,7 @@ Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.2, 2020-10-08
 :toc:
 :toc-placement!:
+:toc-title: Table of Adventures
 :imagesdir: ./img/
 :linkattrs:
 :numbered:
@@ -17,7 +18,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-image::./bakiwi_logo_3-1_purple_3000px.png[]
+image::./bakiwi_logo_3-1_dynamic_EN.png[]
 
 toc::[]
 
@@ -28,11 +29,11 @@ toc::[]
 === Tools
 You will need the following tools to solder the Bakiwi electronics:
 
-* Soldering iron (or soldering station) with a thin soldering tip
+* Soldering iron (or station) with a thin solder tip
 * Tin solder (recommended: thickness 0.5-0.75mm with integrated flux, lead-free)
 * Brass wool with container ("dry cleaner"), alternatively a moistened sponge
 * Diagonal cutters or pliers
-* Multimeter (optionally)
+* Multimeter (optional)
 
 image:./00_preparation/01_required_tools.jpg[width=49%]
 image:./00_preparation/02_fine_tip_and_solder.jpg[width=49%]
@@ -43,9 +44,9 @@ If you have no soldering experience at all, we recommend that you watch an intro
 ====
 
 === View components
-Check all components for completeness. In addition to the parts shown, you may have included material that is suitable for the antennas of your Bakiwi, e.g. guitar strings or pipe cleaners.
+Check all components for completeness. In addition to the parts shown, you may have included material that is suitable for the antennae of your Bakiwi, e. g. pieces of guitar strings or pipe cleaners.
 
-image:./00_preparation/03_check_electronic_parts_annotated.jpg[]
+image:./00_preparation/03_check_electronic_parts_annotated_EN.jpg[]
 
 Put all the small parts in a container so that none can be lost. First, take the Bakiwi board and place it in front of you so you can read the Bakiwi label. The _top_ of the board is the one with all the component labels. All components will now be inserted and soldered one by one in individually explained steps. Each component is inserted from the top and soldered on the _bottom_.
 
@@ -121,7 +122,7 @@ The circuit socket has a total of 14 contact pins. That means you can now practi
 image:./03_socket/01_socket_prepare.jpg[width=49%]
 image:./symbols/socket.png[width=49%]
 
-You can't miss the position of the socket on the circuit board. There is a small notch on the socket. Make sure you put in the socket with the small notch facing the Bakiwi-logo as marked on the circuit board.
+You can't miss the position of the socket on the circuit board but there is a small notch on the socket that needs to be regarded. Make sure you put in the socket with the small notch facing the Bakiwi-logo as marked on the circuit board.
 
 image:./03_socket/02_socket_detail.jpg[width=49%]
 image:./03_socket/03_socket_position.jpg[width=49%]
@@ -135,7 +136,7 @@ image:./03_socket/05_socket_soldering_done.jpg[width=49%]
 
 === Button
 
-Now look for the `PAUSE` marking on the circuit board and put in the button. If you can insert it with ease _without_ bending the legs, it is automatically the right way round. You might hear a slight click when the button snaps in.
+Now look for the `PAUSE` marking on the circuit board and put in the button. If you can insert it with ease _without_ bending the pins, it is automatically the right way round. You might hear a slight click when the button snaps in.
 
 image:./04_button/01_button_prepare.jpg[width=49%]
 image:./symbols/button.png[width=49%]
@@ -158,12 +159,12 @@ image:./symbols/vreg.png[width=49%]
 
 image:./05_vreg/02_vreg_bending.jpg[]
 
-The correct arrangement of the legs is crucial for this component to function correctly. Therefore, make sure that the shape of the component corresponds to the symbol shown on the circuit board. Insert the voltage converter and push it in bit by bit as shown. The middle leg will bend even more - that's okay.
+The correct arrangement of the pins is crucial for this component to function correctly. Therefore, make sure that the shape of the component corresponds to the symbol shown on the circuit board. Insert the voltage regulator and push it in bit by bit as shown. The middle leg will bend even more - that's okay.
 
 image:./05_vreg/04_vreg_insert_1.jpg[width=49%]
 image:./05_vreg/05_vreg_insert_2.jpg[width=49%]
 
-When the voltage regulator is pressed all the way to the circuit board, it should be barely 1 mm higher than the circuit socket. Now solder the three legs as usual and shorten the wires with the pliers after soldering. You will find that the solder joints are very close together this time. Make sure that there is no short circuit.
+When the voltage regulator is pressed all the way to the circuit board, it should be barely 1 mm higher than the circuit socket. Now solder the three pins as usual and shorten the wires with the pliers after soldering. You will find that the solder joints are very close together this time. Make sure that there is no short circuit.
 
 image:./05_vreg/06_vreg_insert_3.jpg[width=49%]
 image:./05_vreg/03_vreg_position.jpg[width=49%]
@@ -205,12 +206,12 @@ The pins of the switch are quite long and should be shortened after soldering. 
 
 === Pin Headers
 
-Now dedicate yourself to the three pin headers. The two _single-rowed_ pin headers (1x3) are inserted with the short end from above into the board at `MOT1` and `MOT2` and soldered to the back as usual. The motors of your Bakiwi will later be connected to them.
+Now dedicate yourself to the three pin headers. The two _single-row_ pin headers (1x3) are inserted with the short end from above into the board at `MOT1` and `MOT2` and soldered to the back as usual. The motors of your Bakiwi will later be connected to them.
 
 image:./08_pinh/01_pinh_prepare.jpg[width=49%]
 image:./symbols/pinh.png[width=49%]
 
-It is best to insert both pin headers together, then turn the circuit board and place it on the somewhat wobbly pin headers as shown in the illustration. Make sure that the pins are as perpendicular as possible to the board. If you first solder only one pin to each pin header, you can correct the exact position by heating up the solder joint again, in case it should not be straight the first time.
+It is best to insert both pin headers together, then turn the circuit board and place it on the somewhat wobbly pin headers as shown in the illustration. Make sure that the pins are as perpendicular as possible to the board. If you first solder only one pin of each  header, you can correct the exact position by heating up the solder joint again, in case it should not be straight the first time.
 
 image:./08_pinh/02_pinh_position.jpg[width=49%]
 image:./08_pinh/03_pinh_soldering.jpg[width=49%]
@@ -278,7 +279,7 @@ image:./make_a_break.jpg/[width=100%]
 
 :numbered:
 
-=== Battery Compartment
+=== Battery Compartments
 
 Now you can put the circuit board aside and take the two battery compartments. There is also one red/black cable with a white plug for each compartment.
 
@@ -562,7 +563,7 @@ image:./04_batholder/23_assembly_thread_battery_cable_done.jpg[width=49%]
 image:./04_batholder/24_assembly_cabling_finished.jpg[width=98%]
 
 
-=== Attach legs
+=== Attach Legs
 
 First put the batteries back in and switch on your Bakiwi. Press the `PAUSE` button twice in succession with an interval of about one second so that your Bakiwi moves its motors to the starting position and then goes back to pause mode.
 
