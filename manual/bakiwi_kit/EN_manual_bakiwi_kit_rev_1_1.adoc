@@ -1,0 +1,716 @@
+=  Bakiwi Kit Assembly Manual
+Doc Writer <kubisch@informatik.hu-berlin.de>
+// Translation by Sebastian Schmölling and Mamun Azmy
+v0.2, 2020-10-08
+:toc:
+:toc-placement!:
+:imagesdir: ./img/
+:linkattrs:
+:numbered:
+:numbered!:
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+image::./bakiwi_logo_3-1_purple_3000px.png[]
+
+toc::[]
+
+:imagesdir: ./img/01_electronics/
+
+== Preparation
+
+=== Tools
+You will need the following tools to solder the Bakiwi electronics:
+
+* Soldering iron (or soldering station) with a thin soldering tip
+* Tin solder (recommended: thickness 0.5-0.75mm with integrated flux, lead-free)
+* Brass wool with container ("dry cleaner"), alternatively a moistened sponge
+* Diagonal cutters or pliers
+* Multimeter (optionally)
+
+image:./00_preparation/01_required_tools.jpg[width=49%]
+image:./00_preparation/02_fine_tip_and_solder.jpg[width=49%]
+
+[NOTE]
+====
+If you have no soldering experience at all, we recommend that you watch an introductory video or tutorial beforehand in order to get a rough idea of ​​soldering. It is even better if you assemble the kit with someone else who can already do a little bit of soldering.
+====
+
+=== View components
+Check all components for completeness. In addition to the parts shown, you may have included material that is suitable for the antennas of your Bakiwi, e.g. guitar strings or pipe cleaners.
+
+image:./00_preparation/03_check_electronic_parts_annotated.jpg[]
+
+Put all the small parts in a container so that none can be lost. First, take the Bakiwi board and place it in front of you so you can read the Bakiwi label. The _top_ of the board is the one with all the component labels. All components will now be inserted and soldered one by one in individually explained steps. Each component is inserted from the top and soldered on the _bottom_.
+
+image:./00_preparation/04_put_parts_in_container.jpg[width=49%]
+image:./00_preparation/05_get_pcb.jpg[width=49%]
+
+Turn on the soldering station and check the temperature display. If the temperature is adjustable, set it to match the recommended temperature of your solder (note the label). If you are unsure, start with 330°C, depending on the performance of the soldering station, a slightly higher temperature may be necessary. If the soldering feels sticky, then the temperature might be too low. If needed, gradually increase the temperature until the solder melts easily.
+
+[TIP]
+====
+If your soldering tip no longer shines even with constant cleaning and keeps getting dark, the temperature is probably set too high.
+====
+
+=== Take your time!
+
+Soldering your Bakiwi requires calm and concentration. The time required varies from person to person and depends very much on previous knowledge. Absolute newbies should plan 2 hours for soldering, professionals can do it in 30 minutes.
+
+:numbered:
+== Solder the components
+
+=== Resistors
+
+Look for the resistors. There is _one blue_ and _two beige_ ones. Start by peeling off the paper at either end of the blue resistor.
+
+image:./01_resistors/01_resistors_prepare.jpg[width=49%]
+image:./symbols/resistor.png[width=49%]
+
+Now bend the two wire ends with your fingers directly at their origin so that they both point in the same direction and the two wires are parallel to each other. The blue resistor has the name `R3`. Look for the resistor symbol shown on the circuit board, it is located directly below the Bakiwi-label. Place it on the circuit board as shown in the picture. A resistor has no polarity, so it doesn't matter which way you put it in.
+
+image:./01_resistors/08_resistors_bend.jpg[width=49%]
+image:./01_resistors/02_resistors_position.jpg[width=49%]
+
+Hold the inserted component with your fingers, carefully flip over the circuit board and place it in front of you. Now start to solder the wire ends to the bottom side of the board. Make sure to touch and heat the wire and the soldering pad around the hole at the same time as you add the solder. The heat transfer works best when the soldering tip is clean and slightly coated with tin.
+
+image:./01_resistors/03_resistors_inserted.jpg[width=49%]
+image:./01_resistors/04_resistors_soldering.jpg[width=49%]
+
+After that remove the wire ends by snapping them off with suitable pliers (e.g. wire cutters). Remove the wire as close as possible to your solder joint without damaging it.
+
+image:./01_resistors/05_resistors_cutting.jpg[width=49%]
+image:./01_resistors/09_resistors_cutting.jpg[width=49%]
+
+Now take the other two resistors, `R1` and `R2` (beige). They are attached on either side of the Bakiwi-label. The order does not matter, you can also install both together. The steps are the same as for the first resistor.
+
+image:./01_resistors/06_resistors_repeat.jpg[width=49%]
+image:./01_resistors/07_resistors_done.jpg[width=49%]
+
+*Congratulations.* You have taken the first step. Compare your result with the picture.
+
+=== Capacitor
+
+Now it’s the capacitor's turn. Look for the small orange lense shaped component. Take the circuit board and look for the `C1`-marking.
+
+image:./02_capacitor/01_capacitor_prepare.jpg[width=49%]
+image:./symbols/capacitor.png[width=49%]
+
+As with the resistors, the capacitor is plugged into the board from above and soldered on from below.
+
+image:./02_capacitor/02_capacitor_detail.jpg[width=49%]
+image:./02_capacitor/03_capacitor_position.jpg[width=49%]
+
+After soldering, cut off the wire ends again.
+
+image:./02_capacitor/04_capacitor_soldering.jpg[width=49%]
+image:./02_capacitor/05_capacitor_cutting.jpg[width=49%]
+
+*Done!* This was the the warm-up. The next part is a little trickier.
+
+=== Circuit Socket
+
+The circuit socket has a total of 14 contact pins. That means you can now practice your soldering skills properly because all 14 solder joints are identical.
+
+image:./03_socket/01_socket_prepare.jpg[width=49%]
+image:./symbols/socket.png[width=49%]
+
+You can't miss the position of the socket on the circuit board. There is a small notch on the socket. Make sure you put in the socket with the small notch facing the Bakiwi-logo as marked on the circuit board.
+
+image:./03_socket/02_socket_detail.jpg[width=49%]
+image:./03_socket/03_socket_position.jpg[width=49%]
+
+When soldering, make sure that you first solder on one corner and then the diagonally opposite corner. This way you can still tare the circuit socket a little, if needed.
+
+image:./03_socket/04_socket_soldering_start.jpg[width=49%]
+image:./03_socket/05_socket_soldering_done.jpg[width=49%]
+
+*Tada.* You have now already placed 22 solder joints on the Bakiwi board. If you haven't soldered so much before, then you surely have the hang of it now.
+
+=== Button
+
+Now look for the `PAUSE` marking on the circuit board and put in the button. If you can insert it with ease _without_ bending the legs, it is automatically the right way round. You might hear a slight click when the button snaps in.
+
+image:./04_button/01_button_prepare.jpg[width=49%]
+image:./symbols/button.png[width=49%]
+
+[IMPORTANT]
+====
+The soldering pins of the button are a bit pointed, watch out for your fingers when inserting the button. After soldering in, you should remove these tips with pliers.
+====
+
+image:./04_button/02_button_position.jpg[width=49%]
+
+=== Voltage Regulator
+
+The next component will be a little more difficult. Look for the `VREG` symbol on the circuit board. It can be found just above the orange capacitor and looks like a cut circle.
+
+image:./05_vreg/01_vreg_prepare.jpg[width=49%]
+image:./symbols/vreg.png[width=49%]
+
+*Attention!* Now it's getting a bit fiddly. The _voltage regulator_ has three thin pins. The middle pin has to be bent so it fits onto the circuit board. You can use tweezers or a pencil, or try gently with your fingernail.
+
+image:./05_vreg/02_vreg_bending.jpg[]
+
+The correct arrangement of the legs is crucial for this component to function correctly. Therefore, make sure that the shape of the component corresponds to the symbol shown on the circuit board. Insert the voltage converter and push it in bit by bit as shown. The middle leg will bend even more - that's okay.
+
+image:./05_vreg/04_vreg_insert_1.jpg[width=49%]
+image:./05_vreg/05_vreg_insert_2.jpg[width=49%]
+
+When the voltage regulator is pressed all the way to the circuit board, it should be barely 1 mm higher than the circuit socket. Now solder the three legs as usual and shorten the wires with the pliers after soldering. You will find that the solder joints are very close together this time. Make sure that there is no short circuit.
+
+image:./05_vreg/06_vreg_insert_3.jpg[width=49%]
+image:./05_vreg/03_vreg_position.jpg[width=49%]
+
+*Well done.* Now soldering will be a little easier again, promise.
+
+=== Battery cable sockets
+
+image:./06_batcon/01_batcon_prepare.jpg[width=49%]
+image:./symbols/batcon.png[width=49%]
+
+Now insert the two white battery sockets at the markings `BAT1` and `BAT2`. Make sure that you insert them exactly as shown on the circuit board. The small gaps and notches on the sockets are also shown on the board. Correct alignment is very important here!
+
+image:./06_batcon/02_batcon_position.jpg[width=49%]
+image:./06_batcon/03_batcon_soldering.jpg[width=49%]
+
+With a little skill you can insert and solder both sockets in the same operation. Here, too, it is advisable to first solder one pin and correct the alignment again if necessary.
+
+[CAUTION]
+====
+Attention! At this point, please compare your circuit board with the photos shown. A battery socket that is soldered the wrong way round will later lead to reverse polarity when the battery is connected and may result in the destruction of parts of your Bakiwi. So better take a second look.
+====
+
+=== Power Switch
+Continue with the power switch. It is blue/white and is placed on the board at the `POWER` marking. You can solder the switch both ways, it works equally in both directions. Just make sure it is in `OFF`-position so your Bakiwi is turned off when you put in the batteries later.
+
+image:./07_switch/01_switch_prepare.jpg[width=49%]
+image:./symbols/switch.png[width=49%]
+
+[CAUTION]
+====
+Too much heat melts the switch and can make it unusable, so when soldering make sure to always heat the pin and the surface around the pin at the same time so that the process is short and effective.
+====
+
+image:./07_switch/02_switch_position.jpg[width=49%]
+image:./07_switch/03_switch_soldering.jpg[width=49%]
+
+The pins of the switch are quite long and should be shortened after soldering. The material of the switch pins is a bit thicker than usual so you’ll need a little more force to snap them off.
+
+=== Pin Headers
+
+Now dedicate yourself to the three pin headers. The two _single-rowed_ pin headers (1x3) are inserted with the short end from above into the board at `MOT1` and `MOT2` and soldered to the back as usual. The motors of your Bakiwi will later be connected to them.
+
+image:./08_pinh/01_pinh_prepare.jpg[width=49%]
+image:./symbols/pinh.png[width=49%]
+
+It is best to insert both pin headers together, then turn the circuit board and place it on the somewhat wobbly pin headers as shown in the illustration. Make sure that the pins are as perpendicular as possible to the board. If you first solder only one pin to each pin header, you can correct the exact position by heating up the solder joint again, in case it should not be straight the first time.
+
+image:./08_pinh/02_pinh_position.jpg[width=49%]
+image:./08_pinh/03_pinh_soldering.jpg[width=49%]
+
+Look for the `PROG` label on the circuit board and insert the double-row pin header (2x3) with its short end from above. Soldering in should now be easier because the two single-row pin headers now stabilize the board. The double-row pin header is the programming port in case you want to change/update the firmware of your Bakiwi later.
+
+=== Light emitting diodes
+
+Your Bakiwi gets two light-emitting diodes (LED) to show you the state of the walking oscillator. The position of both LEDs is marked with `D1` and `D2`. In terms of color, you can decide for yourself which LED should be on which side. You can also use different colored LEDs if you have some.
+
+image:./09_led/01_led_prepare.jpg[width=49%]
+image:./symbols/led.png[width=49%]
+
+[IMPORTANT]
+====
+
+Light emitting diodes have a so-called polarity, which means that *it does matter* how they are installed. Take a look at the pins of the LED. The longer one is always the positive pole, the shorter pin is the negative pole. You can remember this if you imagine that you are mentally disassembling a plus sign and placing the lines one behind the other (`+` -> `--`). Then the plus is longer than the minus. By the way, this rule of thumb applies to all bipolar electronic components.
+
+====
+
+image:./09_led/03_led_detail.jpg[width=49%]
+image:./09_led/02_led_position.jpg[width=49%]
+
+Now insert the LEDs according to their polarity and your desired color and solder them. After that, you can then shorten the pins as usual.
+
+=== Electrolytic Capacitor
+
+The electrolytic capacitor is installed exactly as in the previous step (long pin = positive pole). Its position on the circuit board is marked with `C2`. Make sure to put it in the right way. The negative pole is also marked with a thick (hollow) minus on the cylindrical housing.
+
+image:./10_elcap/01_elcap_prepare.jpg[width=49%]
+image:./symbols/elcap.png[width=49%]
+
+[NOTE]
+====
+The color of your Bakiwi electrolytic capacitor can differ from the one in the picture, but this does not affect the function. Depending on the manufacturer, the electrolytic capacitors also have a strip of paper that stabilizes the pins. Carefully remove any paper before soldering.
+====
+
+image:./10_elcap/02_elcap_position.jpg[width=49%]
+
+=== Potentiometer
+
+Your bakiwi gets four knobs with which you can change its gait. These components are called potentiometers and are adjustable resistors. You know them already from the volume knob of your loudspeakers or other devices.
+
+image:./11_pots/01_pots_prepare.jpg[width=49%]
+image:./symbols/pots.png[width=49%]
+
+Place the four blue potentiometers with the associated knobs in front of you. Insert the rotary knobs into the potentiometers with the arrows pointing upwards (according to the illustration).
+
+image:./11_pots/02_pots_detail.jpg[width=49%]
+
+Then put the assembled parts on the positions `LEVEL`, `SPEED`, `PHASE` and `BALANCE` and flip over the circuit board. The potentiometers are usually quite tight to insert and don't fall off by themselves.
+
+image:./11_pots/03_pots_position.jpg[width=49%]
+image:./11_pots/04_pots_soldering.jpg[width=49%]
+
+Now you can solder all four potentiometers one by one. After soldering, you should also shorten the pointed ends a little.
+
+:numbered!:
+
+=== Take a Break
+
+You have already soldered a lot of components. If you have worked this far, we recommend that you take a short break. Take care of yourself by getting some fresh air, drinking or eating, and most importantly, relaxing your eyes. Working in the near field can be tiring for your eyes and a little relaxation in between won't hurt.
+
+image:./make_a_break.jpg/[width=100%]
+
+:numbered:
+
+=== Battery Compartment
+
+Now you can put the circuit board aside and take the two battery compartments. There is also one red/black cable with a white plug for each compartment.
+
+[WARNING]
+====
+Even if it is tempting: Please do not insert any batteries yet!
+====
+
+The cables must be soldered to the solder tabs of the battery compartments, for this you can insert the stripped cable ends into the holes. It's easier if you slightly bend the taps. Make sure the cables are facing away from the flat side of the battery compartment. This will later be the inside where the motors are and you have to avoid the battery cables getting in the way of your Bakiwis legs.
+
+The correct polarity of the cables is of the utmost importance here. The same applies here as for the battery sockets; if  plus and minus are mixed up, parts of your Bakiwi can break. The red cable stands for plus the black cable for minus. This convention is widespread and worth remembering. You can read the polarity of the battery compartments on the inside.
+
+image:./12_batholder/01_batholder_prepare.jpg[width=49%]
+image:./12_batholder/02_batholder_polarity.jpg[width=49%]
+
+image:./12_batholder/03_batholder_insert.jpg[width=49%]
+
+Now solder the inserted cables to the very end of the tab. Solder as efficiently and quickly as possible so that the plastic of the battery compartments does not melt.
+
+[CAUTION]
+====
+The plastic of the battery compartments is quite temperature sensitive. Touching the plastic with the soldering iron or heating up the solder tabs for too long can melt the battery compartment and in the worst case make it unusable.
+====
+
+image:./12_batholder/04_batholder_soldering.jpg[width=49%]
+image:./12_batholder/05_batholder_done.jpg[width=49%]
+
+
+=== Microcontroller
+
+The following part does not involve soldering. You can now insert the _microcontroller_, a so-called _integrated circuit_ (or short: chip) into the socket. To do this, you first have to prepare the circuit with its 14 pins. Hold the chip as shown in the illustration and carefully bend all seven pins on each side a little further inwards. You can use the table top for that.
+
+At first the pins point outwards a little. Ideally, after bending, they point exactly perpendicular to the chip body in the same direction. This makes it easier to insert the chip into the socket.
+
+image:./13_microctrl/01_microctrl_prepare.jpg[width=49%]
+image:./13_microctrl/02_microctrl_bending.jpg[width=49%]
+
+Now put the microcontroller in the socket, making sure that all pins are in their guides. It is important that the notch on the chip and the notch on the base point in the same direction (towards the Bakiwi-logo).
+
+image:./13_microctrl/03_microctrl_insert.jpg[width=49%]
+image:./13_microctrl/04_microctrl_done.jpg[width=49%]
+
+
+=== Antennae
+
+The final soldering step to complete your Bakiwi board is attaching the antennae (_feelers_ or touch sensors). Your kit comes with two short pieces of guitar string. You can use them as antennae for your personal Bakiwi - but you don't have to. You can use many different metallic materials, e.g.:
+
+* copper cable with colored insulation
+* brass wire
+* pipe cleaners
+* or something else entirely
+
+image:./14_antenna/01_antenna_prepare.jpg[width=49%]
+image:./symbols/antenna.png[width=49%]
+
+The sensors used are automatically adapted by your Bakiwi. It may be that they are not yet sensitive enough or even over-sensitive at the beginning. But after a few minutes, your Bakiwi will be able to use its individually designed feelers just right. So feel free to design, everything is allowed as long as it:
+
+* can be soldered to the dedicated solder pads
+* is made from mostly conductive material
+* and does not touch any conductive parts of the board
+
+*No limits are placed on your creativity.*
+
+If you don't have any other materials available, you can also freely rearrange the enclosed guitar strings. You can attach pom-poms or bobbles on their ends. The strings are easy to solder, flexible, conductive and are quite robust and do not kink easily. Here are two examples:
+
+image:./14_antenna/04_antenna_puschel.jpg[width=49%]
+image:./14_antenna/05_antenna_solder_dots.jpg[width=49%]
+
+For soldering, place the circuit board with the components facing up on the table and first solder the sensors to the top of the circuit board and then to the back as usual. This gives you better control over their alignment.
+
+[NOTE]
+====
+Remember, there may be more metal to heat up for your soldering iron than usual, so you may have to hold the soldering tip on for a few seconds longer. The large soldering areas and the thick wire absorb a lot of heat and get hot, watch out for your fingers!
+====
+
+image:./14_antenna/02_antenna_solder_top.jpg[width=49%]
+image:./14_antenna/03_antenna_solder_bot.jpg[width=49%]
+
+
+== After Soldering
+
+=== Clean Up
+
+*Drum roll.... cymbal strike.* You've done it. The soldering work is now complete. The soldering station is no longer needed and you can turn it off and let it cool down.
+
+[WARNING]
+====
+The solder tip can be very hot for a few minutes after it has been switched off. So let the soldering station cool down for a while before you put it away.
+====
+
+Finally, we recommend equalizing the solder joints on the back again and shortening the remains of the pins that are too long. This is important so that after the mechanical assembly there are no more pointed pins that could dig into the motor or battery cables.
+
+image:./15_cleanup/01_short_pins.jpg[width=49%]
+image:./15_cleanup/02_recycle_trash.jpg[width=49%]
+
+
+=== Waste Disposal
+
+We tried to design the kit so that there is as little waste as possible. Please separate the waste and recycle. All small metal residues can be disposed of as packaging waste and the scraps of paper as waste paper. If you like, you can reuse the enclosed zipper bags and the cardboard box or dispose of them as packaging waste or waste paper.
+
+=== Testing
+In case you have a multimeter at hand: Before the mechanical assembly begins all electronic components should be tested. This way you could identify potential short circuits.
+
+==== Short Circuit Test
+
+image:./16_testing/01_testing_multimeter.jpg[width=49%]
+image:./16_testing/01_testing_multimeter_detail.jpg[width=49%]
+
+Take a multimeter and switch it to continuity test mode ("beeper"). You can recognize this by the loudspeaker symbol. Hold the two test probes with the metallic ends against each other and make sure that there is a clearly audible beep. The beep sound signals an electrical contact with no significant resistance in between. You can use it to check solder joints, cables and plugs for proper contact or to find unwanted short circuits.
+
+image:./16_testing/02_testing_battery_sockets.jpg[width=49%]
+image:./16_testing/03_testing_motor_pins.jpg[width=49%]
+
+Now hold the test probes on the two pins of the left battery socket. No signal should sound here. Repeat the test with the other socket. Also test the pins of the two motor connections and the 6-pin programming port by checking each two adjacent pins for short circuits. If there is a beeping for two pins, you have to look very carefully at your solder joints at this point. It is possible that some solder has gotten between the solder joints and is connecting them. Make sure there is enough light during the inspection and, if necessary, use a magnifying glass.
+
+[TIP]
+====
+If two solder joints are accidentally connected with solder, you can try to separate them by reheating them. If the solder looks sticky, try adding some fresh solder (with flux that has not yet evaporated) to make the solder joints workable again. The colored varnish (blue or purple) on your circuit board will not accept solder and will help you separate the solder joints. If both joints are heated up together and have sufficient flux, they separate easily from each other and retreat to their solder pads.
+
+Optical inspection can also rule out many possible sources of error. A good solder joint always looks a bit like a small volcano or mountain, if the solder joint looks more like a ball, this can be evidence that too little solder has landed on the pad. In this case the contact might be not reliable.
+====
+
+image:./16_testing/04_testing_switch.jpg[width=49%]
+
+Finally, test the positive pole of the left battery socket against the negative pole of the right battery socket. There should also be no contact to be measured here. Set the power switch to `ON` and measure again. There should now be a contact and you should hear a beep when measuring. Now turn the switch back `OFF`.
+
+image:./16_testing/05_testing_get_components.jpg[width=49%]
+
+==== Connect Motors
+[#connect_motors]
+
+Now connect the motors. Make sure that the brown (or black) wires of the 3-wire motor cable are connected to the pin that is marked with the ground symbol on the circuit board (see illustration).
+
+image:./16_testing/06_testing_connect_motors.jpg[width=49%]
+image:./symbols/gnd.png[width=49%]
+
+Now insert the batteries. It is very important to note the polarity (+/-) displayed inside the battery compartment. The plus and minus symbols can also be seen on your batteries or rechargeable batteries. Now connect the battery plugs to the sockets on the circuit board, it doesn't matter which compartment you connect to which plug.
+
+image:./16_testing/07_testing_insert_batteries.jpg[width=49%]
+image:./16_testing/08_testing_connect_batteries.jpg[width=49%]
+
+[WARNING]
+====
+*Watch out!* If the batteries get warm or even hot after connecting the compartments, you have to disconnect the connector from the circuit board immediately. The heating up of the batteries very likely indicates a short circuit and you will have to repeat the electrical continuity test again and carefully inspect your solder joints to find the short circuit.
+====
+
+Now turn `ON` the power switch and if everything is put together correctly, you should already see the diodes flashing. When all rotary knobs with the arrows point upwards, the LEDs should flash in unison.
+
+If the diodes work, press the button and immediately afterwards both motors should start making noises and turn the shafts (the round toothed metal ends).
+
+Touch the feelers with your hands and the noises of the motors should immediately change, slow down or even stop. When the sensors are released, the motors should resume their original behavior. Now turn your Bakiwi off again.
+
+If everything works as expected so far, you can now move on to the next chapter, the <<assembly, mechanical assembly>>.
+
+If only one motor works but the other does not, make sure that all knobs are pointing up and that the motor cables are connected as described in the section <<connect_motors, Connecting Motors>>.
+
+
+=== What to do when something is broken?
+
+If you should have lost or broken a component during soldering or assembly: Don't panic! We'll be happy to send you a new one. Send us a letter with the broken part and a return envelope addressed to you and we will arrange for a replacement immediately. We would be happy if you take the time and briefly describe to us how the component broke so that we can improve our Bakiwi kit with your help.
+
+If there is a problem but you are not entirely sure what is causing it, you can also send us photos of the board (e.g. from the top and bottom side) and we can try to help identify the source of the error.
+
+== Mechanical assembly
+[#assembly]
+
+:imagesdir: ./img/02_mechanics/
+
+
+=== Preparation
+
+Take the illustrated mechanical components out of the package and place them in front of you. You have already prepared the Bakiwi circuit board and the battery compartments in the previous work steps.
+
+image:./00_preparation/01_assembly_get_parts_annotated.jpg[width=98%]
+
+You will need additional tools for the assembly: a small Phillips screwdriver and a hexagon socket screwdriver (2.5 mm). If available, tweezers may be useful and simplify the assembly, but they are not strictly necessary. The side cutter is also required again.
+
+image:./00_preparation/02_assembly_get_tools.jpg[width=49%]
+
+
+=== Install Motors
+
+We start our mechanical assembly with the motors. To do this, take one of the motors and a motor holder as well as two of the four Phillips screws (you can recognize them by the fact that they are the only ones with tips). Fold the motor cable a few times, as shown, and squeeze it gently so that it falls into the same folds more easily when you install it.
+
+image:./01_motors/04_assembly_get_motor_holder.jpg[width=49%]
+image:./01_motors/03_assembly_fold_cable.jpg[width=49%]
+
+Fädele das Motorkabel durch die große Öffnung in den Halter und durch die kleine seitliche Öffnung wieder aus dem Halter heraus. Setze nun den Motor in den Halter, wobei es wichtig ist, dass sich ein Teil des Kabels gefaltet im Halter befindet, damit insgesamt weniger vom Kabel heraussteht. Der Schaft des Motors sollte von der kleinen Öffnung wegzeigen (vergleiche dein Ergebnis mit der Abbildung).
+
+Thread the motor cable through the large opening in the holder and out of the holder again through the small opening on the side. Now insert the motor into the holder. Make sure that part of the cable is folded in the holder so that less of the cable protrudes overall. The shaft of the motor should point away from the small opening (compare your result with the picture).
+
+image:./01_motors/05_assembly_insert_cable.jpg[width=49%]
+image:./01_motors/06_assembly_motor_screws.jpg[width=49%]
+
+Now insert the screws one after the other and tighten them sufficiently. If everything is in place, repeat the steps with the second motor.
+
+image:./01_motors/07_assembly_motors_cable_detail.jpg[width=49%]
+image:./01_motors/08_assembly_motors_prepared.jpg[width=49%]
+
+
+=== Putting the frame together
+
+Next, put the frame together. To do this, place the base plate of the frame in front of you and place the V-shaped clamp nut between the two central hole bars. Insert the locking screw and tighten it two turns.
+
+image:./02_frame/09_assembly_frame_start.jpg[width=49%]
+image:./02_frame/10_assembly_frame_insert_stamp_bolt.jpg[width=49%]
+
+Place the two motor holders with their axle ends on the holes in the base plate. Make sure that the openings and protruding cables are facing up. Now put on the lid of the frame and hold everything together with your fingers. If you gently tighten the locking screw a little further, the frame will hold together better.
+
+image:./02_frame/11_assembly_frame_insert_parts.jpg[width=49%]
+image:./02_frame/12_assembly_frame_close_lid.jpg[width=49%]
+
+
+==== Thread and stow the cables
+
+Hold the frame so that one motor is pointing to the left, the other is pointing to the right, and the cables stick out upwards. Now thread the motor cable on the left side of you through the rear hole facing away from you. The right-hand motor cable goes through the hole facing you.
+
+Stow the two motor cables in the frame above the clamp nut so that about 4 cm of cable protrude from the frame.
+
+image:./02_frame/13_assembly_frame_thread_cables.jpg[width=49%]
+image:./02_frame/14_assembly_frame_stow_cables.jpg[width=49%]
+
+
+==== Mounting the circuit board
+
+Now you need the two cylinder head screws (M3x10mm) and the hexagon socket screwdriver. One after the other, insert the screws into the holes in the Bakiwi board and screw them onto the frame.
+
+
+[TIP]
+====
+With a bit of luck, the screws can be attached to the hexagon socket screwdriver and are held there by friction; some tools are also magnetic. This usually makes it easier to insert the screws into the holes in the board.
+====
+
+[NOTE]
+====
+Attention, when screwing in for the first time, the screws cut their own thread into the holes in the frame base plate. If you want to loosen and reinsert the screws later, try to _feel_ the thread by turning the screw slightly to the left before tightening it until it fits into the original thread.
+====
+
+image:./02_frame/15_assembly_frame_tighten_screws.jpg[width=49%]
+
+The frame will now hold together by itself, carefully tighten the locking screw a little further with your fingers and test how the motor holders can now be locked in into certain positions.
+
+=== Connect the Motor Cables
+
+Now the motors are wired. We already had this step during testing, make sure again that the brown (or black) wires of the motor cables point to the ground symbol (see section  <<connect_motors, Connecting Motors>>). Stow the two motor cables as far as possible in the frame so that they fit snugly and do not form large loops.
+
+image:./03_cabling/16_assembly_connect_cables.jpg[width=49%]
+image:./03_cabling/17_assembly_connect_cables_side.jpg[width=49%]
+
+=== Attach battery holder
+
+==== Preparation
+
+Now prepare to attach the battery holders. You need the four M3x4mm cylinder head screws, the hexagon socket screwdriver and the side cutter.
+
+image:./04_batholder/18_assembly_get_battery_holders.jpg[width=49%]
+
+First remove the two spacer bars in both battery compartments by separating them just above the surface. Now screw the battery compartments to the side of the frame. There is now enough space for the screw heads.
+
+image:./04_batholder/19_assembly_remove_separator.jpg[width=49%]
+image:./04_batholder/20_assembly_separator_removed.jpg[width=49%]
+
+==== Mounting
+
+The battery compartments should be positioned so that the cables are on the side with the sensors. Each holder is fixed to the frame with two screws. Here, too, the screws cut their threads into the holes in the frame the first time they are inserted.
+
+[CAUTION]
+====
+*Warning!* Be careful not to overtighten the screws.
+====
+
+image:./04_batholder/21_assembly_battery_screws.jpg[width=49%]
+
+==== Stow the battery Cables
+
+Lay the battery cables behind the motor cables along the circuit board to the rear and plug them into their sockets. If necessary, carefully slide the cable under the circuit board.
+
+image:./04_batholder/22_assembly_thread_battery_cable.jpg[width=49%]
+image:./04_batholder/23_assembly_thread_battery_cable_done.jpg[width=49%]
+
+*Hurra!* Der Körper deines Bakiwi ist nun fertig. Vergleiche noch einmal die Ausrichtung der Stecker auf deiner Platine und ob alle Kabel möglichst dicht am Bakiwi-Körper anliegen.
+
+*Hooray!* Your Bakiwi's body is finished now. Double check the alignment of the connectors on your circuit board and whether all cables are as close as possible to your Bakiwi’s body.
+
+image:./04_batholder/24_assembly_cabling_finished.jpg[width=98%]
+
+
+=== Attach legs
+
+First put the batteries back in and switch on your Bakiwi. Press the `PAUSE` button twice in succession with an interval of about one second so that your Bakiwi moves its motors to the starting position and then goes back to pause mode.
+
+image:./05_legs/25_assembly_leg_adapter.jpg[width=49%]
+image:./05_legs/26_assembly_insert_batteries.jpg[width=49%]
+
+Now mount the leg connections onto the toothed ends of the motors' shafts and screw them tight with the enclosed Phillips screws. It's the last two screws that are left.
+
+The enclosed 3D-printed leg connections are just one of countless ways to put legs on your Bakiwi. In your kit there are perhaps other parts that fit on the shafts of the motors (so-called horns).
+
+*Give yourself a try!* With the remaining horns you can make different pairs of legs from different craft materials and switch over and over again.
+//TODO link to the leg building manual
+
+image:./05_legs/27_assembly_motor_inner_thread.jpg[width=49%]
+image:./05_legs/28_assembly_leg_adapter_screws.jpg[width=49%]
+
+*Done!* Depending on which Bakiwi kit you have, there may be small Lego parts included, which can be used as feet for your inital Bakiwi. Maybe you already have Lego Technic parts. You can use these to design legs and feet for your bakiwi very quickly.
+
+image:./05_legs/29_assembly_done.jpg[width=98%]
+
+
+== Preparation
+
+=== Before Switching on
+
+*Important:* Before switching on for the first time (with the legs attached) take a closer look at the names of the four gray knobs (potentiometers).
+
+. Set the `BALANCE` and `PHASE` controls to the middle position (arrow upwards).
+
+. Set the `SPEED` control halfway to the left (toward the long waveform).
+
+. Set the LEVEL control halfway to the left (toward the small waveform).
+
+Now turn on your Bakiwi.
+
+== The Functionality Explained
+
+:imagesdir: ./img/04_usage/
+
+image::./05_osc.png[OSC,200,float="right"]
+
+In the program memory of your Bakiwi microcontroller there are two neurons which are connected in such a way that they oscilate. Together they form a so-called oscillator and this is the clock for the movement of the legs. The two LED on your Bakiwi signal the activity of these motor neurons. In the pause mode, the neurons and thus the oscillator are already active and vibrate, but the motors are inhibited. This means that you can change the movement pattern at any time by adjusting the four sliders, whether paused or not.
+We recorded a video to better illustrate how it works:
+
+Im Programmspeicher deines Bakiwi-Mikrocontrollers sind zwei Neuronen, welche so verschaltet sind, dass sie schwingen. Sie bilden zusammen einen sogenannten Oszillator und dieser ist der Taktgeber für die Bewegung der Beine.
+Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorneuronen. Im Pause-Modus sind die Neuronen und somit der Oszillator bereits aktiv und schwingen, die Motoren sind aber inhibiert (gehemmt). Das heißt, du kannst durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.
+
+Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren:
+
+ifdef::env-github[]
+link:https://youtu.be/rAteGra5-xM[Direkter Link aufs Video^]
+
+image::https://img.youtube.com/vi/rAteGra5-xM/maxresdefault.jpg[link=https://youtu.be/rAteGra5-xM, role="ext-link", width=640, height=360]
+endif::[]
+
+ifndef::env-github[]
+video::rAteGra5-xM[youtube, width=640, height=360]
+endif::[]
+
+=== Laufparameter
+
+Die Art, wie dein Bakiwi läuft, wird durch mehrere Faktoren beeinflusst. Maßgeblich für eine erfolgreiche Fortbewegung sind die Beine, die du deinem Bakiwi erschaffst. Hast du dir neue Beine für dein Bakiwi ausgedacht, so kannst du mit der Veränderung der folgenden Parameter (Stellschrauben) deinem Bakiwi mit seinen neuen Beinen das Laufen beibringen:
+
+==== Anstellwinkel
+
+Die Anstellwinkel sind rein mechanische Parameter. Du kannst durch Lösen der großen Arretierschraube die Motorhalter beweglich machen und dann ihre Winkel zum Körper und zueinander verändern. *Probiere Verschiedenes aus!* Ziehe die Schraube dann wieder nur soweit fest, bis die Motorhalter in der gewünschten Position fest genug halten.
+
+==== Geschwindigkeit/Frequenz
+
+image::./01_speed.png[SPEED,200,float="right"]
+
+Bewege den `SPEED`-Knopf und beobachte, wie sich die Geschwindigkeit des Blinkens der LEDs verändert. Verlasse den Pause-Modus durch Drücken des Tasters und beobachte an den Motoren wie sich die Geschwindigkeit der Schwingung (d. h. die Frequenz der Oszillation) der Motorneurone unmittelbar auf die Motoren auswirkt. Die Frequenz regelt die Schrittgeschwindigkeit deines Bakiwi.
+
+[TIP]
+====
+Wir empfehlen zunächst mit einer langsamen Bewegung zu beginnen. Es hilft dir dabei die Bewegung deiner selbst-gebauten Beine gut beobachten zu können und damit ein gutes Verständnis über die Auswirkungen der Beinbewegung zu bekommen.
+====
+
+==== Level/Amplitude
+
+image::./04_level.png[LEVEL,200,float="right"]
+
+Drehe am `LEVEL`-Knopf und beobachte, wie sich die Helligkeit der LEDs verändert und die Weite mit der die Motoren bei jeder Bewegung ausschlagen. Diese Schwingungsweite wird Amplitude genannt und regelt die Schrittweite der Laufbewegung.
+
+==== Balance
+
+image::./03_balance.png[BALANCE,200,float="right"]
+
+Drehe am `BALANCE`-Regler und beobachte wie sich die vorher eingestellte Amplitude auf die beiden Motoren verteilt. Steht der Regler in der Mittelposition, sind beide Motoramplituden gleich. Ein Drehen nach links, senkt die Amplitude des vorderen Motors, eine Drehung nach rechts dämpft die Bewegung des hinteren Motors.
+
+==== Phase
+
+image::./02_phase.png[PHASE,200,float="right"]
+
+Der letzte Parameter, die sogenannte Phase (bzw. der Phasenwinkel) ist wahrlich die besondere Würze und regelt die Laufrichtung. Ein `PHASE`-Regler auf Mitte erzeugt eine synchrone aber gegenläufige Bewegung der Motoren. Drehst du den Phasenwinkel etwas aus der Mitte heraus, bewegen sich die Motoren nicht mehr synchron, was entscheidend für das Laufen ist. Ein bis auf Maximum (oder Minimum) gestellter Phasenwinkel erzeugt erneut eine synchrone aber diesmal mitläufige Bewegung. Die Phase ist der wichtigste Parameter für eine erfolgreiche Laufbewegung und benötigt deine besondere Aufmerksamkeit. Mit Ihr entscheidet sich, ob sich dein Bakiwi überhaupt von der Stelle bewegt und wenn ja in welche Richtung.
+
+Jetzt aber genug gelesen...
+
+*Ran ans Werk!* :)
+
+
+=== Zentrierung
+
+Wenn du dein Bakiwi zusammengebaut hast, solltest Du es ggf. zentrieren. Die Motoren mit den aufgesteckten Bein-Anschlüssen sind herstellungsbedingt nie perfekt gerade. Diesen Versatz kann dein Bakiwi korrigieren und es sich merken.
+
+Schalte dazu dein Bakiwi zunächst aus.
+
+. Halte den Pause-Taster gedrückt und schalte dein Bakiwi bei gehaltenem Taster ein. Die LEDs sollten jetzt schnell flackern.
+
+. Lasse den Taster los und nun sollte nur noch die linke LED flackern und der vordere Motor kurz anfahren. Wenn du nun den `PHASE`-Drehknopf betätigst, kannst du den vorderen Motor in die gewünschte Ausgangsposition stellen. Justiere dabei solange, bis der Beinanschluss gerade ist.
+
+. Betätige den Taster erneut zum Bestätigen. Nun kannst du den Prozess für den hinteren Motor durchführen, während die die rechte LED flackert.
+
+. Ist auch der hintere Motor richtig gerade eingestellt, bestätige erneut durch Drücken des Tasters und der Zentrierungsprozess ist damit abgeschlossen.
+
+[TIP]
+====
+Wenn du deinem Bakiwi neue Beine baust und dabei die Beine, ob gewollt oder ungewollt, nicht gleich werden kannst du die Zentrierung ebenfalls benutzen, um Unsymmertrie auszugleichen.
+
+Du kannst es aber auch gezielt verwenden, um dein Bakiwi immer eine Kurve laufen zu lassen.
+====
+
+=== Der Schaltplan
+
+Im Folgenden siehst du den elektrischen Schaltplan deines Bakiwi. Findest du selbst heraus, welche Symbole zu welchen von dir gelöteten Teilen gehören? Einen Schaltplan zu _lesen_ erfordert etwas Übung, aber nachdem du jetzt alle Teile selbst zusammengelötet hast, kannst du hier nachvollziehen, welches Bauteil mit welchem verkabelt ist. Die _Kabel_ auf einer Platine heißen Leiterbahnen und bestehen aus einer dünnen Lage Kupfer. Wenn du die Platine deines Bakiwi anschaust und leicht gegen das Licht hältst, kannst du sie unter der Lackschicht ausmachen. Manche Leiterbahnen wechseln die Seite der Platine durch kleine Löcher, sogenannte _Vias_. Manche Leiterbahnen sind auch ganze Flächen, so ist beispielsweise die gesamte untere Kupferfläche der Platine der Minuspol.
+
+Ein Schaltplan hilft auch bei der Fehlersuche. Verhält sich die Elektronik merkwürdig, sind ein Multimeter und ein Schaltplan die wichtigsten Hilfsmittel beim Finden der Ursache. Im Schaltplan sind auch die Bauteile genau bezeichnet. Du findest dort beispielsweise welche Kapazität die Kondensatoren haben, in welche Richtung die Dioden zu schalten sind oder wie die Bezeichnung des Spannungswandlers ist. Mit der Hilfe eines Schaltplans kann ein elektrisches Gerät, wie auch dein Bakiwi, immer wieder repariert werden.
+
+:imagesdir: ./img/
+image::./bakiwi_kit_rev1_1_schematics.png[]
+
+// === Die Bauteile und ihre Funktion
+// TODO
+// Kondensator, Widerstand, uC, Schalter, Taster, etc
+
+// === Was ist ein Oszillator?
+// TODO
+// Amplitude, Phase, Frequenz
+:numbered!:
+
+== Hast du noch Fragen?
+Du hast noch Fragen oder wünscht dir weitere Erklärungen? Du hast Anregungen oder Feedback für uns?
+link:https://jetpack.cl/bakiwi[Schreib uns!]
+
+Du kannst uns auch auf Twitter folgen, dann versorgen wir dich mit Neuigkeiten zu *#bakiwi*. Wir sind  link:https://twitter.com/labjetpack[@LabJetpack].
+
+Ansonsten wünschen wir dir viel Spaß mit deinem neuen Bakiwi. Lass es krabbeln!

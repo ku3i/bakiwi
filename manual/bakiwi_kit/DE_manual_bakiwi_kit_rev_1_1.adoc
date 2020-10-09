@@ -45,7 +45,7 @@ Für das Löten der Bakiwi-Elektronik benötigst du folgende Werkzeuge:
 * Lötzinn (empfohlen: Dicke 0.5--0.75mm mit integriertem Flussmittel, bleifrei)
 * Messingwolle mit Behälter ("Trockenreiniger"), alternativ ein angefeuchtetes Schwämmchen
 * Seitenschneider oder Knipszange
-* Multimeter
+* Multimeter (optional)
 
 image:./00_preparation/01_required_tools.jpg[width=49%]
 image:./00_preparation/02_fine_tip_and_solder.jpg[width=49%]
@@ -66,9 +66,14 @@ Lege alle Kleinteile in ein Gefäß, damit dir keines verloren gehen kann. Nimm 
 image:./00_preparation/04_put_parts_in_container.jpg[width=49%]
 image:./00_preparation/05_get_pcb.jpg[width=49%]
 
-Schalte die Lötstation ein und überprüfe die Temperaturanzeige. Wenn die Temperatur einstellbar ist, stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns ein (Aufschrift beachten). Wenn du dir unsicher bist, beginne mit 330°, abhängig von der Leistung der Lötstation ist vielleicht eine etwas höhere Temperatur nötig. Wenn sich das Löten _klebrig_ anfühlt, dann kann die Temperatur zu niedrig sein.
+Schalte die Lötstation ein und überprüfe die Temperaturanzeige. Wenn die Temperatur einstellbar ist, stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns ein (Aufschrift beachten). Wenn du dir unsicher bist, beginne mit 330°C, abhängig von der Leistung der Lötstation ist vielleicht eine etwas höhere Temperatur nötig. Wenn sich das Löten _klebrig_ anfühlt, dann kann die Temperatur zu niedrig sein. Erhöhe bei Bedarf die Temperatur allmählich, bis das Lot mühelos schmilzt.
 
 // Was ist die maximale Temperatur? jenseites von 360° gibts doch eigentlich nix sinnvolles, oder?
+
+[TIP]
+====
+Wenn deine Lötspitze auch bei stetigem Säubern nicht mehr glänzt und immer wieder dunkel wird ist die Temperatur vermutlich zu hoch eingestellt.
+====
 
 === Nimm dir Zeit!
 
@@ -314,7 +319,7 @@ image:./12_batholder/03_batholder_insert.jpg[width=49%]
 Die einlegten Kabel nun am äußersten Ende der Lasche festlöten. Dabei so effizient und schnell wie möglich löten, damit das Plastik der Batteriefächer nicht schmilzt.
 [CAUTION]
 ====
-Das Plastik der Batteriefächer ist recht temperaturempfindlich. Eine Berührung mit dem Lötkolben oder ein zu langes Aufheizen der Lötösen lässt das Batteriefach schmelzen und kann es schlimmstenfalls unbrauchbar machen.
+Das Plastik der Batteriefächer ist recht temperaturempfindlich. Eine Berührung mit dem Lötkolben oder ein zu langes Aufheizen der Lötlaschen lässt das Batteriefach schmelzen und kann es schlimmstenfalls unbrauchbar machen.
 ====
 
 image:./12_batholder/04_batholder_soldering.jpg[width=49%]
@@ -363,6 +368,11 @@ image:./14_antenna/05_antenna_solder_dots.jpg[width=49%]
 
 Zum Anlöten lege die Platine mit den Bauteilen nach oben auf den Tisch und löte die Fühler als erstes einmal _oben_ an der Platine fest und danach auf der Rückseite wie gewohnt. So hast du bessere Kontrolle über deren Ausrichtung.
 
+[NOTE]
+====
+Bedenke, es gibt an dieser Stelle für deinen Lötkolben möglicherweise mehr Metall als üblich aufzuheizen, sodass du hier gegebenenfalls ein paar Sekunden länger die Lötspitze dranhalten musst. Die großen Lötflächen und der dicke Draht nehmen viel Wärme auf und werden heiß, achte auf deine Finger!
+====
+
 image:./14_antenna/02_antenna_solder_top.jpg[width=49%]
 image:./14_antenna/03_antenna_solder_bot.jpg[width=49%]
 
@@ -390,7 +400,7 @@ image:./15_cleanup/02_recycle_trash.jpg[width=49%]
 Wir haben versucht, den Bausatz so zu gestalten, dass möglichst wenig Müll anfällt. Bitte trenne den Müll. Alle kleinen Metallreste können zum Verpackungsmüll (Gelbe Tonne) und die Papierfetzen zum Altpapier. Die beiliegenden Zipper-Tüten und den Karton kannst du vielleicht ja noch weiter nutzen oder entsorgst sie ebenfalls zum Verpackungsmüll bzw. Altpapier.
 
 === Funktionstest
-Bevor es gleich mit dem mechanischen Zusammenbau losgehen kann müssen alle elektronischen Komponenten getestet werden.
+Bevor es gleich mit dem mechanischen Zusammenbau losgehen kann sollten die elektronischen Komponenten getestet werden. Wenn du also ein Multimeter zur Hand hast, kannst du dein Board auf Kurzschlüsse testen.
 
 ==== Kurzschlusstest
 
@@ -407,11 +417,14 @@ Halte nun die Prüfspitzen an die beiden Stifte der linken Batteriebuchse, hierb
 [TIP]
 ====
 Sollten zwei Lötstellen aus Versehen mit Lötzinn miteinander verbunden sein, kannst du durch erneutes Aufheizen der Lötstellen versuchen diese voneinander zu trennen. Wenn das Lot dabei klebrig wirkt, so versuche etwas frisches Lötzinn (mit noch nicht verdampften Flussmittel) hinzuzufügen um die Lötstellen wieder gängig zu machen. Der farbige Lack (blau oder lila) auf deiner Platine nimmt Lötzinn nicht an und hilft dir die Lötstellen zu trennen. Wenn beide Lötstellen gemeinsam aufgeheizt werden und durch genügend Flussmittel gut fließen können trennen sie sich leicht voneinander und ziehen sich auf ihre Lötflächen zurück.
+
+Eine optische Inspektion kann bereits viele mögliche Fehlerquellen ausschließen. Eine gute Lötstelle sieht immer ein wenig aus wie ein kleiner Vulkan oder Berg. Wenn die Lötstelle eher wie eine Kugel aussieht kann das ein Anzeichen dafür sein, dass zu wenig Lötzinn auf der Lötfläche gelandet ist.
+In diesem Fall ist der Kontakt möglicherweise nicht zuverlässig.
 ====
 
 image:./16_testing/04_testing_switch.jpg[width=49%]
 
-Teste als Letztes den Pluspol der linken Batteriebuchse gegen den Minuspol der rechten Batteriebuchse. Es sollte hier ebenfalls kein Kontakt zu messen sein. Stelle nun den An-/Aus-Schalter auf `ON`, nun sollte es bei erneuter Messung Kontakt geben und piepsen. Stelle danach den Schalter wieder auf `OFF`.
+Teste als Letztes den Pluspol der linken Batteriebuchse gegen den Minuspol der rechten Batteriebuchse. Es sollte hier ebenfalls kein Kontakt zu messen sein. Stelle nun den An-/Aus-Schalter auf `ON` und messe nocheinmal. Nun sollte es Kontakt geben und piepsen. Stelle danach den Schalter wieder auf `OFF`.
 
 image:./16_testing/05_testing_get_components.jpg[width=49%]
 
@@ -448,11 +461,7 @@ Sollte ein Motor sich drehen, der andere aber nicht, stelle sicher, dass alle Dr
 
 Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte: Keine Panik! Wir senden dir gerne ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an dich adressierten Rücksende-Umschlag und wir sorgen sofort für Ersatz. Wir freuen uns, wenn du dir die Zeit nimmst und uns kurz beschreibst wie das Bauteil kaputt gegangen ist, sodass wir unseren Bakiwi-Bausatz mit deiner Hilfe verbessern können.
 
-
-////
-*NACHHALTIGKEIT*
-Der nunmehr letzter Arbeitsschritt und dieser liegt uns auch sehr am Herzen, ist die fachgerechte Entsorgung deines Arbeitsmülls. Papier kommt zu Papier und die restlichen angeknipsten Drähte kommen in den gelben Sack. Wir haben uns darum bemüht, dir so wenig wie möglich Verpackungsmaterialien mitzuschicken, denn wir haben nun mal nur einen Planeten. Plan(et) B ist daher keine Lösung.
-////
+Wenn ein Problem besteht, du aber nicht ganz sicher bist, was die Ursache ist, kannst du uns auch Fotos von der Platine senden (z. B. von Ober- und Unterseite) und wir werden versuchen zu helfen, die Fehlerquelle zu identifizieren.
 
 == Mechanischer Zusammenbau
 [#assembly]
@@ -577,7 +586,7 @@ Lege zunächst die Batterien wieder ein und schalte dein Bakiwi ein. Drücke zwe
 image:./05_legs/25_assembly_leg_adapter.jpg[width=49%]
 image:./05_legs/26_assembly_insert_batteries.jpg[width=49%]
 
-Nun setze die abgebildeten Bein-Anschlüsse auf die gezahnten Enden der Motoren (Schäfte) und schraube die mit den beiliegenden Kreuzschrauben fest. Es sind die letzten zwei Schrauben, die übrig sind.
+Nun setze die abgebildeten Bein-Anschlüsse auf die gezahnten Enden der Motorschäfte und schraube sie mit den beiliegenden Kreuzschrauben fest. Es sind die letzten zwei Schrauben, die übrig sind.
 
 Die beiliegenden 3D-gedruckten Bein-Anschlüsse sind nur eine von unzähligen Möglichkeiten wie du deinem Bakiwi Beine geben kannst. In deinem Bausatz liegen mitunter noch weitere Teile, die auf die Schäfte der Motoren passen (sogenannte Ruderhörner).
 
