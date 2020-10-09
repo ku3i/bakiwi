@@ -601,7 +601,7 @@ image:./05_legs/28_assembly_leg_adapter_screws.jpg[width=49%]
 image:./05_legs/29_assembly_done.jpg[width=98%]
 
 
-== Benutzung
+== Wie Du Dein Bakiwi spielst und wie es funktioniert
 
 === Vor dem Einschalten
 
@@ -615,7 +615,7 @@ image:./05_legs/29_assembly_done.jpg[width=98%]
 
 Schalte nun dein Bakiwi ein.
 
-== Die Funktionsweise erklärt
+=== Die Funktionsweise erklärt
 
 :imagesdir: ./img/04_usage/
 

@@ -585,7 +585,7 @@ image:./05_legs/28_assembly_leg_adapter_screws.jpg[width=49%]
 image:./05_legs/29_assembly_done.jpg[width=98%]
 
 
-== Preparation
+== How to play your bakiwi and how it works
 
 === Before Switching on
 
@@ -599,7 +599,7 @@ image:./05_legs/29_assembly_done.jpg[width=98%]
 
 Now turn on your Bakiwi.
 
-== The Functionality Explained
+=== The Functionality Explained
 
 :imagesdir: ./img/04_usage/
 
