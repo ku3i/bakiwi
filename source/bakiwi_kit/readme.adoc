@@ -1,13 +1,13 @@
 = Bakiwi Install Firmware Manual
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-10-12
-:!toc:
+:toc:
 
 :imagesdir: ./doc
 
 These instructions describe how to install or update firmware on your Bakiwi and also enable you to install a self-written program.
 
-== Clone the Repository
+== Get the Source Code
 Clone the repository or get it via Github's download button:
 ****
 `git clone https://github.com/ku3i/bakiwi`
@@ -18,13 +18,14 @@ This step requires `git`. If you're on a Linux machine, you probably have `git` 
 `sudo apt-get install git`
 ****
 
-== Installing the Arduino IDE
+== Installing the Firmware
 
+=== Get latest Arduino IDE
 Open a Browser, navigate to the following link and download the latest version of the Arduino IDE (tested with 1.8.12):
 ****
 `https://www.arduino.cc/en/Main/Software`
 ****
-
+=== Setup ATtiny84 Support for Arduino IDE
 Start the IDE and open the `preferences` dialog. Add the following link to `Additional Boards Manager URLs`:
 ****
 `https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json`
@@ -32,6 +33,7 @@ Start the IDE and open the `preferences` dialog. Add the following link to `Addi
 
 Then select `Tools -> Board -> Boards Manager` and seach for `attiny`. Install the `Attiny Support Library by Davis A. Mellis`.
 
+=== Open the Firmware Source Code and Setup Microcontroller
 When the installation was succesfull open the `source/bakiwi_kit/so2walk_tiny/so2walk_tiny.ino` file via `File -> Open` dialog and setup the Attiny84 processor in `Tools` accordingly as described in the picture:
 
 * Board: *ATtiny24/44/84*
@@ -41,20 +43,25 @@ When the installation was succesfull open the `source/bakiwi_kit/so2walk_tiny/so
 
 image::./setup_arduinoIDE_for_attiny84.png[width=75%]
 
+
+=== Compile and Upload the Firmware
+
 If you have set up the processor, select `Sketch -> Verify/Compile` and if the code could be successfully compiled, connect the Bakiwi-Programmer to your computer via USB cable and to your Bakiwi via the 6-pin ISP connector (pay attention to the polarity).
 
 Then select `Sketch -> Upload` and the programmer should now start to flash the LEDs for some seconds. After that, remove the 6-pin ISP connector.
 
 The Bakiwi-Firmware should now be installed.
 
-== Install AVR Toolchain
+== Bakiwi Programming for Experts
 Your Bakiwi is always delivered with the latest firmware. However, if you want to use a brand new ATTiny84, the fuses must first be set. The following commands do exactly this and cause the LEDs to flash as a success message. You can also use the minimal program as a starting point for your own firmware development if you do not want to use the Arduino IDE or the Arduino framework.
 
+=== Get AVR Toolchain
 Make sure you have a minimal AVR toolchain installed (Linux).
 ****
 `sudo apt-get install gcc-avr binutils-avr avr-libc avrdude`
 ****
 
+=== Set Fuses and Flash Helloworld
 Navigate to the folder `source/blinky`:
 ****
 `cd source/bakiwi_kit/blinky`
