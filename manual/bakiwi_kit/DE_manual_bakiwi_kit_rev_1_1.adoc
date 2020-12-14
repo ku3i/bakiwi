@@ -1,13 +1,12 @@
 =  Bakiwi Kit Bauanleitung
 Doc Writer <kubisch@informatik.hu-berlin.de>
-v0.2, 2020-06-11
+v0.21, 2020-12-15
 :toc:
 :toc-placement!:
 :toc-title: Abenteuer-Verzeichnis
 :imagesdir: ./img/
-//:iconsdir: ./icon
-//:favicon: {iconsdir}/favicon.png
-
+:favicon: {imagesdir}icons/favicon.png
+:stylesheet: bak.css
 :linkattrs:
 
 :numbered:

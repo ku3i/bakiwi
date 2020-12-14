@@ -1,12 +1,14 @@
 =  Bakiwi Kit Assembly Manual
 Doc Writer <kubisch@informatik.hu-berlin.de>
-// Translation by Sebastian Schmölling and Mamun Azmy
-v0.2, 2020-10-08
+v0.21, 2020-12-15
 :toc:
 :toc-placement!:
 :toc-title: Table of Adventures
 :imagesdir: ./img/
+:favicon: {imagesdir}icons/favicon.png
+:stylesheet: bak.css
 :linkattrs:
+
 :numbered:
 :numbered!:
 
@@ -17,6 +19,8 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
+
+_(Translation provided by Sebastian Schmölling and Mamun Azmy)_
 
 image::./bakiwi_logo_3-1_dynamic_EN.png[]
 

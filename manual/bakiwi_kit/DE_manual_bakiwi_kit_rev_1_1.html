@@ -1,471 +1,86 @@
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Bakiwi Kit Assembly ManualBakiwi Kit Bauanleitung</title>
-      <style>
-        #wrapper {width: 960px; margin: 0 auto;}
-        /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
-/* Uncomment @import statement to use as custom stylesheet */
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
-audio,video{display:inline-block}
-audio:not([controls]){display:none;height:0}
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-a{background:none}
-a:focus{outline:thin dotted}
-a:active,a:hover{outline:0}
-h1{font-size:2em;margin:.67em 0}
-abbr[title]{border-bottom:1px dotted}
-b,strong{font-weight:bold}
-dfn{font-style:italic}
-hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
-mark{background:#ff0;color:#000}
-code,kbd,pre,samp{font-family:monospace;font-size:1em}
-pre{white-space:pre-wrap}
-q{quotes:"\201C" "\201D" "\2018" "\2019"}
-small{font-size:80%}
-sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sup{top:-.5em}
-sub{bottom:-.25em}
-img{border:0}
-svg:not(:root){overflow:hidden}
-figure{margin:0}
-fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
-legend{border:0;padding:0}
-button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
-button,input{line-height:normal}
-button,select{text-transform:none}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
-button[disabled],html input[disabled]{cursor:default}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
-button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
-textarea{overflow:auto;vertical-align:top}
-table{border-collapse:collapse;border-spacing:0}
-*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
-a:hover{cursor:pointer}
-img,object,embed{max-width:100%;height:auto}
-object,embed{height:100%}
-img{-ms-interpolation-mode:bicubic}
-.left{float:left!important}
-.right{float:right!important}
-.text-left{text-align:left!important}
-.text-right{text-align:right!important}
-.text-center{text-align:center!important}
-.text-justify{text-align:justify!important}
-.hide{display:none}
-img,object,svg{display:inline-block;vertical-align:middle}
-textarea{height:auto;min-height:50px}
-select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
-.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
-a{color:#2156a5;text-decoration:underline;line-height:inherit}
-a:hover,a:focus{color:#1d4b8f}
-a img{border:0}
-p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
-p aside{font-size:.875em;line-height:1.35;font-style:italic}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
-h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
-h1{font-size:2.125em}
-h2{font-size:1.6875em}
-h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
-h4,h5{font-size:1.125em}
-h6{font-size:1em}
-hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
-em,i{font-style:italic;line-height:inherit}
-strong,b{font-weight:bold;line-height:inherit}
-small{font-size:60%;line-height:inherit}
-code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
-ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol{margin-left:1.5em}
-ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
-ul.circle{list-style-type:circle}
-ul.disc{list-style-type:disc}
-ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
-dl dt{margin-bottom:.3125em;font-weight:bold}
-dl dd{margin-bottom:1.25em}
-abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
-abbr{text-transform:none}
-blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
-blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite::before{content:"\2014 \0020"}
-blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
-blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
-@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
-h1{font-size:2.75em}
-h2{font-size:2.3125em}
-h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
-h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
-table thead,table tfoot{background:#f7f8f7}
-table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
-table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
-table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
-h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
-.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
-.clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
-pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
-pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
-pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
-em em{font-style:normal}
-strong strong{font-weight:400}
-.keyseq{color:rgba(51,51,51,.8)}
-kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
-.keyseq kbd:first-child{margin-left:0}
-.keyseq kbd:last-child{margin-right:0}
-.menuseq,.menuref{color:#000}
-.menuseq b:not(.caret),.menuref{font-weight:inherit}
-.menuseq{word-spacing:-.02em}
-.menuseq b.caret{font-size:1.25em;line-height:.8}
-.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
-b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
-b.button::before{content:"[";padding:0 3px 0 2px}
-b.button::after{content:"]";padding:0 2px 0 3px}
-p a>code:hover{color:rgba(0,0,0,.9)}
-#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
-#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
-#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
-#content{margin-top:1.25em}
-#content::before{content:none}
-#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
-#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
-#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
-#header .details span:first-child{margin-left:-.125em}
-#header .details span.email a{color:rgba(0,0,0,.85)}
-#header .details br{display:none}
-#header .details br+span::before{content:"\00a0\2013\00a0"}
-#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
-#header .details br+span#revremark::before{content:"\00a0|\00a0"}
-#header #revnumber{text-transform:capitalize}
-#header #revnumber::after{content:"\00a0"}
-#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
-#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
-#toc>ul{margin-left:.125em}
-#toc ul.sectlevel0>li>a{font-style:italic}
-#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
-#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
-#toc li{line-height:1.3334;margin-top:.3334em}
-#toc a{text-decoration:none}
-#toc a:active{text-decoration:underline}
-#toctitle{color:#7a2518;font-size:1.2em}
-@media screen and (min-width:768px){#toctitle{font-size:1.375em}
-body.toc2{padding-left:15em;padding-right:0}
-#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
-#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
-#toc.toc2>ul{font-size:.9em;margin-bottom:0}
-#toc.toc2 ul ul{margin-left:0;padding-left:1em}
-#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
-body.toc2.toc-right{padding-left:0;padding-right:15em}
-body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
-@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
-#toc.toc2{width:20em}
-#toc.toc2 #toctitle{font-size:1.375em}
-#toc.toc2>ul{font-size:.95em}
-#toc.toc2 ul ul{padding-left:1.25em}
-body.toc2.toc-right{padding-left:0;padding-right:20em}}
-#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
-#content #toc>:first-child{margin-top:0}
-#content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
-#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
-#content{margin-bottom:.625em}
-.sect1{padding-bottom:.625em}
-@media screen and (min-width:768px){#content{margin-bottom:1.25em}
-.sect1{padding-bottom:1.25em}}
-.sect1:last-child{padding-bottom:0}
-.sect1+.sect1{border-top:1px solid #e7e7e9}
-#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
-#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
-#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
-#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
-#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
-details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
-details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
-.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
-table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
-.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
-table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
-.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
-.admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
-.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
-.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
-.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
-.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
-.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
-@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
-@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
-.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
-.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
-.listingblock>.content{position:relative}
-.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
-.listingblock:hover code[data-lang]::before{display:block}
-.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
-.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
-.listingblock pre.highlightjs{padding:0}
-.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
-.listingblock pre.prettyprint{border-width:0}
-.prettyprint{background:#f7f7f8}
-pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
-pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
-pre.prettyprint li code[data-lang]::before{opacity:1}
-pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
-table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
-table.linenotable td.code{padding-left:.75em}
-table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
-pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
-pre.pygments .lineno::before{content:"";margin-right:-.125em}
-.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
-.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
-.quoteblock blockquote{margin:0;padding:0;border:0}
-.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
-.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
-.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
-.verseblock{margin:0 1em 1.25em}
-.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
-.verseblock pre strong{font-weight:400}
-.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
-.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
-.quoteblock .attribution br,.verseblock .attribution br{display:none}
-.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
-.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
-.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
-.quoteblock.abstract{margin:0 1em 1.25em;display:block}
-.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
-.quoteblock.excerpt,.quoteblock .quoteblock{margin:0 0 1.25em;padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
-.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
-.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
-p.tableblock:last-child{margin-bottom:0}
-td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
-table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
-table.frame-all{border-width:1px}
-table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
-table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
-th.halign-left,td.halign-left{text-align:left}
-th.halign-right,td.halign-right{text-align:right}
-th.halign-center,td.halign-center{text-align:center}
-th.valign-top,td.valign-top{vertical-align:top}
-th.valign-bottom,td.valign-bottom{vertical-align:bottom}
-th.valign-middle,td.valign-middle{vertical-align:middle}
-table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
-tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
-p.tableblock>code:only-child{background:none;padding:0}
-p.tableblock{font-size:1em}
-ol{margin-left:1.75em}
-ul li ol{margin-left:1.5em}
-dl dd{margin-left:1.125em}
-dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
-ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
-ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
-ul.unstyled,ol.unstyled{margin-left:0}
-ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
-ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
-ul.inline>li{margin-left:1.25em}
-.unstyled dl dt{font-weight:400;font-style:normal}
-ol.arabic{list-style-type:decimal}
-ol.decimal{list-style-type:decimal-leading-zero}
-ol.loweralpha{list-style-type:lower-alpha}
-ol.upperalpha{list-style-type:upper-alpha}
-ol.lowerroman{list-style-type:lower-roman}
-ol.upperroman{list-style-type:upper-roman}
-ol.lowergreek{list-style-type:lower-greek}
-.hdlist>table,.colist>table{border:0;background:none}
-.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
-td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
-td.hdlist1{font-weight:bold;padding-bottom:1.25em}
-.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
-.colist td:not([class]):first-child img{max-width:none}
-.colist td:not([class]):last-child{padding:.25em 0}
-.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
-.imageblock.left{margin:.25em .625em 1.25em 0}
-.imageblock.right{margin:.25em 0 1.25em .625em}
-.imageblock>.title{margin-bottom:0}
-.imageblock.thumb,.imageblock.th{border-width:6px}
-.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
-.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
-.image.left{margin-right:.625em}
-.image.right{margin-left:.625em}
-a.image{text-decoration:none;display:inline-block}
-a.image object{pointer-events:none}
-sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
-sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
-#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
-#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
-#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
-#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
-#footnotes .footnote:last-of-type{margin-bottom:0}
-#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
-.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
-.gist .file-data>table td.line-data{width:99%}
-div.unbreakable{page-break-inside:avoid}
-.big{font-size:larger}
-.small{font-size:smaller}
-.underline{text-decoration:underline}
-.overline{text-decoration:overline}
-.line-through{text-decoration:line-through}
-.aqua{color:#00bfbf}
-.aqua-background{background:#00fafa}
-.black{color:#000}
-.black-background{background:#000}
-.blue{color:#0000bf}
-.blue-background{background:#0000fa}
-.fuchsia{color:#bf00bf}
-.fuchsia-background{background:#fa00fa}
-.gray{color:#606060}
-.gray-background{background:#7d7d7d}
-.green{color:#006000}
-.green-background{background:#007d00}
-.lime{color:#00bf00}
-.lime-background{background:#00fa00}
-.maroon{color:#600000}
-.maroon-background{background:#7d0000}
-.navy{color:#000060}
-.navy-background{background:#00007d}
-.olive{color:#606000}
-.olive-background{background:#7d7d00}
-.purple{color:#600060}
-.purple-background{background:#7d007d}
-.red{color:#bf0000}
-.red-background{background:#fa0000}
-.silver{color:#909090}
-.silver-background{background:#bcbcbc}
-.teal{color:#006060}
-.teal-background{background:#007d7d}
-.white{color:#bfbfbf}
-.white-background{background:#fafafa}
-.yellow{color:#bfbf00}
-.yellow-background{background:#fafa00}
-span.icon>.fa{cursor:default}
-a span.icon>.fa{cursor:inherit}
-.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
-.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
-.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
-.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
-.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
-.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
-.conum[data-value] *{color:#fff!important}
-.conum[data-value]+b{display:none}
-.conum[data-value]::after{content:attr(data-value)}
-pre .conum[data-value]{position:relative;top:-.125em}
-b.conum *{color:inherit!important}
-.conum:not([data-value]):empty{display:none}
-dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
-h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
-p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
-p{margin-bottom:1.25rem}
-.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
-.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
-.print-only{display:none!important}
-@page{margin:1.25cm .75cm}
-@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
-html{font-size:80%}
-a{color:inherit!important;text-decoration:underline!important}
-a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
-a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
-abbr[title]::after{content:" (" attr(title) ")"}
-pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
-thead{display:table-header-group}
-svg{max-width:100%}
-p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
-h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
-#toc,.sidebarblock,.exampleblock>.content{background:none!important}
-#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
-body.book #header{text-align:center}
-body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
-body.book #header .details{border:0!important;display:block;padding:0!important}
-body.book #header .details span:first-child{margin-left:0!important}
-body.book #header .details br{display:block}
-body.book #header .details br+span::before{content:none!important}
-body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
-body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
-.listingblock code[data-lang]::before{display:block}
-#footer{padding:0 .9375em}
-.hide-on-print{display:none!important}
-.print-only{display:block!important}
-.hide-for-print{display:none!important}
-.show-for-print{display:inherit!important}}
-@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
-.sect1{padding:0!important}
-.sect1+.sect1{border:0}
-#footer{background:none}
-#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
-@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="author" content="Doc Writer">
+<link rel="icon" type="image/png" href="./img/icons/favicon.png">
+<title>Bakiwi Kit Bauanleitung</title>
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
 
-      </style>
-      <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/asciidoc.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/dockerfile.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/makefile.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/rust.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/haskell.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/typescript.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scss.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/less.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/handlebars.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/groovy.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scala.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/ini.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script>
-    </head>
-    <body>
-      <div id="wrapper">
-        <div class="article">
-          <h1 id="__asciidoctor-preview-0__">Bakiwi Kit Bauanleitung</h1>
+@import url("//fonts.googleapis.com/css?family=Noto+Sans:300,600italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700");
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+
+:root{
+--maincolor:#FFFFFF;
+--primarycolor:#2c3e50;
+--secondarycolor:#323e4a;
+--tertiarycolor: #186d7a;
+--sidebarbackground:#CCC;
+--linkcolor:#ce00ce;
+--linkcoloralternate:#4e6074ff;
+--white:#FFFFFF;
+--black:#000000;
+}
+
+/* Text styles */
+h1{color:var(--primarycolor) !important;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;}
+.title{color:var(--tertiarycolor) !important; font-family:"Noto Sans",sans-serif !important;font-style: normal !important; font-weight: normal !important;}
+p{font-family: "Noto Sans",sans-serif !important}
+
+
+ /* unvisited link */
+a:link { color: var(--primarycolor) !important; }
+
+/* visited link */
+a:visited { color: var(--linkcoloralternate) !important; }
+
+/* mouse over link */
+a:hover { color: var(--linkcolor) !important; }
+
+/* Table styles */
+th{font-family: "Noto Sans",sans-serif !important}
+
+/* Responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+@media all and (max-width: 600px) {
+table {
+  width: 55vw!important;
+  font-size: 3vw;
+}
+
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Bakiwi Kit Bauanleitung</h1>
+<div class="details">
+<span id="author" class="author">Doc Writer</span><br>
+<span id="email" class="email"><a href="mailto:kubisch@informatik.hu-berlin.de">kubisch@informatik.hu-berlin.de</a></span><br>
+<span id="revnumber">version 0.21,</span>
+<span id="revdate">2020-12-15</span>
+</div>
+</div>
+<div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div id="__asciidoctor-preview-1__" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./img/bakiwi_logo_3-1_dynamic_DE.png" alt="bakiwi logo 3 1 dynamic DE">
 </div>
 </div>
-<div id="__asciidoctor-preview-2__" class="toc">
-<div id="__asciidoctor-preview-2__title" class="title">Abenteuer-Verzeichnis</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Abenteuer-Verzeichnis</div>
 <ul class="sectlevel1">
 <li><a href="#_vorbereitung">Vorbereitung</a>
 <ul class="sectlevel2">
@@ -530,40 +145,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_werkzeuge">Werkzeuge</h3>
-<div id="__asciidoctor-preview-3__" class="paragraph">
+<div class="paragraph">
 <p>Für das Löten der Bakiwi-Elektronik benötigst du folgende Werkzeuge:</p>
 </div>
-<div id="__asciidoctor-preview-4__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-5__">
+<li>
 <p>Lötkolben (oder Lötstation) mit dünner Lötspitze</p>
 </li>
-<li id="__asciidoctor-preview-6__">
+<li>
 <p>Lötzinn (empfohlen: Dicke 0.5&#8212;&#8203;0.75mm mit integriertem Flussmittel, bleifrei)</p>
 </li>
-<li id="__asciidoctor-preview-7__">
+<li>
 <p>Messingwolle mit Behälter ("Trockenreiniger"), alternativ ein angefeuchtetes Schwämmchen</p>
 </li>
-<li id="__asciidoctor-preview-8__">
+<li>
 <p>Seitenschneider oder Knipszange</p>
 </li>
-<li id="__asciidoctor-preview-9__">
+<li>
 <p>Multimeter (optional)</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-10__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/00_preparation/01_required_tools.jpg" alt="01 required tools" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/00_preparation/02_fine_tip_and_solder.jpg" alt="02 fine tip and solder" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-11__" class="admonitionblock note">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-12__" class="paragraph">
+<div class="paragraph">
 <p>Falls du noch gar keine Erfahrung im Löten hast, dann empfehlen wir dir, vorher ein Einführungsvideo oder Tutorial anzuschauen um schon mal eine ungefähre Vorstellung vom Löten zu entwickeln. Noch besser ist es, wenn du den Bausatz mit jemand anderem zusammen aufbaust, der bereits ein wenig löten kann.</p>
 </div>
 </td>
@@ -573,30 +188,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_bauteile_sichten">Bauteile sichten</h3>
-<div id="__asciidoctor-preview-13__" class="paragraph">
+<div class="paragraph">
 <p>Überprüfe alle Bauteile auf Vollständigkeit. Zusätzlich zu den gezeigten Teilen hast du vielleicht Material beiliegen, welches sich für die Fühler deines Bakiwi eignet, z.B. Gitarrensaiten oder Pfeifenputzer.</p>
 </div>
-<div id="__asciidoctor-preview-14__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/00_preparation/03_check_electronic_parts_annotated_DE.jpg" alt="03 check electronic parts annotated DE"></span></p>
 </div>
-<div id="__asciidoctor-preview-15__" class="paragraph">
+<div class="paragraph">
 <p>Lege alle Kleinteile in ein Gefäß, damit dir keines verloren gehen kann. Nimm dir zuerst die Bakiwi-Platine und leg sie vor dir hin. Die <em>Oberseite</em> der Platine ist die mit den Bauteilbeschriftungen. Alle Bauteile werden nun nach und nach in einzeln erklärten Schritten auf der Oberseite eingesteckt und auf der <em>Unterseite</em> festgelötet. Die beste Übereinstimmung mit den Bildern dieser Anleitung hast du, wenn du die Platine so drehst, dass du den <code>Bakiwi</code>-Schriftzug lesen kannst und sie mit der Beschriftung <code>POWER</code> zu dir gedreht ist und <code>PAUSE</code> nach oben zeigt.</p>
 </div>
-<div id="__asciidoctor-preview-16__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/00_preparation/04_put_parts_in_container.jpg" alt="04 put parts in container" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/00_preparation/05_get_pcb.jpg" alt="05 get pcb" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-17__" class="paragraph">
+<div class="paragraph">
 <p>Schalte die Lötstation ein und überprüfe die Temperaturanzeige. Wenn die Temperatur einstellbar ist, stelle sie passend zum Legierungs-Mischungsverhältnis deines Lötzinns ein (Aufschrift beachten). Wenn du dir unsicher bist, beginne mit 330°C, abhängig von der Leistung der Lötstation ist vielleicht eine etwas höhere Temperatur nötig. Wenn sich das Löten <em>klebrig</em> anfühlt, dann kann die Temperatur zu niedrig sein. Erhöhe bei Bedarf die Temperatur allmählich, bis das Lot mühelos schmilzt.</p>
 </div>
-<div id="__asciidoctor-preview-18__" class="admonitionblock tip">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">Tip</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-19__" class="paragraph">
+<div class="paragraph">
 <p>Wenn deine Lötspitze auch bei stetigem Säubern nicht mehr glänzt und immer wieder dunkel wird ist die Temperatur vermutlich zu hoch eingestellt.</p>
 </div>
 </td>
@@ -606,7 +221,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_nimm_dir_zeit">Nimm dir Zeit!</h3>
-<div id="__asciidoctor-preview-20__" class="paragraph">
+<div class="paragraph">
 <p>Das Zusammenlöten deines Bakiwis erfordert Ruhe und Konzentration. Die benötigte Zeit ist von Mensch zu Mensch unterschiedlich und sehr vom Vorwissen abhängig. Absolute Neulinge sollte 2 Stunden für das Löten einplanen, Profis schaffen das mitunter in 30 Minuten.</p>
 </div>
 </div>
@@ -617,183 +232,183 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_widerstände">1.1. Widerstände</h3>
-<div id="__asciidoctor-preview-21__" class="paragraph">
+<div class="paragraph">
 <p>Nimm dir die Widerstände zur Hand. Es gibt <em>einen</em> blauen Widerstand und <em>zwei</em> in beige. Beginne damit, das Papier an jeweils beiden Enden des blauen Widerstands abzuziehen.</p>
 </div>
-<div id="__asciidoctor-preview-22__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/01_resistors_prepare.jpg" alt="01 resistors prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/resistor.png" alt="resistor" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-23__" class="paragraph">
+<div class="paragraph">
 <p>Nun biege die beiden Draht-Enden mit deinen Fingern direkt an ihrem Ursprung um, sodass sie beide in dieselbe Richtung zeigen und sich die beiden Drähte parallel gegenüberstehen. Der blaue Widerstand hat die Bezeichnung <code>R3</code>. Suche nach dem abgebildeten Widerstandssymbol auf der Platine, es befindet sich unmittelbar unter dem <code>Bakiwi</code>-Schriftzug. Setze ihn wie auf dem Bild gezeigt auf der Platine ein. Ein Widerstand besitzt <em>keine</em> Polarität, es spielt also keine Rolle, wie herum du diesen einsetzt.</p>
 </div>
-<div id="__asciidoctor-preview-24__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/08_resistors_bend.jpg" alt="08 resistors bend" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/01_resistors/02_resistors_position.jpg" alt="02 resistors position" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-25__" class="paragraph">
+<div class="paragraph">
 <p>Halte das eingesetzte Bauteil mit den Fingern fest, drehe die Platine vorsichtig um und leg Sie vor dir ab. Beginne nun damit, die Drahtenden auf der Platinenunterseite festzulöten. Achte dabei darauf, den Draht und die Lötfläche um das Loch gleichzeitig zu berühren und  aufzuheizen während du das Lötzinn hinzufügst. Die Wärmeübertragung funktioniert am besten, wenn die Lötspitze kurz vorher gereinigt und schon etwas mit Zinn benetzt ist.</p>
 </div>
-<div id="__asciidoctor-preview-26__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/03_resistors_inserted.jpg" alt="03 resistors inserted" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/01_resistors/04_resistors_soldering.jpg" alt="04 resistors soldering" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-27__" class="paragraph">
+<div class="paragraph">
 <p>Entferne den überstehenden Draht, indem du ihn mit einer geeigneten Zange (z. B. Seitenschneider) abknipst. Entferne dabei den Draht möglichst knapp über deiner Lötstelle, ohne diese zu beschädigen.</p>
 </div>
-<div id="__asciidoctor-preview-28__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/05_resistors_cutting.jpg" alt="05 resistors cutting" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/01_resistors/09_resistors_cutting.jpg" alt="09 resistors cutting" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-29__" class="paragraph">
+<div class="paragraph">
 <p>Nun folgen die beiden anderen Widerstände <code>R1</code> und <code>R2</code> (beige). Sie werden links und rechts vom Schriftzug angebracht. Die Reihenfolge ist dabei egal, du kannst auch gleich beide zusammen einbauen. Die Arbeitsschritte sind die gleichen wie beim ersten Widerstand.</p>
 </div>
-<div id="__asciidoctor-preview-30__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/01_resistors/06_resistors_repeat.jpg" alt="06 resistors repeat" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/01_resistors/07_resistors_done.jpg" alt="07 resistors done" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-31__" class="paragraph">
+<div class="paragraph">
 <p><strong>Gratulation.</strong> Du hast den ersten Schritt gemeistert. Vergleiche dein Ergebnis mit dem Bild aus dieser Anleitung.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_kondensator">1.2. Kondensator</h3>
-<div id="__asciidoctor-preview-32__" class="paragraph">
+<div class="paragraph">
 <p>Als Nächstes ist der Kondensator an der Reihe. Suche nach dem kleinen orange-farbenen Bauteil in Form einer Linse. Die Position auf der Platine ist diesmal weiter zum anderen Ende bei der Markierung <code>C1</code>. Schaue auf das abgebildete Symbol.</p>
 </div>
-<div id="__asciidoctor-preview-33__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/02_capacitor/01_capacitor_prepare.jpg" alt="01 capacitor prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/capacitor.png" alt="capacitor" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-34__" class="paragraph">
+<div class="paragraph">
 <p>So wie eben bei den Widerständen wird der Kondensator von oben in die Platine gesteckt und von der Rückseite festgelötet.</p>
 </div>
-<div id="__asciidoctor-preview-35__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/02_capacitor/02_capacitor_detail.jpg" alt="02 capacitor detail" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/02_capacitor/03_capacitor_position.jpg" alt="03 capacitor position" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-36__" class="paragraph">
+<div class="paragraph">
 <p>Nach dem Löten kannst du hier ebenfalls die überstehenden Draht-Enden abzwicken.</p>
 </div>
-<div id="__asciidoctor-preview-37__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/02_capacitor/04_capacitor_soldering.jpg" alt="04 capacitor soldering" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/02_capacitor/05_capacitor_cutting.jpg" alt="05 capacitor cutting" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-38__" class="paragraph">
+<div class="paragraph">
 <p><strong>Geschafft</strong>. Dies war das Ende deiner Aufwärmrunde. Denn jetzt wird es eine Idee kniffeliger.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_schaltkreis_sockel">1.3. Schaltkreis-Sockel</h3>
-<div id="__asciidoctor-preview-39__" class="paragraph">
+<div class="paragraph">
 <p>Der Schaltkreis-Sockel hat ganze 14 Kontakte und das heißt für Dich, dass du Deine Lötfertigkeiten jetzt richtig trainieren kannst. Denn alle 14 Lötstellen sind identisch.</p>
 </div>
-<div id="__asciidoctor-preview-40__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/03_socket/01_socket_prepare.jpg" alt="01 socket prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/socket.png" alt="socket" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-41__" class="paragraph">
+<div class="paragraph">
 <p>Die Position des Sockels auf der Platine kannst du nicht übersehen. Der Sockel hat auf einer Schmalseite eine kleine Kerbe und diese sollte, wie auf der Platine gekennzeichnet, nach vorne zeigen.</p>
 </div>
-<div id="__asciidoctor-preview-42__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/03_socket/02_socket_detail.jpg" alt="02 socket detail" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/03_socket/03_socket_position.jpg" alt="03 socket position" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-43__" class="paragraph">
+<div class="paragraph">
 <p>Achte beim Löten darauf, dass du zunächst erst eine Ecke und dann die schräg gegenüberliegende Ecke anlötest, falls du den Sockel noch ein wenig tarieren möchtest.</p>
 </div>
-<div id="__asciidoctor-preview-44__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/03_socket/04_socket_soldering_start.jpg" alt="04 socket soldering start" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/03_socket/05_socket_soldering_done.jpg" alt="05 socket soldering done" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-45__" class="paragraph">
+<div class="paragraph">
 <p><strong>Tada</strong>. Du hast nun bereits 22 Lötstellen auf der Bakiwi-Platine gesetzt. Wenn du bisher nicht so viel gelötet hattest, solltest du spätestens jetzt den Dreh gut raushaben.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_taster">1.4. Taster</h3>
-<div id="__asciidoctor-preview-46__" class="paragraph">
+<div class="paragraph">
 <p>Der Taster wird an der Stelle mit der Markierung <code>PAUSE</code> eingesetzt. Wenn du den Taster spielend leicht einsetzen kannst <em>ohne</em> die Beinchen zu biegen ist er auch automatisch richtig herum. Mitunter hörst du ein leises Knackgeräusch, wenn der Taster einrastet.</p>
 </div>
-<div id="__asciidoctor-preview-47__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/04_button/01_button_prepare.jpg" alt="01 button prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/button.png" alt="button" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-48__" class="admonitionblock important">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<div class="title">Important</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-49__" class="paragraph">
+<div class="paragraph">
 <p>Die Lötstifte des Tasters sind ein wenig spitz, achte beim Einsetzen des Tasters auf deine Finger. Nach dem Einlöten solltest du diese Spitzen mit der Zange entfernen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-50__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/04_button/02_button_position.jpg" alt="02 button position" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_spannungswandler">1.5. Spannungswandler</h3>
-<div id="__asciidoctor-preview-51__" class="paragraph">
+<div class="paragraph">
 <p>Das nächste Bauteil wird etwas schwieriger. Halte zunächst nach dem abgebildeten Symbol <code>VREG</code> auf der Platine Ausschau, es ist knapp über dem orangenen Kondensator zu finden und sieht aus wie ein angeschnittener Kreis.</p>
 </div>
-<div id="__asciidoctor-preview-52__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/05_vreg/01_vreg_prepare.jpg" alt="01 vreg prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/vreg.png" alt="vreg" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-53__" class="paragraph">
+<div class="paragraph">
 <p><strong>Achtung!</strong> Jetzt wird es etwas fummelig. Der <em>Spannungswandler</em> hat drei dünne Beinchen, die superdicht aneinander liegen. Damit du den Spannungswandler einsetzen kannst, muss das mittlere Bein etwas in Richtung der Rundung umgebogen werden, sodass die Enden der Drähte ein kleines Dreieck aufspannen. Du kannst eine Pinzette oder einen Bleistift zur Hilfe nehmen oder es vorsichtig mit deinem Fingernagel probieren.</p>
 </div>
-<div id="__asciidoctor-preview-54__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/05_vreg/02_vreg_bending.jpg" alt="02 vreg bending"></span></p>
 </div>
-<div id="__asciidoctor-preview-55__" class="paragraph">
+<div class="paragraph">
 <p>Die richtige Anordnung der Beinchen ist bei diesem Bauteil entscheidend für seine korrekte Funktion. Achte daher darauf, dass die Form des Bauteils mit der auf der Platine abgebildeten Zeichnung übereinstimmt. Setze den Spannungswandler ein und drücke ihn wie abgebildet Stück für Stück weiter hinein. Dabei wird sich das mittlere Beinchen noch weiter verbiegen&#8201;&#8212;&#8201;das ist in Ordnung.</p>
 </div>
-<div id="__asciidoctor-preview-56__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/05_vreg/04_vreg_insert_1.jpg" alt="04 vreg insert 1" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/05_vreg/05_vreg_insert_2.jpg" alt="05 vreg insert 2" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-57__" class="paragraph">
+<div class="paragraph">
 <p>Wenn der Spannungswandler bis auf die Platine gedrückt ist, sollte er kaum 1 mm höher sein als der Schaltkreissockel. Nun löte die drei Beine wie gehabt fest und kürze die Drähte nach dem Löten mit der Zange. Du wirst feststellen, dass die Lötstellen diesmal sehr dicht beieinander sind. Konzentriere dich gut, damit kein Kurzschluss entsteht.</p>
 </div>
-<div id="__asciidoctor-preview-58__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/05_vreg/06_vreg_insert_3.jpg" alt="06 vreg insert 3" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/05_vreg/03_vreg_position.jpg" alt="03 vreg position" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-59__" class="paragraph">
+<div class="paragraph">
 <p><strong>Gut gemacht</strong>. Jetzt wird das Löten erst einmal wieder etwas einfacher, versprochen.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_batteriekabel_buchsen">1.6. Batteriekabel-Buchsen</h3>
-<div id="__asciidoctor-preview-60__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/06_batcon/01_batcon_prepare.jpg" alt="01 batcon prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/batcon.png" alt="batcon" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-61__" class="paragraph">
+<div class="paragraph">
 <p>Setze nun die zwei weißen Batteriebuchsen bei den Markierungen <code>BAT1</code> und <code>BAT2</code> ein. Achte dabei darauf, dass du sie <em>genau</em> wie auf der Platine abgebildet einsetzt. Die kleinen Lücken und Kerben an den Buchsen sind auch auf der Platine abgebildet. Die korrekte Ausrichtung ist hier sehr wichtig!</p>
 </div>
-<div id="__asciidoctor-preview-62__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/06_batcon/02_batcon_position.jpg" alt="02 batcon position" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/06_batcon/03_batcon_soldering.jpg" alt="03 batcon soldering" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-63__" class="paragraph">
+<div class="paragraph">
 <p>Mit ein wenig Geschick kannst du beide Buchsen im gleichen Arbeitsgang einsetzen und festlöten. Auch hier bietet es sich an, zunächst ein Beinchen festzulöten und noch mal die Ausrichtung zu korrigieren falls nötig.</p>
 </div>
-<div id="__asciidoctor-preview-64__" class="admonitionblock caution">
+<div class="admonitionblock caution">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
+<div class="title">Caution</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-65__" class="paragraph">
+<div class="paragraph">
 <p>Achtung! Vergleiche an dieser Stelle bitte noch einmal genau deine Platine mit den abgebildeten Fotos. Eine verkehrt herum eingelötete Batteriebuchse führt bei Anschluss der Batterie später zu einem Verpolen und endet möglicherweise in der Zerstörung von Teilen deines Bakiwi. Daher schau lieber zweimal hin.</p>
 </div>
 </td>
@@ -803,292 +418,292 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_anaus_schalter">1.7. An/Aus-Schalter</h3>
-<div id="__asciidoctor-preview-66__" class="paragraph">
+<div class="paragraph">
 <p>Weiter geht es mit dem Einsetzen des An/Aus-Schalters. Dieser ist blau/weiß und wird auf der Platine bei der Markierung <code>POWER</code> platziert. Wichtig ist hierbei, dass das weiße Teil Richtung <code>off</code> zeigt. Prinzipiell kannst du den Schalter auch andersherum einlöten, er funktioniert in beide Richtungen gleichermaßen. Stelle bloß sicher, dass er in der <code>OFF</code>-Position ist, d. h. dass dein Bakiwi ausgeschaltet ist, wenn wir später die Batterien einlegen.</p>
 </div>
-<div id="__asciidoctor-preview-67__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/07_switch/01_switch_prepare.jpg" alt="01 switch prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/switch.png" alt="switch" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-68__" class="admonitionblock caution">
+<div class="admonitionblock caution">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
+<div class="title">Caution</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-69__" class="paragraph">
+<div class="paragraph">
 <p>Zuviel Hitze lässt den Schalter schmelzen und kann ihn unbrauchbar machen, daher achte beim Löten darauf, Stift und Lötfläche stets gleichzeitig aufzuheizen, damit der Lötvorgang kurz und effektiv ist.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-70__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/07_switch/02_switch_position.jpg" alt="02 switch position" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/07_switch/03_switch_soldering.jpg" alt="03 switch soldering" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-71__" class="paragraph">
+<div class="paragraph">
 <p>Die Lötstifte sind recht lang und sollten nach dem Festlöten ein wenig gekürzt werden. Das Material der Schalterstifte ist auch dicker als das der anderen Bauteile, sodass du etwas mehr Kraft beim Abknipsen benötigst.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_stiftleisten">1.8. Stiftleisten</h3>
-<div id="__asciidoctor-preview-72__" class="paragraph">
+<div class="paragraph">
 <p>Widme dich nun den drei Stiftleisten. Die beiden einreihigen Stiftleisten (1x3) werden mit dem kurzen Ende von oben in die Platine bei <code>MOT1</code> und <code>MOT2</code> eingesteckt und wie gehabt auf der Rückseite festgelöten. An ihnen werden später die Motoren deines Bakiwi angeschlossen.</p>
 </div>
-<div id="__asciidoctor-preview-73__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/08_pinh/01_pinh_prepare.jpg" alt="01 pinh prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/pinh.png" alt="pinh" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-74__" class="paragraph">
+<div class="paragraph">
 <p>Am besten setzt du beide Stiftleisten zusammen ein, drehst dann die Platine und stellst sie wie in der Abbildung gezeigt auf die noch etwas wackeligen Stiftleisten. Achte darauf, dass die Stifte möglichst senkrecht zur Platine stehen. Wenn du zuerst an jeder Stiftleiste nur einen Stift festlötest, kannst du die genaue Position durch nochmaliges Aufheizen korrigieren, sollte sie nicht gleich beim ersten Mal gerade sein.</p>
 </div>
-<div id="__asciidoctor-preview-75__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/08_pinh/02_pinh_position.jpg" alt="02 pinh position" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/08_pinh/03_pinh_soldering.jpg" alt="03 pinh soldering" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-76__" class="paragraph">
+<div class="paragraph">
 <p>Die doppelreihige Stiftleiste (2x3) wird bei <code>PROG</code> ebenfalls mit Ihrem kurzen Ende von oben eingesetzt. Das Einlöten sollte nun einfacher sein, weil die beiden verlöteten einreihigen Stiftleisten bereits die Platine stabilisieren. Die doppelreihige Stiftleiste ist der Programmieranschluss, falls du später das Programm deines Bakiwi verändern möchtest.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_leuchtdioden">1.9. Leuchtdioden</h3>
-<div id="__asciidoctor-preview-77__" class="paragraph">
+<div class="paragraph">
 <p>Dein Bakiwi bekommt zwei Leuchtdioden (LED) um dir den Zustand des Lauf-Oszillators anzuzeigen. Die Position der LEDs ist mit <code>D1</code> und <code>D2</code> markiert. Farblich kannst du selbst entscheiden, welche LED auf welche Seite soll. Du kannst auch andersfarbige LEDs einbauen, wenn du welche hast.</p>
 </div>
-<div id="__asciidoctor-preview-78__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/09_led/01_led_prepare.jpg" alt="01 led prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/led.png" alt="led" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-79__" class="admonitionblock important">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<div class="title">Important</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-80__" class="paragraph">
+<div class="paragraph">
 <p>Leuchtdioden haben eine sogenannte <em>Polarität</em>, d. h. es ist <em>nicht</em> egal, wie herum sie eingebaut werden. Erkennen kannst du das anhand der unterschiedlich langen Beine. Das längere Bein ist immer der Pluspol, das kürzere Bein ist der Minuspol. Du kannst dir das gut merken, wenn du dir vorstellst, dass du gedanklich ein <em>Pluszeichen</em> auseinander baust und die Striche hintereinanderlegst (<code>+</code> &#8594; <code>--</code>). Dann ist das <em>Plus</em> länger als das <em>Minus</em>. Diese Merkregel gilt übrigens für alle zweibeinigen elektronischen Bauteile mit Polarität und unterschiedlich langen Beinen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-81__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/09_led/03_led_detail.jpg" alt="03 led detail" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/09_led/02_led_position.jpg" alt="02 led position" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-82__" class="paragraph">
+<div class="paragraph">
 <p>Setze also die Leuchtdioden gemäß ihrer Polarität und deiner Wunschfarbe ein und löte sie fest. Die Beine kannst du danach wie immer kürzen.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_elektrolytkondensator">1.10. Elektrolytkondensator</h3>
-<div id="__asciidoctor-preview-83__" class="paragraph">
+<div class="paragraph">
 <p>Der Elektrolytkondensator (kurz: <em>Elko</em>) wird genau wie im vorherigen Schritt (langes Bein = Pluspol) eingebaut. Seine Position ist mit <code>C2</code> markiert. Der Minuspol ist sogar auf dem zylinderförmigen Gehäuse mit einem dicken (hohlen) Minus gekennzeichnet.</p>
 </div>
-<div id="__asciidoctor-preview-84__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/10_elcap/01_elcap_prepare.jpg" alt="01 elcap prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/elcap.png" alt="elcap" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-85__" class="admonitionblock note">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-86__" class="paragraph">
+<div class="paragraph">
 <p>Die Farbe deines Bakiwi-Elkos kann von der in der Abbildung abweichen, das hat aber keinen Einfluss auf die Funktion. Je nach Hersteller haben auch die Elkos einen Papierstreifen, der die Beinchen stabilisiert. Entferne ihn vorsichtig vor dem Anlöten.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-87__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/10_elcap/02_elcap_position.jpg" alt="02 elcap position" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_potentiometer">1.11. Potentiometer</h3>
-<div id="__asciidoctor-preview-88__" class="paragraph">
+<div class="paragraph">
 <p>Dein Bakiwi bekommt vier Drehknöpfe, mit denen du seine Gangart verändern kannst. Diese Bauteile heißen Potentiometer und sind verstellbare Widerstände. Du kennst das vom Lautstärkeknopf bei Lautsprechern oder anderen Geräten.</p>
 </div>
-<div id="__asciidoctor-preview-89__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/11_pots/01_pots_prepare.jpg" alt="01 pots prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/pots.png" alt="pots" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-90__" class="paragraph">
+<div class="paragraph">
 <p>Lege dir die vier blauen Potentiometer (kurz: <em>Potis</em>) mit den zugehörigen Drehknöpfen vor dich hin. Stecke die Drehknöpfe mit dem Pfeil nach oben in die Potis ein (siehe Abbildung).</p>
 </div>
-<div id="__asciidoctor-preview-91__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/11_pots/02_pots_detail.jpg" alt="02 pots detail" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-92__" class="paragraph">
+<div class="paragraph">
 <p>Danach kannst du die zusammengesteckten Teile auf die Positionen <code>LEVEL</code>, <code>SPEED</code>, <code>PHASE</code> und <code>BALANCE</code> verteilen und vorsichtig die Platine wenden. Die Potis sitzen in der Regel schon recht fest und fallen nicht so leicht von allein ab.</p>
 </div>
-<div id="__asciidoctor-preview-93__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/11_pots/03_pots_position.jpg" alt="03 pots position" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/11_pots/04_pots_soldering.jpg" alt="04 pots soldering" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-94__" class="paragraph">
+<div class="paragraph">
 <p>Jetzt kannst du alle vier Potis nach und nach festlöten. Nach dem Löten solltest du auch hier die spitzen Enden etwas kürzen.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_pause">Pause</h3>
-<div id="__asciidoctor-preview-95__" class="paragraph">
+<div class="paragraph">
 <p>Du hast jetzt schon eine ganze Menge Bauteile eingelötet. Falls du bis hierhin durchgearbeitet hast, empfehlen wir dir, eine kurze Pause einzulegen. Sorge für dich, indem du etwas frische Luft schnappst, etwas trinkst oder isst, und vor allem deine Augen entspannst. Das Arbeiten im Nahfeld kann für deine Augen anstrengend sein und etwas Entspannung zwischendurch kann nicht schaden.</p>
 </div>
-<div id="__asciidoctor-preview-96__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/make_a_break.jpg" alt="make a break.jpg" width="100%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_batteriefächer">1.12. Batteriefächer</h3>
-<div id="__asciidoctor-preview-97__" class="paragraph">
+<div class="paragraph">
 <p>Nun kannst du die Platine kurz beiseitelegen und dir die beiden Batteriefächer schnappen. Zu jedem Fach gibt es ein rot-schwarzes Kabel mit weißem Stecker.</p>
 </div>
-<div id="__asciidoctor-preview-98__" class="admonitionblock warning">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">Warning</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-99__" class="paragraph">
+<div class="paragraph">
 <p>Auch wenn es verlockend ist: Bitte jetzt noch keine Batterien einlegen!</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-100__" class="paragraph">
+<div class="paragraph">
 <p>Die Kabel müssen an den Lötlaschen der Fächer festgelötet werden, dazu kannst du die abisolierten Kabelenden in die Löcher einstecken. Es ist einfacher, wenn du die Laschen dazu ganz leicht hochbiegst.
 Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist später die Innenseite wo die Motoren sitzen und du musst vermeiden, dass die Batteriekabel in die Beine deines Bakiwi gelangen.</p>
 </div>
-<div id="__asciidoctor-preview-101__" class="paragraph">
+<div class="paragraph">
 <p>Die korrekte Polarität der Kabel ist hier von größter Wichtigkeit. Hier gilt dasselbe wie für die Batteriebuchsen, bei Verwechslung von Plus und Minus können Teile deines Bakiwi kaputt gehen. Das rote Kabel steht für <em>Plus</em> das schwarze Kabel für <em>Minus</em>. Diese Konvention ist weit verbreitet und es lohnt, sich das zu merken. Die Polarität der Batteriefächer kannst du auf deren Innenseite ablesen.</p>
 </div>
-<div id="__asciidoctor-preview-102__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/12_batholder/01_batholder_prepare.jpg" alt="01 batholder prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/12_batholder/02_batholder_polarity.jpg" alt="02 batholder polarity" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-103__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/12_batholder/03_batholder_insert.jpg" alt="03 batholder insert" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-104__" class="paragraph">
+<div class="paragraph">
 <p>Die einlegten Kabel nun am äußersten Ende der Lasche festlöten. Dabei so effizient und schnell wie möglich löten, damit das Plastik der Batteriefächer nicht schmilzt.</p>
 </div>
-<div id="__asciidoctor-preview-105__" class="admonitionblock caution">
+<div class="admonitionblock caution">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
+<div class="title">Caution</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-106__" class="paragraph">
+<div class="paragraph">
 <p>Das Plastik der Batteriefächer ist recht temperaturempfindlich. Eine Berührung mit dem Lötkolben oder ein zu langes Aufheizen der Lötlaschen lässt das Batteriefach schmelzen und kann es schlimmstenfalls unbrauchbar machen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-107__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/12_batholder/04_batholder_soldering.jpg" alt="04 batholder soldering" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/12_batholder/05_batholder_done.jpg" alt="05 batholder done" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_mikrocontroller">1.13. Mikrocontroller</h3>
-<div id="__asciidoctor-preview-108__" class="paragraph">
+<div class="paragraph">
 <p>Bei dem folgenden Arbeitsschritt wird ausnahmsweise mal nicht gelötet. Du kannst jetzt den <em>Mikrocontroller</em>, einen sogenannten <em>Integrierten Schaltkreis</em> (kurz: Chip) in den Sockel einsetzen. Dazu musst du den Schaltkreis mit seinen 14 Beinchen zunächst etwas vorbereiten. Halte den Chip wie in der Abbildung gezeigt und biege jeweils alle sieben Beine einer Seite ganz vorsichtig etwas weiter nach innen. Nutze dazu z. B. die Tischplatte. Wiederhole den Schritt mit den anderen sieben Beinchen.</p>
 </div>
-<div id="__asciidoctor-preview-109__" class="paragraph">
+<div class="paragraph">
 <p>Anfangs zeigen die Beine etwas nach außen. Im Idealfall zeigen sie nach dem Biegen genau senkrecht vom Chip-Körper in dieselbe Richtung. So lässt sich der Chip leichter in den Sockel einsetzen.</p>
 </div>
-<div id="__asciidoctor-preview-110__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/13_microctrl/01_microctrl_prepare.jpg" alt="01 microctrl prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/13_microctrl/02_microctrl_bending.jpg" alt="02 microctrl bending" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-111__" class="paragraph">
+<div class="paragraph">
 <p>Setze nun den Mikrocontroller in den Sockel, achte darauf, dass alle Beinchen in ihrer Führung sitzen. Wichtig hierbei ist, dass die Kerbe am Chip mit der Kerbe am Sockel in die gleiche Richtung (zum Taster nach vorn) zeigen.</p>
 </div>
-<div id="__asciidoctor-preview-112__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/13_microctrl/03_microctrl_insert.jpg" alt="03 microctrl insert" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/13_microctrl/04_microctrl_done.jpg" alt="04 microctrl done" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_fühler">1.14. Fühler</h3>
-<div id="__asciidoctor-preview-113__" class="paragraph">
+<div class="paragraph">
 <p>Der letzte Lötarbeitsschritt, um deine Bakiwi-Platine zu vervollständigen, ist die Anbringung der Fühler. Deinem Bausatz liegen zwei kurze Stücke Gitarrensaite bei. Diese kannst du als Grundlage für die Fühler deines persönlichen Bakiwis verwenden&#8201;&#8212;&#8201;musst du aber nicht. Du kannst viele verschiedene metallische Materialien verwenden:</p>
 </div>
-<div id="__asciidoctor-preview-114__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-115__">
+<li>
 <p>Kabel mit farbiger Isolierung</p>
 </li>
-<li id="__asciidoctor-preview-116__">
+<li>
 <p>Messingdraht</p>
 </li>
-<li id="__asciidoctor-preview-117__">
+<li>
 <p>Pfeifenputzer</p>
 </li>
-<li id="__asciidoctor-preview-118__">
+<li>
 <p>oder etwas ganz anderes</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-119__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/14_antenna/01_antenna_prepare.jpg" alt="01 antenna prepare" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/antenna.png" alt="antenna" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-120__" class="paragraph">
+<div class="paragraph">
 <p>Die benutzten Fühler werden von Bakiwi automatisch eingelernt. Es kann sein, dass sie anfänglich noch nicht sensibel genug oder gar übersensibel sind. Aber nach ein paar Minuten kann dein Bakiwi seine von dir individuell gestalteten Fühler genau richtig benutzen. Fühle dich also frei in der Gestaltung, alles ist erlaubt solange es:</p>
 </div>
-<div id="__asciidoctor-preview-121__" class="ulist">
+<div class="ulist">
 <ul>
-<li id="__asciidoctor-preview-122__">
+<li>
 <p>an die entsprechenden Flächen angelötet werden kann</p>
 </li>
-<li id="__asciidoctor-preview-123__">
+<li>
 <p>ein leitfähiges Material ist</p>
 </li>
-<li id="__asciidoctor-preview-124__">
+<li>
 <p>und keine leitenden Teile der Platine berührt</p>
 </li>
 </ul>
 </div>
-<div id="__asciidoctor-preview-125__" class="paragraph">
+<div class="paragraph">
 <p><strong>Probier verschiedenes aus!</strong></p>
 </div>
-<div id="__asciidoctor-preview-126__" class="paragraph">
+<div class="paragraph">
 <p>Wenn du keine anderen Materialien verfügbar hast, kannst du auch die beiliegenden Gitarrensaiten frei umgestalten. Mit Puscheln oder flauschigen Enden, oder du kannst Ösen anlöten und etwas drumbinden. Die Saiten sind gut lötbar, biegsam, leitfähig und sind recht robust und knicken nicht so leicht. Hier zwei Beispiele:</p>
 </div>
-<div id="__asciidoctor-preview-127__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/14_antenna/04_antenna_puschel.jpg" alt="04 antenna puschel" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/14_antenna/05_antenna_solder_dots.jpg" alt="05 antenna solder dots" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-128__" class="paragraph">
+<div class="paragraph">
 <p>Zum Anlöten lege die Platine mit den Bauteilen nach oben auf den Tisch und löte die Fühler als erstes einmal <em>oben</em> an der Platine fest und danach auf der Rückseite wie gewohnt. So hast du bessere Kontrolle über deren Ausrichtung.</p>
 </div>
-<div id="__asciidoctor-preview-129__" class="admonitionblock note">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-130__" class="paragraph">
+<div class="paragraph">
 <p>Bedenke, es gibt an dieser Stelle für deinen Lötkolben möglicherweise mehr Metall als üblich aufzuheizen, sodass du hier gegebenenfalls ein paar Sekunden länger die Lötspitze dranhalten musst. Die großen Lötflächen und der dicke Draht nehmen viel Wärme auf und werden heiß, achte auf deine Finger!</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-131__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/14_antenna/02_antenna_solder_top.jpg" alt="02 antenna solder top" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/14_antenna/03_antenna_solder_bot.jpg" alt="03 antenna solder bot" width="49%"></span></p>
 </div>
@@ -1100,69 +715,69 @@ Achte darauf, dass die Kabel von der flachen Seite des Fachs wegzeigen. Das ist 
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_aufräumen">2.1. Aufräumen</h3>
-<div id="__asciidoctor-preview-132__" class="paragraph">
+<div class="paragraph">
 <p><strong>Trommelwirbel&#8230;&#8203;. Ka&#8212;&#8203;tsching.</strong> Geschafft. Die Lötarbeiten sind nun abgeschlossen. Die Lötstation wird jetzt nicht mehr benötigt und du kannst sie abschalten und abkühlen lassen.</p>
 </div>
-<div id="__asciidoctor-preview-133__" class="admonitionblock warning">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">Warning</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-134__" class="paragraph">
+<div class="paragraph">
 <p>Die Lötspitze kann nach dem Abschalten noch ein paar Minuten sehr heiß sein. Lass also die Lötstation noch eine Weile abkühlen, bevor du sie wegräumst.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-135__" class="paragraph">
+<div class="paragraph">
 <p>Zum Abschluss empfehlen wir, die Lötstellen auf der Rückseite noch einmal anzugleichen und zu lange Stiftereste zu kürzen. Das ist wichtig, damit nachher beim mechanischen Zusammenbau keine störenden Spitzen mehr da sind, die sich in die Motor- bzw. Batteriekabel bohren könnten.</p>
 </div>
-<div id="__asciidoctor-preview-136__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/15_cleanup/01_short_pins.jpg" alt="01 short pins" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/15_cleanup/02_recycle_trash.jpg" alt="02 recycle trash" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_abfallentsorgung">2.2. Abfallentsorgung</h3>
-<div id="__asciidoctor-preview-137__" class="paragraph">
+<div class="paragraph">
 <p>Wir haben versucht, den Bausatz so zu gestalten, dass möglichst wenig Müll anfällt. Bitte trenne den Müll. Alle kleinen Metallreste können zum Verpackungsmüll (Gelbe Tonne) und die Papierfetzen zum Altpapier. Die beiliegenden Zipper-Tüten und den Karton kannst du vielleicht ja noch weiter nutzen oder entsorgst sie ebenfalls zum Verpackungsmüll bzw. Altpapier.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_funktionstest">2.3. Funktionstest</h3>
-<div id="__asciidoctor-preview-138__" class="paragraph">
+<div class="paragraph">
 <p>Bevor es gleich mit dem mechanischen Zusammenbau losgehen kann sollten die elektronischen Komponenten getestet werden. Wenn du also ein Multimeter zur Hand hast, kannst du dein Board auf Kurzschlüsse testen.</p>
 </div>
 <div class="sect3">
 <h4 id="_kurzschlusstest">2.3.1. Kurzschlusstest</h4>
-<div id="__asciidoctor-preview-139__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/01_testing_multimeter.jpg" alt="01 testing multimeter" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/16_testing/01_testing_multimeter_detail.jpg" alt="01 testing multimeter detail" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-140__" class="paragraph">
+<div class="paragraph">
 <p>Nimm ein Multimeter zur Hand und schalte es in den Modus Durchgangsprüfung ("Piepser"). Du erkennst das an dem Lautsprecher-Symbol. Halte die beiden Prüfspitzen mit den metallischen Enden gegeneinander und überzeuge dich, dass es einen deutlich hörbaren Piepton gibt. Das akustische Signal zeigt dir einen elektrischen Kontakt ohne nennenswerten Widerstand dazwischen an. Du kannst es dazu nutzen Lötstellen, Kabel und Stecker auf ordnungsgemäßen Kontakt zu prüfen oder auch um ungewollte Kurzschlüsse zu finden.</p>
 </div>
-<div id="__asciidoctor-preview-141__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/02_testing_battery_sockets.jpg" alt="02 testing battery sockets" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/16_testing/03_testing_motor_pins.jpg" alt="03 testing motor pins" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-142__" class="paragraph">
+<div class="paragraph">
 <p>Halte nun die Prüfspitzen an die beiden Stifte der linken Batteriebuchse, hierbei sollte kein Signal ertönen. Wiederhole den Test mit der anderen Buchse. Teste ebenfalls die Stifte der beiden Motoranschlüsse und des 6-poligen Programmieranschlusses, indem du jeweils zwei benachbarte Stifte auf Kurzschluss prüfst. Sollte es hier bei zwei Stiften piepsen, d. h. einen Kontakt geben, musst du dir deine Lötstellen an dieser Stelle noch einmal sehr genau anschauen. Möglicherweise ist etwas Lötzinn zwischen die Lötstellen geraten und verbindet diese. Achte auf genügend Licht bei der Kontrolle und nimm ggf. eine Lupe zur Hilfe.</p>
 </div>
-<div id="__asciidoctor-preview-143__" class="admonitionblock tip">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">Tip</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-144__" class="paragraph">
+<div class="paragraph">
 <p>Sollten zwei Lötstellen aus Versehen mit Lötzinn miteinander verbunden sein, kannst du durch erneutes Aufheizen der Lötstellen versuchen diese voneinander zu trennen. Wenn das Lot dabei klebrig wirkt, so versuche etwas frisches Lötzinn (mit noch nicht verdampften Flussmittel) hinzuzufügen um die Lötstellen wieder gängig zu machen. Der farbige Lack (blau oder lila) auf deiner Platine nimmt Lötzinn nicht an und hilft dir die Lötstellen zu trennen. Wenn beide Lötstellen gemeinsam aufgeheizt werden und durch genügend Flussmittel gut fließen können trennen sie sich leicht voneinander und ziehen sich auf ihre Lötflächen zurück.</p>
 </div>
-<div id="__asciidoctor-preview-145__" class="paragraph">
+<div class="paragraph">
 <p>Eine optische Inspektion kann bereits viele mögliche Fehlerquellen ausschließen. Eine gute Lötstelle sieht immer ein wenig aus wie ein kleiner Vulkan oder Berg. Wenn die Lötstelle eher wie eine Kugel aussieht kann das ein Anzeichen dafür sein, dass zu wenig Lötzinn auf der Lötfläche gelandet ist.
 In diesem Fall ist der Kontakt möglicherweise nicht zuverlässig.</p>
 </div>
@@ -1170,13 +785,13 @@ In diesem Fall ist der Kontakt möglicherweise nicht zuverlässig.</p>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-146__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/04_testing_switch.jpg" alt="04 testing switch" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-147__" class="paragraph">
+<div class="paragraph">
 <p>Teste als Letztes den Pluspol der linken Batteriebuchse gegen den Minuspol der rechten Batteriebuchse. Es sollte hier ebenfalls kein Kontakt zu messen sein. Stelle nun den An-/Aus-Schalter auf <code>ON</code> und messe nocheinmal. Nun sollte es Kontakt geben und piepsen. Stelle danach den Schalter wieder auf <code>OFF</code>.</p>
 </div>
-<div id="__asciidoctor-preview-148__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/05_testing_get_components.jpg" alt="05 testing get components" width="49%"></span></p>
 </div>
 </div>
@@ -1185,54 +800,54 @@ In diesem Fall ist der Kontakt möglicherweise nicht zuverlässig.</p>
 <div id="connect_motors" class="paragraph">
 <p>Verbinde nun die Motoren. Achte darauf, dass die braunen (bzw. schwarzen) Adern des 3-adrigen Motorkabels mit dem Stift verbunden ist, der auf der Platine mit dem Ground-Symbol (siehe Abbildung) bezeichnet ist.</p>
 </div>
-<div id="__asciidoctor-preview-149__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/06_testing_connect_motors.jpg" alt="06 testing connect motors" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/symbols/gnd.png" alt="gnd" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-150__" class="paragraph">
+<div class="paragraph">
 <p>Lege nun die Batterien ein. Hierbei ist es sehr wichtig, die im Innern des Batteriefachs angezeigte Polarität (+/-) zu beachten. Auf deinen Batterien oder Akkus sind ebenfalls die Symbole Plus und Minus zu erkennen (manchmal nur das Plus). Verbinde nun die Batteriestecker mit den Buchsen auf der Platine, dabei ist es egal, welches Fach du an welchen Stecker anschließt.</p>
 </div>
-<div id="__asciidoctor-preview-151__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/01_electronics/16_testing/07_testing_insert_batteries.jpg" alt="07 testing insert batteries" width="49%"></span>
 <span class="image"><img src="./img/01_electronics/16_testing/08_testing_connect_batteries.jpg" alt="08 testing connect batteries" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-152__" class="admonitionblock warning">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">Warning</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-153__" class="paragraph">
+<div class="paragraph">
 <p><strong>Aufgepasst!</strong> Sollten nach dem Anschließen der Fächer die Batterien warm oder gar heiß werden, musst du die Stecker sofort wieder von der Platine trennen. Das Aufheizen der Batterien deutet sehr wahrscheinlich auf einen Kurzschluss hin und du musst noch einmal die elektrische Durchgangsprüfung wiederholen und deine Lötstellen genau inspizieren, um den Kurzschluss zu finden.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-154__" class="paragraph">
+<div class="paragraph">
 <p>Stelle nun den An-/Aus-Schalter auf <code>ON</code> und wenn alles richtig zusammengebaut ist, solltest du nun bereits die Leuchtdioden blinken sehen. Wenn alle Drehknöpfe mit den Pfeilen nach oben zeigen, sollten die Leuchtdioden im Gleichtakt blinken.</p>
 </div>
-<div id="__asciidoctor-preview-155__" class="paragraph">
+<div class="paragraph">
 <p>Wenn die Leuchtdioden funktionieren, dann betätige nun den Taster und gleich darauf sollten beide Motoren beginnen Geräusche zumachen und die Schäfte zu drehen (die Runden gezahnten Metallenden).</p>
 </div>
-<div id="__asciidoctor-preview-156__" class="paragraph">
+<div class="paragraph">
 <p>Berühre die Fühler mit deinen Händen und sofort sollten die Geräusche der Motoren sich verändern, langsamer werden oder gar stoppen. Beim Loslassen der Fühler sollten die Motoren wieder ihr ursprüngliches Verhalten aufnehmen. Schalte den Bakiwi nun wieder aus.</p>
 </div>
-<div id="__asciidoctor-preview-157__" class="paragraph">
+<div class="paragraph">
 <p>Wenn bis hierhin alles wie erwartet funktioniert, kannst du jetzt zum nächsten Kapitel übergehen, dem <a href="#assembly">mechanischen Zusammenbau</a>.</p>
 </div>
-<div id="__asciidoctor-preview-158__" class="paragraph">
+<div class="paragraph">
 <p>Sollte ein Motor sich drehen, der andere aber nicht, stelle sicher, dass alle Drehknöpfe nach oben zeigen und dass die Motorkabel angeschlossen sind wie in Abschnitt <a href="#connect_motors">Motoren verbinden</a> beschrieben steht.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_was_tun_wenn_etwas_kaputt_gegangen_ist">2.4. Was tun, wenn etwas kaputt gegangen ist?</h3>
-<div id="__asciidoctor-preview-159__" class="paragraph">
+<div class="paragraph">
 <p>Wenn dir während des Lötens oder beim Zusammenbau ein Bauteil kaputt oder verloren gegangen sein sollte: Keine Panik! Wir senden dir gerne ein neues zu. Schicke uns dazu einen Brief mit dem kaputten Teil und dazu einen an dich adressierten Rücksende-Umschlag und wir sorgen sofort für Ersatz. Wir freuen uns, wenn du dir die Zeit nimmst und uns kurz beschreibst wie das Bauteil kaputt gegangen ist, sodass wir unseren Bakiwi-Bausatz mit deiner Hilfe verbessern können.</p>
 </div>
-<div id="__asciidoctor-preview-160__" class="paragraph">
+<div class="paragraph">
 <p>Wenn ein Problem besteht, du aber nicht ganz sicher bist, was die Ursache ist, kannst du uns auch Fotos von der Platine senden (z. B. von Ober- und Unterseite) und wir werden versuchen zu helfen, die Fehlerquelle zu identifizieren.</p>
 </div>
 </div>
@@ -1243,119 +858,119 @@ In diesem Fall ist der Kontakt möglicherweise nicht zuverlässig.</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="assembly">3.1. Vorbereitung</h3>
-<div id="__asciidoctor-preview-161__" class="paragraph">
+<div class="paragraph">
 <p>Hole die abgebildeten mechanischen Bauteile aus der Packung und lege sie vor dir ab. Die Bakiwi-Platine und die Batteriefächer hast du bereits in vorausgehenden Arbeitsschritten vorbereitet.</p>
 </div>
-<div id="__asciidoctor-preview-162__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/00_preparation/01_assembly_get_parts_annotated_DE.jpg" alt="01 assembly get parts annotated DE" width="98%"></span></p>
 </div>
-<div id="__asciidoctor-preview-163__" class="paragraph">
+<div class="paragraph">
 <p>Für den Zusammenbau benötigst du weitere Werkzeuge: einen kleinen Kreuz-Schraubendreher und einen Innensechskant-Schraubendreher (2,5 mm). Wenn vorhanden, ist eine Pinzette evtl. nützlich und vereinfacht den Zusammenbau, ist aber nicht zwingend erforderlich. Weiterhin wird noch einmal der Seitenschneider benötigt.</p>
 </div>
-<div id="__asciidoctor-preview-164__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/00_preparation/02_assembly_get_tools.jpg" alt="02 assembly get tools" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_motoren_einbauen">3.2. Motoren einbauen</h3>
-<div id="__asciidoctor-preview-165__" class="paragraph">
+<div class="paragraph">
 <p>Wir beginnen den Zusammenbau mit den Motoren. Nimm dir dazu einen der Motoren und einen Motorhalter sowie zwei der vier Kreuzschrauben (du erkennst sie daran, dass es die einzigen sind die Spitzen haben). Lege das Motorkabel wie abgebildet einige Male in Falten und drücke es sachte zusammen, sodass es sich beim Einbauen leichter in dieselben Falten legt.</p>
 </div>
-<div id="__asciidoctor-preview-166__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/01_motors/04_assembly_get_motor_holder.jpg" alt="04 assembly get motor holder" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/01_motors/03_assembly_fold_cable.jpg" alt="03 assembly fold cable" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-167__" class="paragraph">
+<div class="paragraph">
 <p>Fädele das Motorkabel durch die große Öffnung in den Halter und durch die kleine seitliche Öffnung wieder aus dem Halter heraus. Setze nun den Motor in den Halter, wobei es wichtig ist, dass sich ein Teil des Kabels gefaltet im Halter befindet, damit insgesamt weniger vom Kabel heraussteht. Der Schaft des Motors sollte von der kleinen Öffnung wegzeigen (vergleiche dein Ergebnis mit der Abbildung).</p>
 </div>
-<div id="__asciidoctor-preview-168__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/01_motors/05_assembly_insert_cable.jpg" alt="05 assembly insert cable" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/01_motors/06_assembly_motor_screws.jpg" alt="06 assembly motor screws" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-169__" class="paragraph">
+<div class="paragraph">
 <p>Setze nun nacheinander die Schrauben an und ziehe sie hinreichend fest. Wenn alles gut sitzt, wiederhole die Schritte mit dem zweiten Motor.</p>
 </div>
-<div id="__asciidoctor-preview-170__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/01_motors/07_assembly_motors_cable_detail.jpg" alt="07 assembly motors cable detail" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/01_motors/08_assembly_motors_prepared.jpg" alt="08 assembly motors prepared" width="49%"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_rahmen_zusammensetzen">3.3. Rahmen zusammensetzen</h3>
-<div id="__asciidoctor-preview-171__" class="paragraph">
+<div class="paragraph">
 <p>Als Nächstes füge den Rahmen zusammen. Lege dazu die Grundplatte des Rahmens vor dir ab und setze die v-förmige Klemmenmutter zwischen die beiden mittigen Lochstege. Setze die Arretierschraube ein und ziehe sie zwei Umdrehungen an.</p>
 </div>
-<div id="__asciidoctor-preview-172__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/09_assembly_frame_start.jpg" alt="09 assembly frame start" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/02_frame/10_assembly_frame_insert_stamp_bolt.jpg" alt="10 assembly frame insert stamp bolt" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-173__" class="paragraph">
+<div class="paragraph">
 <p>Lege die beiden Motorhalter mit ihren Achsenden auf die Löcher in der Grundplatte. Achte darauf, dass die Öffnungen und die herausragenden Kabel nach oben wegzeigen. Lege nun den Deckel des Rahmens auf und halte alles mit deinen Fingern zusammen. Wenn du die Arretierschraube sachte noch etwas weiter hinein drehst, hält der Rahmen besser zusammen.</p>
 </div>
-<div id="__asciidoctor-preview-174__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/11_assembly_frame_insert_parts.jpg" alt="11 assembly frame insert parts" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/02_frame/12_assembly_frame_close_lid.jpg" alt="12 assembly frame close lid" width="49%"></span></p>
 </div>
 <div class="sect3">
 <h4 id="_kabel_einfädeln_und_verstauen">3.3.1. Kabel einfädeln und verstauen</h4>
-<div id="__asciidoctor-preview-175__" class="paragraph">
+<div class="paragraph">
 <p>Halte den Rahmen so, dass ein Motor nach links der andere nach rechts zeigt und die Kabel nach oben herausragen. Fädele nun das von dir aus linksseitige Motorkabel durch das von dir wegzeigende hintere Loch. Das rechtsseitige Motorkabel gehört durch das zu dir hinzeigende Loch.</p>
 </div>
-<div id="__asciidoctor-preview-176__" class="paragraph">
+<div class="paragraph">
 <p>Verstaue die beiden Motorkabel im Rahmen über der Klemmenmutter, sodass in etwa noch 4 cm Kabel aus dem Rahmen ragen.</p>
 </div>
-<div id="__asciidoctor-preview-177__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/13_assembly_frame_thread_cables.jpg" alt="13 assembly frame thread cables" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/02_frame/14_assembly_frame_stow_cables.jpg" alt="14 assembly frame stow cables" width="49%"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_platine_festschrauben">3.3.2. Platine festschrauben</h4>
-<div id="__asciidoctor-preview-178__" class="paragraph">
+<div class="paragraph">
 <p>Nun benötigst du die zwei Zylinderkopfschrauben (M3x10mm) und den Innensechskant-Schraubendreher. Setze nacheinander die Schrauben oben in die Löcher der Bakiwi-Platine ein und schraube diese am Rahmen fest.</p>
 </div>
-<div id="__asciidoctor-preview-179__" class="admonitionblock tip">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">Tip</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-180__" class="paragraph">
+<div class="paragraph">
 <p>Mit etwas Glück lassen sich die Schrauben auf den Innensechskant-Schraubendreher aufstecken und halten dort gut durch Reibung fest, manche Werkzeuge sind auch magnetisch. Damit lassen sich die Schrauben meist leichter in die Löcher der Platine einsetzen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-181__" class="admonitionblock note">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-182__" class="paragraph">
+<div class="paragraph">
 <p>Achtung, beim ersten Einschrauben schneiden sich die Schrauben ihr eigenes Gewinde in die Löcher der Rahmengrundplatte. Solltest du die Schrauben später noch einmal lösen und wieder einsetzen wollen, versuche das Gewinde zu ertasten, indem du die Schraube vor dem festziehen leicht linksherum drehst, bis sie ins ursprüngliche Gewinde findet.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-183__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/02_frame/15_assembly_frame_tighten_screws.jpg" alt="15 assembly frame tighten screws" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-184__" class="paragraph">
+<div class="paragraph">
 <p>Der Rahmen hält nun von selbst zusammen, ziehe die Arretierschraube vorsichtig mit den Fingern etwas fester und teste wie sich die Motorhalter nun in bestimmten Rastpositionen feststellen lassen.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_motorkabel_verbinden">3.4. Motorkabel verbinden</h3>
-<div id="__asciidoctor-preview-185__" class="paragraph">
+<div class="paragraph">
 <p>Nun werden die Motoren verkabelt. Diesen Schritt hatten wir bereits beim Testen, stelle erneut sicher, dass die braunen (bzw. schwarzen) Adern der Motorkabel auf das Ground-Symbol zeigen (vgl. mit Abschnitt <a href="#connect_motors">Motoren verbinden</a>). Verstaue die beiden Motorkabel möglichst weit im Rahmen, sodass sie gut anliegen und keine großen Schlaufen bilden.</p>
 </div>
-<div id="__asciidoctor-preview-186__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/03_cabling/16_assembly_connect_cables.jpg" alt="16 assembly connect cables" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/03_cabling/17_assembly_connect_cables_side.jpg" alt="17 assembly connect cables side" width="49%"></span></p>
 </div>
@@ -1364,86 +979,86 @@ In diesem Fall ist der Kontakt möglicherweise nicht zuverlässig.</p>
 <h3 id="_batteriehalter_anbringen">3.5. Batteriehalter anbringen</h3>
 <div class="sect3">
 <h4 id="_vorbereiten">3.5.1. Vorbereiten</h4>
-<div id="__asciidoctor-preview-187__" class="paragraph">
+<div class="paragraph">
 <p>Bereite nun das Anbringen der Batteriehalter vor. Du benötigst die vier M3x4mm Zylinderkopfschrauben, den Innensechskant-Schraubendreher und den Seitenschneider.</p>
 </div>
-<div id="__asciidoctor-preview-188__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/18_assembly_get_battery_holders.jpg" alt="18 assembly get battery holders" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-189__" class="paragraph">
+<div class="paragraph">
 <p>Entferne zunächst die beiden Distanzstege in beiden Batteriefächern, indem du sie ganz knapp über der Fläche abtrennst. Schraube nun die Batteriefächer seitlich an den Rahmen an. Jetzt ist genügend Platz für die Schraubenköpfe.</p>
 </div>
-<div id="__asciidoctor-preview-190__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/19_assembly_remove_separator.jpg" alt="19 assembly remove separator" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/04_batholder/20_assembly_separator_removed.jpg" alt="20 assembly separator removed" width="49%"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_festschrauben">3.5.2. Festschrauben</h4>
-<div id="__asciidoctor-preview-191__" class="paragraph">
+<div class="paragraph">
 <p>Die Batteriefächer sollten so angebracht werden, dass die Kabel an der Seite mit den Fühlern sind. Jeder Halter wird mit zwei Schrauben am Rahmen fixiert. Auch hier Schneiden sich die Schrauben beim ersten Mal einsetzen ihr Gewinde in die Löcher im Rahmen.</p>
 </div>
-<div id="__asciidoctor-preview-192__" class="admonitionblock caution">
+<div class="admonitionblock caution">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
+<div class="title">Caution</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-193__" class="paragraph">
+<div class="paragraph">
 <p>Warnung! Nach fest kommt locker! Achte darauf, die Schrauben nicht zu fest anzuziehen.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="__asciidoctor-preview-194__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/21_assembly_battery_screws.jpg" alt="21 assembly battery screws" width="49%"></span></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_batteriekabel_verlegen">3.5.3. Batteriekabel verlegen</h4>
-<div id="__asciidoctor-preview-195__" class="paragraph">
+<div class="paragraph">
 <p>Verlege die Batteriekabel hinter den Motorkabeln entlang der Platine bis nach hinten und stecke sie dort in die Buchsen ein. Schiebe das Kabel ggf. vorsichtig etwas unter die Platine.</p>
 </div>
-<div id="__asciidoctor-preview-196__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/22_assembly_thread_battery_cable.jpg" alt="22 assembly thread battery cable" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/04_batholder/23_assembly_thread_battery_cable_done.jpg" alt="23 assembly thread battery cable done" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-197__" class="paragraph">
+<div class="paragraph">
 <p><strong>Hurra!</strong> Der Körper deines Bakiwi ist nun fertig. Vergleiche noch mal mit der Abbildung die Ausrichtung der Stecker auf deiner Platine und ob alle Kabel möglichst dicht am Bakiwi-Körper anliegen.</p>
 </div>
-<div id="__asciidoctor-preview-198__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/04_batholder/24_assembly_cabling_finished.jpg" alt="24 assembly cabling finished" width="98%"></span></p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_beine_anbringen">3.6. Beine anbringen</h3>
-<div id="__asciidoctor-preview-199__" class="paragraph">
+<div class="paragraph">
 <p>Lege zunächst die Batterien wieder ein und schalte dein Bakiwi ein. Drücke zweimal nacheinander im Abstand von ca. einer Sekunde den <code>PAUSE</code>-Knopf, sodass dein Bakiwi seine Motoren in die Ausgangsposition fährt und dann wieder in den Pausemodus geht.</p>
 </div>
-<div id="__asciidoctor-preview-200__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/05_legs/25_assembly_leg_adapter.jpg" alt="25 assembly leg adapter" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/05_legs/26_assembly_insert_batteries.jpg" alt="26 assembly insert batteries" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-201__" class="paragraph">
+<div class="paragraph">
 <p>Nun setze die abgebildeten Bein-Anschlüsse auf die gezahnten Enden der Motorschäfte und schraube sie mit den beiliegenden Kreuzschrauben fest. Es sind die letzten zwei Schrauben, die übrig sind.</p>
 </div>
-<div id="__asciidoctor-preview-202__" class="paragraph">
+<div class="paragraph">
 <p>Die beiliegenden 3D-gedruckten Bein-Anschlüsse sind nur eine von unzähligen Möglichkeiten wie du deinem Bakiwi Beine geben kannst. In deinem Bausatz liegen mitunter noch weitere Teile, die auf die Schäfte der Motoren passen (sogenannte Ruderhörner).</p>
 </div>
-<div id="__asciidoctor-preview-203__" class="paragraph">
+<div class="paragraph">
 <p><strong>Probiere dich aus!</strong> Mit den beiliegenden restlichen Ruderhönern kannst du verschiedene Beinpaare aus unterschiedlichen Bastelmaterialien herstellen immer wieder wechseln.</p>
 </div>
-<div id="__asciidoctor-preview-204__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/05_legs/27_assembly_motor_inner_thread.jpg" alt="27 assembly motor inner thread" width="49%"></span>
 <span class="image"><img src="./img/02_mechanics/05_legs/28_assembly_leg_adapter_screws.jpg" alt="28 assembly leg adapter screws" width="49%"></span></p>
 </div>
-<div id="__asciidoctor-preview-205__" class="paragraph">
+<div class="paragraph">
 <p><strong>Erledigt!</strong> Je nachdem welchen Bakiwi-Bausatz du hast, liegen unter Umständen noch kleine Lego-Teile bei, welche die ersten Füße deines Bakiwi sein können. Vielleicht besitzt du auch bereits Lego-Technic-Teile. Diese kannst du verwenden, um sehr schnell Beine und Füße für dein Bakiwi zu entwerfen.</p>
 </div>
-<div id="__asciidoctor-preview-206__" class="paragraph">
+<div class="paragraph">
 <p><span class="image"><img src="./img/02_mechanics/05_legs/29_assembly_done.jpg" alt="29 assembly done" width="98%"></span></p>
 </div>
 </div>
@@ -1454,41 +1069,41 @@ In diesem Fall ist der Kontakt möglicherweise nicht zuverlässig.</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_vor_dem_einschalten">4.1. Vor dem Einschalten</h3>
-<div id="__asciidoctor-preview-207__" class="paragraph">
+<div class="paragraph">
 <p><strong>Wichtig:</strong> Vor dem ersten Einschalten (mit Beinen dran) schau dir die Bezeichnungen der vier grauen Regler (Potentiometer) genauer an.</p>
 </div>
-<div id="__asciidoctor-preview-208__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-209__">
+<li>
 <p>Stelle den <code>BALANCE</code> und <code>PHASE</code>-Regler auf Mittelposition (Pfeil nach oben).</p>
 </li>
-<li id="__asciidoctor-preview-210__">
+<li>
 <p>Stelle den Geschwindigkeitsregler (<code>SPEED</code>) auf halb links (in Richtung der langen Welle).</p>
 </li>
-<li id="__asciidoctor-preview-211__">
+<li>
 <p>Stelle den <code>LEVEL</code>-Regler auf halb links (in Richtung der kleinen Welle).</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-212__" class="paragraph">
+<div class="paragraph">
 <p>Schalte nun dein Bakiwi ein.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_die_funktionsweise_erklärt">4.2. Die Funktionsweise erklärt</h3>
-<div id="__asciidoctor-preview-213__" class="imageblock right">
+<div class="imageblock right">
 <div class="content">
 <img src="./img/04_usage/05_osc.png" alt="OSC" width="200">
 </div>
 </div>
-<div id="__asciidoctor-preview-214__" class="paragraph">
+<div class="paragraph">
 <p>Im Programmspeicher deines Bakiwi-Mikrocontrollers sind zwei Neuronen, welche so verschaltet sind, dass sie schwingen. Sie bilden zusammen einen sogenannten Oszillator und dieser ist der Taktgeber für die Bewegung der Beine.
 Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorneuronen. Im Pause-Modus sind die Neuronen und somit der Oszillator bereits aktiv und schwingen, die Motoren sind aber inhibiert (gehemmt). Das heißt, du kannst durch das Verstellen der vier Regler das Bewegungsmuster jederzeit verändern, ob pausiert oder nicht.</p>
 </div>
-<div id="__asciidoctor-preview-215__" class="paragraph">
+<div class="paragraph">
 <p>Wir haben ein Video aufgezeichnet, um die Funktionsweise besser zu illustrieren:</p>
 </div>
-<div id="__asciidoctor-preview-216__" class="videoblock">
+<div class="videoblock">
 <div class="content">
 <iframe width="640" height="360" src="https://www.youtube.com/embed/rAteGra5-xM?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -1496,33 +1111,33 @@ Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorn
 </div>
 <div class="sect2">
 <h3 id="_laufparameter">4.3. Laufparameter</h3>
-<div id="__asciidoctor-preview-217__" class="paragraph">
+<div class="paragraph">
 <p>Die Art, wie dein Bakiwi läuft, wird durch mehrere Faktoren beeinflusst. Maßgeblich für eine erfolgreiche Fortbewegung sind die Beine, die du deinem Bakiwi erschaffst. Hast du dir neue Beine für dein Bakiwi ausgedacht, so kannst du mit der Veränderung der folgenden Parameter (Stellschrauben) deinem Bakiwi mit seinen neuen Beinen das Laufen beibringen:</p>
 </div>
 <div class="sect3">
 <h4 id="_anstellwinkel">4.3.1. Anstellwinkel</h4>
-<div id="__asciidoctor-preview-218__" class="paragraph">
+<div class="paragraph">
 <p>Die Anstellwinkel sind rein mechanische Parameter. Du kannst durch Lösen der großen Arretierschraube die Motorhalter beweglich machen und dann ihre Winkel zum Körper und zueinander verändern. <strong>Probiere Verschiedenes aus!</strong> Ziehe die Schraube dann wieder nur soweit fest, bis die Motorhalter in der gewünschten Position fest genug halten.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_geschwindigkeitfrequenz">4.3.2. Geschwindigkeit/Frequenz</h4>
-<div id="__asciidoctor-preview-219__" class="imageblock right">
+<div class="imageblock right">
 <div class="content">
 <img src="./img/04_usage/01_speed.png" alt="SPEED" width="200">
 </div>
 </div>
-<div id="__asciidoctor-preview-220__" class="paragraph">
+<div class="paragraph">
 <p>Bewege den <code>SPEED</code>-Knopf und beobachte, wie sich die Geschwindigkeit des Blinkens der LEDs verändert. Verlasse den Pause-Modus durch Drücken des Tasters und beobachte an den Motoren wie sich die Geschwindigkeit der Schwingung (d. h. die Frequenz der Oszillation) der Motorneurone unmittelbar auf die Motoren auswirkt. Die Frequenz regelt die Schrittgeschwindigkeit deines Bakiwi.</p>
 </div>
-<div id="__asciidoctor-preview-221__" class="admonitionblock tip">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">Tip</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-222__" class="paragraph">
+<div class="paragraph">
 <p>Wir empfehlen zunächst mit einer langsamen Bewegung zu beginnen. Es hilft dir dabei die Bewegung deiner selbst-gebauten Beine gut beobachten zu können und damit ein gutes Verständnis über die Auswirkungen der Beinbewegung zu bekommen.</p>
 </div>
 </td>
@@ -1532,79 +1147,79 @@ Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorn
 </div>
 <div class="sect3">
 <h4 id="_levelamplitude">4.3.3. Level/Amplitude</h4>
-<div id="__asciidoctor-preview-223__" class="imageblock right">
+<div class="imageblock right">
 <div class="content">
 <img src="./img/04_usage/04_level.png" alt="LEVEL" width="200">
 </div>
 </div>
-<div id="__asciidoctor-preview-224__" class="paragraph">
+<div class="paragraph">
 <p>Drehe am <code>LEVEL</code>-Knopf und beobachte, wie sich die Helligkeit der LEDs verändert und die Weite mit der die Motoren bei jeder Bewegung ausschlagen. Diese Schwingungsweite wird Amplitude genannt und regelt die Schrittweite der Laufbewegung.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_balance">4.3.4. Balance</h4>
-<div id="__asciidoctor-preview-225__" class="imageblock right">
+<div class="imageblock right">
 <div class="content">
 <img src="./img/04_usage/03_balance.png" alt="BALANCE" width="200">
 </div>
 </div>
-<div id="__asciidoctor-preview-226__" class="paragraph">
+<div class="paragraph">
 <p>Drehe am <code>BALANCE</code>-Regler und beobachte wie sich die vorher eingestellte Amplitude auf die beiden Motoren verteilt. Steht der Regler in der Mittelposition, sind beide Motoramplituden gleich. Ein Drehen nach links, senkt die Amplitude des vorderen Motors, eine Drehung nach rechts dämpft die Bewegung des hinteren Motors.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_phase">4.3.5. Phase</h4>
-<div id="__asciidoctor-preview-227__" class="imageblock right">
+<div class="imageblock right">
 <div class="content">
 <img src="./img/04_usage/02_phase.png" alt="PHASE" width="200">
 </div>
 </div>
-<div id="__asciidoctor-preview-228__" class="paragraph">
+<div class="paragraph">
 <p>Der letzte Parameter, die sogenannte Phase (bzw. der Phasenwinkel) ist wahrlich die besondere Würze und regelt die Laufrichtung. Ein <code>PHASE</code>-Regler auf Mitte erzeugt eine synchrone aber gegenläufige Bewegung der Motoren. Drehst du den Phasenwinkel etwas aus der Mitte heraus, bewegen sich die Motoren nicht mehr synchron, was entscheidend für das Laufen ist. Ein bis auf Maximum (oder Minimum) gestellter Phasenwinkel erzeugt erneut eine synchrone aber diesmal mitläufige Bewegung. Die Phase ist der wichtigste Parameter für eine erfolgreiche Laufbewegung und benötigt deine besondere Aufmerksamkeit. Mit Ihr entscheidet sich, ob sich dein Bakiwi überhaupt von der Stelle bewegt und wenn ja in welche Richtung.</p>
 </div>
-<div id="__asciidoctor-preview-229__" class="paragraph">
+<div class="paragraph">
 <p>Jetzt aber genug gelesen&#8230;&#8203;</p>
 </div>
-<div id="__asciidoctor-preview-230__" class="paragraph">
+<div class="paragraph">
 <p><strong>Ran ans Werk!</strong> :)</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_zentrierung">4.4. Zentrierung</h3>
-<div id="__asciidoctor-preview-231__" class="paragraph">
+<div class="paragraph">
 <p>Wenn du dein Bakiwi zusammengebaut hast, solltest Du seine Beine ggf. zunächst zentrieren. Die Motoren mit den aufgesteckten Bein-Anschlüssen sind herstellungsbedingt nie perfekt gerade. Diesen Versatz kann dein Bakiwi korrigieren und es sich merken.</p>
 </div>
-<div id="__asciidoctor-preview-232__" class="paragraph">
+<div class="paragraph">
 <p>Schalte dazu dein Bakiwi zunächst aus.</p>
 </div>
-<div id="__asciidoctor-preview-233__" class="olist arabic">
+<div class="olist arabic">
 <ol class="arabic">
-<li id="__asciidoctor-preview-234__">
+<li>
 <p>Halte den Pause-Taster gedrückt und schalte dein Bakiwi bei gehaltenem Taster wieder ein. Die LEDs sollten jetzt schnell flackern.</p>
 </li>
-<li id="__asciidoctor-preview-235__">
+<li>
 <p>Lasse den Taster los und nun sollte nur noch die linke LED flackern und der vordere Motor kurz anfahren. Wenn du nun den <code>PHASE</code>-Drehknopf betätigst, kannst du den vorderen Motor in die gewünschte Ausgangsposition stellen. Justiere dabei solange, bis der Beinanschluss gerade ist.</p>
 </li>
-<li id="__asciidoctor-preview-236__">
+<li>
 <p>Betätige den Taster erneut um zum Bestätigen. Nun flackert die rechte LED und du kannst den Prozess für den hinteren Motor durchführen.</p>
 </li>
-<li id="__asciidoctor-preview-237__">
+<li>
 <p>Ist auch der hintere Motor richtig gerade eingestellt, bestätige erneut durch Drücken des Tasters und der Zentrierungsprozess ist damit abgeschlossen.</p>
 </li>
 </ol>
 </div>
-<div id="__asciidoctor-preview-238__" class="admonitionblock tip">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">Tip</div>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-239__" class="paragraph">
+<div class="paragraph">
 <p>Wenn du deinem Bakiwi neue Beine baust und dabei die Beine, ob gewollt oder ungewollt, nicht gleich werden kannst du die Zentrierung ebenfalls benutzen, um Unsymmertrie auszugleichen.</p>
 </div>
-<div id="__asciidoctor-preview-240__" class="paragraph">
+<div class="paragraph">
 <p>Du kannst es aber auch gezielt verwenden, um dein Bakiwi immer eine Kurve laufen zu lassen.</p>
 </div>
 </td>
@@ -1614,13 +1229,13 @@ Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorn
 </div>
 <div class="sect2">
 <h3 id="_der_schaltplan">4.5. Der Schaltplan</h3>
-<div id="__asciidoctor-preview-241__" class="paragraph">
+<div class="paragraph">
 <p>Im Folgenden siehst du den elektrischen Schaltplan deines Bakiwi. Findest du selbst heraus, welche Symbole zu welchen von dir gelöteten Teilen gehören? Einen Schaltplan zu <em>lesen</em> erfordert etwas Übung, aber nachdem du jetzt alle Teile selbst zusammengelötet hast, kannst du hier nachvollziehen, welches Bauteil mit welchem verkabelt ist. Die <em>Kabel</em> auf einer Platine heißen Leiterbahnen und bestehen aus einer dünnen Lage Kupfer. Wenn du die Platine deines Bakiwi anschaust und leicht gegen das Licht hältst, kannst du sie unter der Lackschicht ausmachen. Manche Leiterbahnen wechseln die Seite der Platine durch kleine Löcher, sogenannte <em>Vias</em>. Manche Leiterbahnen sind auch ganze Flächen, und so ist beispielsweise die gesamte untere Kupferfläche der Platine der Minuspol.</p>
 </div>
-<div id="__asciidoctor-preview-242__" class="paragraph">
+<div class="paragraph">
 <p>Ein Schaltplan hilft auch bei der Fehlersuche. Verhält sich die Elektronik merkwürdig, sind ein Multimeter und ein Schaltplan die wichtigsten Hilfsmittel beim Finden der Ursache. Im Schaltplan sind auch die Bauteile genau bezeichnet. Du findest dort beispielsweise, Widerstandswert, welche Kapazität die Kondensatoren haben, in welche Richtung die Dioden geschaltet sind oder wie die Bezeichnung des Spannungswandlers ist. Mit der Hilfe eines Schaltplans kann ein elektrisches Gerät, wie auch dein Bakiwi, immer wieder repariert werden.</p>
 </div>
-<div id="__asciidoctor-preview-243__" class="imageblock">
+<div class="imageblock">
 <div class="content">
 <img src="./img/bakiwi_kit_rev1_1_schematics.png" alt="bakiwi kit rev1 1 schematics">
 </div>
@@ -1631,19 +1246,24 @@ Die beiden Leuchtdioden deines Bakiwi signalisieren die Aktivität dieser Motorn
 <div class="sect1">
 <h2 id="_hast_du_noch_fragen">Hast du noch Fragen?</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-244__" class="paragraph">
+<div class="paragraph">
 <p>Du hast noch Fragen oder wünscht dir weitere Erklärungen? Du hast Anregungen oder Feedback für uns?
 <a href="https://jetpack.cl/bakiwi">Schreib uns!</a></p>
 </div>
-<div id="__asciidoctor-preview-245__" class="paragraph">
+<div class="paragraph">
 <p>Du kannst uns auch auf Twitter folgen, dann versorgen wir dich mit Neuigkeiten zu <strong>#bakiwi</strong>. Wir sind  <a href="https://twitter.com/labjetpack">@LabJetpack</a>.</p>
 </div>
-<div id="__asciidoctor-preview-246__" class="paragraph">
+<div class="paragraph">
 <p>Ansonsten wünschen wir dir viel Spaß mit deinem neuen Bakiwi. Lass es krabbeln!</p>
 </div>
 </div>
 </div>
-        </div>
-      </div>
-    </body>
-  </html>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 0.21<br>
+Last updated 2020-12-15 00:36:17 +0100
+</div>
+</div>
+</body>
+</html>
