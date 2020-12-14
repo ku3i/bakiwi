@@ -17,11 +17,13 @@ Bakiwis combine education and fun and are therefore perfect for teaching robotic
 
 For information on ongoing developments, you might want to follow the project on its link:https://hackaday.io/project/169268-bakiwi-robot[hackaday.io page] or follow me on link:https://twitter.com/qbernetik[twitter/@qbernetik]
 
-If you want to *buy a Bakiwi Kit*, please visit our store: link:https://bakiwi.shop[]
-
 == Assembly Manual
 
-Here you can find the link:https://github.com/ku3i/Bakiwi/tree/master/manual[Bakiwi Assembly Manual]
+Here you can find the link:https://github.com/ku3i/Bakiwi/tree/master/manual[Bakiwi Assembly Manuals] in English and German language.
+
+== Get a Bakiwi
+
+We at Jetpack Cognition Lab develop, manufacture, and distribute Bakiwi Robots in our home base in Berlin/Germany. All electronic parts are RoHS compliant and the 3D-printed parts are made from PLA which is plant-based and is industrially compostable. The production of the kits takes place in Berlin-Friedrichshain and under fair conditions. If you want to *buy a Bakiwi Kit*, please visit our store: link:https://bakiwi.shop[] or consider supporting our link:https://www.kickstarter.com/projects/bakiwi/bakiwi-invent-a-robot-friend[kickstarter campaign]. 
 
 == Videos
 
