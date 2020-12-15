@@ -26,8 +26,6 @@ image::./bakiwi_logo_3-1_dynamic_DE.png[]
 TODO 💡
 	+ F.A.Q. / Troubleshooting
 	+ find nice soldering tutorial
-	+ add link to different languages
-	+ wo ist platz für eine Lötpause
 	+ describe schematics, boardlayout
 	+ add to each part an explanation, schematics vs. pcb, vs symbol
 ////

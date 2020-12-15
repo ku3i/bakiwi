@@ -1,0 +1,90 @@
+=  Bakiwi Mode Schittanleitung
+Doc Writer Karen Ellenmeyer //<kubisch@informatik.hu-berlin.de>
+v0.1, 2020-12-16
+:toc:
+:toc-placement!:
+:toc-title: Tapferes-Schneiderlein-Verzeichnis
+:imagesdir: ./img/
+:favicon: ../bakiwi_kit/img/icons/favicon.png
+:stylesheet: ../bakiwi_kit/bak.css
+:linkattrs:
+
+:numbered:
+:numbered!:
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+image::./fur_colors.jpg[]
+
+toc::[]
+
+== Vorbereitung
+Für das Schneidern der Bakiwi-Bekleidung benötigst du folgende Werkzeuge und Materialien:
+
+=== Werkzeuge
+* Nähmaschine (empfohlen)
+* Lochzange
+* Nähnadeln
+* Stecknadeln
+* Haushaltsschere
+* Bleistift
+* Maßband oder Lineal
+
+=== Materialien
+* Stoffreste
+* Garn
+* Alleskleber
+
+[NOTE]
+====
+Falls du noch gar keine Erfahrung im Nähen hast, schau Dir ein paar Tutorials im Internet an oder lasse Dir von Freunden oder Verwandten etwas zeigen bzw. frage Sie, ob Sie dich beim Nähen und Bedienen der Nähmaschine etwas anleiten können.
+====
+
+== Stoff falten und Schnitt markieren
+Falte den Stoff so, dass die rechten Seiten (Fell) innen liegen und die linken Seiten außen sind. Achte darauf, dass die meiste Dehnung des Materials in Querrichtung ist.
+
+Markiere den Schnitt mit Bleistift oder Kreide auf der linken (d.h. inneren) Stoffseite. Vergiss dabei nicht die Positionen für die Sensoren zu markieren!
+
+image:./01_prepare.jpg[width=49%]
+image:./02_mark.jpg[width=49%]
+
+== Stofflagen Zuschneiden
+Stecke beide Lagen mit ein paar Nadeln zusammen, damit sich die Stofflagen beim Zuschneiden nicht verschieben. Schneide dann beide Lagen zusammen möglichst genauf auf der Linie aus.
+
+image:./03_cut.jpg[width=49%]
+image:./04_mark_holes.jpg[width=49%]
+
+== Löcher stanzen und verstärken
+Mit einer Lochzange kannst du jetzt die Löcher für die Sensoren durch beide Stofflagen stanzen.
+
+Sichere nun die die ausgestanzten Öffnungen mit etwas Klebstoff vor dem Ausfransen, ein Allzweckkleber sollte dafür genügen. Nimm eine Nadel oder Zahnstocher zu Hilfe um den Kleber dicht um das Loch zu verteilen. Lasse den Kleber ausreichend lang trocknen.
+
+image:./05_cut_holes.jpg[width=49%]
+image:./06_reinforce_holes.jpg[width=49%]
+
+== Nähen
+Nähe jetzt _füßchenbreit_ mit der Nähmaschine um die Schnittkanten herum. Vergiss nicht am Anfang und Ende die Naht zu _verriegeln_, damit sie nicht aufgehen kann.
+
+image:./07_sew.jpg[width=98%]
+
+== Saum umlegen
+Lege den Saum 2cm um und befestige ihn mit dem _Überwendlichstich_ (d.h. mit doppeltem Faden) von Hand. Alternativ kannst du ihn auch festkleben. Achte darauf, nicht zu viel Klebstoff zu verwenden, damit er nicht auf die rechte Seite des Mäntelchens durchschlägt.
+
+image:./08_measure.jpg[width=49%]
+image:./09_sew_the_hem.jpg[width=49%]
+
+== Fertig
+Wende Dein neu-geschneidertes Fell und ziehe Dein Bakiwi an. Dabei sollten die Fühler zuerst durch die Löcher im Fell gesteckt werden.
+
+*Fertig!  Tadaahhhh.*
+
+Wenn Du möchtest, sei so gut und schicke uns ein Foto oder Video von Deiner Kreation an *info@jetpack.cl* für unsere Sammlung oder poste Deine individuelle Bakiwi-Mode mit dem Hashtag *#bakiwi*.
+
+image:./10_ready_made.jpg[width=49%]
+image:./11_done.jpg[width=49%]
