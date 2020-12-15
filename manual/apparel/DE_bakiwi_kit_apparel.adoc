@@ -51,7 +51,7 @@ Falls du noch gar keine Erfahrung im Nähen hast, schau Dir ein paar Tutorials i
 == Schnittschablone anlegen
 Erzeuge Dir eine Schnittschablone indem Du wahlweise die Zeichnung selbst auf Papier bringst, oder die link:stencil//cut_stencil.pdf[Vorlage (PDF)] auf Papier oder Folie ausdruckst. Wenn Du einen 3D-Drucker hast kannst du auch unsere link:stencil/cut_stencil.stl[Schablonenvorlage (STL)] 3D-drucken.
 
-image:../stencil/cut_drawing.png[width=49%]
+image:./cut_drawing.png[width=49%]
 image:./00_get_stencil.jpg[width=49%]
 
 == Stoff falten und Schnitt markieren
