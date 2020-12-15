@@ -1,5 +1,5 @@
 =  Bakiwi Mode Schittanleitung
-Doc Writer Karen Ellenmeyer //<kubisch@informatik.hu-berlin.de>
+Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-12-16
 :toc:
 :toc-placement!:
@@ -19,6 +19,8 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
+
+_Anleitungstext und Fotos von Karen Ellenmeyer_
 
 image::./fur_colors.jpg[]
 
