@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="author" content="Doc Writer">
+<title>Bakiwi Assembly Documentation</title>
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+
+@import url("//fonts.googleapis.com/css?family=Noto+Sans:300,600italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700");
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+
+:root{
+--maincolor:#FFFFFF;
+--primarycolor:#2c3e50;
+--secondarycolor:#323e4a;
+--tertiarycolor: #186d7a;
+--sidebarbackground:#CCC;
+--linkcolor:#ce00ce;
+--linkcoloralternate:#4e6074ff;
+--white:#FFFFFF;
+--black:#000000;
+}
+
+/* Text styles */
+h1{color:var(--primarycolor) !important;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;}
+.title{color:var(--tertiarycolor) !important; font-family:"Noto Sans",sans-serif !important;font-style: normal !important; font-weight: normal !important;}
+p{font-family: "Noto Sans",sans-serif !important}
+
+
+ /* unvisited link */
+a:link { color: var(--primarycolor) !important; }
+
+/* visited link */
+a:visited { color: var(--linkcoloralternate) !important; }
+
+/* mouse over link */
+a:hover { color: var(--linkcolor) !important; }
+
+/* Table styles */
+th{font-family: "Noto Sans",sans-serif !important}
+
+/* Responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+@media all and (max-width: 600px) {
+table {
+  width: 55vw!important;
+  font-size: 3vw;
+}
+
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Bakiwi Assembly Documentation</h1>
+<div class="details">
+<span id="author" class="author">Doc Writer</span><br>
+<span id="email" class="email"><a href="mailto:kubisch@informatik.hu-berlin.de">kubisch@informatik.hu-berlin.de</a></span><br>
+<span id="revnumber">version 0.2,</span>
+<span id="revdate">2020-04-02</span>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>This is the old Bakiwi&#8217;s assembly manual. If you bought your Bakiwi after June 2020 you are probably looking for <a href="../bakiwi_kit/EN_manual_bakiwi_kit_rev_1_1.adoc">the new manual</a>. With the following steps you can assemble your Bakiwi walking robot from the kit. We encourage everyone to contribute to this project. Please share your ideas and experiences, upgrades and schematics, source code and tricks.</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/title.jpg" alt="title">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_motivation">Motivation</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>There is some video links available on how <em>Bakiwi</em> could look like when assembled and how it performs.</p>
+</div>
+<div class="paragraph">
+<p>video: <a href="https://www.youtube.com/watch?v=UyHHptdRnA0">bakiwi robot with lego legs</a></p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/UyHHptdRnA0?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>video: <a href="https://www.youtube.com/watch?v=lXEHFaAaYYs">bakiwi robot with spring steel legs live at xHain hack+makespace</a></p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/lXEHFaAaYYs?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_motivation">Motivation</a></li>
+<li><a href="#_preparation">Preparation</a>
+<ul class="sectlevel2">
+<li><a href="#_prepare_workbench_and_tools">Prepare Workbench and Tools</a></li>
+<li><a href="#_recommended_tools">Recommended Tools</a></li>
+<li><a href="#_check_the_parts">Check the Parts</a></li>
+<li><a href="#_bakiwi_assembly_kit_parts">Bakiwi Assembly Kit Parts</a></li>
+</ul>
+</li>
+<li><a href="#_soldering">Soldering</a>
+<ul class="sectlevel2">
+<li><a href="#_prepare_soldering">Prepare Soldering</a></li>
+<li><a href="#_solder_nano_board_header">Solder Nano-Board Header</a></li>
+<li><a href="#_resistors">Resistors</a></li>
+<li><a href="#_capacitors">Capacitors</a></li>
+<li><a href="#_leds">LEDs</a></li>
+<li><a href="#_switches">Switches</a></li>
+<li><a href="#_socket">Socket</a></li>
+</ul>
+</li>
+<li><a href="#_get_a_break">Get a break</a></li>
+<li><a href="#_soldering_continue">Soldering (continue)</a>
+<ul class="sectlevel2">
+<li><a href="#_servo_header">Servo Header</a></li>
+<li><a href="#_potentiometers">Potentiometers</a></li>
+<li><a href="#_battery_pack">Battery Pack</a></li>
+<li><a href="#_soldering_finishing">Soldering finishing</a></li>
+</ul>
+</li>
+<li><a href="#_testing_and_flashing_firmware">Testing and Flashing Firmware</a>
+<ul class="sectlevel2">
+<li><a href="#_insert_batteries">Insert Batteries</a></li>
+<li><a href="#_installing_arduino_ide">Installing Arduino IDE</a></li>
+<li><a href="#_checking_out_the_code_repository">Checking out the Code-Repository</a></li>
+<li><a href="#_compile_firmware">Compile Firmware</a></li>
+<li><a href="#_connecting_the_nano_board_to_a_pc">Connecting the Nano-Board to a PC</a></li>
+<li><a href="#_selecting_board_and_microcontroller">Selecting Board and Microcontroller</a></li>
+<li><a href="#_uploading_firmware">Uploading Firmware</a></li>
+<li><a href="#_testing_the_functions">Testing the Functions</a></li>
+</ul>
+</li>
+<li><a href="#_assembly">Assembly</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preparation">Preparation</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Before starting the assembly. Check that you have all the tools and parts in place. We recommend reading this manual once briefly before starting the assembly. Please also have a look at the <a href="/circuit/so2walker.sch.pdf">schematics</a> of the board or the board&#8217;s <a href="/circuit/so2walker.brd.png">layout</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/01_package.jpg" alt="01 package">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prepare_workbench_and_tools">Prepare Workbench and Tools</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Clean and wipe your workbench and get all the tools needed as denoted in the list or shown in the picture.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_recommended_tools">Recommended Tools</h3>
+<div class="paragraph">
+<p>We recommend these tools to assemble the <em>Bakiwi</em> robot:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soldering iron with a very fine tip and solder (0.5mm) and up to 400°C (regulated) temperature</p>
+</li>
+<li>
+<p>flat-nosed pliers</p>
+</li>
+<li>
+<p>side-cutting pliers</p>
+</li>
+<li>
+<p>wire stripper</p>
+</li>
+<li>
+<p>utility knife</p>
+</li>
+<li>
+<p>multimeter</p>
+</li>
+<li>
+<p>sandpaper or files</p>
+</li>
+<li>
+<p>small Phillips screw driver</p>
+</li>
+<li>
+<p>tweezers (optionally)</p>
+</li>
+<li>
+<p>hot glue or superglue (optionally)</p>
+</li>
+<li>
+<p>a box of craft materials, trash or old Lego parts for creating legs and body parts of your robot.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/02_tools.jpg" alt="02 tools">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_check_the_parts">Check the Parts</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Check the parts in your <em>Bakiwi</em> package for completeness and complain to <a href="mailto:kubisch@informatik.hu-berlin.de">me via email</a> if it&#8217;s not complete :)
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bakiwi_assembly_kit_parts">Bakiwi Assembly Kit Parts</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">micro servos (incl. several horns)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mini-potentiometers 10 kΩ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mini-knob</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PCB <em>SO(2)-Walker</em> (referred to as the <em>motherboard</em>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arduino-Nano compatible board (i.e. <em>Nano-Board</em>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">battery holder (2xAA)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 kΩ resistor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LED (two different colors)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1x3 pin header</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1x15 socket</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100 µF electrolytic capacitor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100 nF ceramic capacitor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tactile button</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">on/off slide switch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 cm cable</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="./img/03_parts.jpg" alt="03 parts">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Batteries might not be included in the set. Ask your workshop leader or get you a set of 4x AA (mignon) batteries with 1.5 Volts each.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/batteries_not_included.jpg" alt="batteries not included">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_soldering">Soldering</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_prepare_soldering">Prepare Soldering</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Prepare your workbench for soldering. We recommend using a fine tip and thin solder.</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Watch your health! Use enough light. Make sure there is fresh air during soldering and not to breath-in the solder vapor.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+Soldering irons get REALLY hot. You need to stay focused and should be careful not to burn yourself or others. When leaving the table or room, switch off the soldering station.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/use_fine_solder_tip.jpg" alt="use fine solder tip">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Adjust the soldering station for sufficient heat depending on the solder you use. Some stations show the current temperature, make sure to let the iron pre-heat before starting. If soldering 'feels' very sticky, you might have not the correct temperature (too cold) or the flux in the molten solder has already evaporated. Also, ensure to always use a clean solder tip, preferably using a dry cleaner (metal pot cleaner) as it does not cool down the solder tip (in comparison to a wet sponge) and the cleaning result is generally better.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/solder_with_enough_temperature.jpg" alt="solder with enough temperature">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Keep the electronic parts together as they are tiny and get lost easily when they are accidentally dropped from the table.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/keep_parts_together.jpg" alt="keep parts together">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_solder_nano_board_header">Solder Nano-Board Header</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>So now you should be prepared for soldering the first part. Insert header pins for the <em>Nano-Board</em> as shown in the picture.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_pinheader.jpg" alt="insert pinheader">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>You can use a breadboard, if available, for stabilizing the pin headers and keep them aligned and perpendicular during soldering.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/use_breadboard_if_available.jpg" alt="use breadboard if available">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Solder the pins one after another. After soldering the first pin, double-check for alignment and correct it if needed. Otherwise, continue soldering all 30 pins.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/solder_nano_pins.jpg" alt="solder nano pins">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The result should look like this. Sufficient solder looks shiny and volcano-shaped. If it looks like a water drop or ball then there is too much solder. You can remove it by cleaning the tip and put the soldering iron again to the pin.
+Alternatively, use de-soldering braid to remove excessive solder.</p>
+</div>
+<div class="paragraph">
+<p>If the solder point has a weird shape or <em>noses</em>, then there was probably not sufficient flux available in the melting process, use a little <em>fresh</em> solder to make the solder point shiny again.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/nano_solder_result.jpg" alt="nano solder result">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resistors">Resistors</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get the two 1 Kilo-Ohms resistors and the motherboard. Don&#8217;t get irritated as the color might be different than shown in the picture.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/parts_resistor.jpg" alt="parts resistor">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/parts_so2walker.jpg" alt="parts so2walker">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Bend down the resistors' leads very close to their ends and trim the leads as shown in the picture.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/bend_cut_resistor.jpg" alt="bend cut resistor">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Insert resistors as depicted and printed as R1 and R2 on the board&#8217;s silk screen. Make sure that the resistors are soldered very closely to the board.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_resistor.jpg" alt="insert resistor">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Trim the leads after soldering using the side-cutting pliers.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/solder_resistors_and_cut_wire.jpg" alt="solder resistors and cut wire">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_capacitors">Capacitors</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get the two capacitors. They completely differ in size and form.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/parts_capacitors.jpg" alt="parts capacitors">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Insert the ceramic capacitor (small) first as it has a lower profile. Again, make sure that the capacitor is soldered very closely to the board.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_ceramic_cap.jpg" alt="insert ceramic cap">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The electrolytic capacitor has a polarity and its leads must not be mixed up. The shorter lead is minus, the longer lead is plus. Make sure polarity is correct as denoted on the board and shown in the picture. The capacitor must be laid on its side since the <em>Nano-Board</em> will be mounted above it.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_electrolytic_cap.jpg" alt="insert electrolytic cap">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_leds">LEDs</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get the LEDs. Their colors or shape can be different depending on the version of the assembly kit.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/parts_leds.jpg" alt="parts leds">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The LEDs also have polarity. Again, the shorter lead is minus, the long lead is plus. Make sure polarity is correct as denoted on the board and shown in the picture.</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+To remember which lead is plus or minus, imagine, there is a rule of thumb: The dashes of the plus sign put together in a line are longer than the minus dash. Easy, isn&#8217;t it?
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_leds.jpg" alt="insert leds">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_switches">Switches</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get the switches. The silver/black one is a tactile switch, a button so to say. The other one (blue/white) is a slide switch.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/parts_switches.jpg" alt="parts switches">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Insert and solder the slide switch and button. When inserting the tactile button, look out for correct orientation. There is only one correct way and you probably need to gently press the part into the board. You feel a little click when inserted correctly. The orientation of the slide switch is pretty clear and can be installed in both ways. After soldering, make sure that the slide switch is turned off (as marked on the board).</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_slide_switch.jpg" alt="insert slide switch">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_socket">Socket</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The next thing to solder is the sockets for the <em>Nano-Board</em>. The sockets in your package might have more than 15 slots, so you need to trim the socket to exactly 15 slots and use sanding paper to make it even. Be careful when trimming the sockets, they might break easily. You have to cut directly through the 16th socket pin, <strong>not between pins</strong> as this might accidentally break the 15th pin as well.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/cut_socket.jpg" alt="cut socket">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/sand_socket_cut.jpg" alt="sand socket cut">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Then insert the socket and solder the 30 pins. For each half of the socket, make sure the sockets are aligned perpendicular and closest to the board. Otherwise, the <em>Nano-Board</em> might not fit into the socket.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_sockets.jpg" alt="insert sockets">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_a_break">Get a break</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Now it&#8217;s time to grab a coffee or similar and relax your eyes. Get some fruit and fresh air, give your body a break :)
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/make_a_break.jpg" alt="make a break">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_soldering_continue">Soldering (continue)</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Hope you are relaxed, now :)</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_servo_header">Servo Header</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get the servo pin headers and insert four times the 1x3 pin servo header to all four corners of the board, next to the screw holes.
+Again, make sure the pins are perfectly perpendicular to the board, otherwise, the servo connectors might interfere with the sockets of the <em>Nano-Board</em>.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_servo_pin_header.jpg" alt="insert servo pin header">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_potentiometers">Potentiometers</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get the four potentiometers (10 KOhms) and the associated knobs (might have a different color) and insert the knobs in such a way that the shiny metal part of the potentiometer is on the back. When inserting the knobs, make sure the arrow is pointing upwards. Check for correct <em>neutral</em> position (pointing to the top), e.g. when turned fully to the left end stop the arrow should point in the lower left corner and when turned fully to the right end stop, the arrow should point to the lower right corner.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/prepare_potis.jpg" alt="prepare potis">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Insert the potentiometers as shown in the picture, turn the board and solder them.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/insert_potis.jpg" alt="insert potis">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_battery_pack">Battery Pack</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get the wires (approx. 10 cm each). The might have different colors than depicted or the wires come as a flat cable.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/get_wires.jpg" alt="get wires">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Strip the insulation of all the wires' ends, approx. 3-5 mm, twist the ends a little and pre-solder the wires. Pre-soldering is useful to better insert the wire into solder holes.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/strip_wire_and_presolder.jpg" alt="strip wire and presolder">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The result could look like this.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/wires_result.jpg" alt="wires result">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Insert the wires in the denoted order and solder them to the board.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/wire_order.jpg" alt="wire order">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Twist pairs of wires, each pair will be associated with a single battery pack of two cells. If you have a flat cable, you can split them in two pairs of wire.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/twist_wire.jpg" alt="twist wire">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Turn the leads of the battery pack a little upwards so they do not stick out over the part.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/battery_pack_turn_leads_upwards.jpg" alt="battery pack turn leads upwards">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Check polarity of the battery pack (it is denoted inside the packs).</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/polarity_batterypack.jpg" alt="polarity batterypack">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Solder wires to the battery packs as shown. Double check for correct polarity. According to your cable colors the order should be (B1- B1+ B2- B2+) with Bx denoting the battery pack (1 or 2), as denoted on the board/schematics.</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+Battery packs are made of temperature-sensitive plastic. Try to solder only as short as possible in order to avoid melting the plastic. This could irreversibly damage the pack and lead to connection problems later.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/battery_pack_soldered_wires.jpg" alt="battery pack soldered wires">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_soldering_finishing">Soldering finishing</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>So, congratulations. You did it. You finished soldering. Yay. \o/</p>
+</div>
+<div class="paragraph">
+<p>Next thing to do is to trim the pins to be as short as 1-1.5 mm.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/cut_pins_short.jpg" alt="cut pins short">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Dispose the trash material correctly. Metal, plastic and paper parts can be recycled and should not be put to residual waste.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/dispose_solder_waste.jpg" alt="dispose solder waste">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Do not dump the bags. Re-use them or return them to your workshop leader if you do not need them anymore. Save resources. There is no planet B, right?
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/reuse_plastic_bags.jpg" alt="reuse plastic bags">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing_and_flashing_firmware">Testing and Flashing Firmware</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="./img/multimeter.jpg" alt="multimeter">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Before installing batteries, get your multimeter and check at least for three things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the short circuit detection mode (beep mode) and check whether there is good connection between the battery packs and the board. Measure from the very end (e.g. the spring in the pack) to the wire end soldered to the board. The multimeter should make a beep sound here signaling a proper (low-resistance) connection.</p>
+</li>
+<li>
+<p>Next check the four battery cable ends for possible cross connections. There should be none (if you nonetheless find a short circuit between the inner cables, make sure that the power switch is in <em>off</em> position). Remove any short circuits.
+Check (optically) for possible short circuits on all your soldered connections on the motherboard and <em>Nano-Board</em>. If unsure, check (electrically) with the multimeter.</p>
+</li>
+<li>
+<p>The last thing: Check electrically (!) for potential short circuits between GND, VIN and +5V as denoted on the <em>Nano-Board</em> pins.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please be careful with this last step and make sure that there is no short circuit (left) as this can destroy components of your robot irreversibly. In any case, if some component of your robot is getting hot, remove batteries immediately and check for potential problems. Maximally the motors are getting warm after longer use, the rest of the robot should stay at environment temperature.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_insert_batteries">Insert Batteries</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Now it is time to first power-up your freshly soldered Bakiwi robot.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure the power (slide) switch is in "off" position.</p>
+</li>
+<li>
+<p>Insert the <em>Nano-Board</em> into the sockets of the motherboard with the USB connector turning pointing towards the tactile switch.</p>
+</li>
+<li>
+<p>Insert all four batteries into the holders according to the polarity denoted inside the battery holders and the batteries themselves.</p>
+</li>
+<li>
+<p>Switch the power on and the <em>Nano-Board</em> should be light-up its onboard LEDs.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installing_arduino_ide">Installing Arduino IDE</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Get a computer and browse to <a href="https://www.arduino.cc/en/Main/Software" class="bare">https://www.arduino.cc/en/Main/Software</a> and download and install the latest Arduino IDE according to the description on the Arduino website. If you already worked with Arduino boards and have the IDE already installed on your computer, you might consider updating to the current version as it might be required to detect the <em>Bakiwi</em> robot&#8217;s control board in the Arduino IDE. This manual was tested with version 1.8.8 without any problems or modification needed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_checking_out_the_code_repository">Checking out the Code-Repository</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Download the latest <em>Bakiwi</em> firmware source code folder with name <strong>so2walk</strong> from <a href="https://github.com/ku3i/Bakiwi.git" class="bare">https://github.com/ku3i/Bakiwi.git</a> and save to your local hard drive (hit the <strong>Clone or Download</strong> button on the <em>Github</em> website).</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, if you are familiar to a <em>Linux</em> terminal and want to use the source code version system <em>Git</em>, type</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git clone https://github.com/ku3i/Bakiwi.git</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to clone the code repository to your computer. Optionally, if <em>Git</em> is not already installed on your <em>Linux</em> machine, type</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo apt install git</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have question on using <em>Git</em> (e.g. for other operating systems), please refer to <a href="https://www.git-scm.com/" class="bare">https://www.git-scm.com/</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_compile_firmware">Compile Firmware</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Open the <em>Bakiwi</em> firmware&#8217;s source code in the Arduino IDE (file&#8594;open) and hit the <em>compile</em> button (it looks like a checkmark, it&#8217;s somewhere in the left upper corner). When compiling works without complains from the IDE then all the code dependencies seem to be fulfilled on your machine and the compiler was able to create the binary code to be run by the microcontroller on the <em>Nano-Board</em>.
+The firmware source code file is located in:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Bakiwi/source/so2walk/so2walk.ino</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_connecting_the_nano_board_to_a_pc">Connecting the Nano-Board to a PC</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Remove batteries again and connect the <em>Nano-Board</em> to your computer via USB (mini)-cable. The board should immediately power-up again as you connect the cable.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/connect_nano_to_pc_via_usb.jpg" alt="connect nano to pc via usb">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_selecting_board_and_microcontroller">Selecting Board and Microcontroller</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Next you need to select the target board and processor. The <em>Nano-Board</em> is compatible to Arduino Nano and hosts an 8-bit ATMEGA328p microcontroller. After setting the board via <em>Tools</em> &#8594; <em>Board</em> &#8594; <em>Arduino Nano</em> you also have to select the correct microcontroller and Bootloader combination via <em>Tools</em> &#8594; <em>Processor</em> &#8594; <em>ATMEGA328P (Old Bootloader)</em>. If the <em>old-bootloader</em> option is not available in your Arduino IDE you may consider updating to the current version.</p>
+</div>
+<div class="paragraph">
+<p>Please note: The board uses an USB-to-Serial chip-set called "CH340" which, depending on your operating system, may need some sort of driver to be installed.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/arduino_IDE.png" alt="arduino IDE">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uploading_firmware">Uploading Firmware</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>You can now upload the code by hitting the <em>upload</em> button (an arrow to the right). If everything has worked out fine, the motherboard&#8217;s LEDs should blink in a periodic pattern.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testing_the_functions">Testing the Functions</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For testing, follow these steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>remove the USB cable</p>
+</li>
+<li>
+<p>make sure robot is switched off</p>
+</li>
+<li>
+<p>connect motors (yellow cable pointing towards the knobs)</p>
+</li>
+<li>
+<p>insert batteries</p>
+</li>
+<li>
+<p>check all knobs are in neutral position</p>
+</li>
+<li>
+<p>switch on</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The LEDs should again be blinking periodically. The four knobs modify the properties of the neural oscillator: Frequency, Phase and Amplitude (2x).</p>
+</div>
+<div class="paragraph">
+<p>There are four 3-pin headers that allow for connecting motors. In the current version of the code only two of them are sending motor commands (the two next to the USB connector). The others you can use for connecting additional motors or sensors, when you modify or extend your robot or its code.</p>
+</div>
+<div class="paragraph">
+<p>You find the knob which modifies the <em>frequency</em> in the right upper position when holding the board with the USB connector upwards while looking from the <em>Nano-Board</em> side. Try out modifying the frequency and watch the LEDs blinking accordingly. The blinking LEDs corresponds to moving motors later. So the motors will change direction with the same frequency as shown by the LEDs.</p>
+</div>
+<div class="paragraph">
+<p>For each motor the oscillation is tapped at two different positions, so that you can create patterns that are either more <em>in-phase</em> or <em>anti-phase</em>. The right lower knob modifies the <em>phaseshift</em> between those taps. Try out the phase knob and so how you can create different blinking patterns.</p>
+</div>
+<div class="paragraph">
+<p>When powering-up, your <em>Bakiwi</em> is in <em>pause</em> mode. You can now start the motors by hitting the tactile button. The motors will now begin to move according to the frequency and phaseshift you set.</p>
+</div>
+<div class="paragraph">
+<p>The other two knobs (on the left side) can be used to modify each motor&#8217;s amplitude. You can either decrease the amplitude by turning them to the right until the motors fully stop or you can increase the amplitude to a certain maximal value by turning them to the left.</p>
+</div>
+<div class="paragraph">
+<p>Please note that a mixture of large amplitude <em>and</em> high frequency at the same time can probably not be accomplished by the motor since every physical device has some sort of inertia.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/install_nano_board_and_connect_motors.jpg" alt="install nano board and connect motors">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_assembly">Assembly</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>We&#8217;re sorry. The assembly manual for the development version of Bakiwi ("SO(2)Walker") ends here. How you create your robot&#8217;s body is at the moment up to you for this version. However, the given pictures suggest how you can proceed. Try fixing the motors with double-sided tape first and try mounting them in some different angles. If you&#8217;ve found a working (and walking) solution then you may use permanent glue to attach the battery packs to the motors. The board can either by temporarily mounted with a rubber band or fixated with hot glue. Also using the surplus screws inside the motors' packaging is an option.</p>
+</div>
+<div class="paragraph">
+<p>Let us know which solution works best for you.</p>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/parts_servos.jpg" alt="parts servos">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/glue_bat_pack_and_motors.jpg" alt="glue bat pack and motors">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/install_nano_board.jpg" alt="install nano board">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 0.2<br>
+Last updated 2020-12-15 02:14:03 +0100
+</div>
+</div>
+</body>
+</html>
