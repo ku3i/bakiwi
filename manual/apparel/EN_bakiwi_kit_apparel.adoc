@@ -1,0 +1,114 @@
+=  Bakiwi Apparel Sewing Instructions
+Doc Writer <kubisch@informatik.hu-berlin.de>
+v0.1, 2020-12-16
+:toc:
+:toc-placement!:
+:toc-title: Contents
+:imagesdir: ./img/
+:favicon: ../bakiwi_kit/img/icons/favicon.png
+:stylesheet: ../bakiwi_kit/bak.css
+:linkattrs:
+
+:numbered:
+:numbered!:
+
+:icons: image
+:icontype: png
+:iconsdir: ../bakiwi_kit/img/icons/
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+:tip-caption: 💡
+:important-caption: ❗
+:note-caption: 📝
+:caution-caption: 🔥
+:warning-caption: ⚠️
+
+_Instructions, templates and photos by Karen Ellenmeyer_
+
+image::./fur_colors.jpg[]
+
+toc::[]
+
+== Preparation
+You will need the following tools and materials to tailor Bakiwi clothing:
+
+=== Tools
+* sewing machine (recommended)
+* punch pliers
+* sewing needle
+* pins
+* scissors
+* pencil
+* tape measure or ruler
+
+=== Materials
+* pieces of fabric with _light stretch_
+* yarn
+* all purpose glue
+
+[TIP]
+====
+If you have no sewing experience at all, take a look at a few tutorials on the Internet or let friends or relatives show you some sewing, or ask if they can teach you how to use the sewing machine.
+====
+
+== Create the template
+Create a cutting template by either sketching the given drawing on paper yourself or printing out the link:stencil/cut_stencil.pdf[template (PDF)] on paper or foil. If you have a 3D printer, you can also 3D print our link:stencil/cut_stencil.stl[stencil]. The dimensions given are for fabrics with _light stretch_.
+
+[IMPORTANT]
+====
+The specified cutting templates and dimensions are made for fabrics with slight stretching (blue solid line). If you want to use very firm fabrics without noticeable stretching, we recommend making the template approx. 7 mm larger all around (dashed outer line).
+====
+
+image:./cut_drawing.png[width=49%]
+image:./00_get_stencil.jpg[width=49%]
+
+== Fold the fabric and mark the cut
+Fold the fabric so that the right sides (fur) are on the inside and the wrong sides are on the outside. Make sure the material's most stretch is is in cross direction. If you are using fur-like fabrics, make sure that the direction of the hair is facing down, i.e. that it can be smoothed towards the hem.
+
+Put on the cutting template and mark the pattern with a pencil or chalk on the wrong (i.e. inner) side of the fabric. Don't forget to mark the positions for the sensors, too!
+
+image:./01_prepare.jpg[width=49%]
+image:./02_mark.jpg[width=49%]
+
+== Cut out the fabric
+Pin both layers together with a few needles so that they can't move whilst cutting. Cut them out on the line, both at the same time, and as precisely as possible.
+
+image:./03_cut.jpg[width=49%]
+image:./04_mark_holes.jpg[width=49%]
+
+== Punch holes and reinforce
+Use punch pliers to cut holes for the sensors through both layers of fabric. It is best to put a piece of cardboard in between when punching, then the holes can be cut out nice and clean.
+
+Now secure the holes from fraying with a little glue. All-purpose glue should suffice. Use a needle or toothpick to gently spread the glue around the holes in a 3-4 mm radius. Let the glue dry long enough.
+
+image:./05_cut_holes.jpg[width=49%]
+image:./06_reinforce_holes.jpg[width=49%]
+
+== Sewing
+
+Sew around the edges foot width on your sewing machine. Make sure beginning and end are locked by sewing a few stitches back and forth.
+
+image:./07_sew.jpg[width=98%]
+
+== Turn the hem up and fasten it
+Fold the hem 2 cm up and sew it by hand, going over the edges with double thread (_overlock stitch_). Alternatively, simply glue the hem all the way around. Make sure not to overuse the glue so it can’t bleed through to the right side of the fur.
+
+image:./08_measure.jpg[width=49%]
+image:./09_sew_the_hem.jpg[width=49%]
+
+== Try on
+Turn over your newly created fur and dress up your Bakiwi. The feelers should first be inserted through the holes in the fur.
+
+*Done!  Tadaahhhh.*
+
+If you like, please be so nice and send us a photo or a video of your creation to *info@jetpack.cl* for our collection or post your individual Bakiwi apparel with the hashtag *#bakiwi*.
+
+image:./10_ready_made.jpg[width=49%]
+image:./11_done.jpg[width=49%]

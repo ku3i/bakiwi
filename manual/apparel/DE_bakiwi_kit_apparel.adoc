@@ -1,4 +1,4 @@
-=  Bakiwi Mode Schittanleitung
+=  Bakiwi-Mode-Nähanleitung
 Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-12-16
 :toc:
@@ -59,7 +59,7 @@ Falls du noch gar keine Erfahrung im Nähen hast, schau Dir ein paar Tutorials i
 ====
 
 == Schnittschablone erstellen
-Erstelle Dir eine Schnittschablone, indem Du wahlweise die Zeichnung selbst auf Papier bringst oder die link:stencil//cut_stencil.pdf[Vorlage (PDF)] auf Papier oder Folie ausdruckst. Wenn Du einen 3D-Drucker hast, kannst du auch unsere link:stencil/cut_stencil.stl[Schablonenvorlage (STL)] 3D-drucken. Die angegebenen Maße sind für Stoffe mit _leichter Dehnung_.
+Erstelle Dir eine Schnittschablone, indem Du wahlweise die Zeichnung selbst auf Papier bringst oder die link:stencil/cut_stencil.pdf[Vorlage (PDF)] auf Papier oder Folie ausdruckst. Wenn Du einen 3D-Drucker hast, kannst du auch unsere link:stencil/cut_stencil.stl[Schablonenvorlage (STL)] 3D-drucken. Die angegebenen Maße sind für Stoffe mit _leichter Dehnung_.
 
 [IMPORTANT]
 ====
@@ -102,8 +102,8 @@ Lege den Saum 2 cm um und befestige ihn mit dem _Überwendlichstich_ (d. h. mit 
 image:./08_measure.jpg[width=49%]
 image:./09_sew_the_hem.jpg[width=49%]
 
-== Fertig
-Wende Dein neu-geschneidertes Fell und ziehe Dein Bakiwi an. Dabei sollten die Fühler zuerst durch die Löcher im Fell gesteckt werden.
+== Anprobe
+Wende Dein neu-geschneidertes Fell und kleide Dein Bakiwi an. Dabei sollten die Fühler zuerst durch die Löcher im Fell gesteckt werden.
 
 *Fertig!  Tadaahhhh.*
 
