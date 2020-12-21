@@ -25,10 +25,12 @@ ifdef::env-github[]
 endif::[]
 
 :tip-caption: 💡
-:important-caption: ⚠️
+:important-caption: ❗
+:note-caption: 📝
+:caution-caption: 🔥
+:warning-caption: ⚠️
 
-
-_Anleitungstext und Fotos von Karen Ellenmeyer_
+_Anleitungstext, Vorlagen und Fotos von Karen Ellenmeyer_
 
 image::./fur_colors.jpg[]
 
@@ -57,26 +59,26 @@ Falls du noch gar keine Erfahrung im Nähen hast, schau Dir ein paar Tutorials i
 ====
 
 == Schnittschablone erstellen
-Erstelle Dir eine Schnittschablone indem Du wahlweise die Zeichnung selbst auf Papier bringst, oder die link:stencil//cut_stencil.pdf[Vorlage (PDF)] auf Papier oder Folie ausdruckst. Wenn Du einen 3D-Drucker hast kannst du auch unsere link:stencil/cut_stencil.stl[Schablonenvorlage (STL)] 3D-drucken. Beachte die angegebenen Maße sind für Stoffe mit _leichter Dehnung_.
+Erstelle Dir eine Schnittschablone, indem Du wahlweise die Zeichnung selbst auf Papier bringst oder die link:stencil//cut_stencil.pdf[Vorlage (PDF)] auf Papier oder Folie ausdruckst. Wenn Du einen 3D-Drucker hast, kannst du auch unsere link:stencil/cut_stencil.stl[Schablonenvorlage (STL)] 3D-drucken. Die angegebenen Maße sind für Stoffe mit _leichter Dehnung_.
 
 [IMPORTANT]
 ====
-Die angegebenen Schnittschablonen sind für Stoffe mit leichter Dehnung dimensioniert. Wenn du sehr feste Stoffe ohne merkliche Dehnung verwenden möchtest empfehlen wir die Schablone umlaufend ca. 7mm größer anzufertigen.
+Die angegebenen Schnittschablonen und Maße sind für Stoffe mit leichter Dehnung dimensioniert (blaue durchgezogene Linie). Wenn du sehr feste Stoffe ohne merkliche Dehnung verwenden möchtest, empfehlen wir, die Schablone umlaufend ca. 7 mm größer anzufertigen (gestrichelte Außenlinie).
 ====
 
 image:./cut_drawing.png[width=49%]
 image:./00_get_stencil.jpg[width=49%]
 
 == Stoff falten und Schnitt anzeichnen
-Falte den Stoff so, dass die rechten Seiten (Fell) innen liegen und die linken Seiten außen sind. Achte darauf, dass die meiste Dehnung des Materials in Querrichtung ist.
+Falte den Stoff so, dass die rechten Seiten (Fell) innen liegen und die linken Seiten außen sind. Achte darauf, dass die meiste Dehnung des Materials in Querrichtung ist. Wenn Du Fell-ähnliche Stoffe benutzt, achte darauf, dass der Strich nach unten zeigt, d. h. dass es in Richtung Saum glatt gestrichen werden kann.
 
-Lege die Schnittschablone auf und zeichne den Schnitt mit Bleistift oder Kreide auf der linken (d.h. inneren) Stoffseite an. Vergiss dabei nicht die Positionen für die Sensoren zu markieren!
+Lege die Schnittschablone auf und zeichne den Schnitt mit Bleistift oder Kreide auf der linken (d. h. inneren) Stoffseite an. Vergiss dabei nicht, die Positionen für die Sensoren zu markieren!
 
 image:./01_prepare.jpg[width=49%]
 image:./02_mark.jpg[width=49%]
 
 == Stofflagen zuschneiden
-Stecke beide Lagen mit ein paar Nadeln zusammen, damit sich die Stofflagen beim Zuschneiden nicht verschieben. Schneide dann beide Lagen zusammen möglichst genauf auf der Linie aus.
+Stecke beide Lagen mit ein paar Nadeln zusammen, damit sich die Stofflagen beim Zuschneiden nicht verschieben. Schneide dann beide Lagen zusammen möglichst genau auf der Linie aus.
 
 image:./03_cut.jpg[width=49%]
 image:./04_mark_holes.jpg[width=49%]
@@ -84,18 +86,18 @@ image:./04_mark_holes.jpg[width=49%]
 == Löcher stanzen und verstärken
 Mit einer Lochzange kannst du jetzt die Löcher für die Sensoren durch beide Stofflagen stanzen. Am besten legst du ein Stück Pappe beim Stanzen mit dazwischen, dann lassen sich die Löcher schön sauber ausstanzen.
 
-Sichere nun die die ausgestanzten Öffnungen mit etwas Klebstoff vor dem Ausfransen, ein Allzweckkleber sollte dafür genügen. Nimm eine Nadel oder einen Zahnstocher zur Hilfe um den Kleber dicht um das Loch zu verteilen. Lasse den Kleber ausreichend lange trocknen.
+Sichere nun die ausgestanzten Öffnungen mit etwas Klebstoff vor dem Ausfransen, ein Allzweckkleber sollte dafür genügen. Nimm eine Nadel oder einen Zahnstocher zur Hilfe, um den Kleber vorsichtig im Radius von etwa 3-4 mm um die Löcher herum zu verteilen. Lasse den Kleber ausreichend lange trocknen.
 
 image:./05_cut_holes.jpg[width=49%]
 image:./06_reinforce_holes.jpg[width=49%]
 
 == Nähen
-Nähe jetzt _füßchenbreit_ mit der Nähmaschine um die Schnittkanten herum. Vergiss nicht am Anfang und Ende die Naht zu _verriegeln_, d.h. nähe hin und zurück, damit Sie nicht aufgehen kann.
+Nähe jetzt _füßchenbreit_ mit der Nähmaschine um die Schnittkanten herum. Vergiss nicht am Anfang und Ende die Naht zu _verriegeln_, d. h. nähe hin und zurück, damit Sie nicht aufgehen kann.
 
 image:./07_sew.jpg[width=98%]
 
 == Saum umlegen und befestigen
-Lege den Saum 2cm um und befestige ihn mit dem _Überwendlichstich_ (d.h. mit doppeltem Faden) von Hand. Alternativ kannst du ihn auch festkleben. Achte aber darauf, nicht zu viel Klebstoff zu verwenden, damit er nicht auf die rechte Seite des Mäntelchens durchschlägt.
+Lege den Saum 2 cm um und befestige ihn mit dem _Überwendlichstich_ (d. h. mit doppeltem Faden) von Hand. Alternativ kannst du ihn auch festkleben. Achte aber darauf, nicht zu viel Klebstoff zu verwenden, damit er nicht auf die rechte Seite des Mäntelchens durchschlägt.
 
 image:./08_measure.jpg[width=49%]
 image:./09_sew_the_hem.jpg[width=49%]
