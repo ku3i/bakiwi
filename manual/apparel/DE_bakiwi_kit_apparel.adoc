@@ -3,7 +3,7 @@ Doc Writer <kubisch@informatik.hu-berlin.de>
 v0.1, 2020-12-16
 :toc:
 :toc-placement!:
-:toc-title: Tapferes-Schneiderlein-Verzeichnis
+:toc-title: Übersicht
 :imagesdir: ./img/
 :favicon: ../bakiwi_kit/img/icons/favicon.png
 :stylesheet: ../bakiwi_kit/bak.css
@@ -12,6 +12,10 @@ v0.1, 2020-12-16
 :numbered:
 :numbered!:
 
+:icons: image
+:icontype: png
+:iconsdir: ../bakiwi_kit/img/icons/
+
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -19,6 +23,10 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
+
+:tip-caption: 💡
+:important-caption: ⚠️
+
 
 _Anleitungstext und Fotos von Karen Ellenmeyer_
 
@@ -32,57 +40,62 @@ Für das Schneidern der Bakiwi-Bekleidung benötigst du folgende Werkzeuge und M
 === Werkzeuge
 * Nähmaschine (empfohlen)
 * Lochzange
-* Nähnadeln
+* Nähnadel
 * Stecknadeln
 * Haushaltsschere
 * Bleistift
 * Maßband oder Lineal
 
 === Materialien
-* Stoffreste
+* Stoffstücke mit _leichter Dehnung_
 * Garn
 * Alleskleber
 
-[NOTE]
+[TIP]
 ====
 Falls du noch gar keine Erfahrung im Nähen hast, schau Dir ein paar Tutorials im Internet an oder lasse Dir von Freunden oder Verwandten etwas zeigen bzw. frage Sie, ob Sie dich beim Nähen und Bedienen der Nähmaschine etwas anleiten können.
 ====
 
-== Schnittschablone anlegen
-Erzeuge Dir eine Schnittschablone indem Du wahlweise die Zeichnung selbst auf Papier bringst, oder die link:stencil//cut_stencil.pdf[Vorlage (PDF)] auf Papier oder Folie ausdruckst. Wenn Du einen 3D-Drucker hast kannst du auch unsere link:stencil/cut_stencil.stl[Schablonenvorlage (STL)] 3D-drucken.
+== Schnittschablone erstellen
+Erstelle Dir eine Schnittschablone indem Du wahlweise die Zeichnung selbst auf Papier bringst, oder die link:stencil//cut_stencil.pdf[Vorlage (PDF)] auf Papier oder Folie ausdruckst. Wenn Du einen 3D-Drucker hast kannst du auch unsere link:stencil/cut_stencil.stl[Schablonenvorlage (STL)] 3D-drucken. Beachte die angegebenen Maße sind für Stoffe mit _leichter Dehnung_.
+
+[IMPORTANT]
+====
+Die angegebenen Schnittschablonen sind für Stoffe mit leichter Dehnung dimensioniert. Wenn du sehr feste Stoffe ohne merkliche Dehnung verwenden möchtest empfehlen wir die Schablone umlaufend ca. 7mm größer anzufertigen.
+====
 
 image:./cut_drawing.png[width=49%]
 image:./00_get_stencil.jpg[width=49%]
 
-== Stoff falten und Schnitt markieren
+== Stoff falten und Schnitt anzeichnen
 Falte den Stoff so, dass die rechten Seiten (Fell) innen liegen und die linken Seiten außen sind. Achte darauf, dass die meiste Dehnung des Materials in Querrichtung ist.
 
-Markiere den Schnitt mit Bleistift oder Kreide auf der linken (d.h. inneren) Stoffseite. Vergiss dabei nicht die Positionen für die Sensoren zu markieren!
+Lege die Schnittschablone auf und zeichne den Schnitt mit Bleistift oder Kreide auf der linken (d.h. inneren) Stoffseite an. Vergiss dabei nicht die Positionen für die Sensoren zu markieren!
 
 image:./01_prepare.jpg[width=49%]
 image:./02_mark.jpg[width=49%]
 
-== Stofflagen Zuschneiden
+== Stofflagen zuschneiden
 Stecke beide Lagen mit ein paar Nadeln zusammen, damit sich die Stofflagen beim Zuschneiden nicht verschieben. Schneide dann beide Lagen zusammen möglichst genauf auf der Linie aus.
 
 image:./03_cut.jpg[width=49%]
 image:./04_mark_holes.jpg[width=49%]
 
 == Löcher stanzen und verstärken
-Mit einer Lochzange kannst du jetzt die Löcher für die Sensoren durch beide Stofflagen stanzen.
+Mit einer Lochzange kannst du jetzt die Löcher für die Sensoren durch beide Stofflagen stanzen. Am besten legst du ein Stück Pappe beim Stanzen mit dazwischen, dann lassen sich die Löcher schön sauber ausstanzen.
 
-Sichere nun die die ausgestanzten Öffnungen mit etwas Klebstoff vor dem Ausfransen, ein Allzweckkleber sollte dafür genügen. Nimm eine Nadel oder Zahnstocher zu Hilfe um den Kleber dicht um das Loch zu verteilen. Lasse den Kleber ausreichend lang trocknen.
+Sichere nun die die ausgestanzten Öffnungen mit etwas Klebstoff vor dem Ausfransen, ein Allzweckkleber sollte dafür genügen. Nimm eine Nadel oder einen Zahnstocher zur Hilfe um den Kleber dicht um das Loch zu verteilen. Lasse den Kleber ausreichend lange trocknen.
 
 image:./05_cut_holes.jpg[width=49%]
 image:./06_reinforce_holes.jpg[width=49%]
 
 == Nähen
-Nähe jetzt _füßchenbreit_ mit der Nähmaschine um die Schnittkanten herum. Vergiss nicht am Anfang und Ende die Naht zu _verriegeln_, damit sie nicht aufgehen kann.
+Nähe jetzt _füßchenbreit_ mit der Nähmaschine um die Schnittkanten herum. Vergiss nicht am Anfang und Ende die Naht zu _verriegeln_, d.h. nähe hin und zurück, damit Sie nicht aufgehen kann.
 
 image:./07_sew.jpg[width=98%]
 
-== Saum umlegen
-Lege den Saum 2cm um und befestige ihn mit dem _Überwendlichstich_ (d.h. mit doppeltem Faden) von Hand. Alternativ kannst du ihn auch festkleben. Achte darauf, nicht zu viel Klebstoff zu verwenden, damit er nicht auf die rechte Seite des Mäntelchens durchschlägt.
+== Saum umlegen und befestigen
+Lege den Saum 2cm um und befestige ihn mit dem _Überwendlichstich_ (d.h. mit doppeltem Faden) von Hand. Alternativ kannst du ihn auch festkleben. Achte aber darauf, nicht zu viel Klebstoff zu verwenden, damit er nicht auf die rechte Seite des Mäntelchens durchschlägt.
 
 image:./08_measure.jpg[width=49%]
 image:./09_sew_the_hem.jpg[width=49%]
