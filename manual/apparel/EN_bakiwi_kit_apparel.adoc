@@ -84,7 +84,7 @@ image:./03_cut.jpg[width=49%]
 image:./04_mark_holes.jpg[width=49%]
 
 == Punch holes and reinforce
-Use punch pliers to cut holes for the sensors through both layers of fabric. It is best to put a piece of cardboard in between when punching, then the holes can be cut out nice and clean.
+Use punch pliers to cut holes for the sensors through both layers of fabric. For best results when punching, put a piece of cardboard below, between fabric and support surface. then the holes can be cut out nice and clean.
 
 Now secure the holes from fraying with a little glue. All-purpose glue should suffice. Use a needle or toothpick to gently spread the glue around the holes in a 3-4 mm radius. Let the glue dry long enough.
 
