@@ -84,7 +84,7 @@ image:./03_cut.jpg[width=49%]
 image:./04_mark_holes.jpg[width=49%]
 
 == Löcher stanzen und verstärken
-Mit einer Lochzange kannst du jetzt die Löcher für die Sensoren durch beide Stofflagen stanzen. Am besten legst du ein Stück Pappe beim Stanzen mit darunter, zwischen den Stoff und der Auflage, dann lassen sich die Löcher schön sauber ausstanzen.
+Mit einer Lochzange kannst du jetzt die Löcher für die Sensoren durch beide Stofflagen stanzen. Am besten legst du ein Stück Pappe beim Stanzen mit darunter, zwischen den Stoff und die Auflage, dann lassen sich die Löcher schön sauber ausstanzen.
 
 Sichere nun die ausgestanzten Öffnungen mit etwas Klebstoff vor dem Ausfransen, ein Allzweckkleber sollte dafür genügen. Nimm eine Nadel oder einen Zahnstocher zur Hilfe, um den Kleber vorsichtig im Radius von etwa 3-4 mm um die Löcher herum zu verteilen. Lasse den Kleber ausreichend lange trocknen.
 
