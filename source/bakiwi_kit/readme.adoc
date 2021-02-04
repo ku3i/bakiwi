@@ -1,9 +1,12 @@
 = Bakiwi Install Firmware Manual
 Doc Writer <kubisch@informatik.hu-berlin.de>
-v0.1, 2020-10-12
+v0.2, 2021-02-04
 :toc:
 
 :imagesdir: ./doc
+
+image::./bakiwi_connect_flasher.jpg[width=75%]
+
 
 These instructions describe how to install or update firmware on your Bakiwi and also enable you to install a self-written program.
 
