@@ -7,6 +7,14 @@
  | version 20.6.17                 |
  +---------------------------------*/
 
+/*---WE THANK OUR SUPPORTERS----------------------------------------------+
+ | Daniel Sitbon, Thomas Lobig, Sebastian Schmölling, Martin Marmulla,    |
+ | Richard Lemke, Jens Priebe, Ines Müller, Stefan Kruse, Thomas Chung,   |
+ | Michael Merz, Sian Thomas, Gero, HealthCare Futurists, Bruno Böttcher  |
+ | Andrea Mayr-Stalder, Irene Diez, Guido Schillaci, MaggiWuerze, ...     |
+ | to be continued                                                        |
+ +------------------------------------------------------------------------*/
+
 #include "jcl_neural_osc.h"
 #include "jcl_bakiwi_kit_rev_1_1.h"
 
