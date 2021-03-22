@@ -10,8 +10,13 @@
 /*---WE THANK OUR SUPPORTERS----------------------------------------------+
  | Daniel Sitbon, Thomas Lobig, Sebastian Schmölling, Martin Marmulla,    |
  | Richard Lemke, Jens Priebe, Ines Müller, Stefan Kruse, Thomas Chung,   |
+ | Andreas Gerken, Oswald Berthold, Pablo Zöllner, Andreas Pieper,        |
+ | Hannes Ziegerhofer, Philip Brechler, Rebecca Mico, Wally WonTaek Chung |
  | Michael Merz, Sian Thomas, Gero, HealthCare Futurists, Bruno Böttcher  |
- | Andrea Mayr-Stalder, Irene Diez, Guido Schillaci, MaggiWuerze, ...     |
+ | Andrea Mayr-Stalder, Irene Diez, Guido Schillaci, MaggiWuerze,         |
+ | Heinrich Mellmann, Christian Thiele, Michael Mehling, Hendrik Schober, |
+ | xHain hack+makespace, Mona Orgel, Paula, Thomas Prätzlich,             |
+ | Karen Ellmer,                                                          |
  | to be continued                                                        |
  +------------------------------------------------------------------------*/
 
