@@ -7,18 +7,20 @@
  | version 20.6.17                 |
  +---------------------------------*/
 
-/*---WE THANK OUR SUPPORTERS----------------------------------------------+
- | Daniel Sitbon, Thomas Lobig, Sebastian Schmölling, Martin Marmulla,    |
- | Richard Lemke, Jens Priebe, Ines Müller, Stefan Kruse, Thomas Chung,   |
- | Andreas Gerken, Oswald Berthold, Pablo Zöllner, Andreas Pieper,        |
- | Hannes Ziegerhofer, Philip Brechler, Rebecca Mico, Wally WonTaek Chung |
- | Michael Merz, Sian Thomas, Gero, HealthCare Futurists, Bruno Böttcher  |
- | Andrea Mayr-Stalder, Irene Diez, Guido Schillaci, MaggiWuerze,         |
- | Heinrich Mellmann, Christian Thiele, Michael Mehling, Hendrik Schober, |
- | xHain hack+makespace, Mona Orgel, Paula, Thomas Prätzlich,             |
- | Karen Ellmer,                                                          |
- | to be continued                                                        |
- +------------------------------------------------------------------------*/
+/*---WE THANK OUR SUPPORTERS-----------------------------------------------+
+ | Daniel Sitbon, Thomas Lobig, Sebastian Schmölling, Martin Marmulla,     |
+ | Richard Lemke, Jens Priebe, Ines Müller, Stefan Kruse, Thomas Chung,    |
+ | Andreas Gerken, Oswald Berthold, Pablo Zöllner, Andreas Pieper,         |
+ | Hannes Ziegerhofer, Philip Brechler, Rebecca Mico, Wally WonTaek Chung, |
+ | Michael Merz, Sian Thomas, Gero, HealthCare Futurists, Bruno Böttcher,  |
+ | Andrea Mayr-Stalder, Irene Diez, Guido Schillaci, MaggiWuerze,          |
+ | Heinrich Mellmann, Christian Thiele, Michael Mehling, Hendrik Schober,  |
+ | xHain hack+makespace, Mona Orgel, Paula Grünwald, Thomas Prätzlich,     |
+ | Karen Ellmer, Jasper Mendel, Mamoun Azmy, Mali Ohana, Olivier Haustrate,|
+ | Clemenz Kühn, Elisa Fett, Mario Lasseck, Basti Voss, Jaqueline Reiter,  |
+ | Thomas Schranz, Oskar Obereder, Wendelin Weingartner, Sophie Fee Thomas |
+ | Hime Yoshimura, MINT-Impuls, Verstehbahnhof, CCCamp19 + Elmar Wander    |
+ +-------------------------------------------------------------------------*/
 
 #include "jcl_neural_osc.h"
 #include "jcl_bakiwi_kit_rev_1_1.h"
