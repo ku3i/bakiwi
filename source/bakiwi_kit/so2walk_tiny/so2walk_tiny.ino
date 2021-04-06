@@ -19,8 +19,10 @@
  | Karen Ellmer, Jasper Mendel, Mamoun Azmy, Mali Ohana, Olivier Haustrate,|
  | Clemenz Kühn, Elisa Fett, Mario Lasseck, Basti Voss, Jaqueline Reiter,  |
  | Thomas Schranz, Oskar Obereder, Wendelin Weingartner, Sophie Fee Thomas |
- | Hime Yoshimura, MINT-Impuls, Verstehbahnhof, CCCamp19 + Elmar Wander    |
+ | Hime Yoshimura, Mirco Eidecker, MINT-Impuls, Verstehbahnhof, CCCamp19   |
+ | Elmar Janosch Wander                                                    |
  +-------------------------------------------------------------------------*/
+
 
 #include "jcl_neural_osc.h"
 #include "jcl_bakiwi_kit_rev_1_1.h"
