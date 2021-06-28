@@ -11,7 +11,7 @@
  | Daniel Sitbon, Thomas Lobig, Sebastian Schmölling, Martin Marmulla,     |
  | Richard Lemke, Jens Priebe, Ines Müller, Stefan Kruse, Thomas Chung,    |
  | Andreas Gerken, Oswald Berthold, Pablo Zöllner, Andreas Pieper,         |
- | Hannes Ziegerhofer, Philip Brechler, Rebecca Mico, Wally WonTaek Chung, |
+ | Hannes Ziegerhofer, Philip Brechler, Rebecca Miko, Wally WonTaek Chung, |
  | Michael Merz, Sian Thomas, Gero, HealthCare Futurists, Bruno Böttcher,  |
  | Andrea Mayr-Stalder, Irene Diez, Guido Schillaci, MaggiWuerze,          |
  | Heinrich Mellmann, Christian Thiele, Michael Mehling, Hendrik Schober,  |
