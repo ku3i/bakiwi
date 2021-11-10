@@ -1,14 +1,25 @@
 = Bakiwi Install Firmware Manual
 Doc Writer <kubisch@informatik.hu-berlin.de>
-v0.2, 2021-02-04
+v0.3, 2021-11-10
 :toc:
 
 :imagesdir: ./doc
 
 image::./bakiwi_connect_flasher.jpg[width=75%]
 
-
 These instructions describe how to install or update firmware on your Bakiwi and also enable you to install a self-written program.
+
+== Get the Programmer Device
+In order to upload software to your Bakiwi you need a programmer device capable of handling AVR microcontrollers such as the Microchip ATtiny84.
+
+There is plenty of AVR programmers available and most of them should do the job nicely. However if you are new to programming AVR microcontrollers we recommend using the ArduinoISP Kit as it works nicely together with the Arduino Integrated Development Environment (IDE).
+
+Along with the Bakiwi Robot Kit there is the possibility to purchase a Bakiwi Programmer which comes as a solder kit.
+****
+`https://bakiwi.shop`
+****
+
+At the end of this document, there can be found advice on how to assemble the programmer kit.
 
 == Get the Source Code
 Clone the repository or get it via Github's download button:
@@ -24,7 +35,7 @@ This step requires `git`. If you're on a Linux machine, you probably have `git` 
 == Installing the Firmware
 
 === Get latest Arduino IDE
-Open a Browser, navigate to the following link and download the latest version of the Arduino IDE (tested with 1.8.12):
+Open a Browser, navigate to the following link and download the latest version of the Arduino IDE (we tested this documentation with version 1.8.12):
 ****
 `https://www.arduino.cc/en/Main/Software`
 ****
@@ -83,3 +94,50 @@ This sets the fuses of the ATtiny84 and causes the LEDs to flash at a rate of ar
 ****
 `make flash`
 ****
+
+=== Programmer Assembly
+Like the Bakiwi, the programmer comes as a kit and needs to be soldered together as shown in the pictures below. We recommend starting by soldering the two 15-pin headers onto the blue Arduino-compatible board.
+
+image:./flasher_insert_pinheader.jpg[width=49%]
+image:./flasher_solder.jpg[width=49%]
+
+Next, you need to solder the components to the daughterboard as shown below. If you have no soldering expertise so far, we recommend starting with the Bakiwi-Kit before soldering the programmer.
+
+The component in your kit are:
+
+* 7x resistor 1 kOhms
+* 4x LEDs of different colors
+* 1x electrolytic capacitor
+* Arduino-Nano compatible board
+* 2x pin headers (15 pins)
+* 2x sockets (15 pins)
+* 1x 6-wire flat cable
+* 2x cable end sockets with clamps
+* 1x pin header (2x3 pins)
+
+All parts are inserted from the top side of the circuit board (marked with the Jetpack logo) and soldered from the bottom side.
+
+[NOTE]
+====
+The electrolytic capacitor has polarity, so you need to solder the long wire to the solder pad marked with the plus sign.
+====
+
+image:./flasher_assembly_0.jpg[width=49%]
+image:./flasher_assembly_1.jpg[width=49%]
+
+For programming Bakiwis the device must be configured for providing a voltage of 3.3V. Make sure to bridge the solder pads close to the 3V3 sign.
+
+image:./flasher_assembly_2.jpg[width=49%]
+
+Before you can use it, the programmer needs its own software.
+Start the Arduino IDE and open the code example **File->Examples->11.ArduinoISP** .
+The code should be uploaded using the settings shown below:
+
+image:./flasher_arduino_IDE.png[width=99%]
+
+[NOTE]
+====
+In order to upload the programmers code the blue-colored Arduino-Nano compatible board must *not* be connected to the daughter board, since the electrolytic capacitor is (intentionally) preventing the device from receiving the reset command from the computer.
+====
+
+After successfully uploading the ArduinoISP code the boards can be put together and are ready to be used as a programmer device.
