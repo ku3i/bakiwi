@@ -51,6 +51,9 @@ flash:  all
 test:
 	$(AVRDUDE) -v
 
+read:
+	$(AVRDUDE) -U eeprom:r:eedump.hex:i
+
 fuse:
 	$(AVRDUDE) $(FUSES)
 
